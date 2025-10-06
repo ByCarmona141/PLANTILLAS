@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" >
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" width="100" height="100"> IGS Forwarding
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html" data-translate="nav_inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" data-translate="nav_nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html" data-translate="nav_servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quotes.html" data-translate="nav_cotizaciones">Cotizaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" data-translate="nav_contacto">Contacto</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe me-1"></i>
+                        <span id="currentLang">ES</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/mx.svg" alt="Español" style="width: 20px; margin-right: 8px;">
+                                Español
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg" alt="English" style="width: 20px; margin-right: 8px;">
+                                English
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
