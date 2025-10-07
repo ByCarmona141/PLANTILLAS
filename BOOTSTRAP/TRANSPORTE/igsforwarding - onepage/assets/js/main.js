@@ -62,7 +62,18 @@ function initializeApp() {
             const message = currentLanguage === 'es' 
                 ? '¡Gracias! Tu solicitud de cotización ha sido enviada. Te contactaremos pronto.' 
                 : 'Thank you! Your quote request has been sent. We will contact you soon.';
-            alert(message);
+            
+            // SweetAlert notification
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "¡Solicitud enviada!",
+                text: message,
+                showConfirmButton: false,
+                timer: 1500
+            });
+
+            // Reset the form after submission
             this.reset();
         });
     }
@@ -75,7 +86,18 @@ function initializeApp() {
             const message = currentLanguage === 'es' 
                 ? '¡Gracias por contactarnos! Te responderemos a la brevedad.' 
                 : 'Thank you for contacting us! We will respond shortly.';
-            alert(message);
+            
+            // SweetAlert notification
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "¡Mensaje enviado!",
+                text: message,
+                showConfirmButton: false,
+                timer: 1500
+            });
+
+            // Reset the form after submission
             this.reset();
         });
     }
