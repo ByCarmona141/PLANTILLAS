@@ -34,7 +34,7 @@ function initializeApp() {
         }
         
         // Update active nav based on scroll position
-        const sections = document.querySelectorAll('section[id]');
+        const sections = document.querySelectorAll('index.html/section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
         
         let current = '';

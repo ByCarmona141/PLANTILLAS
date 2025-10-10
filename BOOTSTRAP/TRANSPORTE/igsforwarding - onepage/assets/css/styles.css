@@ -108,6 +108,15 @@ body {
     height: 60px;
 }
 
+.nav-dropdown:hover {
+    background-color: var(--bg-primary-color);
+}
+
+.nav-dropdown:hover i,
+.nav-dropdown:hover span {
+    color: var(--bg-tertiary-color);
+}
+
 /* Hero Section - INICIO */
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -115,13 +124,11 @@ body {
     padding: 120px 0 100px;
     position: relative;
     overflow: hidden;
-    height: 45vh;
 }
 
-/* 1. Define la altura del carrusel y asegúrate de que ocupe todo el ancho */
 .full-width-half-height {
-    height: 50vh; /* 50% de la altura del viewport */
-    width: 100vw; /* Opcional, ya que 'container-fluid' ya lo hace, pero es una buena práctica */
+    height: 50vh; 
+    width: 100vw;
 }
 
 /* 2. Asegura que el contenedor interno del carrusel también tenga esa altura */
@@ -207,6 +214,7 @@ body {
 }
 
 .hero-title {
+    text-align: center;
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
