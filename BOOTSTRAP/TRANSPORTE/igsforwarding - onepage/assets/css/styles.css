@@ -115,6 +115,7 @@ body {
     padding: 120px 0 100px;
     position: relative;
     overflow: hidden;
+    height: 45vh;
 }
 
 /* 1. Define la altura del carrusel y asegúrate de que ocupe todo el ancho */
@@ -170,9 +171,23 @@ body {
     z-index: 1; /* Asegura que el degradado esté por encima de la imagen */
 }
 
-/* Ajuste opcional para las leyendas */
 .carousel-caption {
-    z-index: 2; /* Asegura que la leyenda esté por encima del degradado */
+    z-index: 2;
+}
+
+.carousel-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.carousel-subtitle {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease;
 }
 
 .hero-section::before {
