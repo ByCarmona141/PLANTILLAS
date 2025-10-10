@@ -11,28 +11,28 @@
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_name">Nombre Completo</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="name" class="form-control" required>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_email">Correo Electrónico</label>
-                                <input type="email" class="form-control" required>
+                                <input type="email" name="email" class="form-control" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_phone">Teléfono</label>
-                                <input type="tel" class="form-control" required>
+                                <input type="tel" name="phone" class="form-control" required>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_company">Empresa (Opcional)</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="company" class="form-control">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_service_type">Tipo de Servicio</label>
                                 <select class="form-select" required>
-                                    <option value="" data-translate="quote_select">Seleccionar...</option>
+                                    <option value="" name="service_type" data-translate="quote_select">Seleccionar...</option>
                                     <option data-translate="quote_opt_air">Envío Aéreo</option>
                                     <option data-translate="quote_opt_sea">Envío Marítimo</option>
                                     <option data-translate="quote_opt_land">Envío Terrestre</option>
@@ -40,25 +40,26 @@
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_weight">Peso Aproximado (kg)</label>
-                                <input type="number" class="form-control" min="0" step="0.1" required>
+                                <input type="number" name="weight" class="form-control" min="0" step="0.1" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_origin">Ciudad de Origen</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="origin" class="form-control" required>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_destination">Ciudad de Destino</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="destination" class="form-control" required>
                             </div>
                         </div>
                         <div class="mb-4">
                             <label class="form-label fw-bold" data-translate="quote_message">Mensaje Adicional</label>
-                            <textarea class="form-control" rows="4"></textarea>
+                            <textarea class="form-control" name="message" rows="4"></textarea>
                         </div>
                         <button type="submit" class="btn custom-btn-tertiary btn-lg w-100">
-                            <i class="fas fa-paper-plane me-2"></i><span data-translate="quote_btn">Solicitar Cotización Gratis</span>
+                            <i class="fas fa-paper-plane me-2"></i>
+                            <span data-translate="quote_btn">Solicitar Cotización Gratis</span>
                         </button>
                     </form>
                 </div>
@@ -86,7 +87,7 @@
                         <h5 data-translate="quote_info4_title">Sin Compromiso</h5>
                         <p class="mb-0" data-translate="quote_info4_desc">Cotización 100% gratuita y sin obligación</p>
                     </div>
-                    <div class="mt-4 pt-4 border-top border-light">
+                    <!-- <div class="mt-4 pt-4 border-top border-light">
                         <p class="mb-2">
                             <i class="fas fa-phone me-2"></i>
                             +52 (81) 1234-5678
@@ -99,7 +100,7 @@
                             <i class="fas fa-clock me-2"></i>
                             <span data-translate="quote_schedule">Lun - Vie: 9:00 AM - 6:00 PM</span>
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

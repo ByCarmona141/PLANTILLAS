@@ -11,8 +11,8 @@
     --bg-secondary-color: #000000;
     --bg-tertiary-color: #ffffff;
     
-    --bg-primary-color-hover: #a80b25a9;
-    --bg-secondary-color-hover: #00000098;
+    --bg-primary-color-hover: #a80b2583;
+    --bg-secondary-color-hover: #00000062;
     --bg-tertiary-color-hover: #ffffff40;
 
     --bg-primary-button: #000000;
@@ -46,6 +46,11 @@ body {
     background: white !important;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     transition: all 0.3s;
+}
+
+.navbar-title {
+    color: var(--text-secondary-color);
+    font-size: 25px;
 }
 
 .navbar-dark {
@@ -93,6 +98,16 @@ body {
     width: 80%;
 }
 
+.nav-logo-certification-ctpat {
+    width: 150px;
+    height: 100%;
+}
+
+.nav-logo-certification-iso {
+    width: 150px;
+    height: 60px;
+}
+
 /* Hero Section - INICIO */
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -100,6 +115,64 @@ body {
     padding: 120px 0 100px;
     position: relative;
     overflow: hidden;
+}
+
+/* 1. Define la altura del carrusel y asegúrate de que ocupe todo el ancho */
+.full-width-half-height {
+    height: 50vh; /* 50% de la altura del viewport */
+    width: 100vw; /* Opcional, ya que 'container-fluid' ya lo hace, pero es una buena práctica */
+}
+
+/* 2. Asegura que el contenedor interno del carrusel también tenga esa altura */
+.full-width-half-height .carousel-inner {
+    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
+}
+
+/* 3. Asegura que cada item del carrusel tenga la altura completa */
+.full-width-half-height .carousel-item {
+    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
+}
+
+/* 4. Estilo para la imagen dentro del carrusel-item */
+.full-width-half-height .carousel-item img {
+    height: 100%; /* La imagen toma la altura completa del item (50vh) */
+    object-fit: cover; /* **IMPORTANTE:** Esto asegura que la imagen cubra el área sin distorsionarse, recortando lo necesario. */
+}
+
+.carousel-img {
+    /* Asegura que la imagen sea el 100% del contenedor del item */
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Aplica el degradado usando un pseudo-elemento en el contenedor de la imagen */
+.carousel-item {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    overflow: hidden; /* Opcional, pero buena práctica */
+}
+
+.carousel-item::before {
+    content: ""; /* Obligatorio para pseudo-elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Define el degradado: de #A80B24 (arriba) a #000000 (abajo) */
+    /* Usamos rgba para añadir transparencia y que se vea la imagen */
+    /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
+    background: linear-gradient(
+        135deg,
+        var(--bg-primary-color-hover), /* #A80B24 con 50% de opacidad */
+        var(--bg-secondary-color-hover)      /* #000000 con 70% de opacidad */
+    );
+    z-index: 1; /* Asegura que el degradado esté por encima de la imagen */
+}
+
+/* Ajuste opcional para las leyendas */
+.carousel-caption {
+    z-index: 2; /* Asegura que la leyenda esté por encima del degradado */
 }
 
 .hero-section::before {
@@ -131,6 +204,11 @@ body {
     margin-bottom: 30px;
     opacity: 0.95;
     animation: fadeInUp 1s ease;
+}
+
+.hero-carousel {
+    height: 50vh;
+    width: 100vh;
 }
 
 @keyframes fadeInUp {
@@ -530,6 +608,10 @@ footer a:hover {
 }
 
 .author:hover {
+    color: var(--primary-color) !important;
+}
+
+.link:hover {
     color: var(--primary-color) !important;
 }
 
