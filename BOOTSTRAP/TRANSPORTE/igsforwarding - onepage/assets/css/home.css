@@ -1,0 +1,164 @@
+/* Hero Section - INICIO */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 120px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.full-width-half-height {
+    height: 50vh; 
+    width: 100vw;
+}
+
+/* 2. Asegura que el contenedor interno del carrusel también tenga esa altura */
+.full-width-half-height .carousel-inner {
+    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
+}
+
+/* 3. Asegura que cada item del carrusel tenga la altura completa */
+.full-width-half-height .carousel-item {
+    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
+}
+
+/* 4. Estilo para la imagen dentro del carrusel-item */
+.full-width-half-height .carousel-item img {
+    height: 100%; /* La imagen toma la altura completa del item (50vh) */
+    object-fit: cover; /* **IMPORTANTE:** Esto asegura que la imagen cubra el área sin distorsionarse, recortando lo necesario. */
+}
+
+.carousel-img {
+    /* Asegura que la imagen sea el 100% del contenedor del item */
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Aplica el degradado usando un pseudo-elemento en el contenedor de la imagen */
+.carousel-item {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    overflow: hidden; /* Opcional, pero buena práctica */
+}
+
+.carousel-item::before {
+    content: ""; /* Obligatorio para pseudo-elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Define el degradado: de #A80B24 (arriba) a #000000 (abajo) */
+    /* Usamos rgba para añadir transparencia y que se vea la imagen */
+    /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
+    background: linear-gradient(
+        135deg,
+        var(--bg-primary-color-hover), /* #A80B24 con 50% de opacidad */
+        var(--bg-secondary-color-hover)      /* #000000 con 70% de opacidad */
+    );
+    z-index: 1; /* Asegura que el degradado esté por encima de la imagen */
+}
+
+.carousel-caption {
+    z-index: 2;
+}
+
+.carousel-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.carousel-subtitle {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 50 L50 0 L100 50 L50 100 Z" fill="rgba(255,255,255,0.03)"/></svg>');
+    background-size: 100px 100px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-subtitle {
+    text-align: justify;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-carousel {
+    height: 50vh;
+    width: 100vh;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-icon-box {
+    background: var(--bg-secondary-color-hover);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-icon-box:hover {
+    background: var(--bg-tertiary-color-hover);
+    transform: translateY(-10px);
+}
+
+.hero-icon-box i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}

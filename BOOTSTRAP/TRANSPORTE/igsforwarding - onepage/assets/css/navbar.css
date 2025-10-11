@@ -1,0 +1,75 @@
+/* Navbar */
+.navbar {
+    background: white !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.navbar-title {
+    color: var(--text-secondary-color);
+    font-size: 25px;
+}
+
+.navbar-dark {
+    background: var(--dark-color) !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--light-color) !important;
+    margin: 0 10px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--bg-tertiary-color) !important;
+}
+
+.nav-link.active {
+    color: var(--bg-primary-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--tertiary-color);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-logo-certification-ctpat {
+    width: 150px;
+    height: 100%;
+}
+
+.nav-logo-certification-iso {
+    width: 150px;
+    height: 60px;
+}
+
+.nav-dropdown:hover {
+    background-color: var(--bg-primary-color);
+}
+
+.nav-dropdown:hover i,
+.nav-dropdown:hover span {
+    color: var(--bg-tertiary-color);
+}

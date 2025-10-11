@@ -1,0 +1,47 @@
+/* Contact Section - CONTACTO */
+.contact-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.contact-info-card {
+    background: var(--light-color);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.contact-info-card:hover {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    height: 400px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}

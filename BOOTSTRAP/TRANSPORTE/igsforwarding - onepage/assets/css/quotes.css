@@ -1,0 +1,51 @@
+/* Quote Section - COTIZACIONES */
+.quote-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.quote-form {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.form-control, .form-select {
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+}
+
+.quote-info {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 50px;
+    border-radius: 20px;
+    color: white;
+    height: 100%;
+}
+
+.quote-info-item {
+    padding: 25px;
+    background: var(--bg-secondary-color-hover);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.quote-info-item:hover {
+    background: var(--bg-tertiary-color-hover);
+    transform: translateX(10px);
+}
+
+.quote-info-item i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}

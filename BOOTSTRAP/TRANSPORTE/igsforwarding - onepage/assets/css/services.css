@@ -1,0 +1,50 @@
+/* Services Section - SERVICIOS */
+.services-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.service-card {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    height: 100%;
+    background: white;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotateY(360deg);
+}

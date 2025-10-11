@@ -36,6 +36,11 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/quotes.css">
+    <link rel="stylesheet" href="assets/css/maritime-page.css">
 
     <!-- SweetAlert2 -->
     <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
@@ -76,8 +81,11 @@
     <!-- Navigation -->
     <div id="navbar-container"></div>
 
-    <!-- Hero Section - Service -->
+    <!-- Hero Section - INICIO -->
     <div id="maritime-container"></div>
+
+    <!-- Contact Section - CONTACTO -->
+    <div id="contact-container"></div>
 
     <!-- Footer -->
     <div id="footer-container"></div>
@@ -107,7 +115,8 @@
         // Load all components
         document.addEventListener('DOMContentLoaded', async function() {
             await loadComponent('navbar-container', 'components/navbar.html');
-            await loadComponent('maritime-container', 'components/services/maritime.html');
+            await loadComponent('maritime-container', 'components/services/maritime/index.html');
+            await loadComponent('contact-container', 'components/services/maritime/contact.html');
             await loadComponent('footer-container', 'components/footer.html');
             
             // Initialize main functionality after all components are loaded

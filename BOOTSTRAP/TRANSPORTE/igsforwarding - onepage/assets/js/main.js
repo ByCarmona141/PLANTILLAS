@@ -22,6 +22,43 @@ function initializeApp() {
         });
     });
     
+    // Function to update active nav link
+    function updateActiveNav() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let current = '';
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            // Si estamos en la sección (considerando el navbar de 70px)
+            if (scrollPosition >= (sectionTop - 100) && scrollPosition < (sectionTop + sectionHeight - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        // Si estamos al inicio de la página, marcar "inicio" como activo
+        if (scrollPosition < 100) {
+            current = 'inicio';
+        }
+        
+        // Actualizar clases active
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            
+            // Remover el index.html# si existe y comparar solo con el id
+            const linkId = href.replace('index.html#', '').replace('#', '');
+            
+            if (linkId === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
     // Navbar scroll effect and active section
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
@@ -33,26 +70,11 @@ function initializeApp() {
             }
         }
         
-        // Update active nav based on scroll position
-        const sections = document.querySelectorAll('index.html/section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
-        });
+        updateActiveNav();
     });
+    
+    // Llamar una vez al cargar para establecer el estado inicial
+    updateActiveNav();
     
     // Quote form submission
     const quoteForm = document.getElementById('quoteForm');
