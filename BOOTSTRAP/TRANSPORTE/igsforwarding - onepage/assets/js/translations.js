@@ -262,11 +262,17 @@ const translations = {
     }
 };
 
-let currentLanguage = 'es';
+// Obtener el idioma guardado o usar español por defecto
+let currentLanguage = localStorage.getItem('preferredLanguage') || 'es';
 
 // Change language function
 function changeLanguage(lang) {
     currentLanguage = lang;
+    
+    // Guardar la preferencia en localStorage
+    localStorage.setItem('preferredLanguage', lang);
+    
+    // Actualizar la interfaz
     document.getElementById('currentLang').textContent = lang.toUpperCase();
     document.documentElement.lang = lang === 'es' ? 'es-MX' : 'en-US';
     
@@ -292,3 +298,11 @@ function changeLanguage(lang) {
         }
     });
 }
+
+// Aplicar el idioma guardado cuando se carga la página
+document.addEventListener('DOMContentLoaded', function() {
+    // Esperar un momento para que los componentes se carguen
+    setTimeout(() => {
+        changeLanguage(currentLanguage);
+    }, 100);
+});
