@@ -21,7 +21,8 @@ const translations = mergeTranslations(
     servicesTranslations,
     quotesTranslations,
     contactTranslations,
-    footerTranslations
+    footerTranslations,
+    maritimeTranslations
 );
 
 // Obtener el idioma guardado o usar español por defecto
