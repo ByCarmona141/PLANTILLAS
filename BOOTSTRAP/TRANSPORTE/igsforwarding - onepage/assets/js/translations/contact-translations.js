@@ -1,0 +1,45 @@
+// Traducciones para la sección de Contacto
+const contactTranslations = {
+    es: {
+        contact_title: 'Contáctanos',
+        contact_subtitle: 'Estamos aquí para ayudarte',
+        contact_address: 'Dirección',
+        contact_phone: 'Teléfono',
+        contact_phone_subtitle: 'Línea 24/7',
+        contact_email_title: 'Email',
+        contact_schedule_title: 'Horario de atención',
+        contact_schedule_week: 'Lun - Vie: 9:00 AM - 6:00 PM',
+        contact_schedule_sat: 'Sábado y Domingo: Cerrado',
+        contact_schedule_sun: 'Domingos: Cerrado',
+        contact_map: 'Mapa de Ubicación',
+        contact_map_desc: 'Integra aquí tu mapa de Google Maps',
+        contact_form_title: 'Envíanos un Mensaje',
+        contact_form_name: 'Nombre',
+        contact_form_email: 'Email',
+        contact_form_phone: 'Teléfono',
+        contact_form_subject: 'Asunto',
+        contact_form_message: 'Mensaje',
+        contact_form_btn: 'Enviar Mensaje'
+    },
+    en: {
+        contact_title: 'Contact Us',
+        contact_subtitle: 'We are here to help you',
+        contact_address: 'Address',
+        contact_phone: 'Phone',
+        contact_phone_subtitle: '24/7 Line',
+        contact_email_title: 'Email',
+        contact_schedule_title: 'Business Hours',
+        contact_schedule_week: 'Mon - Fri: 9:00 AM - 6:00 PM',
+        contact_schedule_sat: 'Saturday and Sunday: Closed',
+        contact_schedule_sun: 'Sundays: Closed',
+        contact_map: 'Location Map',
+        contact_map_desc: 'Integrate your Google Maps here',
+        contact_form_title: 'Send Us a Message',
+        contact_form_name: 'Name',
+        contact_form_email: 'Email',
+        contact_form_phone: 'Phone',
+        contact_form_subject: 'Subject',
+        contact_form_message: 'Message',
+        contact_form_btn: 'Send Message'
+    }
+};

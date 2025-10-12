@@ -16,12 +16,13 @@ function mergeTranslations(...translationObjects) {
 // Combinar todas las traducciones
 const translations = mergeTranslations(
     navbarTranslations,
-    homeTranslations,
-    aboutTranslations,
-    servicesTranslations,
-    quotesTranslations,
-    contactTranslations,
-    footerTranslations
+    //homeTranslations,
+    //aboutTranslations,
+    //servicesTranslations,
+    //quotesTranslations,
+    //contactTranslations,
+    //footerTranslations,
+    //maritimeTranslations
 );
 
 // Obtener el idioma guardado o usar español por defecto

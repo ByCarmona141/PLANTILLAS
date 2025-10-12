@@ -8,25 +8,25 @@
     <link rel="icon" href="assets/image/logo.png" type="image/x-icon" />
     
     <!-- SEO Meta Tags -->
-    <title>Envío de Paquetes Aéreo, Marítimo y Terrestre | Entrega Rápida y Segura</title>
-    <meta name="description" content="Servicio profesional de envío de paquetes por vía aérea, marítima y terrestre. Rastreo en tiempo real, entrega garantizada y cobertura internacional. Cotiza ahora.">
-    <meta name="keywords" content="envío de paquetes, paquetería aérea, envío marítimo, transporte terrestre, mensajería internacional, rastreo de paquetes, logística">
-    <meta name="author" content="Tu Empresa de Paquetería">
+    <title>Servicio de Envío Marítimo | IGS Forwarding</title>
+    <meta name="description" content="Transporte marítimo internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
+    <meta name="keywords" content="envío marítimo, FCL, LCL, transporte marítimo, carga consolidada, contenedor completo">
+    <meta name="author" content="IGS Forwarding">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://tudominio.com/">
+    <link rel="canonical" href="https://igsforwarding.com/maritime.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tudominio.com/">
-    <meta property="og:title" content="Envío de Paquetes Aéreo, Marítimo y Terrestre">
-    <meta property="og:description" content="Servicio profesional de envío de paquetes con cobertura nacional e internacional. Cotiza ahora.">
-    <meta property="og:image" content="https://tudominio.com/img/og-image.jpg">
+    <meta property="og:url" content="https://igsforwarding.com/maritime.html">
+    <meta property="og:title" content="Servicio de Envío Marítimo | IGS Forwarding">
+    <meta property="og:description" content="Transporte marítimo internacional con cobertura global. FCL y LCL.">
+    <meta property="og:image" content="https://igsforwarding.com/assets/image/maritime/img1.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tudominio.com/">
-    <meta property="twitter:title" content="Envío de Paquetes Aéreo, Marítimo y Terrestre">
-    <meta property="twitter:description" content="Servicio profesional de envío de paquetes con cobertura nacional e internacional.">
+    <meta property="twitter:url" content="https://igsforwarding.com/maritime.html">
+    <meta property="twitter:title" content="Servicio de Envío Marítimo | IGS Forwarding">
+    <meta property="twitter:description" content="Transporte marítimo internacional con cobertura global.">
     
     <!-- Bootstrap CSS -->
     <link href="assets/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -49,31 +49,14 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "IGS Forwarding",
-      "url": "https://igsforwarding.com",
-      "logo": "https://tudominio.com/logo.png",
-      "description": "Servicio profesional de envío de paquetes por vía aérea, marítima y terrestre",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Tu Dirección",
-        "addressLocality": "Monterrey",
-        "addressRegion": "Nuevo León",
-        "postalCode": "64000",
-        "addressCountry": "MX"
+      "@type": "Service",
+      "serviceType": "Maritime Shipping",
+      "provider": {
+        "@type": "Organization",
+        "name": "IGS Forwarding",
+        "url": "https://igsforwarding.com"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+52-81-XXXX-XXXX",
-        "contactType": "Customer Service",
-        "areaServed": "MX",
-        "availableLanguage": ["es", "en"]
-      },
-      "sameAs": [
-        "https://facebook.com/tuempresa",
-        "https://twitter.com/tuempresa",
-        "https://instagram.com/tuempresa"
-      ]
+      "description": "Servicio profesional de transporte marítimo internacional FCL y LCL"
     }
     </script>
 </head>
@@ -81,11 +64,11 @@
     <!-- Navigation -->
     <div id="navbar-container"></div>
 
-    <!-- Hero Section - INICIO -->
+    <!-- Maritime Content -->
     <div id="maritime-container"></div>
 
-    <!-- Contact Section - CONTACTO -->
-    <div id="contact-container"></div>
+    <!-- Quote Section - COTIZACIONES -->
+    <div id="quotes-container"></div>
 
     <!-- Footer -->
     <div id="footer-container"></div>
@@ -93,8 +76,13 @@
     <!-- Bootstrap JS -->
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
     
-    <!-- Translations -->
-    <script src="assets/js/translations.js"></script>
+    <!-- Translations - Cargar en orden -->
+    <script src="assets/js/translations/navbar-translations.js"></script>
+    <script src="assets/js/translations/home-translations.js"></script>
+    <script src="assets/js/translations/quotes-translations.js"></script>
+    <script src="assets/js/translations/footer-translations.js"></script>
+    <script src="assets/js/translations/maritime-translations.js"></script>
+    <script src="assets/js/translations-maritime.js"></script>
     
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
@@ -115,8 +103,8 @@
         // Load all components
         document.addEventListener('DOMContentLoaded', async function() {
             await loadComponent('navbar-container', 'components/navbar.html');
-            await loadComponent('maritime-container', 'components/services/maritime/index.html');
-            await loadComponent('contact-container', 'components/services/maritime/contact.html');
+            await loadComponent('maritime-container', 'components/services/maritime/maritime-page.html');
+            await loadComponent('quotes-container', 'components/quotes.html');
             await loadComponent('footer-container', 'components/footer.html');
             
             // Initialize main functionality after all components are loaded
