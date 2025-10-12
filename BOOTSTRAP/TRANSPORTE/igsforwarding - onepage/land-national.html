@@ -50,13 +50,13 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Maritime Shipping",
+      "serviceType": "Air Shipping",
       "provider": {
         "@type": "Organization",
         "name": "IGS Forwarding",
         "url": "https://igsforwarding.com"
       },
-      "description": "Servicio profesional de transporte marítimo internacional FCL y LCL"
+      "description": "Servicio profesional de transporte aereo internacional"
     }
     </script>
 </head>
@@ -64,8 +64,8 @@
     <!-- Navigation -->
     <div id="navbar-container"></div>
 
-    <!-- Maritime Content -->
-    <div id="maritime-container"></div>
+    <!-- Land National Content -->
+    <div id="land-national-container"></div>
 
     <!-- Quote Section - COTIZACIONES -->
     <div id="quotes-container"></div>
@@ -85,8 +85,8 @@
     <script src="assets/js/translations/contact-translations.js"></script>
     <script src="assets/js/translations/footer-translations.js"></script>
     <script src="assets/js/translations/air-translations.js"></script>
-    <script src="assets/js/translations/land-national-translations.js"></script>
     <script src="assets/js/translations/land-international-translations.js"></script>
+    <script src="assets/js/translations/land-national-translations.js"></script>
     <script src="assets/js/translations/maritime-translations.js"></script>
     
     <!-- Translations Main - DEBE ir después de los archivos individuales -->
@@ -112,8 +112,8 @@
         document.addEventListener('DOMContentLoaded', async function() {
             // Cargar todos los componentes
             await loadComponent('navbar-container', 'components/navbar.html');
-            await loadComponent('maritime-container', 'components/services/maritime/maritime-page.html');
-            await loadComponent('quotes-container', 'components/services/maritime/quotes.html');
+            await loadComponent('land-national-container', 'components/services/land-national/land-page.html');
+            await loadComponent('quotes-container', 'components/services/land-national/quotes.html');
             await loadComponent('footer-container', 'components/footer.html');
             
             // IMPORTANTE: Esperar un momento para que el DOM se actualice

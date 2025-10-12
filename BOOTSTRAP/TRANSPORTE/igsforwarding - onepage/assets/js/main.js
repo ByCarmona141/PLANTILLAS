@@ -82,6 +82,7 @@ function initializeApp() {
     updateActiveNav();
     
     // Quote form submission
+    /*
     const quoteForm = document.getElementById('quoteForm');
     if (quoteForm) {
         quoteForm.addEventListener('submit', function(e) {
@@ -104,6 +105,7 @@ function initializeApp() {
             this.reset();
         });
     }
+        */
     
     // Contact form submission
     const contactForm = document.getElementById('contactForm');

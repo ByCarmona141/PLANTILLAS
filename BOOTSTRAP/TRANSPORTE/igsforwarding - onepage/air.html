@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/quotes.css">
-    <link rel="stylesheet" href="assets/css/land-national-page.css">
+    <link rel="stylesheet" href="assets/css/air-page.css">
 
     <!-- SweetAlert2 -->
     <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
@@ -50,13 +50,13 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Maritime Shipping",
+      "serviceType": "Air Shipping",
       "provider": {
         "@type": "Organization",
         "name": "IGS Forwarding",
         "url": "https://igsforwarding.com"
       },
-      "description": "Servicio profesional de transporte marítimo internacional FCL y LCL"
+      "description": "Servicio profesional de transporte aereo internacional"
     }
     </script>
 </head>
@@ -64,8 +64,8 @@
     <!-- Navigation -->
     <div id="navbar-container"></div>
 
-    <!-- Maritime Content -->
-    <div id="maritime-container"></div>
+    <!-- Air Content -->
+    <div id="air-container"></div>
 
     <!-- Quote Section - COTIZACIONES -->
     <div id="quotes-container"></div>
@@ -112,8 +112,8 @@
         document.addEventListener('DOMContentLoaded', async function() {
             // Cargar todos los componentes
             await loadComponent('navbar-container', 'components/navbar.html');
-            await loadComponent('maritime-container', 'components/services/maritime/maritime-page.html');
-            await loadComponent('quotes-container', 'components/services/maritime/quotes.html');
+            await loadComponent('air-container', 'components/services/air/air-page.html');
+            await loadComponent('quotes-container', 'components/services/air/quotes.html');
             await loadComponent('footer-container', 'components/footer.html');
             
             // IMPORTANTE: Esperar un momento para que el DOM se actualice

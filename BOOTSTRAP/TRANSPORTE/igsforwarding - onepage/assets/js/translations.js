@@ -22,6 +22,9 @@ const translations = mergeTranslations(
     quotesTranslations,
     contactTranslations,
     footerTranslations,
+    airTranslations,
+    landInternationalTranslations,
+    landNationalTranslations,
     maritimeTranslations
 );
 
