@@ -1,5 +1,10 @@
 // Initialize app after all components are loaded
 function initializeApp() {
+    // IMPORTANTE: Aplicar traducciones después de cargar todos los componentes
+    if (typeof initializeTranslations === 'function') {
+        initializeTranslations();
+    }
+    
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -89,7 +94,7 @@ function initializeApp() {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "¡Solicitud enviada!",
+                title: currentLanguage === 'es' ? '¡Solicitud enviada!' : 'Request sent!',
                 text: message,
                 showConfirmButton: false,
                 timer: 1500
@@ -113,7 +118,7 @@ function initializeApp() {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "¡Mensaje enviado!",
+                title: currentLanguage === 'es' ? '¡Mensaje enviado!' : 'Message sent!',
                 text: message,
                 showConfirmButton: false,
                 timer: 1500

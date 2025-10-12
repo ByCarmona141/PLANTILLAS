@@ -1,398 +1,29 @@
-// Translations object
-const translations = {
-    es: {
-        nav_inicio: 'Inicio',
-        nav_nosotros: 'Nosotros',
-        nav_servicios: 'Servicios',
-        nav_cotizaciones: 'Cotizaciones',
-        nav_contacto: 'Contacto',
-        
-        hero_title: 'Envío de Paquetes Aéreo, Marítimo y Terrestre',
-        hero_subtitle: 'Soluciones de logística profesional con cobertura nacional e internacional. Nuestros servicios son operados por personal apliamente capacitado, garantizamos que su carga llegue segura y a tiempo a su destino.',
-        hero_btn_quote: 'Cotizar Ahora',
-        hero_btn_services: 'Ver Servicios',
-        hero_air: 'Aéreo',
-        hero_air_desc: '24-72 horas',
-        hero_sea: 'Marítimo FCL y LCL',
-        hero_sea_desc: 'Carga pesada',
-        hero_land: 'Terrestre TL o LTL',
-        hero_land_desc: 'Cobertura nacional',
-        hero_dispatch: 'Despacho aduanal',
-        hero_dispatch_desc: 'Cobertura nacional',
-        
-        about_title: 'Sobre Nosotros',
-        about_subtitle: 'Líderes en Logística Internacional',
-        about_stat1: 'Años',
-        about_stat2: 'Envíos',
-        about_stat3: 'Países',
-        about_stat4: 'Satisfacción',
-        about_text1: 'Con más de 15 años de experiencia en el sector de la logística y transporte, nos hemos consolidado como una de las empresas más confiables en el envío de paquetes a nivel nacional e internacional.',
-        about_text2: 'Nuestra misión es garantizar soluciones integrales en la cadena de suministro de las empresas, a través de la calidad de nuestro servicio, con un equipo altamente capacitado, brindando la mejor atención al cliente y seguimiento en cada embarque.',
-        about_feat1: 'Certificación internacional ISO 9001',
-        about_feat2: 'Certificación CTPAT (Customs-Trade Partnership Against Terrorism)',
-        about_feat3: 'Transporte y gestión logística terrestre, marítima y aérea, con soluciones especializadas',
-        about_feat4: 'Rastreo satelital 24/7: Geocercas, alertas y cuenta espejo para cliente',
-        about_btn: 'Solicitar Cotización',
-        
-        services_title: 'Nuestros Servicios',
-        services_subtitle: 'Soluciones logísticas adaptadas a tus necesidades',
-        service_air_title: 'Envío Aéreo',
-        service_air_desc: 'Brindamos transporte aéreo internacional, con opciones programadas y charter, cubriendo destinos clave en Norteamérica, Europa, Lejano Oriente y LATAM, con seguimiento en tiempo real.',
-        service_air_feat1: 'Cobertura en Norteamérica, Europa, Lejano Oriente y LATAM.',
-        service_air_feat2: 'Servicios de envío programado y charter.',
-        service_air_feat3: ' Seguimiento en tiempo real.',
-        service_air_feat4: ' Seguro de carga y aduanas prioritarias.',
+// Archivo principal de traducciones
+// Combina todas las traducciones de los diferentes componentes
 
-        service_sea_title: 'Envío Marítimo',
-        service_sea_desc: 'Proporcionamos transporte marítimo global, con rutas hacia Asia, Europa y LATAM, ofreciendo soluciones tanto para carga completa como consolidada, con gestión aduanal y aseguramiento.',
-        service_sea_feat1: 'Rutas internacionales (México, Asia, Europa, LATAM).',
-        service_sea_feat2: 'Modalidades FCL y LCL.',
-        service_sea_feat3: 'Consolidación/desconsolidación y aseguramiento de mercancías.',
-        service_sea_feat4: 'Cumplimiento con los estándares CTPAT.',
+// Función para combinar objetos de traducción
+function mergeTranslations(...translationObjects) {
+    const result = { es: {}, en: {} };
+    
+    translationObjects.forEach(obj => {
+        Object.assign(result.es, obj.es);
+        Object.assign(result.en, obj.en);
+    });
+    
+    return result;
+}
 
-        service_land_title: 'Envío Terrestre',
-        service_land_desc: 'Ofrecemos transporte terrestre de carga con cobertura nacional e internacional, especialmente hacia EE.UU. y Canadá, adaptándonos a diferentes modalidades y tipos de carga.',
-        service_land_feat1: 'Cobertura nacional e internacional (México, EE.UU., Canadá).',
-        service_land_feat2: 'Modalidades FTL, LTL, Hot Shot y Milkruns.',
-        service_land_feat3: 'Rastreo satelital 24/7 con geocercas y control de paro motor.',
-        service_land_feat4: 'Flota propia con unidades de hasta 22T.',
-        service_btn: 'Cotizar Servicio',
-        
-        quote_title: 'Solicita tu Cotización',
-        quote_subtitle: 'Obtén una cotización personalizada en minutos',
-        quote_name: 'Nombre Completo',
-        quote_email: 'Correo Electrónico',
-        quote_phone: 'Teléfono',
-        quote_company: 'Empresa (Opcional)',
-        quote_service_type: 'Tipo de Servicio',
-        quote_select: 'Seleccionar...',
-        quote_opt_air: 'Envío Aéreo',
-        quote_opt_sea: 'Envío Marítimo',
-        quote_opt_land: 'Envío Terrestre',
-        quote_weight: 'Peso Aproximado (kg)',
-        quote_origin: 'Ciudad de Origen',
-        quote_destination: 'Ciudad de Destino',
-        quote_message: 'Mensaje Adicional',
-        quote_btn: 'Solicitar Cotización Gratis',
-        quote_info_title: '¿Por qué cotizar con nosotros?',
-        quote_info1_title: 'Respuesta Inmediata',
-        quote_info1_desc: 'Recibirás tu cotización en menos de 2 horas hábiles',
-        quote_info2_title: 'Precios Competitivos',
-        quote_info2_desc: 'Las mejores tarifas del mercado sin costos ocultos',
-        quote_info3_title: 'Asesoría Personalizada',
-        quote_info3_desc: 'Un experto te acompañará en todo el proceso',
-        quote_info4_title: 'Sin Compromiso',
-        quote_info4_desc: 'Cotización 100% gratuita y sin obligación',
-        quote_schedule: 'Lun - Vie: 8:00 AM - 7:00 PM',
-        
-        contact_title: 'Contáctanos',
-        contact_subtitle: 'Estamos aquí para ayudarte',
-        contact_address: 'Dirección',
-        contact_phone: 'Teléfono',
-        contact_phone_subtitle: 'Línea 24/7',
-        contact_email_title: 'Email',
-        contact_schedule_title: 'Horario',
-        contact_schedule_week: 'Lun - Vie: 8:00 - 19:00',
-        contact_schedule_sat: 'Sábados: 9:00 - 14:00',
-        contact_schedule_sun: 'Domingos: Cerrado',
-        contact_map: 'Mapa de Ubicación',
-        contact_map_desc: 'Integra aquí tu mapa de Google Maps',
-        contact_form_title: 'Envíanos un Mensaje',
-        contact_form_name: 'Nombre',
-        contact_form_email: 'Email',
-        contact_form_phone: 'Teléfono',
-        contact_form_subject: 'Asunto',
-        contact_form_message: 'Mensaje',
-        contact_form_btn: 'Enviar Mensaje',
-        
-        footer_desc: 'Líder en servicios de envío de paquetes con más de 15 años de experiencia. Conectamos México con el mundo de manera rápida, segura y confiable.',
-        footer_services: 'Servicios',
-        footer_air: 'Envío Aéreo',
-        footer_sea: 'Envío Marítimo',
-        footer_land: 'Envío Terrestre',
-        footer_quote: 'Cotizaciones',
-        footer_company: 'Empresa',
-        footer_about: 'Acerca de',
-        footer_blog: 'Blog',
-        footer_careers: 'Carreras',
-        footer_coverage: 'Cobertura',
-        footer_support: 'Soporte',
-        footer_faq: 'FAQ',
-        footer_contact: 'Contacto',
-        footer_terms: 'Términos',
-        footer_privacy: 'Privacidad',
-        footer_resources: 'Recursos',
-        footer_calculator: 'Calculadora',
-        footer_tracking: 'Rastreo',
-        footer_rates: 'Tarifas',
-        footer_api: 'API',
-        footer_rights: 'Todos los derechos reservados',
-        footer_made: 'Hecho por ByCarmona141',
-        footer_in: 'en México',
-
-        // Puertos de Operación
-        ports_title: 'Puertos de Operación en México',
-        ports_subtitle: 'Operamos desde los puertos estratégicos de Veracruz, Altamira, Manzanillo y Lázaro Cárdenas. Esta cobertura nacional nos permite optimizar tiempos, rutas y costos, además de garantizar conexiones fluidas hacia cualquier destino global.',
-        port_veracruz: 'Veracruz',
-        port_altamira: 'Altamira',
-        port_manzanillo: 'Manzanillo',
-        port_lazaro: 'Lázaro Cárdenas',
-
-        // Cobertura Internacional
-        coverage_title: 'Cobertura Internacional',
-        coverage_europe_title: 'Envíos Semanales',
-        coverage_europe_desc: 'Desde Latinoamérica hacia Europa, Medio Oriente y África',
-        coverage_asia_title: 'Envíos Semanales',
-        coverage_asia_desc: 'Hacia Asia, con rutas marítimas directas y tiempos de tránsito competitivos',
-        coverage_global_title: 'Rutas Confirmadas',
-        coverage_global_desc: 'Red global semanal en alianza con WorldWide Alliance (WWA) y socios estratégicos',
-
-        // Modalidades de Servicio
-        modalities_title: 'Modalidades de Servicio',
-
-        // LCL
-        lcl_badge: 'Carga Consolidada',
-        lcl_title: 'LCL – Less than Container Load',
-        lcl_desc: 'Ideal para envíos que no requieren un contenedor completo.',
-        lcl_feat1: 'Consolidación y desconsolidación en puertos clave',
-        lcl_feat2: 'Reducción de costos mediante uso compartido del espacio',
-        lcl_feat3: 'Menor manipulación y riesgos en tránsito',
-        lcl_feat4: 'Tarifas competitivas y transparentes',
-        lcl_feat5: 'Servicio 100% neutral para freight forwarders y clientes directos',
-
-        // FCL
-        fcl_badge: 'Contenedor Completo',
-        fcl_title: 'FCL – Full Container Load',
-        fcl_desc: 'Perfecto para cargas exclusivas o de gran volumen.',
-        fcl_feat1: 'Contratos globales con navieras líderes y condiciones preferenciales',
-        fcl_feat2: 'Rutas flexibles y tarifas personalizadas',
-        fcl_feat3: 'Asesoría completa en documentación y despacho aduanal',
-        fcl_feat4: 'Cobertura con seguros de mercancía y contenedor',
-        fcl_modalities: 'Modalidades disponibles:',
-        fcl_cy: 'CY–CY: Puerto a Puerto (Container Yard)',
-        fcl_door: 'Puerta a Puerta: Servicio integral con trazabilidad total',
-
-        // Carga Especializada
-        special_badge: 'Carga Especializada',
-        special_title: 'OOG – Out of Gauge',
-        special_desc: 'Transporte marítimo de maquinaria, estructuras y piezas que exceden las dimensiones estándar de un contenedor.',
-        special_feat1: 'Manejo de carga sobredimensionada',
-        special_feat2: 'Planificación logística especializada',
-        special_feat3: 'Equipos y personal certificado',
-
-        // Soporte Logístico
-        support_title: 'Soporte Logístico Integral',
-        support1: 'Monitoreo en Tiempo Real',
-        support2: 'Almacenaje y Arrastre',
-        support3: 'Personal Especializado',
-        support4: 'Despacho Aduanal',
-
-        // Ventajas Competitivas
-        advantages_title: 'Ventajas Competitivas',
-        adv1: '+15 Años de Experiencia',
-        adv2: 'Neutralidad Total',
-        adv3: 'Optimización de Costos',
-        adv4: 'Alianzas Internacionales',
-        adv5: 'Soluciones End-to-End',
-        adv6: 'Soporte Personalizado'
-    },
-    en: {
-        nav_inicio: 'Home',
-        nav_nosotros: 'About Us',
-        nav_servicios: 'Services',
-        nav_cotizaciones: 'Quotes',
-        nav_contacto: 'Contact',
-
-        hero_title: 'Shipping Packages by Air, Sea and Land',
-        hero_subtitle: 'Professional logistics solutions with national and international coverage. Our services are operated by highly trained personnel, ensuring that your cargo arrives safely and on time at its destination.',
-        hero_btn_quote: 'Get Quote Now',
-        hero_btn_services: 'See Services',
-        hero_air: 'Air',
-        hero_air_desc: '24-72 hours',
-        hero_sea: 'Maritime FCL and LCL',
-        hero_sea_desc: 'Heavy cargo',
-        hero_land: 'Land TL or LTL',
-        hero_land_desc: 'National coverage',
-        hero_dispatch: 'Customs Clearance',
-        hero_dispatch_desc: 'National coverage',
-        
-        about_title: 'About Us',
-        about_subtitle: 'Leaders in International Logistics',
-        about_stat1: 'Years',
-        about_stat2: 'Shipments',
-        about_stat3: 'Countries',
-        about_stat4: 'Satisfaction',
-        about_text1: 'With over 15 years of experience in the logistics and transportation sector, we have established ourselves as one of the most reliable companies in national and international package shipping.',
-        about_text2: 'Our mission is to guarantee comprehensive solutions for companies\' supply chains through the quality of our service, a highly trained team, and providing the best customer service and follow-up for each shipment.',
-        about_feat1: 'ISO 9001 international certification',
-        about_feat2: 'CTPAT (Customs-Trade Partnership Against Terrorism) Certification',
-        about_feat3: 'Land, sea, and air transportation and logistics management, with specialized solutions',
-        about_feat4: '24/7 Satellite Tracking: Geofences, Alerts, and Mirror Account for Clients',
-        about_btn: 'Request Quote',
-        
-        services_title: 'Our Services',
-        services_subtitle: 'Logistics solutions tailored to your needs',
-        service_air_title: 'Air Shipping',
-        service_air_desc: 'We provide international air transportation, with scheduled and charter options, covering key destinations in North America, Europe, the Far East, and Latin America, with real-time tracking.',
-        service_air_feat1: 'Coverage in North America, Europe, the Far East, and Latin America.',
-        service_air_feat2: 'Scheduled and charter shipping services.',
-        service_air_feat3: 'Real-time tracking.',
-        service_air_feat4: 'Cargo insurance and priority customs.',
-
-        service_sea_title: 'Maritime Shipping',
-        service_sea_desc: 'We provide global maritime transport, with routes to Asia, Europe, and Latin America, offering solutions for both full and consolidated loads, with customs clearance and insurance.',
-        service_sea_feat1: 'International routes (Mexico, Asia, Europe, LATAM).',
-        service_sea_feat2: 'FCL and LCL modalities.',
-        service_sea_feat3: 'Consolidation/deconsolidation and insurance of goods.',
-        service_sea_feat4: 'Compliance with CTPAT standards.',
-        
-        service_land_title: 'Land Shipping',
-        service_land_desc: 'We offer land transportation of cargo with national and international coverage, especially to the US and Canada, adapting to different modalities and types of cargo.',
-        service_land_feat1: 'National and international coverage (Mexico, USA, Canada).',
-        service_land_feat2: 'FTL, LTL, Hot Shot and Milkruns modes.',
-        service_land_feat3: '24/7 satellite tracking with geofencing and engine shutdown control.',
-        service_land_feat4: 'Own fleet with units up to 22T.',
-        service_btn: 'Get Quote',
-        
-        quote_title: 'Request Your Quote',
-        quote_subtitle: 'Get a personalized quote in minutes',
-        quote_name: 'Full Name',
-        quote_email: 'Email Address',
-        quote_phone: 'Phone',
-        quote_company: 'Company (Optional)',
-        quote_service_type: 'Service Type',
-        quote_select: 'Select...',
-        quote_opt_air: 'Air Shipping',
-        quote_opt_sea: 'Sea Shipping',
-        quote_opt_land: 'Land Shipping',
-        quote_weight: 'Approximate Weight (kg)',
-        quote_origin: 'Origin City',
-        quote_destination: 'Destination City',
-        quote_message: 'Additional Message',
-        quote_btn: 'Request Free Quote',
-        quote_info_title: 'Why quote with us?',
-        quote_info1_title: 'Immediate Response',
-        quote_info1_desc: 'You will receive your quote in less than 2 business hours',
-        quote_info2_title: 'Competitive Prices',
-        quote_info2_desc: 'The best market rates without hidden costs',
-        quote_info3_title: 'Personalized Advice',
-        quote_info3_desc: 'An expert will accompany you throughout the process',
-        quote_info4_title: 'No Commitment',
-        quote_info4_desc: '100% free quote with no obligation',
-        quote_schedule: 'Mon - Fri: 8:00 AM - 7:00 PM',
-        
-        contact_title: 'Contact Us',
-        contact_subtitle: 'We are here to help you',
-        contact_address: 'Address',
-        contact_phone: 'Phone',
-        contact_phone_subtitle: '24/7 Line',
-        contact_email_title: 'Email',
-        contact_schedule_title: 'Schedule',
-        contact_schedule_week: 'Mon - Fri: 8:00 AM - 7:00 PM',
-        contact_schedule_sat: 'Saturdays: 9:00 AM - 2:00 PM',
-        contact_schedule_sun: 'Sundays: Closed',
-        contact_map: 'Location Map',
-        contact_map_desc: 'Integrate your Google Maps here',
-        contact_form_title: 'Send Us a Message',
-        contact_form_name: 'Name',
-        contact_form_email: 'Email',
-        contact_form_phone: 'Phone',
-        contact_form_subject: 'Subject',
-        contact_form_message: 'Message',
-        contact_form_btn: 'Send Message',
-        
-        footer_desc: 'Leader in package shipping services with over 15 years of experience. We connect Mexico to the world quickly, securely, and reliably.',
-        footer_services: 'Services',
-        footer_air: 'Air Shipping',
-        footer_sea: 'Sea Shipping',
-        footer_land: 'Land Shipping',
-        footer_quote: 'Quotes',
-        footer_company: 'Company',
-        footer_about: 'About',
-        footer_blog: 'Blog',
-        footer_careers: 'Careers',
-        footer_coverage: 'Coverage',
-        footer_support: 'Support',
-        footer_faq: 'FAQ',
-        footer_contact: 'Contact',
-        footer_terms: 'Terms',
-        footer_privacy: 'Privacy',
-        footer_resources: 'Resources',
-        footer_calculator: 'Calculator',
-        footer_tracking: 'Tracking',
-        footer_rates: 'Rates',
-        footer_api: 'API',
-        footer_rights: 'All rights reserved',
-        footer_made: 'Made by ByCarmona141',
-        footer_in: 'in Mexico',
-
-        // Ports of Operation
-        ports_title: 'Ports of Operation in Mexico',
-        ports_subtitle: 'We operate from the strategic ports of Veracruz, Altamira, Manzanillo and Lázaro Cárdenas. This national coverage allows us to optimize times, routes and costs, in addition to guaranteeing smooth connections to any global destination.',
-        port_veracruz: 'Veracruz',
-        port_altamira: 'Altamira',
-        port_manzanillo: 'Manzanillo',
-        port_lazaro: 'Lázaro Cárdenas',
-
-        // International Coverage
-        coverage_title: 'International Coverage',
-        coverage_europe_title: 'Weekly Shipments',
-        coverage_europe_desc: 'From Latin America to Europe, Middle East and Africa',
-        coverage_asia_title: 'Weekly Shipments',
-        coverage_asia_desc: 'To Asia, with direct maritime routes and competitive transit times',
-        coverage_global_title: 'Confirmed Routes',
-        coverage_global_desc: 'Weekly global network in alliance with WorldWide Alliance (WWA) and strategic partners',
-
-        // Service Modalities
-        modalities_title: 'Service Modalities',
-
-        // LCL
-        lcl_badge: 'Consolidated Cargo',
-        lcl_title: 'LCL – Less than Container Load',
-        lcl_desc: 'Ideal for shipments that do not require a full container.',
-        lcl_feat1: 'Consolidation and deconsolidation at key ports',
-        lcl_feat2: 'Cost reduction through shared space use',
-        lcl_feat3: 'Less handling and risks in transit',
-        lcl_feat4: 'Competitive and transparent rates',
-        lcl_feat5: '100% neutral service for freight forwarders and direct customers',
-
-        // FCL
-        fcl_badge: 'Full Container',
-        fcl_title: 'FCL – Full Container Load',
-        fcl_desc: 'Perfect for exclusive or high-volume loads.',
-        fcl_feat1: 'Global contracts with leading shipping lines and preferential conditions',
-        fcl_feat2: 'Flexible routes and customized rates',
-        fcl_feat3: 'Complete advice on documentation and customs clearance',
-        fcl_feat4: 'Coverage with cargo and container insurance',
-        fcl_modalities: 'Available modalities:',
-        fcl_cy: 'CY–CY: Port to Port (Container Yard)',
-        fcl_door: 'Door to Door: Comprehensive service with full traceability',
-
-        // Specialized Cargo
-        special_badge: 'Specialized Cargo',
-        special_title: 'OOG – Out of Gauge',
-        special_desc: 'Maritime transport of machinery, structures and parts that exceed the standard dimensions of a container.',
-        special_feat1: 'Handling of oversized cargo',
-        special_feat2: 'Specialized logistics planning',
-        special_feat3: 'Certified equipment and personnel',
-
-        // Logistics Support
-        support_title: 'Comprehensive Logistics Support',
-        support1: 'Real-Time Monitoring',
-        support2: 'Storage and Haulage',
-        support3: 'Specialized Personnel',
-        support4: 'Customs Clearance',
-
-        // Competitive Advantages
-        advantages_title: 'Competitive Advantages',
-        adv1: '+15 Years of Experience',
-        adv2: 'Total Neutrality',
-        adv3: 'Cost Optimization',
-        adv4: 'International Alliances',
-        adv5: 'End-to-End Solutions',
-        adv6: 'Personalized Support'
-    }
-};
+// Combinar todas las traducciones
+const translations = mergeTranslations(
+    navbarTranslations,
+    homeTranslations,
+    aboutTranslations,
+    servicesTranslations,
+    quotesTranslations,
+    contactTranslations,
+    footerTranslations,
+    maritimeTranslations
+);
 
 // Obtener el idioma guardado o usar español por defecto
 let currentLanguage = localStorage.getItem('preferredLanguage') || 'es';
@@ -404,8 +35,19 @@ function changeLanguage(lang) {
     // Guardar la preferencia en localStorage
     localStorage.setItem('preferredLanguage', lang);
     
-    // Actualizar la interfaz
-    document.getElementById('currentLang').textContent = lang.toUpperCase();
+    // Aplicar traducciones
+    applyTranslations(lang);
+}
+
+// Función separada para aplicar traducciones
+function applyTranslations(lang) {
+    // Actualizar el indicador de idioma
+    const currentLangElement = document.getElementById('currentLang');
+    if (currentLangElement) {
+        currentLangElement.textContent = lang.toUpperCase();
+    }
+    
+    // Actualizar el atributo lang del documento
     document.documentElement.lang = lang === 'es' ? 'es-MX' : 'en-US';
     
     const t = translations[lang];
@@ -431,10 +73,10 @@ function changeLanguage(lang) {
     });
 }
 
-// Aplicar el idioma guardado cuando se carga la página
-document.addEventListener('DOMContentLoaded', function() {
-    // Esperar un momento para que los componentes se carguen
-    setTimeout(() => {
-        changeLanguage(currentLanguage);
-    }, 100);
-});
+// Función para inicializar las traducciones cuando los componentes estén listos
+function initializeTranslations() {
+    // Aplicar el idioma guardado
+    applyTranslations(currentLanguage);
+}
+
+// NO usar DOMContentLoaded aquí, se llamará desde main.js después de cargar componentes
