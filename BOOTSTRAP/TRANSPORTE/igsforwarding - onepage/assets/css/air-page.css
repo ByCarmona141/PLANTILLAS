@@ -21,6 +21,21 @@
     background-color: var(--dark-color) !important;
 }
 
+.carousel-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    animation: fadeInUp 1s ease;
+}
+
+.carousel-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
 /* Hero Section */
 .service-hero {
     padding: 180px 0 120px;

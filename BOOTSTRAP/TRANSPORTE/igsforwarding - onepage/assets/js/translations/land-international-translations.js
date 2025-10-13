@@ -4,6 +4,8 @@ const landInternationalTranslations = {
         land_carousel_title: 'Servicio Terrestre Internacional',
         land_carousel_subtitle: 'Ofrecemos servicio terrestre en todo Norteamérica, realizando importaciones o exportaciones entre Canadá, Estados Unidos y México',
 
+        land_service_btn: 'Cotizar Servicio',
+
         // Puertos de Operación
         land_ports_title: 'Puertos de Operación en México',
         land_ports_subtitle: 'Operamos desde los puertos estratégicos de Veracruz, Altamira, Manzanillo y Lázaro Cárdenas. Esta cobertura nacional nos permite optimizar tiempos, rutas y costos, además de garantizar conexiones fluidas hacia cualquier destino global.',
@@ -66,6 +68,8 @@ const landInternationalTranslations = {
     en: {
         land_carousel_title: 'International Ground Service',
         land_carousel_subtitle: 'We offer ground service throughout North America, importing and exporting between Canada, the United States, and Mexico',
+
+        land_service_btn: 'Quote Service',
 
         // Ports of Operation
         land_ports_title: 'Ports of Operation in Mexico',
