@@ -40,26 +40,31 @@ const landNationalTranslations = {
         land_national_sd_feat2: 'Control operativo centralizado',
 
         // Servicio spot
-        land_national_ss_badge: 'Carga Especializada',
-        land_national_ss_title: 'OOG – Out of Gauge',
-        land_national_ss_desc: 'Transporte marítimo de maquinaria, estructuras y piezas que exceden las dimensiones estándar de un contenedor.',
-        land_national_special_feat1: 'Manejo de carga sobredimensionada',
-        land_national_special_feat2: 'Planificación logística especializada',
-        land_national_special_feat3: 'Equipos y personal certificado',
+        land_national_ss_badge: 'Servicio Spot',
+        land_national_ss_title: 'Servicio Spot',
+        land_national_ss_desc: 'Diseñado para cubrir requerimientos eventuales o incrementos temporales de demanda.',
+        land_national_ss_feat1: 'Transporte por viaje',
+        land_national_ss_feat2: 'Transporte por servicio puntual',
+        
+        // Servicio Express
+        land_national_se_badge: 'Servicio Express',
+        land_national_se_title: 'Servicio Express',
+        land_national_se_desc: 'Disponible exclusivamente para clientes con alta recurrencia o contrato activo con IGS.',
+        land_national_se_feat1: 'Entrega urgente en el mismo día',
 
         // Soporte Logístico
         land_national_support_title: 'Soporte Logístico Integral',
         land_national_support1: 'Monitoreo en Tiempo Real',
-        land_national_support2: 'Almacenaje y Arrastre',
-        land_national_support3: 'Personal Especializado',
-        land_national_support4: 'Despacho Aduanal',
+        land_national_support2: 'Almacenaje',
+        land_national_support3: 'Equipo Operativo Exclusivo',
+        land_national_support4: 'Seguro de Mercancías',
 
         // Ventajas Competitivas
         land_national_advantages_title: 'Ventajas Competitivas',
         land_national_adv1: '+15 Años de Experiencia',
-        land_national_adv2: 'Neutralidad Total',
+        land_national_adv2: 'Alta Capacidad de Respuesta y Flexibilidad Operativa',
         land_national_adv3: 'Optimización de Costos',
-        land_national_adv4: 'Alianzas Internacionales',
+        land_national_adv4: 'Red de Aliados',
         land_national_adv5: 'Soluciones End-to-End',
         land_national_adv6: 'Soporte Personalizado'
     },
