@@ -6,22 +6,23 @@ const landNationalTranslations = {
 
         land_national_service_btn: 'Cotizar Servicio',
 
-        // Puertos de Operación
-        land_national_ports_title: 'Puertos de Operación en México',
-        land_national_ports_subtitle: 'Operamos desde los puertos estratégicos de Veracruz, Altamira, Manzanillo y Lázaro Cárdenas. Esta cobertura nacional nos permite optimizar tiempos, rutas y costos, además de garantizar conexiones fluidas hacia cualquier destino global.',
-        land_national_port_veracruz: 'Veracruz',
-        land_national_port_altamira: 'Altamira',
-        land_national_port_manzanillo: 'Manzanillo',
-        land_national_port_lazaro: 'Lázaro Cárdenas',
+        // Rutas de Operación
+        land_national_paths_title: 'Rutas de Operación en México',
+        land_national_paths_subtitle: 'Red de distribución integral que conecta las principales ciudades y zonas industriales de México.',
+        land_national_path_northwest: 'Noroeste',
+        land_national_path_northeast: 'Noreste',
+        land_national_path_central_north: 'Centro-Norte',
+        land_national_path_central_south: 'Centro-Sur',
+        land_national_path_east: 'Oriente',
 
         // Cobertura Internacional
         land_national_coverage_title: 'Cobertura Nacional',
-        land_national_coverage_europe_title: 'Envíos Semanales',
-        land_national_coverage_europe_desc: 'Desde Latinoamérica hacia Europa, Medio Oriente y África',
+        land_national_coverage_region_title: 'Regiones',
+        land_national_coverage_region_desc: 'Amplias zonas estratégicas',
         land_national_coverage_asia_title: 'Envíos Semanales',
         land_national_coverage_asia_desc: 'Hacia Asia, con rutas marítimas directas y tiempos de tránsito competitivos',
-        land_national_coverage_global_title: 'Rutas Confirmadas',
-        land_national_coverage_global_desc: 'Red global semanal en alianza con WorldWide Alliance (WWA) y socios estratégicos',
+        land_national_coverage_title: 'Rutas Confirmadas',
+        land_national_coverage_desc: 'Amplias zonas estratégicas',
 
         // Modalidades de Servicio
         land_national_modalities_title: 'Modalidades de Servicio',
@@ -74,69 +75,66 @@ const landNationalTranslations = {
 
         land_national_service_btn: 'Quote Service',
 
-        // Ports of Operation
-        land_national_ports_title: 'Ports of Operation in Mexico',
-        land_national_ports_subtitle: 'We operate from the strategic ports of Veracruz, Altamira, Manzanillo and Lázaro Cárdenas. This national coverage allows us to optimize times, routes and costs, in addition to guaranteeing smooth connections to any global destination.',
-        land_national_port_veracruz: 'Veracruz',
-        land_national_port_altamira: 'Altamira',
-        land_national_port_manzanillo: 'Manzanillo',
-        land_national_port_lazaro: 'Lázaro Cárdenas',
+        // Routes of Operation
+        land_national_paths_title: 'Operating Routes in Mexico',
+        land_national_paths_subtitle: 'We operate from the strategic ports of Veracruz, Altamira, Manzanillo and Lázaro Cárdenas. This national coverage allows us to optimize times, routes and costs, in addition to guaranteeing smooth connections to any global destination.',
+        land_national_path_northwest: 'Northwest',
+        land_national_path_northeast: 'Northeast',
+        land_national_path_central_north: 'Central-North',
+        land_national_path_central_south: 'Central-South',
+        land_national_path_east: 'East',
 
-        // International Coverage
-        land_national_coverage_title: 'International Coverage',
-        land_national_coverage_europe_title: 'Weekly Shipments',
-        land_national_coverage_europe_desc: 'From Latin America to Europe, Middle East and Africa',
+        // National Coverage
+        land_national_coverage_title: 'National Coverage',
+        land_national_coverage_region_title: 'Regions',
+        land_national_coverage_region_desc: 'Large strategic areas',
         land_national_coverage_asia_title: 'Weekly Shipments',
         land_national_coverage_asia_desc: 'To Asia, with direct maritime routes and competitive transit times',
-        land_national_coverage_global_title: 'Confirmed Routes',
-        land_national_coverage_global_desc: 'Weekly global network in alliance with WorldWide Alliance (WWA) and strategic partners',
+        land_national_coverage_title: 'Confirmed Routes',
+        land_national_coverage_desc: 'Large strategic areas',
 
         // Service Modalities
         land_national_modalities_title: 'Service Modalities',
 
-        // LCL
-        land_national_lcl_badge: 'Consolidated Cargo',
-        land_national_lcl_title: 'LCL – Less than Container Load',
-        land_national_lcl_desc: 'Ideal for shipments that do not require a full container.',
-        land_national_lcl_feat1: 'Consolidation and deconsolidation at key ports',
-        land_national_lcl_feat2: 'Cost reduction through shared space use',
-        land_national_lcl_feat3: 'Less handling and risks in transit',
-        land_national_lcl_feat4: 'Competitive and transparent rates',
-        land_national_lcl_feat5: '100% neutral service for freight forwarders and direct customers',
+        // FTL
+        land_national_ftl_badge: 'FTL',
+        land_national_ftl_title: 'FTL – Full Truck Load',
+        land_national_ftl_desc: 'Ideal for high volumes or materials that require total control of space and time',
+        land_national_ftl_feat1: 'Exclusive transportation for full load',
 
-        // FCL
-        land_national_fcl_badge: 'Full Container',
-        land_national_fcl_title: 'FCL – Full Container Load',
-        land_national_fcl_desc: 'Perfect for exclusive or high-volume loads.',
-        land_national_fcl_feat1: 'Global contracts with leading shipping lines and preferential conditions',
-        land_national_fcl_feat2: 'Flexible routes and customized rates',
-        land_national_fcl_feat3: 'Complete advice on documentation and customs clearance',
-        land_national_fcl_feat4: 'Coverage with cargo and container insurance',
-        land_national_fcl_modalities: 'Available modalities:',
-        land_national_fcl_cy: 'CY–CY: Port to Port (Container Yard)',
-        land_national_fcl_door: 'Door to Door: Comprehensive service with full traceability',
+        // Servicio dedicado
+        land_national_sd_badge: 'Dedicated Service',
+        land_national_sd_title: 'Dedicated Service',
+        land_national_sd_desc: 'Exclusive fleet allocation for specific projects or routes.',
+        land_national_sd_feat1: 'Permanent availability',
+        land_national_sd_feat2: 'Centralized operational control',
 
-        // Specialized Cargo
-        land_national_special_badge: 'Specialized Cargo',
-        land_national_special_title: 'OOG – Out of Gauge',
-        land_national_special_desc: 'Maritime transport of machinery, structures and parts that exceed the standard dimensions of a container.',
-        land_national_special_feat1: 'Handling of oversized cargo',
-        land_national_special_feat2: 'Specialized logistics planning',
-        land_national_special_feat3: 'Certified equipment and personnel',
+        // Servicio spot
+        land_national_ss_badge: 'Spot Service',
+        land_national_ss_title: 'Spot Service',
+        land_national_ss_desc: 'Designed to cover eventual requirements or temporary increases in demand.',
+        land_national_ss_feat1: 'Transportation per trip',
+        land_national_ss_feat2: 'Transportation by punctual service',
+        
+        // Servicio Express
+        land_national_se_badge: 'Express Service',
+        land_national_se_title: 'Express Service',
+        land_national_se_desc: 'Available exclusively for customers with high recurring or active contracts with IGS.',
+        land_national_se_feat1: 'Same-day express delivery',
 
         // Logistics Support
         land_national_support_title: 'Comprehensive Logistics Support',
         land_national_support1: 'Real-Time Monitoring',
-        land_national_support2: 'Storage and Haulage',
-        land_national_support3: 'Specialized Personnel',
-        land_national_support4: 'Customs Clearance',
+        land_national_support2: 'Storage',
+        land_national_support3: 'Exclusive Operational Team',
+        land_national_support4: 'Cargo Insurance',
 
         // Competitive Advantages
         land_national_advantages_title: 'Competitive Advantages',
         land_national_adv1: '+15 Years of Experience',
-        land_national_adv2: 'Total Neutrality',
+        land_national_adv2: 'High Responsiveness and Operational Flexibility',
         land_national_adv3: 'Cost Optimization',
-        land_national_adv4: 'International Alliances',
+        land_national_adv4: 'Network of Allies',
         land_national_adv5: 'End-to-End Solutions',
         land_national_adv6: 'Personalized Support'
     }

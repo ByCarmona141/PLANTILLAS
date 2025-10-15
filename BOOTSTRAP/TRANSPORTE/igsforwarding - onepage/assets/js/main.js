@@ -146,7 +146,7 @@ function initializeApp() {
         });
     }, observerOptions);
     
-    // Observe service cards and other elements
+    // Animacion de Cards que se muestran al hacer scroll
     document.querySelectorAll('.service-card, .contact-info-card, .about-stats').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';

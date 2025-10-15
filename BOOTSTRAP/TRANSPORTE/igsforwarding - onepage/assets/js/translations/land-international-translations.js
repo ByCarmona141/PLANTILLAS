@@ -6,13 +6,13 @@ const landInternationalTranslations = {
 
         land_service_btn: 'Cotizar Servicio',
 
-        // Puertos de Operación
-        land_ports_title: 'Puertos de Operación en México',
-        land_ports_subtitle: 'Operamos desde los puertos estratégicos de Veracruz, Altamira, Manzanillo y Lázaro Cárdenas. Esta cobertura nacional nos permite optimizar tiempos, rutas y costos, además de garantizar conexiones fluidas hacia cualquier destino global.',
-        land_port_veracruz: 'Veracruz',
-        land_port_altamira: 'Altamira',
-        land_port_manzanillo: 'Manzanillo',
-        land_port_lazaro: 'Lázaro Cárdenas',
+        // Lugares de Operación
+        land_locations_title: 'Lugares de Operación en Norteamérica',
+        land_locations_subtitle: 'Servicio seguro, puntual y transparente, respaldado por alianzas internacionales.',
+        
+        land_locations_canada: 'Canadá',
+        land_locations_usa: 'Estados Unidos',
+        land_locations_mexico: 'México',
 
         // Cobertura Internacional
         land_coverage_title: 'Cobertura Internacional',
@@ -71,13 +71,13 @@ const landInternationalTranslations = {
 
         land_service_btn: 'Quote Service',
 
-        // Ports of Operation
-        land_ports_title: 'Ports of Operation in Mexico',
-        land_ports_subtitle: 'We operate from the strategic ports of Veracruz, Altamira, Manzanillo and Lázaro Cárdenas. This national coverage allows us to optimize times, routes and costs, in addition to guaranteeing smooth connections to any global destination.',
-        land_port_veracruz: 'Veracruz',
-        land_port_altamira: 'Altamira',
-        land_port_manzanillo: 'Manzanillo',
-        land_port_lazaro: 'Lázaro Cárdenas',
+        // Lugares de Operación
+        land_locations_title: 'Locations of Operation in North America',
+        land_locations_subtitle: 'Safe, timely, and transparent service, supported by international alliances.',
+        
+        land_locations_canada: 'Canada',
+        land_locations_usa: 'United States',
+        land_locations_mexico: 'Mexico',
 
         // International Coverage
         land_coverage_title: 'International Coverage',
