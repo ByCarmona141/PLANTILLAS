@@ -1,7 +1,7 @@
 // Traducciones para el Home/Hero Section
 const homeTranslations = {
     es: {
-        hero_title: 'Envío de Paquetes Aéreo, Marítimo y Terrestre',
+        hero_title: 'Transporte Aéreo, Marítimo y Terrestre',
         hero_subtitle: 'Soluciones de logística profesional con cobertura nacional e internacional. Nuestros servicios son operados por personal ampliamente capacitado, garantizamos que su carga llegue segura y a tiempo a su destino.',
         hero_btn_quote: 'Cotizar Ahora',
         hero_btn_services: 'Ver Servicios',
@@ -15,7 +15,7 @@ const homeTranslations = {
         hero_dispatch_desc: 'Cobertura nacional'
     },
     en: {
-        hero_title: 'Shipping Packages by Air, Sea and Land',
+        hero_title: 'Air, Sea and Land Transportation',
         hero_subtitle: 'Professional logistics solutions with national and international coverage. Our services are operated by highly trained personnel, ensuring that your cargo arrives safely and on time at its destination.',
         hero_btn_quote: 'Get Quote Now',
         hero_btn_services: 'See Services',

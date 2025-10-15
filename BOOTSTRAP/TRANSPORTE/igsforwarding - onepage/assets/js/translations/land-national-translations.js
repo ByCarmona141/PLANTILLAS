@@ -15,12 +15,12 @@ const landNationalTranslations = {
         land_national_path_central_south: 'Centro-Sur',
         land_national_path_east: 'Oriente',
 
-        // Cobertura Internacional
+        // Cobertura Nacional
         land_national_coverage_title: 'Cobertura Nacional',
         land_national_coverage_region_title: 'Regiones',
         land_national_coverage_region_desc: 'Amplias zonas estratégicas',
-        land_national_coverage_asia_title: 'Envíos Semanales',
-        land_national_coverage_asia_desc: 'Hacia Asia, con rutas marítimas directas y tiempos de tránsito competitivos',
+        land_national_coverage_week_title: 'Envíos Semanales',
+        land_national_coverage_week_desc: '',
         land_national_coverage_title: 'Rutas Confirmadas',
         land_national_coverage_desc: 'Amplias zonas estratégicas',
 
@@ -88,8 +88,8 @@ const landNationalTranslations = {
         land_national_coverage_title: 'National Coverage',
         land_national_coverage_region_title: 'Regions',
         land_national_coverage_region_desc: 'Large strategic areas',
-        land_national_coverage_asia_title: 'Weekly Shipments',
-        land_national_coverage_asia_desc: 'To Asia, with direct maritime routes and competitive transit times',
+        land_national_coverage_week_title: 'Weekly Shipments',
+        land_national_coverage_week_desc: '',
         land_national_coverage_title: 'Confirmed Routes',
         land_national_coverage_desc: 'Large strategic areas',
 
