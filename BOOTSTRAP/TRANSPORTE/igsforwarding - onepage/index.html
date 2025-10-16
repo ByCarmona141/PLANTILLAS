@@ -150,5 +150,27 @@
             }, 100);
         });
     </script>
+
+    <!-- Script para toggle de vistas -->
+    <script>
+        function toggleQuoteView(view) {
+            const formView = document.getElementById('form-view');
+            const whatsappView = document.getElementById('whatsapp-view');
+            const btnForm = document.querySelector('.btn-form');
+            const btnWhatsapp = document.querySelector('.btn-whatsapp');
+
+            if (view === 'form') {
+                formView.style.display = 'block';
+                whatsappView.style.display = 'none';
+                btnForm.classList.add('active');
+                btnWhatsapp.classList.remove('active');
+            } else if (view === 'whatsapp') {
+                formView.style.display = 'none';
+                whatsappView.style.display = 'block';
+                btnForm.classList.remove('active');
+                btnWhatsapp.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
