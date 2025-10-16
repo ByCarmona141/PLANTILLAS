@@ -264,6 +264,41 @@
     font-weight: 600;
 }
 
+/* Customs Clearance Cards */
+.custom-clearance-card {
+    border: 2px solid var(--primary-color);
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.custom-clearance-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    background: var(--primary-color);
+    color: white;
+}
+
+.custom-clearance-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.custom-clearance-card:hover i {
+    color: white;
+}
+
+.custom-clearance-card h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 /* Advantage Cards */
 .advantage-card {
     background: var(--bg-tertiary-color);

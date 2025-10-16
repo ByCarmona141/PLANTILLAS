@@ -2,7 +2,7 @@
 const aboutTranslations = {
     es: {
         about_title: 'Sobre Nosotros',
-        about_subtitle: 'Líderes en Logística Internacional',
+        about_subtitle: 'Líderes en Servicios Logísticos',
         about_stat1: 'Años',
         about_stat2: 'Envíos',
         about_stat3: 'Países',
@@ -17,7 +17,7 @@ const aboutTranslations = {
     },
     en: {
         about_title: 'About Us',
-        about_subtitle: 'Leaders in International Logistics',
+        about_subtitle: 'Leaders in Logistics Services',
         about_stat1: 'Years',
         about_stat2: 'Shipments',
         about_stat3: 'Countries',

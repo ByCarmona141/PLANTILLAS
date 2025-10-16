@@ -71,6 +71,22 @@ const airTranslations = {
         air_support3: 'Personal Especializado',
         air_support4: 'Despacho Aduanal',
 
+        // Despacho Aduanal
+        air_customs_clearance_title: 'Despacho Aduanal con IGS Forwarding',
+        air_customs_clearance_subtitle: 'Ofrecemos un servicio integral de Despacho Aduanal, asegurando el cumplimiento normativo y una gestión ágil en cada operación de importación y exportación.',
+        air_customs_clearence_adv1: 'Coordinación Integrada',
+        air_customs_clearence_adv1_desc: 'Departamentos marítimo, aéreo y terrestre coordinados',
+        air_customs_clearence_adv2: 'Asesoría Personalizada',
+        air_customs_clearence_adv2_desc: 'Expertos en cada etapa del proceso aduanal',
+        air_customs_clearence_adv3: 'Cumplimiento Total',
+        air_customs_clearence_adv3_desc: 'Normas SAT, Secretaría de Economía y autoridades',
+        air_customs_clearence_adv4: 'Visibilidad Total',
+        air_customs_clearence_adv4_desc: 'Trazabilidad con sistemas digitales avanzados',
+        air_customs_clearence_adv5: 'Transparencia en Costos',
+        air_customs_clearence_adv5_desc: 'Sin sorpresas ni cargos ocultos',
+        air_customs_clearence_adv6: 'Optimización de Tiempos',
+        air_customs_clearence_adv6_desc: 'Gestión ágil y liberación oportuna de carga',
+
         // Ventajas Competitivas
         air_advantages_title: 'Ventajas Competitivas',
         air_adv1: '+15 Años de Experiencia',
@@ -150,6 +166,22 @@ const airTranslations = {
         air_support2: 'Storage and Towing',
         air_support3: 'Specialized Personnel',
         air_support4: 'Customs Clearance',
+
+        // Despacho Aduanal
+        air_customs_clearance_title: 'Customs Clearance with IGS Forwarding',
+        air_customs_clearance_subtitle: 'We offer comprehensive customs clearance services, ensuring regulatory compliance and streamlined management of every import and export transaction.',
+        air_customs_clearence_adv1: 'Integrated Coordination',
+        air_customs_clearence_adv1_desc: 'Coordinated maritime, air and land departments',
+        air_customs_clearence_adv2: 'Personalized Advice',
+        air_customs_clearence_adv2_desc: 'Experts in every stage of the customs process',
+        air_customs_clearence_adv3: 'Total Compliance',
+        air_customs_clearence_adv3_desc: 'SAT regulations, Ministry of Economy and authorities',
+        air_customs_clearence_adv4: 'Total Visibility',
+        air_customs_clearence_adv4_desc: 'Traceability with advanced digital systems',
+        air_customs_clearence_adv5: 'Cost Transparency',
+        air_customs_clearence_adv5_desc: 'No surprises or hidden charges',
+        air_customs_clearence_adv6: 'Time Optimization',
+        air_customs_clearence_adv6_desc: 'Agile management and timely release of cargo',
 
         // Ventajas Competitivas
         air_advantages_title: 'Competitive Advantages',

@@ -56,6 +56,22 @@ const landInternationalTranslations = {
         land_support3: 'Personal Especializado',
         land_support4: 'Despacho Aduanal',
 
+        // Despacho Aduanal
+        land_customs_clearance_title: 'Despacho Aduanal con IGS Forwarding',
+        land_customs_clearance_subtitle: 'Ofrecemos un servicio integral de Despacho Aduanal, asegurando el cumplimiento normativo y una gestión ágil en cada operación de importación y exportación.',
+        land_customs_clearence_adv1: 'Coordinación Integrada',
+        land_customs_clearence_adv1_desc: 'Departamentos marítimo, aéreo y terrestre coordinados',
+        land_customs_clearence_adv2: 'Asesoría Personalizada',
+        land_customs_clearence_adv2_desc: 'Expertos en cada etapa del proceso aduanal',
+        land_customs_clearence_adv3: 'Cumplimiento Total',
+        land_customs_clearence_adv3_desc: 'Normas SAT, Secretaría de Economía y autoridades',
+        land_customs_clearence_adv4: 'Visibilidad Total',
+        land_customs_clearence_adv4_desc: 'Trazabilidad con sistemas digitales avanzados',
+        land_customs_clearence_adv5: 'Transparencia en Costos',
+        land_customs_clearence_adv5_desc: 'Sin sorpresas ni cargos ocultos',
+        land_customs_clearence_adv6: 'Optimización de Tiempos',
+        land_customs_clearence_adv6_desc: 'Gestión ágil y liberación oportuna de carga',
+
         // Ventajas Competitivas
         land_advantages_title: 'Ventajas Competitivas',
         land_adv1: '+15 Años de Experiencia',
@@ -127,6 +143,22 @@ const landInternationalTranslations = {
         land_support2: 'Storage and Haulage',
         land_support3: 'Specialized Personnel',
         land_support4: 'Customs Clearance',
+
+        // Despacho Aduanal
+        land_customs_clearance_title: 'Customs Clearance with IGS Forwarding',
+        land_customs_clearance_subtitle: 'We offer comprehensive customs clearance services, ensuring regulatory compliance and streamlined management of every import and export transaction.',
+        land_customs_clearence_adv1: 'Integrated Coordination',
+        land_customs_clearence_adv1_desc: 'Coordinated maritime, air and land departments',
+        land_customs_clearence_adv2: 'Personalized Advice',
+        land_customs_clearence_adv2_desc: 'Experts in every stage of the customs process',
+        land_customs_clearence_adv3: 'Total Compliance',
+        land_customs_clearence_adv3_desc: 'SAT regulations, Ministry of Economy and authorities',
+        land_customs_clearence_adv4: 'Total Visibility',
+        land_customs_clearence_adv4_desc: 'Traceability with advanced digital systems',
+        land_customs_clearence_adv5: 'Cost Transparency',
+        land_customs_clearence_adv5_desc: 'No surprises or hidden charges',
+        land_customs_clearence_adv6: 'Time Optimization',
+        land_customs_clearence_adv6_desc: 'Agile management and timely release of cargo',
 
         // Competitive Advantages
         land_advantages_title: 'Competitive Advantages',

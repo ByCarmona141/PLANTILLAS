@@ -63,6 +63,22 @@ const maritimeTranslations = {
         maritime_support3: 'Personal Especializado',
         maritime_support4: 'Despacho Aduanal',
 
+        // Despacho Aduanal
+        maritime_customs_clearance_title: 'Despacho Aduanal con IGS Forwarding',
+        maritime_customs_clearance_subtitle: 'Ofrecemos un servicio integral de Despacho Aduanal, asegurando el cumplimiento normativo y una gestión ágil en cada operación de importación y exportación.',
+        maritime_customs_clearence_adv1: 'Coordinación Integrada',
+        maritime_customs_clearence_adv1_desc: 'Departamentos marítimo, aéreo y terrestre coordinados',
+        maritime_customs_clearence_adv2: 'Asesoría Personalizada',
+        maritime_customs_clearence_adv2_desc: 'Expertos en cada etapa del proceso aduanal',
+        maritime_customs_clearence_adv3: 'Cumplimiento Total',
+        maritime_customs_clearence_adv3_desc: 'Normas SAT, Secretaría de Economía y autoridades',
+        maritime_customs_clearence_adv4: 'Visibilidad Total',
+        maritime_customs_clearence_adv4_desc: 'Trazabilidad con sistemas digitales avanzados',
+        maritime_customs_clearence_adv5: 'Transparencia en Costos',
+        maritime_customs_clearence_adv5_desc: 'Sin sorpresas ni cargos ocultos',
+        maritime_customs_clearence_adv6: 'Optimización de Tiempos',
+        maritime_customs_clearence_adv6_desc: 'Gestión ágil y liberación oportuna de carga',
+
         // Ventajas Competitivas
         maritime_advantages_title: 'Ventajas Competitivas',
         maritime_adv1: '+15 Años de Experiencia',
@@ -134,6 +150,22 @@ const maritimeTranslations = {
         maritime_support2: 'Storage and Haulage',
         maritime_support3: 'Specialized Personnel',
         maritime_support4: 'Customs Clearance',
+
+        // Despacho Aduanal
+        maritime_customs_clearance_title: 'Customs Clearance with IGS Forwarding',
+        maritime_customs_clearance_subtitle: 'We offer comprehensive customs clearance services, ensuring regulatory compliance and streamlined management of every import and export transaction.',
+        maritime_customs_clearence_adv1: 'Integrated Coordination',
+        maritime_customs_clearence_adv1_desc: 'Coordinated maritime, air and land departments',
+        maritime_customs_clearence_adv2: 'Personalized Advice',
+        maritime_customs_clearence_adv2_desc: 'Experts in every stage of the customs process',
+        maritime_customs_clearence_adv3: 'Total Compliance',
+        maritime_customs_clearence_adv3_desc: 'SAT regulations, Ministry of Economy and authorities',
+        maritime_customs_clearence_adv4: 'Total Visibility',
+        maritime_customs_clearence_adv4_desc: 'Traceability with advanced digital systems',
+        maritime_customs_clearence_adv5: 'Cost Transparency',
+        maritime_customs_clearence_adv5_desc: 'No surprises or hidden charges',
+        maritime_customs_clearence_adv6: 'Time Optimization',
+        maritime_customs_clearence_adv6_desc: 'Agile management and timely release of cargo',
 
         // Competitive Advantages
         maritime_advantages_title: 'Competitive Advantages',
