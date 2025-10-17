@@ -4,24 +4,20 @@
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     transition: all 0.3s;
 }
-
 .navbar-title {
     color: var(--text-secondary-color);
     font-size: 25px;
 }
-
 .navbar-dark {
     background: var(--dark-color) !important;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     transition: all 0.3s;
 }
-
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--primary-color) !important;
 }
-
 .nav-link {
     font-weight: 500;
     color: var(--light-color) !important;
@@ -29,15 +25,12 @@
     transition: color 0.3s;
     position: relative;
 }
-
 .nav-link:hover {
     color: var(--bg-tertiary-color) !important;
 }
-
 .nav-link.active {
     color: var(--bg-primary-color) !important;
 }
-
 .nav-link::after {
     content: '';
     position: absolute;
@@ -49,26 +42,21 @@
     transition: all 0.3s;
     transform: translateX(-50%);
 }
-
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 80%;
 }
-
 .nav-logo-certification-ctpat {
     width: 150px;
     height: 100%;
 }
-
 .nav-logo-certification-iso {
     width: 150px;
     height: 60px;
 }
-
 .nav-dropdown:hover {
     background-color: var(--bg-primary-color);
 }
-
 .nav-dropdown:hover i,
 .nav-dropdown:hover span {
     color: var(--bg-tertiary-color);
@@ -85,10 +73,11 @@
         left: 100%;
         margin-top: 0;
         margin-left: 0;
+        display: none !important;
     }
 
     .dropdown-submenu:hover > .dropdown-menu {
-        display: block;
+        display: block !important;
     }
 
     .dropdown-submenu > a:after {
@@ -104,6 +93,11 @@
         margin-top: 5px;
         margin-right: -10px;
     }
+
+    /* Quitar el ::after del terrestre-toggle en escritorio */
+    .terrestre-toggle::after {
+        display: none !important;
+    }
 }
 
 /* Móvil - submenú debajo */
@@ -115,6 +109,7 @@
         margin-left: 0;
         background-color: rgba(0, 0, 0, 0.1);
         display: none;
+        padding: 0.5rem 0;
     }
 
     .dropdown-submenu .dropdown-menu.show {
@@ -127,19 +122,20 @@
         align-items: center;
     }
 
-    .dropdown-submenu > a::after {
+    .terrestre-toggle::after {
         content: "";
         display: inline-block;
         width: 0.3em;
         height: 0.3em;
         border-right: 0.12em solid currentColor;
         border-bottom: 0.12em solid currentColor;
-        margin-left: 0.5em;
+        margin-left: auto;
+        margin-right: 0.5em;
         transform: rotate(-45deg);
         transition: transform 0.2s;
     }
 
-    .dropdown-submenu > a[aria-expanded="true"]::after {
+    .terrestre-toggle[aria-expanded="true"]::after {
         transform: rotate(45deg);
     }
 }
