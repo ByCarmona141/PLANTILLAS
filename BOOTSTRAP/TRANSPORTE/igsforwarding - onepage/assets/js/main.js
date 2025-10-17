@@ -1,6 +1,15 @@
 // Initialize app after all components are loaded
 function initializeApp() {
     try {
+        // Inicializar el carrusel explícitamente
+        const carouselElement = document.getElementById('carouselCaptions');
+        if (carouselElement) {
+            const carousel = new bootstrap.Carousel(carouselElement, {
+                interval: 4000,
+                ride: 'carousel'
+            });
+        }
+        
         // IMPORTANTE: Aplicar traducciones después de cargar todos los componentes
         if (typeof initializeTranslations === 'function') {
             initializeTranslations();
