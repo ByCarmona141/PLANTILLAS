@@ -18,10 +18,10 @@ const navbarTranslations = {
         nav_servicios: 'Services',
         nav_cotizaciones: 'Quotes',
         nav_contacto: 'Contact',
-        nav_air_int: 'Air',
-        nav_maritime_int: 'Maritime',
-        nav_land_nat: 'Land National',
-        nav_land_int: 'Land International',
+        nav_air_int: 'Air Freight',
+        nav_maritime_int: 'Sea Freight',
+        nav_land_nat: 'National Road Freight',
+        nav_land_int: 'International Road Freight',
         nav_customs: 'Customs Clearance'
     }
 };

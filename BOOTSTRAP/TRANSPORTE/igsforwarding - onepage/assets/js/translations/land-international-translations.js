@@ -132,7 +132,7 @@ const landInternationalTranslations = {
         // Specialized Cargo
         land_special_badge: 'Specialized Cargo',
         land_special_title: 'OOG – Out of Gauge',
-        land_special_desc: 'Maritime transport of machinery, structures and parts that exceed the standard dimensions of a container.',
+        land_special_desc: 'Ground transportation with specific requirements that, due to their characteristics, cannot use 53-foot dry boxes.',
         land_special_feat1: 'Handling of oversized cargo',
         land_special_feat2: 'Specialized logistics planning',
         land_special_feat3: 'Certified equipment and personnel',

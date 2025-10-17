@@ -95,21 +95,6 @@
     text-align: center;
 }
 
-.whatsapp-icon-large {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #25D366, #20BA5A);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: white;
-    margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-    animation: pulse 2s infinite;
-}
-
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -266,12 +251,6 @@
     .btn-selection {
         padding: 12px 25px;
         font-size: 0.95rem;
-    }
-    
-    .whatsapp-icon-large {
-        width: 80px;
-        height: 80px;
-        font-size: 3rem;
     }
     
     .whatsapp-button-card {

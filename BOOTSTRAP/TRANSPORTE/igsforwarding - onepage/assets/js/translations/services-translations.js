@@ -35,7 +35,7 @@ const servicesTranslations = {
         services_subtitle: 'Logistics solutions tailored to your needs',
         
         // Air Service
-        service_air_title: 'Air Shipping',
+        service_air_title: 'Air Freight',
         service_air_desc: 'We provide international air transportation, with scheduled and charter options, connecting key destinations in North America, Europe, the Far East, and Latin America. We offer agility, security and total control through real-time tracking technology.',
         service_air_feat1: 'Fast connections with direct and charter flights.',
         service_air_feat2: 'Priority handling and customs clearance.',
@@ -43,7 +43,7 @@ const servicesTranslations = {
         service_air_feat4: 'Global coverage with personalized attention.',
 
         // Maritime Service
-        service_sea_title: 'Maritime Shipping',
+        service_sea_title: 'Sea Freight',
         service_sea_desc: 'We provide global maritime transport, with routes to Asia, Europe, and Latin America, offering solutions for both full and consolidated loads, with customs clearance and insurance.',
         service_sea_feat1: 'International routes (Mexico, Asia, Europe, LATAM).',
         service_sea_feat2: 'FCL and LCL modalities.',
@@ -51,7 +51,7 @@ const servicesTranslations = {
         service_sea_feat4: 'Operations under CTPAT and ISO 9001:2015 certifications.',
         
         // Land Service
-        service_land_title: 'Land Shipping',
+        service_land_title: 'Road Transport',
         service_land_desc: 'We provide national and international land transportation, with coverage in Mexico, the United States and Canada. We have our own fleet and advanced technology to guarantee punctuality and safety in each shipment.',
         service_land_feat1: 'FTL, LTL, Hot Shot and Milkruns modalities.',
         service_land_feat2: '24/7 satellite tracking with geofencing and unit control.',

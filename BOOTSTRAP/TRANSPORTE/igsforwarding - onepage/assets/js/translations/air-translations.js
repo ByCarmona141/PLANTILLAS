@@ -26,14 +26,24 @@ const airTranslations = {
         air_coverage_global_desc: 'Red global semanal en alianza con WorldWide Alliance (WWA) y socios estratégicos',
 
         // Modalidades de Servicio
-        air_modalities_title: 'Modalidades de Servicio',
+        air_modalities_title: 'Servicios que Ofrecemos',
 
         // Quotation and planning of air routes
         air_qpr_badge: 'Cotización y planeación',
         air_qpr_title: 'Cotización y planeación de rutas aéreas',
         //qpr_desc: 'Ideal para envíos que no requieren un contenedor completo.',
-        air_qpr_feat1: 'Selección de aerolíneas y rutas óptimas',
-        air_qpr_feat2: 'Evaluación de disponibilidad en vuelos CAO (Cargo Aircraft Only) y PAX (Passenger Aircraft)',
+        air_qpr_feat1: 'Selección de aerolíneas y rutas óptimas según destino, tipo de mercancía y urgencia',
+        air_qpr_feat2: 'Evaluación de disponibilidad en vuelos CAO (Cargo Aircraft Only) y PAX (Passenger Aircraft), considerando limitaciones de tamaño, peso y tipo de equipo',
+
+        // Corte de Guia
+        air_gc_badge: 'Corte de Guia',
+        air_gc_title: 'Corte de Guia',
+        air_gc_feat1: 'Coordinación de AWB y documentación IATA estandarizada',
+
+        // Despacho Aduanal
+        air_clearance_badge: 'Despacho Aduanal',
+        air_clearance_title: 'Despacho Aduanal',
+        air_clearance_feat1: 'Coordinación con agentes aduanales en origen y destino',
 
         // DAP / DDP
         air_dd_badge: 'DAP / DDP',
@@ -98,7 +108,7 @@ const airTranslations = {
     },
     en: {
         // Carousel
-        air_service_title: 'Air Shipping',
+        air_service_title: 'Air Freight',
         air_service_desc: 'We provide worldwide air cargo service (except Russia, Belarus, and Ukraine).',
         
         air_service_btn: 'Quote Service',
@@ -115,21 +125,31 @@ const airTranslations = {
         // Cobertura Internacional
         air_coverage_title: 'International Coverage',
         air_coverage_europe_title: 'Weekly Shipments',
-        air_coverage_europe_desc: 'From Latin America to Europe, the Middle East and Africa',
+        air_coverage_europe_desc: 'From Latam to Europe, the Middle East and Africa',
         air_coverage_asia_title: 'Weekly Shipments',
         air_coverage_asia_desc: 'To Asia, with direct sea routes and competitive transit times',
         air_coverage_global_title: 'Confirmed Routes',
         air_coverage_global_desc: 'Weekly global network in alliance with WorldWide Alliance (WWA) and strategic partners',
 
         // Modalidades de Servicio
-        air_modalities_title: 'Service Modalities',
+        air_modalities_title: 'Services We Offer',
 
         // Quotation and planning of air routes
         air_qpr_badge: 'Quotation and planning',
         air_qpr_title: 'Quotation and planning of air routes',
         //qpr_desc: 'Ideal para envíos que no requieren un contenedor completo.',
-        air_qpr_feat1: 'Selection of optimal airlines and routes',
-        air_qpr_feat2: 'Availability assessment on CAO (Cargo Aircraft Only) and PAX (Passenger Aircraft) flights',
+        air_qpr_feat1: 'Selection of optimal airlines and routes based on destination, type of goods, and urgency',
+        air_qpr_feat2: 'Availability assessment for CAO (Cargo Aircraft Only) and PAX (Passenger Aircraft) flights, considering size, weight, and equipment type limitations',
+
+        // Corte de Guia
+        air_gc_badge: 'Guide Cut',
+        air_gc_title: 'Guide Cut',
+        air_gc_feat1: 'Coordination of AWB and standardized IATA documentation',
+
+        // Despacho Aduanal
+        air_clearance_badge: 'Customs Clearance',
+        air_clearance_title: 'Customs Clearance',
+        air_clearance_feat1: 'Coordination with customs agents at origin and destination',
 
         // DAP / DDP
         air_dd_badge: 'DAP / DDP',
