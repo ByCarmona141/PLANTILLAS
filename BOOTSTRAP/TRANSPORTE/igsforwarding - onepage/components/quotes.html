@@ -4,10 +4,30 @@
             <h2 class="section-title" data-translate="quote_title">Solicita tu Cotización</h2>
             <p class="section-subtitle" data-translate="quote_subtitle">Obtén una cotización personalizada en minutos</p>
         </div>
+
+        <!-- Botones de Selección -->
+        <div class="quote-selection-buttons mb-5">
+            <div class="row justify-content-center g-3">
+                <div class="col-sm-auto">
+                    <button type="button" class="btn btn-selection btn-form active" onclick="toggleQuoteView('form')">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span data-translate="quote_method_form">Formulario</span>
+                    </button>
+                </div>
+                <div class="col-sm-auto">
+                    <button type="button" class="btn btn-selection btn-whatsapp" onclick="toggleQuoteView('whatsapp')">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        <span data-translate="quote_method_whatsapp">WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
-            <div class="col-lg-7 mb-4 mb-lg-0">
+            <!-- VISTA FORMULARIO -->
+            <div id="form-view" class="col-lg-7 mb-4 mb-lg-0">
                 <div class="quote-form">
-                    <form id="quoteForm">
+                    <form id="quoteForm" action="https://formspree.io/f/xzzjkblz" method="POST">
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_name">Nombre Completo</label>
@@ -22,21 +42,6 @@
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_phone">Teléfono</label>
                                 <input type="tel" name="phone" class="form-control" required>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label class="form-label fw-bold" data-translate="quote_company">Empresa (Opcional)</label>
-                                <input type="text" name="company" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label class="form-label fw-bold" data-translate="quote_service_type">Tipo de Servicio</label>
-                                <select class="form-select" required>
-                                    <option value="" name="service_type" data-translate="quote_select">Seleccionar...</option>
-                                    <option data-translate="quote_opt_air">Envío Aéreo</option>
-                                    <option data-translate="quote_opt_sea">Envío Marítimo</option>
-                                    <option data-translate="quote_opt_land">Envío Terrestre</option>
-                                </select>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label class="form-label fw-bold" data-translate="quote_weight">Peso Aproximado (kg)</label>
@@ -63,7 +68,143 @@
                         </button>
                     </form>
                 </div>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4 data-translate="contact_address">Dirección</h4>
+                            <p class="text-muted">
+                                Blvd. Sinfonía 3D, int. 107. Lomas de Angelópolis. <br> San Andrés Cholula, Puebla. CP. 72830
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4 data-translate="contact_schedule_title">Horario de atención</h4>
+                            <p class="text-muted">
+                                <span data-translate="contact_schedule_week">Lun - Vie: 9:00 AM - 6:00 PM</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- VISTA WHATSAPP -->
+            <div id="whatsapp-view" class="col-lg-7 mb-4 mb-lg-0" style="display: none;">
+                <div class="whatsapp-contact-container">
+                    <div class="whatsapp-info mb-5">
+                        <div class="whatsapp-icon-large">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4 class="mt-4 mb-3" data-translate="quote_whatsapp_title">Contáctanos por WhatsApp</h4>
+                        <p class="text-muted mb-4" data-translate="quote_whatsapp_desc">Obtén una respuesta inmediata de nuestro equipo</p>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <div class="whatsapp-card">
+                                <div class="whatsapp-icon">
+                                    <i class="fa-solid fa-plane-departure"></i>
+                                </div>
+                                <h4 data-translate="air_whatsapp">Envío Aéreo</h4>
+                                <div class="d-flex justify-content-center">
+                                    <a 
+                                    href="https://wa.me/2227185252?text=Gracias por ponerse en contacto con *IGS FORWARDING*!%0A%0ASomos una empresa especializada en servicios marítimos internacionales, ofreciendo las siguientes soluciones:%0A%0A*• Carga Consolidada (LCL):* Ideal para envíos pequeños o medianos, con rutas directas y tiempos de tránsito reducidos.%0A*• Contenedor Completo (FCL):* Flexibilidad en rutas, tarifas competitivas y opciones de servicio puerta a puerta.%0A%0A*Contamos con soporte en los principales puertos de México:* Veracruz, Altamira, Manzanillo y Lázaro Cárdenas.%0A%0APara proporcionarle una cotización detallada, por favor indíquenos:%0A%0A*Puerto de origen:*%0A*Puerto de destino:*%0A*Tipo de carga:*%0A*Dimensiones y peso aproximado:*%0A%0ANuestro horario de atención es de lunes a viernes de 9:00 a 18:00 horas.%0A%0AUno de nuestros ejecutivos se pondrá en contacto con usted a la brevedad.%0A%0AAgradecemos su preferencia y quedamos a su disposición para cualquier consulta adicional.%0A%0AAtentamente,%0A*IGS FORWARDING*"
+                                    target="_blank" 
+                                    class="btn custom-btn-tertiary mt-3">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span data-translate="air_service_btn">Cotizar Servicio</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="whatsapp-card">
+                                <div class="whatsapp-icon">
+                                    <i class="fa-solid fa-ship"></i>
+                                </div>
+                                <h4 data-translate="air_whatsapp">Envío Marítimo</h4>
+                                <div class="d-flex justify-content-center">
+                                    <a 
+                                    href="https://wa.me/2227185252?text=Gracias por ponerse en contacto con *IGS FORWARDING*!%0A%0ASomos una empresa especializada en servicios marítimos internacionales, ofreciendo las siguientes soluciones:%0A%0A*• Carga Consolidada (LCL):* Ideal para envíos pequeños o medianos, con rutas directas y tiempos de tránsito reducidos.%0A*• Contenedor Completo (FCL):* Flexibilidad en rutas, tarifas competitivas y opciones de servicio puerta a puerta.%0A%0A*Contamos con soporte en los principales puertos de México:* Veracruz, Altamira, Manzanillo y Lázaro Cárdenas.%0A%0APara proporcionarle una cotización detallada, por favor indíquenos:%0A%0A*Puerto de origen:*%0A*Puerto de destino:*%0A*Tipo de carga:*%0A*Dimensiones y peso aproximado:*%0A%0ANuestro horario de atención es de lunes a viernes de 9:00 a 18:00 horas.%0A%0AUno de nuestros ejecutivos se pondrá en contacto con usted a la brevedad.%0A%0AAgradecemos su preferencia y quedamos a su disposición para cualquier consulta adicional.%0A%0AAtentamente,%0A*IGS FORWARDING*" 
+                                    target="_blank" 
+                                    class="btn custom-btn-tertiary mt-3">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span data-translate="air_service_btn">Cotizar Servicio</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="whatsapp-card">
+                                <div class="whatsapp-icon">
+                                    <i class="fa-solid fa-truck"></i>
+                                </div>
+                                <h4 data-translate="air_whatsapp">Envío Terrestre Internacional</h4>
+                                <div class="d-flex justify-content-center">
+                                    <a 
+                                    href="https://wa.me/2212704639?text=Gracias por comunicarse con *IGS FORWARDING*.%0A%0ASomos una empresa con amplia experiencia en *transporte terrestre internacional*, brindando soluciones integrales y seguras para sus envíos.%0A%0A*Nuestros servicios incluyen:*%0A• Transporte de carga completa (FTL) y consolidada (LTL).%0A• Rastreo satelital 24/7 y cobertura en toda la República Mexicana.%0A• Flotilla propia y red de aliados estratégicos en Norteamérica.%0A• Cumplimiento con certificaciones *CTPAT* e *ISO 9001:2015*.%0A%0APara brindarle una cotización personalizada, por favor indíquenos:%0A• Origen:%0A• Destino:%0A• Tipo de carga:%0A• Dimensiones y peso aproximado:%0A%0A*Horario de atención:* lunes a viernes de 9:00 a 18:00 horas.%0AUno de nuestros ejecutivos se pondrá en contacto con usted lo antes posible.%0A%0AAgradecemos su confianza y quedamos atentos a sus requerimientos logísticos.%0A%0A*Atentamente,*%0A*IGS FORWARDING*" 
+                                    target="_blank" 
+                                    class="btn custom-btn-tertiary mt-3">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span data-translate="air_service_btn">Cotizar Servicio</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="whatsapp-card">
+                                <div class="whatsapp-icon">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <h4 data-translate="air_whatsapp">Envío Terrestre Nacional</h4>
+                                <div class="d-flex justify-content-center">
+                                    <a 
+                                    href="https://wa.me/2227185252?text=Gracias por ponerse en contacto con *IGS FORWARDING*!%0A%0ASomos una empresa especializada en servicios marítimos internacionales, ofreciendo las siguientes soluciones:%0A%0A*• Carga Consolidada (LCL):* Ideal para envíos pequeños o medianos, con rutas directas y tiempos de tránsito reducidos.%0A*• Contenedor Completo (FCL):* Flexibilidad en rutas, tarifas competitivas y opciones de servicio puerta a puerta.%0A%0A*Contamos con soporte en los principales puertos de México:* Veracruz, Altamira, Manzanillo y Lázaro Cárdenas.%0A%0APara proporcionarle una cotización detallada, por favor indíquenos:%0A%0A*Puerto de origen:*%0A*Puerto de destino:*%0A*Tipo de carga:*%0A*Dimensiones y peso aproximado:*%0A%0ANuestro horario de atención es de lunes a viernes de 9:00 a 18:00 horas.%0A%0AUno de nuestros ejecutivos se pondrá en contacto con usted a la brevedad.%0A%0AAgradecemos su preferencia y quedamos a su disposición para cualquier consulta adicional.%0A%0AAtentamente,%0A*IGS FORWARDING*" 
+                                    target="_blank" 
+                                    class="btn custom-btn-tertiary mt-3">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span data-translate="air_service_btn">Cotizar Servicio</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="contact-info-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h4 data-translate="contact_address">Dirección</h4>
+                                <p class="text-muted">
+                                    Blvd. Sinfonía 3D, int. 107. Lomas de Angelópolis. <br> San Andrés Cholula, Puebla. CP. 72830
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="contact-info-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h4 data-translate="contact_schedule_title">Horario de atención</h4>
+                                <p class="text-muted">
+                                    <span data-translate="contact_schedule_week">Lun - Vie: 9:00 AM - 6:00 PM</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
             <div class="col-lg-5">
                 <div class="quote-info">
                     <h3 class="mb-4" data-translate="quote_info_title">¿Por qué cotizar con nosotros?</h3>
@@ -87,20 +228,16 @@
                         <h5 data-translate="quote_info4_title">Sin Compromiso</h5>
                         <p class="mb-0" data-translate="quote_info4_desc">Cotización 100% gratuita y sin obligación</p>
                     </div>
-                    <!-- <div class="mt-4 pt-4 border-top border-light">
+                    <div class="mt-4 pt-4 border-top border-light">
                         <p class="mb-2">
                             <i class="fas fa-phone me-2"></i>
-                            +52 (81) 1234-5678
+                            +52 221 270 4639
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-envelope me-2"></i>
-                            cotizaciones@packexpress.com
+                            trafico.int@igsforwarding.com.mx
                         </p>
-                        <p class="mb-0">
-                            <i class="fas fa-clock me-2"></i>
-                            <span data-translate="quote_schedule">Lun - Vie: 9:00 AM - 6:00 PM</span>
-                        </p>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
