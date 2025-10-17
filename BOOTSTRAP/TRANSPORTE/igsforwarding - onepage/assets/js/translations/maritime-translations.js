@@ -24,8 +24,8 @@ const maritimeTranslations = {
         maritime_coverage_global_title: 'Rutas Confirmadas',
         maritime_coverage_global_desc: 'Red global semanal en alianza con WorldWide Alliance (WWA) y socios estratégicos',
 
-        // Modalidades de Servicio
-        maritime_modalities_title: 'Modalidades de Servicio',
+        // Servicios que Ofrecemos
+        maritime_modalities_title: 'Servicios que Ofrecemos',
 
         // LCL
         maritime_lcl_badge: 'Carga Consolidada',
@@ -112,8 +112,8 @@ const maritimeTranslations = {
         maritime_coverage_global_title: 'Confirmed Routes',
         maritime_coverage_global_desc: 'Weekly global network in alliance with WorldWide Alliance (WWA) and strategic partners',
 
-        // Service Modalities
-        maritime_modalities_title: 'Service Modalities',
+        // Services We Offer
+        maritime_modalities_title: 'Services We Offer',
 
         // LCL
         maritime_lcl_badge: 'Consolidated Cargo',

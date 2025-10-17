@@ -34,17 +34,23 @@
                                 <span data-translate="nav_maritime_int">Marítimo</span>
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item nav-dropdown" href="land-national.html">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle terrestre-toggle" href="#" id="terrestreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-truck me-2"></i>
-                                <span data-translate="nav_land_nat">Terrestre Nacional</span>
+                                <span data-translate="nav_land">Terrestre</span>
                             </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item nav-dropdown" href="land-international.html">
-                                <i class="fa-solid fa-truck-fast me-2"></i>
-                                <span data-translate="nav_land_int">Terrestre Internacional</span>
-                            </a>
+                            <ul class="dropdown-menu terrestre-submenu" aria-labelledby="terrestreDropdown">
+                                <li>
+                                    <a class="dropdown-item nav-dropdown" href="land-national.html">
+                                        <span data-translate="nav_land_nat">Nacional</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item nav-dropdown" href="land-international.html">
+                                        <span data-translate="nav_land_int">Internacional</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>

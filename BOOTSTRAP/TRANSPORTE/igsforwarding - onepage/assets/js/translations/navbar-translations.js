@@ -8,8 +8,9 @@ const navbarTranslations = {
         nav_contacto: 'Contacto',
         nav_air_int: 'Aéreo',
         nav_maritime_int: 'Marítimo',
-        nav_land_nat: 'Terrestre Nacional',
-        nav_land_int: 'Terrestre Internacional',
+        nav_land: 'Terrestre',
+        nav_land_nat: 'Nacional',
+        nav_land_int: 'Internacional',
         nav_customs: 'Despacho Aduanal'
     },
     en: {
@@ -20,8 +21,9 @@ const navbarTranslations = {
         nav_contacto: 'Contact',
         nav_air_int: 'Air Freight',
         nav_maritime_int: 'Sea Freight',
-        nav_land_nat: 'National Road Freight',
-        nav_land_int: 'International Road Freight',
+        nav_land: 'Land Freight',
+        nav_land_nat: 'National',
+        nav_land_int: 'International',
         nav_customs: 'Customs Clearance'
     }
 };

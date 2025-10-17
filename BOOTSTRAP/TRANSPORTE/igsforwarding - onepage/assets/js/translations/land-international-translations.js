@@ -23,8 +23,8 @@ const landInternationalTranslations = {
         land_coverage_global_title: 'Rutas Confirmadas',
         land_coverage_global_desc: 'Red global semanal en alianza con WorldWide Alliance (WWA) y socios estratégicos',
 
-        // Modalidades de Servicio
-        land_modalities_title: 'Modalidades de Servicio',
+        // Servicios que Ofrecemos
+        land_modalities_title: 'Servicios que Ofrecemos',
 
         // LTL
         land_ltl_badge: 'Carga Consolidada',
@@ -104,8 +104,8 @@ const landInternationalTranslations = {
         land_coverage_global_title: 'Confirmed Routes',
         land_coverage_global_desc: 'Weekly global network in alliance with WorldWide Alliance (WWA) and strategic partners',
 
-        // Service Modalities
-        land_modalities_title: 'Service Modalities',
+        // Services We Offer
+        land_modalities_title: 'Services We Offer',
 
         // LTL
         land_ltl_badge: 'Consolidated Cargo',

@@ -24,8 +24,8 @@ const landNationalTranslations = {
         land_national_coverage_title: 'Rutas Confirmadas',
         land_national_coverage_desc: 'Amplias zonas estratégicas',
 
-        // Modalidades de Servicio
-        land_national_modalities_title: 'Modalidades de Servicio',
+        // Servicios que Ofrecemos
+        land_national_modalities_title: 'Servicios que Ofrecemos',
 
         // FTL
         land_national_ftl_badge: 'FTL',
@@ -93,8 +93,8 @@ const landNationalTranslations = {
         land_national_coverage_title: 'Confirmed Routes',
         land_national_coverage_desc: 'Large strategic areas',
 
-        // Service Modalities
-        land_national_modalities_title: 'Service Modalities',
+        // Services We Offer
+        land_national_modalities_title: 'Services We Offer',
 
         // FTL
         land_national_ftl_badge: 'FTL',
