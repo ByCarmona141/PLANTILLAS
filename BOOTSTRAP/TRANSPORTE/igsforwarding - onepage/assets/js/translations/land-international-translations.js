@@ -8,7 +8,7 @@ const landInternationalTranslations = {
 
         // Lugares de Operación
         land_locations_title: 'Lugares de Operación en Norteamérica',
-        land_locations_subtitle: 'Servicio seguro, puntual y transparente, respaldado por alianzas internacionales.',
+        land_locations_subtitle: 'Nuestro compromiso es ofrecer un servicio seguro, puntual y transparente, respaldado por alianzas internacionales.',
         
         land_locations_canada: 'Canadá',
         land_locations_usa: 'Estados Unidos',
@@ -30,8 +30,8 @@ const landInternationalTranslations = {
         land_ltl_badge: 'Carga Consolidada',
         land_ltl_title: 'LTL – Less than Truck Load',
         land_ltl_desc: 'Ideal para cargas entarimadas que no llenan el tractor y que no tienen un carácter urgente.',
-        land_ltl_feat1: 'Servicio de carga consolidada puerta a puerta',
-        land_ltl_feat2: 'Servicio de carga consolidado intra USA, o Intra México',
+        land_ltl_feat1: 'Servicio de carga consolidada puerta a puerta, desde o hacia México a cualquier ciudad de la Unión Americana o Canadá',
+        land_ltl_feat2: 'Servicio de carga consolidado intra USA, o Intra México, ideal para servicios consolidados que llegan a frontera solamente, o entre ciudades de la unión americana, o entre ciudades de México',
         land_ltl_feat3: 'Reducción de costos mediante el uso compartido del espacio del contenedor',
         land_ltl_feat4: 'Tarifas competitivas y transparentes',
 
@@ -39,22 +39,24 @@ const landInternationalTranslations = {
         land_ftl_badge: 'Contenedor Completo',
         land_ftl_title: 'FTL – Full Truck load',
         land_ftl_desc: 'Perfecto para cargas exclusivas o de gran volumen.',
-        land_ftl_feat1: 'Servicio de flete de caja directa puerta a puerta para importación o exportación',
-        land_ftl_feat2: 'Servicio de flete de caja a transbordo en frontera para  exportación',
+        land_ftl_feat1: 'Servicio de flete de caja directa puerta a puerta para importación o exportación:',
+        land_ftl_feat2: 'se usa la misma caja desde origen hasta destino, lo que permite que no haya manipulación de la carga, ideal para materiales muy sensibles que pueden tener daños',
+        land_ftl_feat3: 'Servicio de flete de caja a transbordo en frontera para  exportación:',
+        land_ftl_feat4: 'Se ofrece el cambio de caja en bodegas de Laredo Texas usa la misma caja desde origen hasta destino, lo que permite un mejor costo y menor tiempo de espera para cargar el material',
 
         // Carga Especializada
         land_special_badge: 'Carga Especializada',
         land_special_title: 'Flatbed, Stepdeck, double drop',
-        land_special_desc: 'Transporte terrestre con requerimientos específicos que por sus características no puedan usar caja seca de 53 pies',
-        special_feat1: 'Manejo de carga sobredimensionada',
-        special_feat2: 'Cargas Hazmat en consolidado y unidades directas',
+        land_special_desc: 'Movemos mercancías con requerimientos específicos que por sus características no puedan usar caja seca de 53 pies',
+        land_special_feat1: 'Sobredimensionada:',
+        land_special_feat2: 'Maquinaria o estructuras que exceden medidas estándar',
+        land_special_feat3: 'Manejo de algunas cargas Hazmat en consolidado y unidades directas',
 
         // Soporte Logístico
         land_support_title: 'Soporte Logístico Integral',
         land_support1: 'Monitoreo en Tiempo Real',
-        land_support2: 'Almacenaje y Arrastre',
-        land_support3: 'Personal Especializado',
-        land_support4: 'Despacho Aduanal',
+        land_support2: 'Personal Especializado',
+        land_support3: 'Despacho Aduanal',
 
         // Despacho Aduanal
         land_customs_clearance_title: 'Despacho Aduanal con IGS Forwarding',
@@ -89,7 +91,7 @@ const landInternationalTranslations = {
 
         // Lugares de Operación
         land_locations_title: 'Locations of Operation in North America',
-        land_locations_subtitle: 'Safe, timely, and transparent service, supported by international alliances.',
+        land_locations_subtitle: 'Our commitment is to offer a safe, timely, and transparent service, supported by international alliances.',
         
         land_locations_canada: 'Canada',
         land_locations_usa: 'United States',
@@ -111,9 +113,9 @@ const landInternationalTranslations = {
         land_ltl_badge: 'Consolidated Cargo',
         land_ltl_title: 'LCL – Less than Container Load',
         land_ltl_desc: 'Ideal for shipments that do not require a full container.',
-        land_ltl_feat1: 'Consolidation and deconsolidation at key ports',
-        land_ltl_feat2: 'Cost reduction through shared space use',
-        land_ltl_feat3: 'Less handling and risks in transit',
+        land_ltl_feat1: 'Door-to-door consolidated cargo service, from or to Mexico to any city in the United States or Canada',
+        land_ltl_feat2: 'Consolidated intra-USA or intra-Mexico cargo service, ideal for consolidated services that reach the border only, or between cities in the American Union, or between cities in Mexico',
+        land_ltl_feat3: 'Cost reduction through shared container space',
         land_ltl_feat4: 'Competitive and transparent rates',
         land_ltl_feat5: '100% neutral service for freight forwarders and direct customers',
 
@@ -121,28 +123,24 @@ const landInternationalTranslations = {
         land_ftl_badge: 'Full Container',
         land_ftl_title: 'FCL – Full Container Load',
         land_ftl_desc: 'Perfect for exclusive or high-volume loads.',
-        land_ftl_feat1: 'Global contracts with leading shipping lines and preferential conditions',
-        land_ftl_feat2: 'Flexible routes and customized rates',
-        land_ftl_feat3: 'Complete advice on documentation and customs clearance',
-        land_ftl_feat4: 'Coverage with cargo and container insurance',
-        land_ftl_modalities: 'Available modalities:',
-        land_ftl_cy: 'CY–CY: Port to Port (Container Yard)',
-        land_ftl_door: 'Door to Door: Comprehensive service with full traceability',
+        land_ftl_feat1: 'Door-to-door direct box freight service for import or export:',
+        land_ftl_feat2: 'The same box is used from origin to destination, which prevents cargo handling, ideal for very sensitive materials that may be damaged',
+        land_ftl_feat3: 'Box freight service to transshipment at the border for export:',
+        land_ftl_feat4: 'Box exchange is offered in Laredo, Texas warehouses. The same box is used from origin to destination, allowing for a better cost and shorter waiting time for loading the material',
 
         // Specialized Cargo
         land_special_badge: 'Specialized Cargo',
-        land_special_title: 'OOG – Out of Gauge',
-        land_special_desc: 'Ground transportation with specific requirements that, due to their characteristics, cannot use 53-foot dry boxes.',
-        land_special_feat1: 'Handling of oversized cargo',
-        land_special_feat2: 'Specialized logistics planning',
-        land_special_feat3: 'Certified equipment and personnel',
+        land_special_title: 'Flatbed, Stepdeck, double drop',
+        land_special_desc: 'We move merchandise with specific requirements that due to their characteristics cannot use a 53-foot dry box.',
+        land_special_feat1: 'Oversized:',
+        land_special_feat2: 'machinery or structures that exceed standard measurements',
+        land_special_feat3: 'Handling of some Hazmat loads in consolidated and direct units',
 
         // Logistics Support
         land_support_title: 'Comprehensive Logistics Support',
         land_support1: 'Real-Time Monitoring',
-        land_support2: 'Storage and Haulage',
-        land_support3: 'Specialized Personnel',
-        land_support4: 'Customs Clearance',
+        land_support2: 'Specialized Personnel',
+        land_support3: 'Customs Clearance',
 
         // Despacho Aduanal
         land_customs_clearance_title: 'Customs Clearance with IGS Forwarding',
