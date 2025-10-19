@@ -44,21 +44,6 @@
 
     <!-- SweetAlert2 -->
     <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Air Freight",
-      "provider": {
-        "@type": "Organization",
-        "name": "IGS Forwarding",
-        "url": "https://igsforwarding.com"
-      },
-      "description": "Servicio profesional de transporte aéreo internacional"
-    }
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -77,7 +62,7 @@
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
     
     <!-- Translations - IMPORTANTE: Cargar ANTES de translations.js -->
-    <script src="assets/js/translations/navbar-translations.js"></script>
+    <script src="assets/js/translations/navbar-services-translations.js"></script>
     <script src="assets/js/translations/home-translations.js"></script>
     <script src="assets/js/translations/about-translations.js"></script>
     <script src="assets/js/translations/services-translations.js"></script>
@@ -93,7 +78,7 @@
     <script src="assets/js/translations.js"></script>
     
     <!-- Main JS - DEBE ir después de translations.js -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main-services.js"></script>
     
     <!-- Load Components -->
     <script>
@@ -111,7 +96,7 @@
         // Load all components
         document.addEventListener('DOMContentLoaded', async function() {
             // Cargar todos los componentes
-            await loadComponent('navbar-container', 'components/navbar.html');
+            await loadComponent('navbar-container', 'components/navbar-services.html');
             await loadComponent('air-container', 'components/services/air/air-page.html');
             await loadComponent('quotes-container', 'components/services/air/quotes.html');
             await loadComponent('footer-container', 'components/footer.html');

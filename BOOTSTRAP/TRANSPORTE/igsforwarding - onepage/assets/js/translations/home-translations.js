@@ -1,12 +1,14 @@
 // Traducciones para el Home/Hero Section
 const homeTranslations = {
     es: {
-        carousel_title_air: 'Envío Aéreo',
-        carousel_subtitle_air: 'Proporcionamos transporte aéreo internacional con opciones programadas y charter, conectando los principales destinos en Norteamérica, Europa, Lejano Oriente y LATAM.',
-        carousel_title_maritime: 'Envío Marítimo',
-        carousel_subtitle_maritime: 'Proporcionamos transporte marítimo global, con rutas hacia Asia, Europa y LATAM.',
-        carousel_title_land: 'Envío Terrestre',
-        carousel_subtitle_land: 'Proporcionamos transporte terrestre nacional e internacional, con cobertura en México, Estados Unidos y Canadá.',
+        carousel_title_air: 'Servicio Aéreo',
+        carousel_subtitle_air: 'En IGS FORWARDING ofrecemos servicio de carga aéreo de alcance mundial (salvo Rusia, Bielorrusia, y Ucrania).',
+        carousel_title_maritime: 'Servicio Marítimo',
+        carousel_subtitle_maritime: 'En IGS FORWARDING conectamos Latinoamérica con los principales mercados del mundo a través de soluciones marítimas confiables, eficientes y personalizadas.',
+        carousel_title_land: 'Servicio Terrestre',
+        carousel_subtitle_land: 'En IGS Forwarding somos especialistas en transporte terrestre nacional FTL (Full Truck Load), ofreciendo soluciones confiables y personalizadas para el movimiento de carga completa en todo el país.',
+        carousel_title_land_international: 'Servicio Terrestre',
+        carousel_subtitle_land_international: 'En IGS FORWARDING ofrecemos servicio terrestre en todo Norteamérica, realizando importaciones o exportaciones entre Canadá, Estados Unidos y México.',
         hero_title: 'Transporte Aéreo, Marítimo y Terrestre',
         hero_subtitle: 'Soluciones de logística profesional con cobertura nacional e internacional. Nuestros servicios son operados por personal ampliamente capacitado, garantizamos que su carga llegue segura y a tiempo a su destino.',
         hero_btn_quote: 'Cotizar Ahora',
