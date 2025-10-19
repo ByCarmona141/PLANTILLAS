@@ -6,7 +6,7 @@
 }
 
 .navbar .nav-link:hover {
-    color: var(--primary-color) !important;
+    color: var(--tertiary-color) !important;
 }
 
 .navbar .nav-link.active {
@@ -14,7 +14,7 @@
 }
 
 .navbar .nav-link::after {
-    background: var(--primary-color);
+    background: var(--tertiary-color);
 }
 
 .bg-dark {

@@ -25,14 +25,18 @@ function initializeApp() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.nav-link');
         
+        // Limpiar activos previos
         navLinks.forEach(link => {
             link.classList.remove('active');
+        });
+        
+        // Marcar el link actual como activo
+        navLinks.forEach(link => {
             const href = link.getAttribute('href');
+            if (!href || href.startsWith('#')) return;
             
-            // Extraer solo el nombre del archivo del href
             const linkPage = href.split('/').pop().split('#')[0];
             
-            // Comparar con la página actual
             if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
                 link.classList.add('active');
             }
@@ -101,11 +105,12 @@ function initializeApp() {
         observer.observe(el);
     });
 }
+
 // Expose changeLanguage to global scope for onclick handlers
-// Añadir verificación para evitar errores si la función no está definida
 window.changeLanguage = typeof changeLanguage === 'function' ? changeLanguage : function(lang) {
     console.warn('changeLanguage function not defined');
 };
+
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
