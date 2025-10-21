@@ -7,7 +7,7 @@ const aboutTranslations = {
         about_stat2: 'Envíos',
         about_stat3: 'Países',
         about_stat4: 'Satisfacción',
-        about_text1: 'Con más de 15 años de experiencia en el sector de la logística y transporte, nos hemos consolidado como una de las empresas más confiables en el envío de paquetes a nivel nacional e internacional.',
+        about_text1: 'Con más de 15 años de experiencia en el sector de la logística y transporte, nos hemos consolidado como una de las empresas más confiables en soluciones logísticas a nivel nacional e internacional.',
         about_text2: 'Nuestra misión es garantizar soluciones integrales en la cadena de suministro de las empresas, a través de la calidad de nuestro servicio, con un equipo altamente capacitado, brindando la mejor atención al cliente y seguimiento en cada embarque.',
         about_feat1: 'Certificación internacional ISO 9001',
         about_feat2: 'Certificación CTPAT (Customs-Trade Partnership Against Terrorism)',
