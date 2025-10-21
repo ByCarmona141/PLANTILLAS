@@ -33,7 +33,7 @@ const maritimeTranslations = {
         maritime_lcl_desc: 'Ideal para envíos que no requieren un contenedor completo.',
         maritime_lcl_feat1: 'Consolidación y desconsolidación en puertos clave',
         maritime_lcl_feat2: 'Reducción de costos mediante uso compartido del espacio',
-        maritime_lcl_feat3: 'Menor manipulación y riesgos en tránsito',
+        maritime_lcl_feat3: 'Rutas flexibles y tarifas personalizadas',
         maritime_lcl_feat4: 'Tarifas competitivas y transparentes',
 
         // FCL
@@ -41,7 +41,7 @@ const maritimeTranslations = {
         maritime_fcl_title: 'FCL – Full Container Load',
         maritime_fcl_desc: 'Perfecto para cargas exclusivas o de gran volumen.',
         maritime_fcl_feat1: 'Contratos globales con navieras líderes y condiciones preferenciales',
-        maritime_fcl_feat2: 'Rutas flexibles y tarifas personalizadas',
+        maritime_fcl_feat2: 'Menor manipulación y riesgos en tránsito',
         maritime_fcl_feat3: 'Asesoría completa en documentación y despacho aduanal',
         maritime_fcl_feat4: 'Cobertura con seguros de mercancía y contenedor',
         maritime_fcl_modalities: 'Modalidades disponibles:',
