@@ -45,8 +45,10 @@ const maritimeTranslations = {
         maritime_fcl_feat3: 'Asesoría completa en documentación y despacho aduanal',
         maritime_fcl_feat4: 'Cobertura con seguros de mercancía y contenedor',
         maritime_fcl_modalities: 'Modalidades disponibles:',
-        maritime_fcl_cy: 'CY–CY: Puerto a Puerto (Container Yard)',
-        maritime_fcl_door: 'Puerta a Puerta: Servicio integral con trazabilidad total',
+        maritime_fcl_door1: 'Puerta a Puerta:',
+        maritime_fcl_door2: 'Servicio integral con trazabilidad total',
+        maritime_fcl_cy1: 'CY-CY:',
+        maritime_fcl_cy2: 'Puerto a Puerto (Container Yard)',
 
         // Carga Especializada
         maritime_special_badge: 'Carga Especializada',
