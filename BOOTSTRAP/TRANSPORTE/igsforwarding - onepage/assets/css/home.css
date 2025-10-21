@@ -2,9 +2,23 @@
 .hero-section {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 120px 0 100px;
+    padding: 60px 0;
     position: relative;
     overflow: hidden;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+    padding-top: 130px;
+}
+
+.hero-main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .full-width-half-height {
@@ -91,7 +105,8 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    animation: slideInRight 0.8s ease 0.3s both;
+    animation: slideInFromRight 1s ease-out 3s forwards;
+    opacity: 0;
 }
 
 .hero-logo-container {
@@ -100,10 +115,11 @@
     align-items: center;
     position: relative;
     z-index: 2;
+    animation: fadeInCenter 1s ease-out forwards, slideToLeft 1s ease-out 2s forwards;
 }
 
 .hero-logo-wrapper {
-    animation: slideInLeft 0.8s ease both;
+    animation: fadeInCenter 1s ease-out forwards, slideToLeft 1s ease-out 2s forwards;
 }
 
 .hero-logo {
@@ -124,10 +140,32 @@
     }
 }
 
-@keyframes slideInLeft {
+@keyframes fadeInCenter {
     from {
         opacity: 0;
-        transform: translateX(-80px);
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-150px);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
     }
     to {
         opacity: 1;
@@ -166,18 +204,35 @@
 /* Responsive */
 @media (max-width: 992px) {
     .hero-logo-container {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         order: -1;
+        animation: fadeInCenter 1s ease-out forwards, slideToLeft 0.8s ease-out 2s forwards;
     }
     
     .hero-logo {
         max-width: 80%;
     }
+    
+    .hero-title {
+        font-size: 2rem;
+        animation: slideInFromRight 0.8s ease-out 2.8s forwards;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 0;
+        height: 50vh;
+        margin-top: 0;
+    }
+    
+    .hero-logo-container {
+        animation: fadeInCenter 0.8s ease-out forwards, slideToLeft 0.8s ease-out 2s forwards;
+    }
+    
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        animation: slideInFromRight 0.8s ease-out 2.8s forwards;
     }
     
     .hero-subtitle {
@@ -189,13 +244,35 @@
     }
     
     .hero-logo-container {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .carousel-title {
+        font-size: 2rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 1rem;
+    }
+    
+    .full-width-half-height {
+        height: 50vh;
     }
 }
 
 @media (max-width: 576px) {
+    .hero-section {
+        padding: 25px 0;
+        height: 50vh;
+    }
+    
+    .hero-logo-container {
+        animation: fadeInCenter 0.8s ease-out forwards, slideToLeft 0.8s ease-out 2s forwards;
+    }
+    
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        animation: slideInFromRight 0.8s ease-out 2.8s forwards;
     }
     
     .hero-subtitle {
@@ -205,5 +282,17 @@
     
     .hero-logo {
         max-width: 50%;
+    }
+    
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .full-width-half-height {
+        height: 50vh;
     }
 }

@@ -9,7 +9,7 @@ const homeTranslations = {
         carousel_subtitle_land: 'En IGS Forwarding somos especialistas en transporte terrestre nacional FTL (Full Truck Load), ofreciendo soluciones confiables y personalizadas para el movimiento de carga completa en todo el país.',
         carousel_title_land_international: 'Servicio Terrestre',
         carousel_subtitle_land_international: 'En IGS FORWARDING ofrecemos servicio terrestre en todo Norteamérica, realizando importaciones o exportaciones entre Canadá, Estados Unidos y México.',
-        hero_title: 'Transporte Aéreo, Marítimo y Terrestre',
+        hero_title: 'Conectamos México con el mundo de manera rápida, segura y confiable',
         hero_subtitle: 'Soluciones de logística profesional con cobertura nacional e internacional. Nuestros servicios son operados por personal ampliamente capacitado, garantizamos que su carga llegue segura y a tiempo a su destino.',
         hero_btn_quote: 'Cotizar Ahora',
         hero_btn_services: 'Ver Servicios',
