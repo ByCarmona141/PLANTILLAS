@@ -66,9 +66,9 @@ const airTranslations = {
         air_dtd_feat1: 'Recolección en planta, despacho de exportación, coordinación aérea, importación y entrega final',
         air_dtd_feat2: 'Seguimiento proactivo de vuelos y coordinación directa con aerolíneas',
         
-        // Carga Especializada
-        air_special_badge: 'Carga Especializada y Sensible',
-        air_special_title: 'Carga Especializada y Sensible',
+        // Carga Especial y Sensible
+        air_special_badge: 'Carga Especial y Sensible',
+        air_special_title: 'Carga Especial y Sensible',
         //air_special_desc: 'Transporte marítimo de maquinaria, estructuras y piezas que exceden las dimensiones estándar de un contenedor.',
         air_special_feat1: 'Mercancías con temperatura controlada (2–8°C, 15–25°C)',
         air_special_feat2: 'Carga valiosa, farmacéutica, tecnológica y obras de arte',

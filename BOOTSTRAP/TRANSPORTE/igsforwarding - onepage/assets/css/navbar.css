@@ -4,20 +4,30 @@
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     transition: all 0.3s;
 }
+
+.navbar-logo {
+    width: 75px;
+    height: 75px;
+    animation: floatingLogo 3s ease-in-out 0.2s infinite;
+}
+
 .navbar-title {
     color: var(--text-secondary-color);
     font-size: 25px;
 }
+
 .navbar-dark {
     background: var(--dark-color) !important;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     transition: all 0.3s;
 }
+
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--primary-color) !important;
 }
+
 .nav-link {
     font-weight: 500;
     color: var(--light-color) !important;
@@ -25,12 +35,15 @@
     transition: color 0.3s;
     position: relative;
 }
+
 .nav-link:hover {
     color: var(--bg-tertiary-color) !important;
 }
+
 .nav-link.active {
     color: var(--bg-primary-color) !important;
 }
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -64,6 +77,18 @@
 
 .dropdown-submenu {
     position: relative;
+}
+
+@keyframes floatingLogo {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Escritorio - submenú a la derecha */

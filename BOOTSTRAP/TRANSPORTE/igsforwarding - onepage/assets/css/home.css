@@ -1,6 +1,6 @@
 /* Hero Section - INICIO */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
     color: white;
     padding: 120px 0 100px;
     position: relative;
@@ -8,55 +8,47 @@
 }
 
 .full-width-half-height {
-    height: 50vh; 
+    height: 50vh;
     width: 100vw;
 }
 
-/* 2. Asegura que el contenedor interno del carrusel también tenga esa altura */
 .full-width-half-height .carousel-inner {
-    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
+    height: 100%;
 }
 
-/* 3. Asegura que cada item del carrusel tenga la altura completa */
 .full-width-half-height .carousel-item {
-    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
+    height: 100%;
 }
 
-/* 4. Estilo para la imagen dentro del carrusel-item */
 .full-width-half-height .carousel-item img {
-    height: 100%; /* La imagen toma la altura completa del item (50vh) */
-    object-fit: cover; /* **IMPORTANTE:** Esto asegura que la imagen cubra el área sin distorsionarse, recortando lo necesario. */
+    height: 100%;
+    object-fit: cover;
 }
 
 .carousel-img {
-    /* Asegura que la imagen sea el 100% del contenedor del item */
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    object-fit: cover;
 }
 
-/* Aplica el degradado usando un pseudo-elemento en el contenedor de la imagen */
 .carousel-item {
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
-    overflow: hidden; /* Opcional, pero buena práctica */
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel-item::before {
-    content: ""; /* Obligatorio para pseudo-elementos */
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Define el degradado: de #A80B24 (arriba) a #000000 (abajo) */
-    /* Usamos rgba para añadir transparencia y que se vea la imagen */
-    /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
     background: linear-gradient(
         135deg,
-        var(--bg-primary-color-hover), /* #A80B24 con 50% de opacidad */
-        var(--bg-secondary-color-hover)      /* #000000 con 70% de opacidad */
+        var(--bg-primary-color-hover),
+        var(--bg-secondary-color-hover)
     );
-    z-index: 1; /* Asegura que el degradado esté por encima de la imagen */
+    z-index: 1;
 }
 
 .carousel-caption {
@@ -99,7 +91,7 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    animation: fadeInUp 0.8s ease;
+    animation: slideInRight 0.8s ease 0.3s both;
 }
 
 .hero-subtitle {
@@ -107,12 +99,30 @@
     font-size: 1.4rem;
     margin-bottom: 30px;
     opacity: 0.95;
-    animation: fadeInUp 1s ease;
+    animation: slideInRight 0.8s ease 0.5s both;
 }
 
-.hero-carousel {
-    height: 50vh;
-    width: 100vh;
+.hero-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-logo-wrapper {
+    animation: slideInLeft 0.8s ease both;
+}
+
+.hero-logo {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    animation: floatingLogo 3s ease-in-out 0.8s infinite;
+}
+
+.hero-logo:hover {
+    animation-play-state: paused;
 }
 
 @keyframes fadeInUp {
@@ -123,6 +133,28 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -143,22 +175,47 @@
     }
 }
 
-.hero-icon-box {
-    background: var(--bg-secondary-color-hover);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-logo-container {
+        margin-bottom: 40px;
+        order: -1;
+    }
+    
+    .hero-logo {
+        max-width: 80%;
+    }
 }
 
-.hero-icon-box:hover {
-    background: var(--bg-tertiary-color-hover);
-    transform: translateY(-10px);
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-logo {
+        max-width: 60%;
+    }
+    
+    .hero-logo-container {
+        margin-bottom: 30px;
+    }
 }
 
-.hero-icon-box i {
-    font-size: 3rem;
-    margin-bottom: 15px;
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .hero-logo {
+        max-width: 50%;
+    }
 }

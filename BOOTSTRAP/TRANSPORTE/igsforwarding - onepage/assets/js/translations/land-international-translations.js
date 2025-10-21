@@ -55,8 +55,9 @@ const landInternationalTranslations = {
         // Soporte Logístico
         land_support_title: 'Soporte Logístico Integral',
         land_support1: 'Monitoreo en Tiempo Real',
-        land_support2: 'Personal Especializado',
-        land_support3: 'Despacho Aduanal',
+        land_support2: 'Trazabilidad Completa',
+        land_support3: 'Personal Especializado',
+        land_support4: 'Despacho Aduanal',
 
         // Despacho Aduanal
         land_customs_clearance_title: 'Despacho Aduanal con IGS Forwarding',
@@ -139,8 +140,9 @@ const landInternationalTranslations = {
         // Logistics Support
         land_support_title: 'Comprehensive Logistics Support',
         land_support1: 'Real-Time Monitoring',
-        land_support2: 'Specialized Personnel',
-        land_support3: 'Customs Clearance',
+        land_support2: 'Complete Traceability',
+        land_support3: 'Specialized Personnel',
+        land_support4: 'Customs Clearance',
 
         // Despacho Aduanal
         land_customs_clearance_title: 'Customs Clearance with IGS Forwarding',

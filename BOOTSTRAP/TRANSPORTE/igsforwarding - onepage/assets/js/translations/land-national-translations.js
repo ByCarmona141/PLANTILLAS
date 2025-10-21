@@ -8,7 +8,7 @@ const landNationalTranslations = {
 
         // Rutas de Operación
         land_national_paths_title: 'Rutas de Operación en México',
-        land_national_paths_subtitle: 'Red de distribución integral que conecta las principales ciudades y zonas industriales de México.',
+        land_national_paths_subtitle: 'Operamos a nivel nacional, conectando los principales corredores industriales y centros productivos del país.',
         land_national_path_northwest: 'Noroeste',
         land_national_path_northeast: 'Noreste',
         land_national_path_central_north: 'Centro-Norte',
@@ -30,28 +30,32 @@ const landNationalTranslations = {
         // FTL
         land_national_ftl_badge: 'FTL',
         land_national_ftl_title: 'FTL – Full Truck Load',
-        land_national_ftl_desc: 'Ideal para volúmenes altos o materiales que requieren control total del espacio y tiempos',
-        land_national_ftl_feat1: 'Transporte exclusivo para carga completa',
+        land_national_ftl_desc: 'Transporte exclusivo para carga completa, ideal para volúmenes altos o materiales que requieren control total del espacio y tiempos.',
+        land_national_ftl_feat1: 'Rutas optimizadas para reducir costos y tiempos de tránsito',
+        land_national_ftl_feat2: 'Seguimiento en tiempo real para cada envío',
 
         // Servicio dedicado
         land_national_sd_badge: 'Servicio Dedicado',
         land_national_sd_title: 'Servicio Dedicado',
-        land_national_sd_desc: 'Asignación de flota exclusiva para proyectos o rutas específicas.',
-        land_national_sd_feat1: 'Disponibilidad permanente',
-        land_national_sd_feat2: 'Control operativo centralizado',
+        land_national_sd_desc: 'Asignación de flota exclusiva para proyectos o rutas específicas, con disponibilidad permanente y control operativo centralizado.',
+        land_national_sd_feat1: 'Atención prioritaria',
+        land_national_sd_feat2: 'Personal especializado',
+        land_national_sd_feat3: 'Reportes de desempeño específicos para cada cliente',
 
         // Servicio spot
         land_national_ss_badge: 'Servicio Spot',
         land_national_ss_title: 'Servicio Spot',
-        land_national_ss_desc: 'Diseñado para cubrir requerimientos eventuales o incrementos temporales de demanda.',
-        land_national_ss_feat1: 'Transporte por viaje',
-        land_national_ss_feat2: 'Transporte por servicio puntual',
+        land_national_ss_desc: 'Transporte por viaje o servicio puntual, diseñado para cubrir requerimientos eventuales o incrementos temporales de demanda.',
+        land_national_ss_feat1: 'Monitoreo en tiempo real',
+        land_national_ss_feat2: 'Coordinación inmediata con el cliente para garantizar flexibilidad',
+        land_national_ss_feat3: 'Control total del envío',
         
         // Servicio Express
         land_national_se_badge: 'Servicio Express',
         land_national_se_title: 'Servicio Express',
-        land_national_se_desc: 'Disponible exclusivamente para clientes con alta recurrencia o contrato activo con IGS.',
-        land_national_se_feat1: 'Entrega urgente en el mismo día',
+        land_national_se_desc: 'Solución de entrega urgente en el mismo día, disponible exclusivamente para clientes con alta recurrencia o contrato activo con IGS.',
+        land_national_se_feat1: 'Comunicación constante durante todo el trayecto',
+        land_national_se_feat2: 'Priorización en la asignación de unidades para cumplir con tiempos críticos de entrega',
 
         // Soporte Logístico
         land_national_support_title: 'Soporte Logístico Integral',
