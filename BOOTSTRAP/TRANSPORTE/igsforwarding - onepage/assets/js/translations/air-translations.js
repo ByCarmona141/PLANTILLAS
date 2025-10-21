@@ -2,7 +2,7 @@
 const airTranslations = {
     es: {
         // Carousel
-        air_service_title: 'Envío Aereo',
+        air_service_title: 'Servicio Aereo',
         air_service_desc: 'Proporcionamos servicio de carga aéreo de alcance mundial (salvo Rusia, Bielorrusia, y Ucrania).',
         
         air_service_btn: 'Cotizar Servicio',

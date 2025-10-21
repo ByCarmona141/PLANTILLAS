@@ -2,7 +2,7 @@
 const maritimeTranslations = {
     es: {
         // Carousel
-        maritime_service_title: 'Envío Marítimo',
+        maritime_service_title: 'Servicio Marítimo',
         maritime_service_desc: 'Proporcionamos transporte marítimo global, con rutas hacia Asia, Europa y LATAM.',
 
         maritime_service_btn: 'Cotizar Servicio',
