@@ -143,7 +143,7 @@
 @keyframes fadeInCenter {
     from {
         opacity: 0;
-        transform: scale(0.5);
+        transform: scale(5);
     }
     to {
         opacity: 1;
@@ -202,11 +202,23 @@
 }
 
 /* Responsive */
+/* Media query para pantallas más grandes que 992px, pero más pequeñas que la configuración de escritorio "full" (ej. hasta 1200px o 1400px) */
+@media (max-width: 1400px) {
+    .hero-title {
+        /* Reduce el tamaño de la fuente para que se vea mejor en el ancho de 1280px */
+        font-size: 2.8rem; 
+        /* Si estás usando animaciones con transform, a veces pueden causar problemas, 
+           aunque no parece ser el caso aquí, ajusta los valores si es necesario. */
+        animation: slideInFromRight 1s ease-out 3s forwards;
+    }
+}
+
+/* Responsive */
 @media (max-width: 992px) {
     .hero-logo-container {
         margin-bottom: 20px;
         order: -1;
-        animation: fadeInCenter 1s ease-out forwards, slideToLeft 0.8s ease-out 2s forwards;
+        animation: fadeInCenter 1s ease-out forwards;
     }
     
     .hero-logo {
@@ -227,7 +239,7 @@
     }
     
     .hero-logo-container {
-        animation: fadeInCenter 0.8s ease-out forwards, slideToLeft 0.8s ease-out 2s forwards;
+        animation: fadeInCenter 0.8s ease-out forwards;
     }
     
     .hero-title {
@@ -267,7 +279,7 @@
     }
     
     .hero-logo-container {
-        animation: fadeInCenter 0.8s ease-out forwards, slideToLeft 0.8s ease-out 2s forwards;
+        animation: fadeInCenter 0.8s ease-out forwards;
     }
     
     .hero-title {
