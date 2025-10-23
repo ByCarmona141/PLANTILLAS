@@ -34,7 +34,7 @@ const airTranslations = {
         // Despacho Aduanal
         air_clearance_badge: 'Despacho Aduanal',
         air_clearance_title: 'Despacho Aduanal',
-        air_clearance_feat1: 'Clasificación conforme a IATA Dangerous Goods Regulations',
+        air_clearance_feat1: 'Coordinación con agentes aduanales en origen y destino',
 
         // DAP / DDP
         air_dd_badge: 'DAP / DDP',
@@ -136,7 +136,7 @@ const airTranslations = {
         // Despacho Aduanal
         air_clearance_badge: 'Customs Clearance',
         air_clearance_title: 'Customs Clearance',
-        air_clearance_feat1: 'Classification according to IATA Dangerous Goods Regulations',
+        air_clearance_feat1: 'Coordination with customs agents at origin and destination',
 
         // DAP / DDP
         air_dd_badge: 'DAP / DDP',

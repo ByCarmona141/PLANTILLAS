@@ -18,6 +18,14 @@ const landInternationalTranslations = {
         // Servicios que Ofrecemos
         land_modalities_title: 'Servicios que Ofrecemos',
 
+        // Bodega Americana y Cruce Fronterizo
+        land_store_badge: 'Bodega Americana y Cruce Fronterizo',
+        land_store_title: 'Bodega Americana y Cruce Fronterizo',
+        land_store_desc: 'Nuestro punto de cruce es Laredo Texas, y ofrecemos servicio de bodega en Laredo Texas. Lo que nos permite ofrecerle:',
+        land_store_feat1: 'Anticipar, consolidar o desaduanar carga antes del cruce',
+        land_store_feat2: 'Consolidación y desconsolidación eficiente',
+        land_store_feat3: 'Mayor control operativo y seguridad',
+
         // LTL
         land_ltl_badge: 'Carga Consolidada',
         land_ltl_title: 'LTL – Less than Truck Load',
@@ -97,6 +105,14 @@ const landInternationalTranslations = {
 
         // Services We Offer
         land_modalities_title: 'Services We Offer',
+
+        // Bodega Americana y Cruce Fronterizo
+        land_store_badge: 'American Warehouse and Border Crossing',
+        land_store_title: 'American Warehouse and Border Crossing',
+        land_store_desc: 'Our crossing point is Laredo, Texas, and we offer warehouse service in Laredo, Texas. This allows us to offer you:',
+        land_store_feat1: 'Anticipate, consolidate or clear cargo before crossing',
+        land_store_feat2: 'Efficient consolidation and deconsolidation',
+        land_store_feat3: 'Greater operational control and security',
 
         // LTL
         land_ltl_badge: 'Consolidated Cargo',
