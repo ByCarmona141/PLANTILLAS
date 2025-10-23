@@ -15,15 +15,6 @@ const landNationalTranslations = {
         land_national_path_central_south: 'Centro-Sur',
         land_national_path_east: 'Oriente',
 
-        // Cobertura Nacional
-        land_national_coverage_title: 'Cobertura Nacional',
-        land_national_coverage_region_title: 'Regiones',
-        land_national_coverage_region_desc: 'Amplias zonas estratégicas',
-        land_national_coverage_week_title: 'Envíos Semanales',
-        land_national_coverage_week_desc: '',
-        land_national_coverage_title: 'Rutas Confirmadas',
-        land_national_coverage_desc: 'Amplias zonas estratégicas',
-
         // Servicios que Ofrecemos
         land_national_modalities_title: 'Servicios que Ofrecemos',
 
@@ -71,7 +62,12 @@ const landNationalTranslations = {
         land_national_adv3: 'Optimización de Costos',
         land_national_adv4: 'Red de Aliados',
         land_national_adv5: 'Soluciones End-to-End',
-        land_national_adv6: 'Soporte Personalizado'
+        land_national_adv6: 'Soporte Personalizado',
+
+        // Cotización
+        land_national_contact_address: 'Dirección',
+        land_national_contact_schedule_title: 'Horario de atención',
+        land_national_contact_schedule_week: 'Lun - Vie: 9:00 AM - 6:00 PM'
     },
     en: {
         land_national_carousel_title: 'National Land Service',
@@ -88,43 +84,38 @@ const landNationalTranslations = {
         land_national_path_central_south: 'Central-South',
         land_national_path_east: 'East',
 
-        // National Coverage
-        land_national_coverage_title: 'National Coverage',
-        land_national_coverage_region_title: 'Regions',
-        land_national_coverage_region_desc: 'Large strategic areas',
-        land_national_coverage_week_title: 'Weekly Shipments',
-        land_national_coverage_week_desc: '',
-        land_national_coverage_title: 'Confirmed Routes',
-        land_national_coverage_desc: 'Large strategic areas',
-
         // Services We Offer
         land_national_modalities_title: 'Services We Offer',
 
         // FTL
         land_national_ftl_badge: 'FTL',
         land_national_ftl_title: 'FTL – Full Truck Load',
-        land_national_ftl_desc: 'Ideal for high volumes or materials that require total control of space and time',
-        land_national_ftl_feat1: 'Exclusive transportation for full load',
+        land_national_ftl_desc: 'Exclusive full-load transportation, ideal for high volumes or materials that require complete control of space and time.',
+        land_national_ftl_feat1: 'Optimized routes to reduce costs and transit times',
+        land_national_ftl_feat2: 'Real-time tracking for each shipment',
 
         // Servicio dedicado
         land_national_sd_badge: 'Dedicated Service',
         land_national_sd_title: 'Dedicated Service',
-        land_national_sd_desc: 'Exclusive fleet allocation for specific projects or routes.',
-        land_national_sd_feat1: 'Permanent availability',
-        land_national_sd_feat2: 'Centralized operational control',
+        land_national_sd_desc: 'Exclusive fleet allocation for specific projects or routes, with permanent availability and centralized operational control.',
+        land_national_sd_feat1: 'Priority attention',
+        land_national_sd_feat2: 'Specialized personnel',
+        land_national_sd_feat3: 'Client-specific performance reports',
 
         // Servicio spot
         land_national_ss_badge: 'Spot Service',
         land_national_ss_title: 'Spot Service',
-        land_national_ss_desc: 'Designed to cover eventual requirements or temporary increases in demand.',
-        land_national_ss_feat1: 'Transportation per trip',
-        land_national_ss_feat2: 'Transportation by punctual service',
+        land_national_ss_desc: 'Transportation per trip or punctual service, designed to cover eventual requirements or temporary increases in demand.',
+        land_national_ss_feat1: 'Real-time monitoring',
+        land_national_ss_feat2: 'Immediate coordination with the client to ensure flexibility',
+        land_national_ss_feat3: 'Full shipping control',
         
         // Servicio Express
         land_national_se_badge: 'Express Service',
         land_national_se_title: 'Express Service',
-        land_national_se_desc: 'Available exclusively for customers with high recurring or active contracts with IGS.',
-        land_national_se_feat1: 'Same-day express delivery',
+        land_national_se_desc: 'Same-day express delivery solution, available exclusively for high-frequency customers or active IGS contracts.',
+        land_national_se_feat1: 'Constant communication throughout the journey',
+        land_national_se_feat2: 'Prioritization in the allocation of units to meet critical delivery times',
 
         // Logistics Support
         land_national_support_title: 'Comprehensive Logistics Support',
@@ -140,6 +131,11 @@ const landNationalTranslations = {
         land_national_adv3: 'Cost Optimization',
         land_national_adv4: 'Network of Allies',
         land_national_adv5: 'End-to-End Solutions',
-        land_national_adv6: 'Personalized Support'
+        land_national_adv6: 'Personalized Support',
+
+        // Cotización
+        land_national_contact_address: 'Address',
+        land_national_contact_schedule_title: 'Schedule of attention',
+        land_national_contact_schedule_week: 'Mon - Fri: 9:00 AM - 6:00 PM'
     }
 };

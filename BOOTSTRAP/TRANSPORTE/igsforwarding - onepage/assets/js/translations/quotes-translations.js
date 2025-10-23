@@ -1,8 +1,9 @@
 // Traducciones para la sección de Cotizaciones
 const quotesTranslations = {
     es: {
-        quote_title: 'Solicita tu Cotización',
+        quote_title: 'Solicita tu Cotización', 
         quote_subtitle: 'Obtén una cotización personalizada en minutos',
+
         quote_name: 'Nombre Completo',
         quote_email: 'Correo Electrónico',
         quote_phone: 'Teléfono',
@@ -17,6 +18,20 @@ const quotesTranslations = {
         quote_destination: 'Ciudad de Destino',
         quote_message: 'Mensaje Adicional',
         quote_btn: 'Solicitar Cotización Gratis',
+
+        quote_contact_address: 'Dirección',
+        quote_contact_schedule_title: 'Horario de atención',
+        quote_contact_schedule: 'Lun - Vie: 9:00 AM - 6:00 PM',
+
+        quote_whatsapp_title: 'Contáctanos por WhatsApp',
+        quote_whatsapp_desc: 'Obtén una respuesta inmediata de nuestro equipo',
+
+        quote_air_whatsapp: 'Servicio Aéreo',
+        quote_sea_whatsapp: 'Servicio Marítimo',
+        quote_land_international_whatsapp: 'Servicio Terrestre Internacional',
+        quote_land_whatsapp: 'Servicio Terrestre Nacional',
+        quote_service_whatsapp_btn: 'Cotizar Servicio',
+
         quote_info_title: '¿Por qué cotizar con nosotros?',
         quote_info1_title: 'Respuesta Inmediata',
         quote_info1_desc: 'Recibirás tu cotización en menos de 2 horas hábiles',
@@ -26,11 +41,11 @@ const quotesTranslations = {
         quote_info3_desc: 'Un experto te acompañará en todo el proceso',
         quote_info4_title: 'Sin Compromiso',
         quote_info4_desc: 'Cotización 100% gratuita y sin obligación',
-        quote_schedule: 'Lun - Vie: 8:00 AM - 7:00 PM'
     },
     en: {
         quote_title: 'Request Your Quote',
         quote_subtitle: 'Get a personalized quote in minutes',
+        
         quote_name: 'Full Name',
         quote_email: 'Email Address',
         quote_phone: 'Phone',
@@ -45,6 +60,20 @@ const quotesTranslations = {
         quote_destination: 'Destination City',
         quote_message: 'Additional Message',
         quote_btn: 'Request Free Quote',
+
+        quote_contact_address: 'Address',
+        quote_contact_schedule_title: 'Schedule of attention',
+        quote_contact_schedule: 'Mon - Fri: 9:00 AM - 6:00 PM',
+
+        quote_whatsapp_title: 'Contact us by WhatsApp',
+        quote_whatsapp_desc: 'Get an immediate response from our team',
+
+        quote_air_whatsapp: 'Air Service',
+        quote_sea_whatsapp: 'Maritime Service',
+        quote_land_international_whatsapp: 'International Ground Service',
+        quote_land_whatsapp: 'National Land Service',
+        quote_service_whatsapp_btn: 'Quote Service',
+
         quote_info_title: 'Why quote with us?',
         quote_info1_title: 'Immediate Response',
         quote_info1_desc: 'You will receive your quote in less than 2 business hours',
@@ -54,6 +83,5 @@ const quotesTranslations = {
         quote_info3_desc: 'An expert will accompany you throughout the process',
         quote_info4_title: 'No Commitment',
         quote_info4_desc: '100% free quote with no obligation',
-        quote_schedule: 'Mon - Fri: 8:00 AM - 7:00 PM'
     }
 };

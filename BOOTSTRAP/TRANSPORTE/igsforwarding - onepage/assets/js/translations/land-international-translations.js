@@ -6,6 +6,7 @@ const landInternationalTranslations = {
 
         land_service_btn: 'Cotizar Servicio',
 
+
         // Lugares de Operación
         land_locations_title: 'Lugares de Operación en Norteamérica',
         land_locations_subtitle: 'Nuestro compromiso es ofrecer un servicio seguro, puntual y transparente, respaldado por alianzas internacionales.',
@@ -13,15 +14,6 @@ const landInternationalTranslations = {
         land_locations_canada: 'Canadá',
         land_locations_usa: 'Estados Unidos',
         land_locations_mexico: 'México',
-
-        // Cobertura Internacional
-        land_coverage_title: 'Cobertura Internacional',
-        land_coverage_europe_title: 'Envíos Semanales',
-        land_coverage_europe_desc: 'Desde Latinoamérica hacia Europa, Medio Oriente y África',
-        land_coverage_asia_title: 'Envíos Semanales',
-        land_coverage_asia_desc: 'Hacia Asia, con rutas marítimas directas y tiempos de tránsito competitivos',
-        land_coverage_global_title: 'Rutas Confirmadas',
-        land_coverage_global_desc: 'Red global semanal en alianza con WorldWide Alliance (WWA) y socios estratégicos',
 
         // Servicios que Ofrecemos
         land_modalities_title: 'Servicios que Ofrecemos',
@@ -40,7 +32,7 @@ const landInternationalTranslations = {
         land_ftl_title: 'FTL – Full Truck load',
         land_ftl_desc: 'Perfecto para cargas exclusivas o de gran volumen.',
         land_ftl_feat1: 'Servicio de flete de caja directa puerta a puerta para importación o exportación:',
-        land_ftl_feat2: 'se usa la misma caja desde origen hasta destino, lo que permite que no haya manipulación de la carga, ideal para materiales muy sensibles que pueden tener daños',
+        land_ftl_feat2: 'Se usa la misma caja desde origen hasta destino, lo que permite que no haya manipulación de la carga, ideal para materiales muy sensibles que pueden tener daños',
         land_ftl_feat3: 'Servicio de flete de caja a transbordo en frontera para  exportación:',
         land_ftl_feat4: 'Se ofrece el cambio de caja en bodegas de Laredo Texas usa la misma caja desde origen hasta destino, lo que permite un mejor costo y menor tiempo de espera para cargar el material',
 
@@ -82,7 +74,12 @@ const landInternationalTranslations = {
         land_adv3: 'Optimización de Tiempos y Costos',
         land_adv4: 'Alianzas Internacionales',
         land_adv5: 'Soluciones End-to-End',
-        land_adv6: 'Soporte Personalizado'
+        land_adv6: 'Soporte Personalizado',
+
+        // Cotización
+        land_international_contact_address: 'Dirección',
+        land_international_contact_schedule_title: 'Horario de atención',
+        land_international_contact_schedule_week: 'Lun - Vie: 9:00 AM - 6:00 PM'
     },
     en: {
         land_carousel_title: 'International Ground Service',
@@ -98,34 +95,24 @@ const landInternationalTranslations = {
         land_locations_usa: 'United States',
         land_locations_mexico: 'Mexico',
 
-        // International Coverage
-        land_coverage_title: 'International Coverage',
-        land_coverage_europe_title: 'Weekly Shipments',
-        land_coverage_europe_desc: 'From Latin America to Europe, Middle East and Africa',
-        land_coverage_asia_title: 'Weekly Shipments',
-        land_coverage_asia_desc: 'To Asia, with direct maritime routes and competitive transit times',
-        land_coverage_global_title: 'Confirmed Routes',
-        land_coverage_global_desc: 'Weekly global network in alliance with WorldWide Alliance (WWA) and strategic partners',
-
         // Services We Offer
         land_modalities_title: 'Services We Offer',
 
         // LTL
         land_ltl_badge: 'Consolidated Cargo',
         land_ltl_title: 'LCL – Less than Container Load',
-        land_ltl_desc: 'Ideal for shipments that do not require a full container.',
+        land_ltl_desc: 'Ideal for palletized loads that do not fill the tractor and are not urgent.',
         land_ltl_feat1: 'Door-to-door consolidated cargo service, from or to Mexico to any city in the United States or Canada',
         land_ltl_feat2: 'Consolidated intra-USA or intra-Mexico cargo service, ideal for consolidated services that reach the border only, or between cities in the American Union, or between cities in Mexico',
         land_ltl_feat3: 'Cost reduction through shared container space',
         land_ltl_feat4: 'Competitive and transparent rates',
-        land_ltl_feat5: '100% neutral service for freight forwarders and direct customers',
 
         // FTL
         land_ftl_badge: 'Full Container',
         land_ftl_title: 'FCL – Full Container Load',
         land_ftl_desc: 'Perfect for exclusive or high-volume loads.',
         land_ftl_feat1: 'Door-to-door direct box freight service for import or export:',
-        land_ftl_feat2: 'The same box is used from origin to destination, which prevents cargo handling, ideal for very sensitive materials that may be damaged',
+        land_ftl_feat2: 'The same box is used from origin to destination, which prevents handling of the load, ideal for very sensitive materials that may be damaged',
         land_ftl_feat3: 'Box freight service to transshipment at the border for export:',
         land_ftl_feat4: 'Box exchange is offered in Laredo, Texas warehouses. The same box is used from origin to destination, allowing for a better cost and shorter waiting time for loading the material',
 
@@ -134,7 +121,7 @@ const landInternationalTranslations = {
         land_special_title: 'Flatbed, Stepdeck, double drop',
         land_special_desc: 'We move merchandise with specific requirements that due to their characteristics cannot use a 53-foot dry box.',
         land_special_feat1: 'Oversized:',
-        land_special_feat2: 'machinery or structures that exceed standard measurements',
+        land_special_feat2: 'Machinery or structures that exceed standard measurements',
         land_special_feat3: 'Handling of some Hazmat loads in consolidated and direct units',
 
         // Logistics Support
@@ -167,6 +154,11 @@ const landInternationalTranslations = {
         land_adv3: 'Cost Optimization',
         land_adv4: 'International Alliances',
         land_adv5: 'End-to-End Solutions',
-        land_adv6: 'Personalized Support'
+        land_adv6: 'Personalized Support',
+
+        // Cotización
+        land_international_contact_address: 'Address',
+        land_international_contact_schedule_title: 'Schedule of attention',
+        land_international_contact_schedule_week: 'Mon - Fri: 9:00 AM - 6:00 PM'
     }
 };
