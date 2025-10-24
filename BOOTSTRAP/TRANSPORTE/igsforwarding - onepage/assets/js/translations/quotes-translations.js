@@ -34,7 +34,7 @@ const quotesTranslations = {
 
         quote_info_title: '¿Por qué cotizar con nosotros?',
         quote_info1_title: 'Respuesta Inmediata',
-        quote_info1_desc: 'Recibirás tu cotización en menos de 2 horas hábiles',
+        quote_info1_desc: 'Recibirás tu cotización en el menor tiempo posible',
         quote_info2_title: 'Precios Competitivos',
         quote_info2_desc: 'Las mejores tarifas del mercado sin costos ocultos',
         quote_info3_title: 'Asesoría Personalizada',
@@ -76,7 +76,7 @@ const quotesTranslations = {
 
         quote_info_title: 'Why quote with us?',
         quote_info1_title: 'Immediate Response',
-        quote_info1_desc: 'You will receive your quote in less than 2 business hours',
+        quote_info1_desc: 'You will receive your quote as soon as possible',
         quote_info2_title: 'Competitive Prices',
         quote_info2_desc: 'The best market rates without hidden costs',
         quote_info3_title: 'Personalized Advice',
