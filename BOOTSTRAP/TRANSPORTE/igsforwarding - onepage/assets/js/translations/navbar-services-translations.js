@@ -11,7 +11,7 @@ const navbarTranslations = {
         nav_home: 'Home',
         nav_air_int: 'Air Freight',
         nav_maritime_int: 'Sea Freight',
-        nav_land_nat: 'Land Freight National',
-        nav_land_int: 'Land Freight International'
+        nav_land_nat: 'Land Freight Natl',
+        nav_land_int: 'Land Freight Intl'
     }
 };
