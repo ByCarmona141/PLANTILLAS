@@ -10,7 +10,9 @@ const contactTranslations = {
         contact_form_phone: 'Teléfono',
         contact_form_subject: 'Asunto',
         contact_form_message: 'Mensaje',
-        contact_form_btn: 'Enviar Mensaje' 
+        contact_form_btn: 'Enviar Mensaje',
+        contact_title_map1: 'Nuestras Oficinas',
+        contact_title_map2: 'Nuestro Patio',
     },
     en: {
         contact_title: 'Contact Us',
@@ -22,6 +24,8 @@ const contactTranslations = {
         contact_form_phone: 'Phone',
         contact_form_subject: 'Subject',
         contact_form_message: 'Message',
-        contact_form_btn: 'Send Message'
+        contact_form_btn: 'Send Message',
+        contact_title_map1: 'Our Offices',
+        contact_title_map2: 'Our Yard',
     }
 };
