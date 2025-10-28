@@ -9,7 +9,7 @@ const homeTranslations = {
         carousel_subtitle_land_international: 'En IGS FORWARDING ofrecemos servicio terrestre en todo Norteamérica, realizando importaciones o exportaciones entre Canadá, Estados Unidos y México.',
         carousel_title_land: 'Servicio Terrestre Nacional',
         carousel_subtitle_land: 'En IGS Forwarding somos especialistas en transporte terrestre nacional FTL (Full Truck Load), ofreciendo soluciones confiables y personalizadas para el movimiento de carga completa en todo el país.',
-        hero_title: 'Conectamos México con el mundo de manera rápida, segura y confiable',
+        hero_title: 'TRANSPORTE INTELIGENTE PARA UN MUNDO EN MOVIMIENTO',
     },
     en: {
         carousel_title_air: 'Air Service',
@@ -20,6 +20,6 @@ const homeTranslations = {
         carousel_subtitle_land_international: 'At IGS FORWARDING, we offer ground service throughout North America, importing and exporting between Canada, the United States, and Mexico.',
         carousel_title_land: 'National Land Service',
         carousel_subtitle_land: 'At IGS Forwarding, we specialize in national FTL (Full Truck Load) land transportation, offering reliable and customized solutions for moving full truckloads across the country.',
-        hero_title: 'We connect Mexico with the world quickly, safely and reliably',
+        hero_title: 'SMART TRANSPORTATION FOR A WORLD IN MOTION',
     }
 };
