@@ -2,7 +2,7 @@
 const landNationalTranslations = {
     es: {
         land_national_carousel_title: 'Servicio Terrestre Nacional',
-        land_national_carousel_subtitle: 'En IGS Forwarding somos especialistas en transporte terrestre nacional FTL (Full Truck Load).',
+        land_national_carousel_subtitle: 'En IGS Forwarding somos una línea de transporte nacional FTL (Full Truck Load).',
 
         land_national_service_btn: 'Cotizar Servicio',
 
@@ -71,13 +71,13 @@ const landNationalTranslations = {
     },
     en: {
         land_national_carousel_title: 'National Land Service',
-        land_national_carousel_subtitle: 'At IGS Forwarding we are specialists in national land transport FTL (Full Truck Load).',
+        land_national_carousel_subtitle: 'At IGS Forwarding we are a national FTL (Full Truck Load) transport line.',
 
         land_national_service_btn: 'Quote Service',
 
         // Routes of Operation
         land_national_paths_title: 'Operating Routes in Mexico',
-        land_national_paths_subtitle: 'We operate from the strategic ports of Veracruz, Altamira, Manzanillo and Lázaro Cárdenas. This national coverage allows us to optimize times, routes and costs, in addition to guaranteeing smooth connections to any global destination.',
+        land_national_paths_subtitle: 'We operate nationwide, connecting the country\'s main industrial corridors and production centers.',
         land_national_path_northwest: 'Northwest',
         land_national_path_northeast: 'Northeast',
         land_national_path_central_north: 'Central-North',
