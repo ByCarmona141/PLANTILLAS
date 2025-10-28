@@ -45,3 +45,18 @@
     justify-content: center;
     color: #666;
 }
+
+/* Section Titles */
+.section-title-map {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .section-title-map {
+        font-size: 1.5rem;
+    }
+}
