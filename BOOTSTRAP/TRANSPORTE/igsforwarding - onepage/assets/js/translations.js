@@ -19,6 +19,7 @@ const translations = mergeTranslations(
     homeTranslations,
     aboutTranslations,
     servicesTranslations,
+    certificationsTranslations,
     quotesTranslations,
     contactTranslations,
     footerTranslations,
