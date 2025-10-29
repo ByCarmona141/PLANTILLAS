@@ -206,7 +206,7 @@
 @media (max-width: 1400px) {
     .hero-title {
         /* Reduce el tamaño de la fuente para que se vea mejor en el ancho de 1280px */
-        font-size: 2.8rem; 
+        font-size: 2.5rem; 
         /* Si estás usando animaciones con transform, a veces pueden causar problemas, 
            aunque no parece ser el caso aquí, ajusta los valores si es necesario. */
         animation: slideInFromRight 1s ease-out 3s forwards;
