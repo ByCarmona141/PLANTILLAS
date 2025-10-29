@@ -1,7 +1,7 @@
 // Traducciones para el Footer
 const footerTranslations = {
     es: {
-        footer_desc: 'Líder en servicios de envío de paquetes con más de 15 años de experiencia. Conectamos México con el mundo de manera rápida, segura y confiable.',
+        footer_desc: 'Líder en servicios logísticos, con más de 15 años de experiencia. Conectamos México con el mundo de manera rápida, segura y confiable.',
         footer_services: 'Servicios',
         footer_air: 'Envío Aéreo',
         footer_sea: 'Envío Marítimo',
@@ -27,14 +27,14 @@ const footerTranslations = {
         footer_in: 'en México'
     },
     en: {
-        footer_desc: 'Leader in package shipping services with over 15 years of experience. We connect Mexico to the world quickly, securely, and reliably.',
+        footer_desc: 'Leader in logistics services, with over 15 years of experience. We connect Mexico with the world quickly, safely, and reliably.',
         footer_services: 'Services',
-        footer_air: 'Air Shipping',
-        footer_sea: 'Sea Shipping',
-        footer_land: 'Land Shipping',
+        footer_air: 'Air Freight',
+        footer_sea: 'Sea Freight',
+        footer_land: 'Road Freight',
         footer_quote: 'Quotes',
         footer_company: 'Company',
-        footer_about: 'About',
+        footer_about: 'About Us',
         footer_blog: 'Blog',
         footer_careers: 'Careers',
         footer_coverage: 'Coverage',

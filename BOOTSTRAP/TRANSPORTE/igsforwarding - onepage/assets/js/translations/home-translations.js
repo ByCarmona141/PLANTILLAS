@@ -1,7 +1,15 @@
 // Traducciones para el Home/Hero Section
 const homeTranslations = {
     es: {
-        hero_title: 'Envío de Paquetes Aéreo, Marítimo y Terrestre',
+        carousel_title_air: 'Servicio Aéreo',
+        carousel_subtitle_air: 'En IGS FORWARDING ofrecemos servicio de carga aéreo de alcance mundial (salvo Rusia, Bielorrusia, y Ucrania).',
+        carousel_title_maritime: 'Servicio Marítimo',
+        carousel_subtitle_maritime: 'En IGS FORWARDING conectamos Latinoamérica con los principales mercados del mundo a través de soluciones marítimas confiables, eficientes y personalizadas.',
+        carousel_title_land: 'Servicio Terrestre',
+        carousel_subtitle_land: 'En IGS Forwarding somos especialistas en transporte terrestre nacional FTL (Full Truck Load), ofreciendo soluciones confiables y personalizadas para el movimiento de carga completa en todo el país.',
+        carousel_title_land_international: 'Servicio Terrestre',
+        carousel_subtitle_land_international: 'En IGS FORWARDING ofrecemos servicio terrestre en todo Norteamérica, realizando importaciones o exportaciones entre Canadá, Estados Unidos y México.',
+        hero_title: 'Transporte Aéreo, Marítimo y Terrestre',
         hero_subtitle: 'Soluciones de logística profesional con cobertura nacional e internacional. Nuestros servicios son operados por personal ampliamente capacitado, garantizamos que su carga llegue segura y a tiempo a su destino.',
         hero_btn_quote: 'Cotizar Ahora',
         hero_btn_services: 'Ver Servicios',
@@ -15,7 +23,13 @@ const homeTranslations = {
         hero_dispatch_desc: 'Cobertura nacional'
     },
     en: {
-        hero_title: 'Shipping Packages by Air, Sea and Land',
+        carousel_title_air: 'Air Freight',
+        carousel_subtitle_air: 'We provide international air transportation with scheduled and charter options, connecting major destinations in North America, Europe, the Far East, and LATAM.',
+        carousel_title_maritime: 'Maritime Freight',
+        carousel_subtitle_maritime: 'We provide global maritime transport, with routes to Asia, Europe and LATAM.',
+        carousel_title_land: 'Land Freight',
+        carousel_subtitle_land: 'We provide national and international ground transportation, with coverage in Mexico, the United States, and Canada.',
+        hero_title: 'Air, Sea and Land Transportation',
         hero_subtitle: 'Professional logistics solutions with national and international coverage. Our services are operated by highly trained personnel, ensuring that your cargo arrives safely and on time at its destination.',
         hero_btn_quote: 'Get Quote Now',
         hero_btn_services: 'See Services',

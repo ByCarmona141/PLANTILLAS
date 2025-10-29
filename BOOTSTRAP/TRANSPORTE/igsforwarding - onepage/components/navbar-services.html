@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/image/logo.png" alt="Logo" width="75" height="75">
+            <span class="navbar-title">IGS Forwarding</span>
+        </a>
+        <img src="assets/image/ctpat.svg" alt="CTPAT" class="nav-logo-certification-ctpat">
+        <img src="assets/image/iso.svg" alt="ISO" class="nav-logo-certification-iso">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html" data-translate="nav_home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap" href="air.html" data-translate="nav_air_int">Aéreo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap" href="maritime.html" data-translate="nav_maritime_int">Marítimo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap" href="land-national.html" data-translate="nav_land_nat">Terrestre Nacional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap" href="land-international.html" data-translate="nav_land_int">Terrestre Internacional</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe me-1"></i>
+                        <span id="currentLang">ES</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('es'); return false;">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/mx.svg" alt="Español" style="width: 20px; margin-right: 8px;">
+                                Español
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('en'); return false;">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg" alt="English" style="width: 20px; margin-right: 8px;">
+                                English
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -34,7 +34,7 @@ const contactTranslations = {
         contact_schedule_sun: 'Sundays: Closed',
         contact_map: 'Location Map',
         contact_map_desc: 'Integrate your Google Maps here',
-        contact_form_title: 'Send Us a Message',
+        contact_form_title: 'Contact Us',
         contact_form_name: 'Name',
         contact_form_email: 'Email',
         contact_form_phone: 'Phone',

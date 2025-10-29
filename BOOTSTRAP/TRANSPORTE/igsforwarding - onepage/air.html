@@ -8,25 +8,25 @@
     <link rel="icon" href="assets/image/logo.png" type="image/x-icon" />
     
     <!-- SEO Meta Tags -->
-    <title>Servicio de Envío Marítimo | IGS Forwarding</title>
-    <meta name="description" content="Transporte marítimo internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
-    <meta name="keywords" content="envío marítimo, FCL, LCL, transporte marítimo, carga consolidada, contenedor completo">
+    <title>Servicio de Envío Aéreo | IGS Forwarding</title>
+    <meta name="description" content="Transporte aéreo internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
+    <meta name="keywords" content="envío aéreo, FCL, LCL, transporte aéreo, carga consolidada, avión completo">
     <meta name="author" content="IGS Forwarding">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://igsforwarding.com/maritime.html">
+    <link rel="canonical" href="https://igsforwarding.com/air.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://igsforwarding.com/maritime.html">
-    <meta property="og:title" content="Servicio de Envío Marítimo | IGS Forwarding">
-    <meta property="og:description" content="Transporte marítimo internacional con cobertura global. FCL y LCL.">
-    <meta property="og:image" content="https://igsforwarding.com/assets/image/maritime/img1.jpg">
+    <meta property="og:url" content="https://igsforwarding.com/air.html">
+    <meta property="og:title" content="Servicio de Envío Aéreo | IGS Forwarding">
+    <meta property="og:description" content="Transporte aéreo internacional con cobertura global. FCL y LCL.">
+    <meta property="og:image" content="https://igsforwarding.com/assets/image/air/img1.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://igsforwarding.com/maritime.html">
-    <meta property="twitter:title" content="Servicio de Envío Marítimo | IGS Forwarding">
-    <meta property="twitter:description" content="Transporte marítimo internacional con cobertura global.">
+    <meta property="twitter:url" content="https://igsforwarding.com/air.html">
+    <meta property="twitter:title" content="Servicio de Envío Aéreo | IGS Forwarding">
+    <meta property="twitter:description" content="Transporte aéreo internacional con cobertura global.">
     
     <!-- Bootstrap CSS -->
     <link href="assets/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -44,21 +44,6 @@
 
     <!-- SweetAlert2 -->
     <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Air Shipping",
-      "provider": {
-        "@type": "Organization",
-        "name": "IGS Forwarding",
-        "url": "https://igsforwarding.com"
-      },
-      "description": "Servicio profesional de transporte aereo internacional"
-    }
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -77,7 +62,7 @@
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
     
     <!-- Translations - IMPORTANTE: Cargar ANTES de translations.js -->
-    <script src="assets/js/translations/navbar-translations.js"></script>
+    <script src="assets/js/translations/navbar-services-translations.js"></script>
     <script src="assets/js/translations/home-translations.js"></script>
     <script src="assets/js/translations/about-translations.js"></script>
     <script src="assets/js/translations/services-translations.js"></script>
@@ -93,7 +78,7 @@
     <script src="assets/js/translations.js"></script>
     
     <!-- Main JS - DEBE ir después de translations.js -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main-services.js"></script>
     
     <!-- Load Components -->
     <script>
@@ -111,7 +96,7 @@
         // Load all components
         document.addEventListener('DOMContentLoaded', async function() {
             // Cargar todos los componentes
-            await loadComponent('navbar-container', 'components/navbar.html');
+            await loadComponent('navbar-container', 'components/navbar-services.html');
             await loadComponent('air-container', 'components/services/air/air-page.html');
             await loadComponent('quotes-container', 'components/services/air/quotes.html');
             await loadComponent('footer-container', 'components/footer.html');
