@@ -1,0 +1,225 @@
+/* Privacy Section - PRIVACY */
+.privacy-section {
+    background: var(--bg-tertiary-color);
+    padding: 80px 20px;
+}
+
+.privacy-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.privacy-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.privacy-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .privacy-header h2 {
+        font-size: 3rem;
+    }
+}
+
+.privacy-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.privacy-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .privacy-content {
+        padding: 25px 20px;
+    }
+}
+
+.privacy-intro {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.privacy-intro p {
+    margin: 0;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.privacy-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacy-section-title i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.privacy-text {
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.privacy-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.privacy-list li {
+    padding: 12px 0 12px 35px;
+    position: relative;
+    color: #555;
+    line-height: 1.8;
+}
+
+.privacy-list li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.privacy-highlight {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ffc107;
+    margin: 25px 0;
+}
+
+.privacy-highlight strong {
+    color: var(--secondary-color);
+}
+
+.privacy-box {
+    background: linear-gradient(135deg, rgba(168, 11, 36, 0.05), rgba(0, 0, 0, 0.05));
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border: 2px solid var(--primary-color);
+}
+
+.privacy-box h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacy-box h4 i {
+    color: var(--primary-color);
+}
+
+.contact-info {
+    background: var(--secondary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+.last-update {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.accordion-privacy {
+    margin-top: 30px;
+}
+
+.accordion-privacy .accordion-item {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-privacy .accordion-button {
+    background: #f8f9fa;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 20px;
+}
+
+.accordion-privacy .accordion-button:not(.collapsed) {
+    background: var(--primary-color);
+    color: white;
+}
+
+.accordion-privacy .accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+.accordion-privacy .accordion-body {
+    padding: 25px;
+    color: #555;
+    line-height: 1.8;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icono -->
+    <link rel="icon" href="assets/image/logo.png" type="image/x-icon" />
+
+    <!-- SEO Meta Tags -->
+    <title>Servicio Terrestre Internacional | IGS Forwarding</title>
+    <meta name="description" content="Transporte terrestre internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
+    <meta name="keywords" content="envío terrestre, FCL, LCL, transporte terrestre, carga consolidada, contenedor completo">
+    <meta name="author" content="IGS Forwarding">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://igsforwarding.com/land-international.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://igsforwarding.com/land-international.html">
+    <meta property="og:title" content="Servicio de Envío Terrestre | IGS Forwarding">
+    <meta property="og:description" content="Transporte terrestre internacional con cobertura global. FCL y LCL.">
+    <meta property="og:image" content="https://igsforwarding.com/assets/image/land-international/img1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://igsforwarding.com/land-international.html">
+    <meta property="twitter:title" content="Servicio de Envío Terrestre | IGS Forwarding">
+    <meta property="twitter:description" content="Transporte terrestre internacional con cobertura global.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="assets/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/privacy.css">
+
+    <!-- SweetAlert2 -->
+    <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <!-- Land International Content -->
+    <div id="privacy-container"></div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    
+    <!-- Translations - IMPORTANTE: Cargar ANTES de translations.js -->
+    <script src="assets/js/translations/navbar-services-translations.js"></script>
+    <script src="assets/js/translations/home-translations.js"></script>
+    <script src="assets/js/translations/about-translations.js"></script>
+    <script src="assets/js/translations/services-translations.js"></script>
+    <script src="assets/js/translations/certifications-translations.js"></script>
+    <script src="assets/js/translations/quotes-translations.js"></script>
+    <script src="assets/js/translations/contact-translations.js"></script>
+    <script src="assets/js/translations/footer-translations.js"></script>
+    <script src="assets/js/translations/air-translations.js"></script>
+    <script src="assets/js/translations/land-international-translations.js"></script>
+    <script src="assets/js/translations/land-national-translations.js"></script>
+    <script src="assets/js/translations/maritime-translations.js"></script>
+    
+    <!-- Translations Main - DEBE ir después de los archivos individuales -->
+    <script src="assets/js/translations.js"></script>
+    
+    <!-- Main JS - DEBE ir después de translations.js -->
+    <script src="assets/js/main-services.js"></script>
+    
+    <!-- Load Components -->
+    <script>
+        // Function to load HTML components
+        async function loadComponent(containerId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error(`Error loading ${filePath}:`, error);
+            }
+        }
+
+        // Load all components
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Cargar todos los componentes
+            await loadComponent('navbar-container', 'components/navbar.html');
+            await loadComponent('privacy-container', 'components/privacy.html');
+            await loadComponent('footer-container', 'components/footer.html');
+            
+            // IMPORTANTE: Esperar un momento para que el DOM se actualice
+            setTimeout(() => {
+                // Initialize main functionality after all components are loaded
+                if (typeof initializeApp === 'function') {
+                    initializeApp();
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>
