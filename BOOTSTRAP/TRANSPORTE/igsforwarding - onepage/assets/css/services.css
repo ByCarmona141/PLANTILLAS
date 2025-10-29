@@ -1,7 +1,7 @@
 /* Services Section - SERVICIOS */
 .services-section {
     padding: 100px 0;
-    background: white;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .service-card {

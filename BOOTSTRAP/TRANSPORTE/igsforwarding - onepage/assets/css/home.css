@@ -1,62 +1,68 @@
 /* Hero Section - INICIO */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 120px 0 100px;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+    padding-top: 130px;
+}
+
+.hero-main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-width-half-height {
+    height: 50vh;
+    width: 100vw;
+}
+
+.full-width-half-height .carousel-inner {
+    height: 100%;
+}
+
+.full-width-half-height .carousel-item {
+    height: 100%;
+}
+
+.full-width-half-height .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item {
     position: relative;
     overflow: hidden;
 }
 
-.full-width-half-height {
-    height: 50vh; 
-    width: 100vw;
-}
-
-/* 2. Asegura que el contenedor interno del carrusel también tenga esa altura */
-.full-width-half-height .carousel-inner {
-    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
-}
-
-/* 3. Asegura que cada item del carrusel tenga la altura completa */
-.full-width-half-height .carousel-item {
-    height: 100%; /* Toma el 100% de la altura de su padre (50vh) */
-}
-
-/* 4. Estilo para la imagen dentro del carrusel-item */
-.full-width-half-height .carousel-item img {
-    height: 100%; /* La imagen toma la altura completa del item (50vh) */
-    object-fit: cover; /* **IMPORTANTE:** Esto asegura que la imagen cubra el área sin distorsionarse, recortando lo necesario. */
-}
-
-.carousel-img {
-    /* Asegura que la imagen sea el 100% del contenedor del item */
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-}
-
-/* Aplica el degradado usando un pseudo-elemento en el contenedor de la imagen */
-.carousel-item {
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
-    overflow: hidden; /* Opcional, pero buena práctica */
-}
-
 .carousel-item::before {
-    content: ""; /* Obligatorio para pseudo-elementos */
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Define el degradado: de #A80B24 (arriba) a #000000 (abajo) */
-    /* Usamos rgba para añadir transparencia y que se vea la imagen */
-    /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
     background: linear-gradient(
         135deg,
-        var(--bg-primary-color-hover), /* #A80B24 con 50% de opacidad */
-        var(--bg-secondary-color-hover)      /* #000000 con 70% de opacidad */
+        var(--bg-primary-color-hover),
+        var(--bg-secondary-color-hover)
     );
-    z-index: 1; /* Asegura que el degradado esté por encima de la imagen */
+    z-index: 1;
 }
 
 .carousel-caption {
@@ -99,20 +105,28 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    animation: fadeInUp 0.8s ease;
+    animation: slideInFromRight 1s ease-out 3s forwards;
+    opacity: 0;
 }
 
-.hero-subtitle {
-    text-align: justify;
-    font-size: 1.4rem;
-    margin-bottom: 30px;
-    opacity: 0.95;
-    animation: fadeInUp 1s ease;
+.hero-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    animation: fadeInCenter 1s ease-out forwards, slideToLeft 1s ease-out 2s forwards;
 }
 
-.hero-carousel {
-    height: 50vh;
-    width: 100vh;
+.hero-logo-wrapper {
+    animation: fadeInCenter 1s ease-out forwards, slideToLeft 1s ease-out 2s forwards;
+}
+
+.hero-logo {
+    width: 150px; 
+    height: auto; 
+    display: block; 
+    margin: 20px auto; 
 }
 
 @keyframes fadeInUp {
@@ -123,6 +137,50 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCenter {
+    from {
+        opacity: 0;
+        transform: scale(5) translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+}
+
+@keyframes slideToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-150px);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -143,22 +201,110 @@
     }
 }
 
-.hero-icon-box {
-    background: var(--bg-secondary-color-hover);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+/* Responsive */
+/* Media query para pantallas más grandes que 992px, pero más pequeñas que la configuración de escritorio "full" (ej. hasta 1200px o 1400px) */
+@media (max-width: 1400px) {
+    .hero-title {
+        /* Reduce el tamaño de la fuente para que se vea mejor en el ancho de 1280px */
+        font-size: 2.8rem; 
+        /* Si estás usando animaciones con transform, a veces pueden causar problemas, 
+           aunque no parece ser el caso aquí, ajusta los valores si es necesario. */
+        animation: slideInFromRight 1s ease-out 3s forwards;
+    }
 }
 
-.hero-icon-box:hover {
-    background: var(--bg-tertiary-color-hover);
-    transform: translateY(-10px);
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-logo-container {
+        margin-bottom: 20px;
+        order: -1;
+        animation: fadeInCenter 1s ease-out forwards;
+    }
+    
+    .hero-logo {
+        max-width: 80%;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        animation: slideInFromRight 0.8s ease-out 2.8s forwards;
+    }
 }
 
-.hero-icon-box i {
-    font-size: 3rem;
-    margin-bottom: 15px;
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 0;
+        height: 50vh;
+        margin-top: 0;
+    }
+    
+    .hero-logo-container {
+        animation: fadeInCenter 0.8s ease-out forwards;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        animation: slideInFromRight 0.8s ease-out 2.8s forwards;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-logo {
+        max-width: 60%;
+    }
+    
+    .hero-logo-container {
+        margin-bottom: 20px;
+    }
+    
+    .carousel-title {
+        font-size: 2rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 1rem;
+    }
+    
+    .full-width-half-height {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 25px 0;
+        height: 50vh;
+    }
+    
+    .hero-logo-container {
+        animation: fadeInCenter 0.8s ease-out forwards;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+        animation: slideInFromRight 0.8s ease-out 2.8s forwards;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .hero-logo {
+        max-width: 50%;
+    }
+    
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .full-width-half-height {
+        height: 50vh;
+    }
 }

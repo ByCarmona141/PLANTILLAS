@@ -2,7 +2,7 @@
 const airTranslations = {
     es: {
         // Carousel
-        air_service_title: 'Envío Aereo',
+        air_service_title: 'Servicio Aereo', 
         air_service_desc: 'Proporcionamos servicio de carga aéreo de alcance mundial (salvo Rusia, Bielorrusia, y Ucrania).',
         
         air_service_btn: 'Cotizar Servicio',
@@ -15,15 +15,6 @@ const airTranslations = {
         airport_gdl: 'GDL',
         airport_mty: 'MTY',
         airport_cun: 'CUN',
-
-        // Cobertura Internacional
-        air_coverage_title: 'Cobertura Internacional',
-        air_coverage_europe_title: 'Envíos Semanales',
-        air_coverage_europe_desc: 'Desde Latinoamérica hacia Europa, Medio Oriente y África',
-        air_coverage_asia_title: 'Envíos Semanales',
-        air_coverage_asia_desc: 'Hacia Asia, con rutas marítimas directas y tiempos de tránsito competitivos',
-        air_coverage_global_title: 'Rutas Confirmadas',
-        air_coverage_global_desc: 'Red global semanal en alianza con WorldWide Alliance (WWA) y socios estratégicos',
 
         // Modalidades de Servicio
         air_modalities_title: 'Servicios que Ofrecemos',
@@ -49,7 +40,7 @@ const airTranslations = {
         air_dd_badge: 'DAP / DDP',
         air_dd_title: 'Revalidaciones y servicios DAP / DDP',
         //dd_desc: 'Perfecto para cargas exclusivas o de gran volumen.',
-        air_dd_feat1: 'Revalidaciones en destino con agentes designados y en México.',
+        air_dd_feat1: 'Revalidaciones en destino con agentes designados y en México',
         air_dd_feat2: 'Manejo de entregas bajo términos DAP (Delivered at Place) y DDP (Delivered Duty Paid)',
 
         // DGR
@@ -66,9 +57,9 @@ const airTranslations = {
         air_dtd_feat1: 'Recolección en planta, despacho de exportación, coordinación aérea, importación y entrega final',
         air_dtd_feat2: 'Seguimiento proactivo de vuelos y coordinación directa con aerolíneas',
         
-        // Carga Especializada
-        air_special_badge: 'Carga Especializada y Sensible',
-        air_special_title: 'Carga Especializada y Sensible',
+        // Carga Especial y Sensible
+        air_special_badge: 'Carga Especial y Sensible',
+        air_special_title: 'Carga Especial y Sensible',
         //air_special_desc: 'Transporte marítimo de maquinaria, estructuras y piezas que exceden las dimensiones estándar de un contenedor.',
         air_special_feat1: 'Mercancías con temperatura controlada (2–8°C, 15–25°C)',
         air_special_feat2: 'Carga valiosa, farmacéutica, tecnológica y obras de arte',
@@ -104,7 +95,12 @@ const airTranslations = {
         air_adv3: 'Optimización de Costos',
         air_adv4: 'Alianzas Internacionales',
         air_adv5: 'Soluciones End-to-End',
-        air_adv6: 'Soporte Personalizado'
+        air_adv6: 'Soporte Personalizado',
+
+        // Cotización
+        air_contact_address: 'Dirección',
+        air_contact_schedule_title: 'Horario de atención',
+        air_contact_schedule_week: 'Lun - Vie: 9:00 AM - 6:00 PM'
     },
     en: {
         // Carousel
@@ -122,15 +118,6 @@ const airTranslations = {
         airport_mty: 'MTY',
         airport_cun: 'CUN',
 
-        // Cobertura Internacional
-        air_coverage_title: 'International Coverage',
-        air_coverage_europe_title: 'Weekly Shipments',
-        air_coverage_europe_desc: 'From Latam to Europe, the Middle East and Africa',
-        air_coverage_asia_title: 'Weekly Shipments',
-        air_coverage_asia_desc: 'To Asia, with direct sea routes and competitive transit times',
-        air_coverage_global_title: 'Confirmed Routes',
-        air_coverage_global_desc: 'Weekly global network in alliance with WorldWide Alliance (WWA) and strategic partners',
-
         // Modalidades de Servicio
         air_modalities_title: 'Services We Offer',
 
@@ -138,8 +125,8 @@ const airTranslations = {
         air_qpr_badge: 'Quotation and planning',
         air_qpr_title: 'Quotation and planning of air routes',
         //qpr_desc: 'Ideal para envíos que no requieren un contenedor completo.',
-        air_qpr_feat1: 'Selection of optimal airlines and routes based on destination, type of goods, and urgency',
-        air_qpr_feat2: 'Availability assessment for CAO (Cargo Aircraft Only) and PAX (Passenger Aircraft) flights, considering size, weight, and equipment type limitations',
+        air_qpr_feat1: 'Selection of optimal airlines and routes according to destination, type of merchandise and urgency',
+        air_qpr_feat2: 'Availability assessment on CAO (Cargo Aircraft Only) and PAX (Passenger Aircraft) flights, considering size, weight and equipment type limitations',
 
         // Corte de Guia
         air_gc_badge: 'Guide Cut',
@@ -173,8 +160,8 @@ const airTranslations = {
         air_dtd_feat2: 'Proactive flight tracking and direct coordination with airlines',
         
         // Carga Especializada
-        air_special_badge: 'Specialized and Sensitive Cargo',
-        air_special_title: 'Specialized and Sensitive Cargo',
+        air_special_badge: 'Special and Sensitive Cargo',
+        air_special_title: 'Special and Sensitive Cargo',
         //air_special_desc: 'Transporte marítimo de maquinaria, estructuras y piezas que exceden las dimensiones estándar de un contenedor.',
         air_special_feat1: 'Temperature-controlled goods (2–8°C, 15–25°C)',
         air_special_feat2: 'Valuable cargo, pharmaceuticals, technology and works of art',
@@ -210,6 +197,11 @@ const airTranslations = {
         air_adv3: 'Cost Optimization',
         air_adv4: 'International Alliances',
         air_adv5: 'End-to-End Solutions',
-        air_adv6: 'Personalized Support'
+        air_adv6: 'Personalized Support',
+
+        // Cotización
+        air_contact_address: 'Address',
+        air_contact_schedule_title: 'Schedule of attention',
+        air_contact_schedule_week: 'Mon - Fri: 9:00 AM - 6:00 PM'
     }
 };

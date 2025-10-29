@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html#inicio">
-            <img src="assets/image/logo.png" alt="Logo" width="75" height="75">
+            <img src="assets/image/logo.png" alt="Logo" class="navbar-logo">
             <span class="navbar-title">IGS Forwarding</span>
         </a>
         <img src="assets/image/ctpat.svg" alt="CTPAT" class="nav-logo-certification-ctpat">
@@ -22,22 +22,10 @@
                         <span data-translate="nav_servicios">Servicios</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <li>
-                            <a class="dropdown-item nav-dropdown" href="air.html">
-                                <i class="fas fa-plane me-2"></i>
-                                <span data-translate="nav_air_int">Aéreo</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item nav-dropdown" href="maritime.html">
-                                <i class="fas fa-ship me-2"></i>
-                                <span data-translate="nav_maritime_int">Marítimo</span>
-                            </a>
-                        </li>
                         <li class="dropdown-submenu">
                             <a class="dropdown-item dropdown-toggle terrestre-toggle" href="#" id="terrestreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-truck me-2"></i>
-                                <span data-translate="nav_terrestre">Terrestre</span>
+                                <span data-translate="nav_land">Terrestre</span>
                             </a>
                             <ul class="dropdown-menu terrestre-submenu" aria-labelledby="terrestreDropdown">
                                 <li>
@@ -51,6 +39,18 @@
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item nav-dropdown" href="maritime.html">
+                                <i class="fas fa-ship me-2"></i>
+                                <span data-translate="nav_maritime_int">Marítimo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item nav-dropdown" href="air.html">
+                                <i class="fas fa-plane me-2"></i>
+                                <span data-translate="nav_air_int">Aéreo</span>
+                            </a>
                         </li>
                     </ul>
                 </li>

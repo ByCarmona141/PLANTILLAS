@@ -1,7 +1,7 @@
 /* Contact Section - CONTACTO */
 .contact-section {
     padding: 100px 0;
-    background: white;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .contact-info-card {
@@ -44,4 +44,19 @@
     align-items: center;
     justify-content: center;
     color: #666;
+}
+
+/* Section Titles */
+.section-title-map {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .section-title-map {
+        font-size: 1.5rem;
+    }
 }
