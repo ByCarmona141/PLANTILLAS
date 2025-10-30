@@ -1,5 +1,5 @@
 .clients-section {
-    background: var(--bg-tertiary-color);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     padding: 80px 20px;
     position: relative;
     overflow: hidden;
