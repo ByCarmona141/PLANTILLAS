@@ -1,5 +1,5 @@
 .clients-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: var(--bg-tertiary-color);
     padding: 80px 20px;
     position: relative;
     overflow: hidden;
@@ -68,12 +68,12 @@
 
 /* Animación hacia la derecha */
 .carousel-row.right {
-    animation: scrollRight 30s linear infinite;
+    animation: scrollRight 25s linear infinite;
 }
 
 /* Animación hacia la izquierda */
 .carousel-row.left {
-    animation: scrollLeft 30s linear infinite;
+    animation: scrollLeft 25s linear infinite;
 }
 
 .carousel-row:hover {
@@ -95,6 +95,28 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+/* Velocidad más rápida en tablets */
+@media (max-width: 768px) {
+    .carousel-row.right {
+        animation: scrollRight 12s linear infinite;
+    }
+
+    .carousel-row.left {
+        animation: scrollLeft 12s linear infinite;
+    }
+}
+
+/* Velocidad aún más rápida en móviles */
+@media (max-width: 480px) {
+    .carousel-row.right {
+        animation: scrollRight 8s linear infinite;
+    }
+
+    .carousel-row.left {
+        animation: scrollLeft 8s linear infinite;
     }
 }
 
