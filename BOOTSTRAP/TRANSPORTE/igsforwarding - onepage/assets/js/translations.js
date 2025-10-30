@@ -20,6 +20,7 @@ const translations = mergeTranslations(
     aboutTranslations,
     servicesTranslations,
     certificationsTranslations,
+    clientsTranslations,
     quotesTranslations,
     contactTranslations,
     footerTranslations,
