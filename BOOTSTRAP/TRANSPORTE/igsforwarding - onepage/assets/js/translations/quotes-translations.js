@@ -3,6 +3,8 @@ const quotesTranslations = {
     es: {
         quote_title: 'Solicita tu Cotización', 
         quote_subtitle: 'Obtén una cotización personalizada en minutos',
+        quote_method_form: 'Formulario',
+        quote_method_whatsapp: 'WhatsApp',
 
         quote_name: 'Nombre Completo',
         quote_email: 'Correo Electrónico',
@@ -45,6 +47,8 @@ const quotesTranslations = {
     en: {
         quote_title: 'Request Your Quote',
         quote_subtitle: 'Get a personalized quote in minutes',
+        quote_method_form: 'Form',
+        quote_method_whatsapp: 'WhatsApp',
         
         quote_name: 'Full Name',
         quote_email: 'Email Address',
@@ -69,7 +73,7 @@ const quotesTranslations = {
         quote_whatsapp_desc: 'Get an immediate response from our team',
 
         quote_air_whatsapp: 'Air Service',
-        quote_sea_whatsapp: 'Maritime Service',
+        quote_sea_whatsapp: 'Sea Freight',
         quote_land_international_whatsapp: 'International Ground Service',
         quote_land_whatsapp: 'National Land Service',
         quote_service_whatsapp_btn: 'Quote Service',

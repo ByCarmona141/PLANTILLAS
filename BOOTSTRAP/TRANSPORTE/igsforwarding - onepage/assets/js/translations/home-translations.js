@@ -14,7 +14,7 @@ const homeTranslations = {
     en: {
         carousel_title_air: 'Air Service',
         carousel_subtitle_air: 'At IGS FORWARDING we offer worldwide air cargo service (except Russia, Belarus, and Ukraine).',
-        carousel_title_maritime: 'Maritime Service',
+        carousel_title_maritime: 'Sea Freight',
         carousel_subtitle_maritime: 'At IGS FORWARDING, we connect LATAM with the world\'s major markets through reliable, efficient, and customized maritime solutions.',
         carousel_title_land_international: 'International Ground Service',
         carousel_subtitle_land_international: 'At IGS FORWARDING, we offer ground service throughout North America, importing and exporting between Canada, the United States, and Mexico.',

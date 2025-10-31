@@ -12,8 +12,11 @@ const landInternationalTranslations = {
         land_locations_subtitle: 'Nuestro compromiso es ofrecer un servicio seguro, puntual y transparente, respaldado por alianzas internacionales.',
         
         land_locations_canada: 'Canadá',
+        land_locations_canada_desc: 'Asociación de carriers autorizados (bonded carriers)',
         land_locations_usa: 'Estados Unidos',
+        land_locations_usa_desc: 'Cobertura en toda la unión americana',
         land_locations_mexico: 'México',
+        land_locations_mexico_desc: 'Punto de cruce en Laredo TX',
 
         // Servicios que Ofrecemos
         land_modalities_title: 'Servicios que Ofrecemos',
@@ -100,8 +103,11 @@ const landInternationalTranslations = {
         land_locations_subtitle: 'Our commitment is to offer a safe, timely, and transparent service, supported by international alliances.',
         
         land_locations_canada: 'Canada',
+        land_locations_canada_desc: 'Association of authorized carriers (bonded carriers)',
         land_locations_usa: 'United States',
+        land_locations_usa_desc: 'Coverage throughout the United States',
         land_locations_mexico: 'Mexico',
+        land_locations_mexico_desc: 'Crossing point in Laredo TX',
 
         // Services We Offer
         land_modalities_title: 'Services We Offer',

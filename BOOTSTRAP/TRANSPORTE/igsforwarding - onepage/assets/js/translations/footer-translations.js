@@ -23,7 +23,7 @@ const footerTranslations = {
         footer_desc: 'Leader in logistics services, with more than 15 years of experience. We connect Mexico to the world quickly, safely, and reliably.',
         footer_services: 'Services',
         footer_air: 'Air Service',
-        footer_sea: 'Maritime Service',
+        footer_sea: 'Sea Freight',
         footer_land_international: 'International Ground Service',
         footer_land_national: 'National Land Service',
         footer_quote: 'Quotes',

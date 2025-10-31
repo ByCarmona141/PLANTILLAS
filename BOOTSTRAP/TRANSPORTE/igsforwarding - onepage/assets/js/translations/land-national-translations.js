@@ -10,10 +10,15 @@ const landNationalTranslations = {
         land_national_paths_title: 'Rutas de Operación en México',
         land_national_paths_subtitle: 'Operamos a nivel nacional, conectando los principales corredores industriales y centros productivos del país.',
         land_national_path_northwest: 'Noroeste',
+        land_national_path_northwest_destinations: '2 Destinos',
         land_national_path_northeast: 'Noreste',
+        land_national_path_northeast_destinations: '3 Destinos',
         land_national_path_central_north: 'Centro-Norte',
+        land_national_path_central_north_destinations: '7 Destinos',
         land_national_path_central_south: 'Centro-Sur',
+        land_national_path_central_south_destinations: '4 Destinos',
         land_national_path_east: 'Oriente',
+        land_national_path_east_destinations: '1 Destino',
 
         // Servicios que Ofrecemos
         land_national_modalities_title: 'Servicios que Ofrecemos',
@@ -79,10 +84,15 @@ const landNationalTranslations = {
         land_national_paths_title: 'Operating Routes in Mexico',
         land_national_paths_subtitle: 'We operate nationwide, connecting the country\'s main industrial corridors and production centers.',
         land_national_path_northwest: 'Northwest',
+        land_national_path_northwest_destinations: '2 Destinations',
         land_national_path_northeast: 'Northeast',
+        land_national_path_northeast_destinations: '3 Destinations',
         land_national_path_central_north: 'Central-North',
+        land_national_path_central_north_destinations: '7 Destinations',
         land_national_path_central_south: 'Central-South',
+        land_national_path_central_south_destinations: '4 Destinations',
         land_national_path_east: 'East',
+        land_national_path_east_destinations: '1 Destination',
 
         // Services We Offer
         land_national_modalities_title: 'Services We Offer',

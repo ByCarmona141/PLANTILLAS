@@ -30,7 +30,7 @@ const servicesTranslations = {
         service_air_btn: 'See more',
 
         // Maritime Service
-        service_sea_title: 'Maritime Service',
+        service_sea_title: 'Sea Freight',
         service_sea_desc: 'We provide global maritime transport, with routes to Asia, Europe, and Latin America, offering solutions for both full and consolidated loads, with customs clearance and insurance.',
         service_sea_btn: 'See more',
 

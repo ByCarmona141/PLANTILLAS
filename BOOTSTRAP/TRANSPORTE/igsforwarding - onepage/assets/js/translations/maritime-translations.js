@@ -88,7 +88,7 @@ const maritimeTranslations = {
     },
     en: {
         // Carousel
-        maritime_service_title: 'Maritime Service',
+        maritime_service_title: 'Sea Freight',
         maritime_service_desc: 'We provide global maritime transport, with routes to Asia, Europe and LATAM.',
 
         maritime_service_btn: 'Quote Service',
