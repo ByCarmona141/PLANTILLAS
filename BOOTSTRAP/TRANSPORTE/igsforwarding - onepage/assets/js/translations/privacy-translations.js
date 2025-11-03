@@ -99,7 +99,7 @@ const privacyTranslations = {
 
         privacy_consent_title: 'Al no oponerse al presente, autorizo el tratamiento y uso de mis datos personales en términos del presente Aviso de Privacidad.',
 
-        privacy_last_update: 'Última actualización: Junio 2024',
+        privacy_last_update: 'Última actualización: Noviembre 2025',
     },
     en: {
         privacy_title: 'Privacy Policy', 
@@ -200,6 +200,6 @@ const privacyTranslations = {
 
         privacy_consent_title: 'By not opposing the present, I authorize the treatment and use of my personal data in terms of the present Privacy Notice.',
 
-        privacy_last_update: 'Last update: June 2024',
+        privacy_last_update: 'Last update: November 2025',
     }
 };
