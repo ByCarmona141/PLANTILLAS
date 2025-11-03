@@ -23,6 +23,7 @@ const translations = mergeTranslations(
     clientsTranslations,
     quotesTranslations,
     contactTranslations,
+    fraudTranslations,
     footerTranslations,
     airTranslations,
     landNationalTranslations,

@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="assets/css/services.css">
     <link rel="stylesheet" href="assets/css/quotes.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/fraud.css">
 
     <!-- SweetAlert2 -->
     <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
@@ -72,6 +73,9 @@
 
     <!-- Contact Section - CONTACTO -->
     <div id="contact-container"></div>
+    
+    <!-- Fraud Section - FRAUDES -->
+    <div id="fraud-container"></div>
 
     <!-- Footer -->
     <div id="footer-container"></div>
@@ -88,6 +92,7 @@
     <script src="assets/js/translations/clients-translations.js"></script>
     <script src="assets/js/translations/quotes-translations.js"></script>
     <script src="assets/js/translations/contact-translations.js"></script>
+    <script src="assets/js/translations/fraud-translations.js"></script>
     <script src="assets/js/translations/footer-translations.js"></script>
     <script src="assets/js/translations/air-translations.js"></script>
     <script src="assets/js/translations/land-national-translations.js"></script>
@@ -125,6 +130,7 @@
             await loadComponent('services-container', 'components/services.html');
             await loadComponent('quotes-container', 'components/quotes.html');
             await loadComponent('contact-container', 'components/contact.html');
+            await loadComponent('fraud-container', 'components/fraud.html');
             await loadComponent('footer-container', 'components/footer.html');
             
             // IMPORTANTE: Esperar un momento para que el DOM se actualice
@@ -134,6 +140,17 @@
                     initializeApp();
                 }
             }, 100);
+
+            // Funcionalidad del Acordeón de Fraudes
+            const fraudHeader = document.getElementById('fraudAccordionHeader');
+            const fraudContent = document.getElementById('fraudAccordionContent');
+            
+            if (fraudHeader && fraudContent) {
+                fraudHeader.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    fraudContent.classList.toggle('active');
+                });
+            }
         });
     </script>
 

@@ -1,0 +1,15 @@
+// Traducciones para la sección de Contacto
+const fraudTranslations = {
+    es: {
+        fraud_title: 'Evita Fraudes',
+        fraud_subtitle: 'Haz click para más información',
+        fraud_strong: 'Para nuestros clientes, usuarios, partners, proveedores y amigos:',
+        fraud_span: 'Se ha detectado a través de comentarios de algunos clientes y partners del giro del transporte, que han tomado nuestra identidad para la ejecución de fraudes, por lo que les solicitamos estén atentos ya que están usando el nombre e imagen de IGS FORWARDING; como empresa nos pronunciamos completamente en contra de este tipo de acciones y confirmamos que ya se están tomando las acciones legales pertinentes, puesto que la confianza que se ha depositado en nosotros para sus servicios es lo más importante para IGS FORWARDING y todo su equipo. Advertimos que la persona que ejecuta estos delitos, se hace llamar Giovanni Pineday trabaja en conjunto con otras personas bajo los correos: transportes@grupoigs1.onmicrosoft.com y igsfinanzas@outlook.com con el número telefónico 56 3134 5961. Por lo que reiteramos que la comunicación oficial de IGS FORWARDING, siempre ha sido y seguirá siendo a través de los correos oficiales con dominio @igsforwarding.com.mx, con los principales contactos de: ventas@igsforwarding.com.mx, info@igsforwarding.com.mx y contabilidad@igsforwarding.com.mx Así mismo, los números telefónicos de la empresa los pueden encontrar en el menú de Contacto, en los cuales estamos para atenderlos las 24 horas del día, los 7 días de la semana. En IGS FORWARDING nos encontramos trabajando de manera continua para brindarles un mejor servicio.',
+    },
+    en: {
+        fraud_title: 'Avoid Fraud',
+        fraud_subtitle: 'Click to learn more',
+        fraud_strong: 'For our clients, users, partners, suppliers and friends:',
+        fraud_span: 'We have detected through comments of some clients and partners in the transportation sector, that they have taken our identity for the execution of frauds, so we ask you to be alert as they are using the name and image of IGS FORWARDING; as a company we pronounce ourselves completely against this type of actions and confirm that we are already taking legal actions. Since the trust you have placed in us for your services is of utmost importance to IGS FORWARDING and its entire team, we want to warn you that the person committing these crimes, who goes by the name Giovanni Pineday, works in conjunction with others using the email addresses transportes@grupoigs1.onmicrosoft.com and igsfinanzas@outlook.com, with the phone number 56 3134 5961. Therefore, we reiterate that official communication from IGS FORWARDING has always been and will continue to be through official email addresses with the domain @igsforwarding.com.mx, specifically the following main contacts: ventas@igsforwarding.com.mx, info@igsforwarding.com.mx, and contabilidad@igsforwarding.com.mx. Likewise, the company\'s phone numbers can be found in the Contact menu, where we are available to assist you 24 hours a day, 7 days a week. At IGS FORWARDING we are constantly working to provide you with better service.',
+    }
+};
