@@ -159,7 +159,7 @@ const landNationalTranslations = {
         land_national_units_capacity1: '3 Tons',
         land_national_units_pallets1: '8 units',
 
-        land_national_units_title2: 'Tailless',
+        land_national_units_title2: 'Bobtail',
         land_national_units_desc2: 'Medium Load',
         land_national_units_measure2: '6-7 x 2.5 x 2.5 m',
         land_national_units_capacity2: '7-9 Tons',
