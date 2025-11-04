@@ -116,6 +116,26 @@
     </script>
 
     <script>
+        function showCategory(category) {
+            // Ocultar todas las grids
+            document.querySelectorAll('.units-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+            
+            // Remover active de todos los tabs
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Mostrar la grid seleccionada
+            document.getElementById(category).classList.add('active');
+            
+            // Activar el tab clickeado
+            event.target.classList.add('active');
+        }
+    </script>
+
+    <script>
     var form = document.getElementById("quoteForm");
     
     async function handleSubmit(event) {

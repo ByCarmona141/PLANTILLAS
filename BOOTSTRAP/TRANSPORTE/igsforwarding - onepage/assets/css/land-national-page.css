@@ -380,3 +380,248 @@
         font-size: 2rem;
     }
 }
+
+/* Land Service Section */
+.land-service-section {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.land-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.land-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.land-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .land-header h2 {
+        font-size: 3rem;
+    }
+}
+
+.land-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.own-fleet-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(168, 11, 36, 0.3);
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 5px 20px rgba(168, 11, 36, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(168, 11, 36, 0.5);
+    }
+}
+
+.own-fleet-badge i {
+    font-size: 1.3rem;
+}
+
+/* Tabs de Categorías */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.category-tab {
+    padding: 15px 40px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--bg-tertiary-button);
+    color: var(--tertiary-button-text);
+}
+
+.category-tab:hover {
+    background-color: var(--bg-tertiary-button-hover);
+    color: var(--tertiary-button-text-hover);
+    transform: translateY(-3px);
+}
+
+.category-tab.active {
+    background-color: var(--bg-tertiary-button-hover);
+    color: var(--tertiary-button-text-hover);
+    border-color: var(--primary-color);
+}
+
+/* Grid de Unidades */
+.units-grid {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.units-grid.active {
+    display: grid;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@media (min-width: 768px) {
+    .units-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .units-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card de Unidad */
+.unit-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.unit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(168, 11, 36, 0.2);
+    border-color: var(--primary-color);
+}
+
+.unit-content {
+    padding: 25px;
+}
+
+.unit-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.unit-title i {
+    color: var(--primary-color);
+}
+
+.unit-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.unit-specs li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #555;
+}
+
+.unit-specs li:last-child {
+    border-bottom: none;
+}
+
+.unit-specs li i {
+    color: var(--primary-color);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.unit-specs li strong {
+    color: var(--secondary-color);
+    min-width: 80px;
+}
+
+.unit-highlight {
+    background: linear-gradient(135deg, rgba(168, 11, 36, 0.1), rgba(0, 0, 0, 0.05));
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.unit-highlight i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.unit-highlight strong {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .land-service-section {
+        padding: 60px 15px;
+    }
+
+    .unit-card {
+        margin-bottom: 0;
+    }
+
+    .category-tabs {
+        gap: 10px;
+    }
+
+    .category-tab {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

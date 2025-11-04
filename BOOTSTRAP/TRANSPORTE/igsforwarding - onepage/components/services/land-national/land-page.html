@@ -41,7 +41,7 @@
     </div>
 
     <!-- Rutas de Operación -->
-    <section class="service-section bg-light">
+    <section class="service-section">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title" data-translate="land_national_paths_title">Rutas de Operación en México</h2>
@@ -93,6 +93,223 @@
                         </div>
                         <h4 data-translate="land_national_path5">Noroeste</h4>
                         <p class="text-muted small" data-translate="land_national_path_destinations5">2 Destinos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unidades -->
+    <section class="land-service-section bg-light" id="terrestre-nacional">
+        <div class="land-container">
+            <!-- Header -->
+            <div class="land-header">
+                <h2 data-translate="land_national_units_title">Nuestras Unidades</h2>
+                <p data-translate="land_national_units_subtitle">
+                    Transportamos tu carga con nuestras unidades propias, garantizando puntualidad y seguridad
+                </p>
+                <div class="own-fleet-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-translate="land_national_units_badge">Flota Propia</span>
+                </div>
+            </div>
+
+            <!-- Tabs de Categorías -->
+            <div class="category-tabs">
+                <button class="category-tab active" onclick="showCategory('caja-seca')">
+                    <i class="fas fa-truck"></i> <span data-translate="land_national_units_box">Caja Seca</span>
+                </button>
+                <button class="category-tab" onclick="showCategory('plataformas')">
+                    <i class="fas fa-pallet"></i> <span data-translate="land_national_units_platforms">Plataformas</span>
+                </button>
+            </div>
+
+            <!-- Caja Seca -->
+            <div class="units-grid active" id="caja-seca">
+                <!-- Camioneta 3.5 -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-pickup"></i>
+                            <span data-translate="land_national_units_title1">Camioneta 3.5</span>
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong data-translate="land_national_units_measure">Medidas:</strong><span data-translate="land_national_units_measure1">4 x 2.5 x 2.5 m</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong data-translate="land_national_units_capacity">Capacidad:</strong><span data-translate="land_national_units_capacity1">3 Toneladas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong data-translate="land_national_units_pallets">Pallets:</strong><span data-translate="land_national_units_pallets1">8 unidades</span>
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-shipping-fast"></i>
+                            <strong data-translate="land_national_units_desc1">Entregas Urbanas</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rabón -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck"></i>
+                            <span data-translate="land_national_units_title2">Rabón</span>
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong data-translate="land_national_units_measure">Medidas:</strong><span data-translate="land_national_units_measure2">6-7 x 2.5 x 2.5 m</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong data-translate="land_national_units_capacity">Capacidad:</strong><span data-translate="land_national_units_capacity2">7-9 Toneladas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong data-translate="land_national_units_pallets">Pallets:</strong><span data-translate="land_national_units_pallets2">20 unidades</span>
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-city"></i>
+                            <strong data-translate="land_national_units_desc2">Carga Media</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Torton -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-moving"></i>
+                            <span data-translate="land_national_units_title3">Torton</span>
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong data-translate="land_national_units_measure">Medidas:</strong><span data-translate="land_national_units_measure3">6-7 x 2.5 x 2.5 m</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong data-translate="land_national_units_capacity">Capacidad:</strong><span data-translate="land_national_units_capacity3">9-16 Toneladas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong data-translate="land_national_units_pallets">Pallets:</strong><span data-translate="land_national_units_pallets3">20 unidades</span>
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-industry"></i>
+                            <strong data-translate="land_national_units_desc3">Carga Pesada</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tráiler -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-trailer"></i>
+                            <span data-translate="land_national_units_title4">Tráiler 53-48 ft</span>
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong data-translate="land_national_units_measure">Medidas:</strong><span data-translate="land_national_units_measure4">14 x 2.5 x 2.7 m</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong data-translate="land_national_units_capacity">Capacidad:</strong><span data-translate="land_national_units_capacity4">22-24 Toneladas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong data-translate="land_national_units_pallets">Pallets:</strong><span data-translate="land_national_units_pallets4">26 unidades</span>
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-globe-americas"></i>
+                            <strong data-translate="land_national_units_desc4">Largo Alcance</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plataformas -->
+            <div class="units-grid" id="plataformas">
+                <!-- Plataforma Camioneta 3.5 -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-pickup"></i>
+                            <span data-translate="land_national_units_title5">Camioneta 3.5</span>
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong data-translate="land_national_units_measure">Medidas:</strong><span data-translate="land_national_units_measure5">4 x 2.5 m</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong data-translate="land_national_units_capacity">Capacidad:</strong><span data-translate="land_national_units_capacity5">3-4 Toneladas</span>
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-tools"></i>
+                            <strong data-translate="land_national_units_desc5">Carga Especial</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plataforma Torton -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-moving"></i>
+                            <span data-translate="land_national_units_title6">Torton</span>
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong data-translate="land_national_units_measure">Medidas:</strong><span data-translate="land_national_units_measure6">6-7 x 2.5 m</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong data-translate="land_national_units_capacity">Capacidad:</strong><span data-translate="land_national_units_capacity6">9-16 Toneladas</span>
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-cubes"></i>
+                            <strong data-translate="land_national_units_desc6">Carga Voluminosa</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plataforma Tráiler -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-trailer"></i>
+                            <span data-translate="land_national_units_title7">Tráiler</span>
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong data-translate="land_national_units_measure">Medidas:</strong><span data-translate="land_national_units_measure7">12 x 2.5 m</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong data-translate="land_national_units_capacity">Capacidad:</strong><span data-translate="land_national_units_capacity7">25-35 Toneladas</span>
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-industry"></i>
+                            <strong data-translate="land_national_units_desc7">Maquinaria Pesada</strong>
+                        </div>
                     </div>
                 </div>
             </div>

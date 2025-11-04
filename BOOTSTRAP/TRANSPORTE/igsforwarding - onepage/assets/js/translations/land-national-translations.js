@@ -20,6 +20,55 @@ const landNationalTranslations = {
         land_national_path5: 'Noroeste',
         land_national_path_destinations5: '2 Destinos',
 
+        // Unidades
+        land_national_units_title: 'Nuestras Unidades',
+        land_national_units_subtitle: 'Nuestras unidades son de alta calidad y están equipadas con tecnología de punta para garantizar la seguridad y la eficiencia de tus envíos.',
+        land_national_units_badge: 'Flota Propia',
+        land_national_units_box: 'Caja Seca',
+        land_national_units_platforms: 'Plataformas',
+        land_national_units_measure: 'Medidas',
+        land_national_units_capacity: 'Capacidad',
+        land_national_units_pallets: 'Pallets',
+
+        land_national_units_title1: 'Camioneta 3.5',
+        land_national_units_desc1: 'Entregas Urbanas',
+        land_national_units_measure1: '4 x 2.5 x 2.5 m',
+        land_national_units_capacity1: '3 Toneladas',
+        land_national_units_pallets1: '8 unidades',
+
+        land_national_units_title2: 'Rabón',
+        land_national_units_desc2: 'Carga Media',
+        land_national_units_measure2: '6-7 x 2.5 x 2.5 m',
+        land_national_units_capacity2: '7-9 Toneladas',
+        land_national_units_pallets2: '20 unidades',
+
+        land_national_units_title3: 'Torton',
+        land_national_units_desc3: 'Carga Pesada',
+        land_national_units_measure3: '6-7 x 2.5 x 2.5 m',
+        land_national_units_capacity3: '9-16 Toneladas',
+        land_national_units_pallets3: '20 unidades',
+        
+        land_national_units_title4: 'Tráiler 53-48 ft',
+        land_national_units_desc4: 'Largo Alcance',
+        land_national_units_measure4: '14 x 2.5 x 2.7 m',
+        land_national_units_capacity4: '22-24 Toneladas',
+        land_national_units_pallets4: '26 unidades',
+
+        land_national_units_title5: 'Camioneta 3.5',
+        land_national_units_desc5: 'Carga Especial',
+        land_national_units_measure5: '4 x 2.5 m',
+        land_national_units_capacity5: '3-4 Toneladas',
+
+        land_national_units_title6: 'Torton',
+        land_national_units_desc6: 'Carga Voluminosa',
+        land_national_units_measure6: '6-7 x 2.5 m',
+        land_national_units_capacity6: '9-16 Toneladas',
+
+        land_national_units_title7: 'Tráiler',
+        land_national_units_desc7: 'Maquinaria Pesada',
+        land_national_units_measure7: '12 x 2.5 m',
+        land_national_units_capacity7: '25-35 Toneladas',
+
         // Servicios que Ofrecemos
         land_national_modalities_title: 'Servicios que Ofrecemos',
 
@@ -93,6 +142,55 @@ const landNationalTranslations = {
         land_national_path_destinations4: '3 Destinations',
         land_national_path5: 'Northwest',
         land_national_path_destinations5: '2 Destinations',
+
+        // Unidades
+        land_national_units_title: 'Our Units',
+        land_national_units_subtitle: 'Our units are of high quality and are equipped with cutting-edge technology to ensure the safety and efficiency of your shipments.',
+        land_national_units_badge: 'Own Fleet',
+        land_national_units_box: 'Dry Storage',
+        land_national_units_platforms: 'Platforms',
+        land_national_units_measure: 'Dimensions',
+        land_national_units_capacity: 'Capacity',
+        land_national_units_pallets: 'Pallets',
+
+        land_national_units_title1: '3.5 Pickup Truck',
+        land_national_units_desc1: 'Urban Deliveries',
+        land_national_units_measure1: '4 x 2.5 x 2.5 m',
+        land_national_units_capacity1: '3 Tons',
+        land_national_units_pallets1: '8 units',
+
+        land_national_units_title2: 'Tailless',
+        land_national_units_desc2: 'Medium Load',
+        land_national_units_measure2: '6-7 x 2.5 x 2.5 m',
+        land_national_units_capacity2: '7-9 Tons',
+        land_national_units_pallets2: '20 units',
+
+        land_national_units_title3: 'Torton',
+        land_national_units_desc3: 'Heavy Load',
+        land_national_units_measure3: '6-7 x 2.5 x 2.5 m',
+        land_national_units_capacity3: '9-16 Tons',
+        land_national_units_pallets3: '20 units',
+        
+        land_national_units_title4: 'Trailer 53-48 ft',
+        land_national_units_desc4: 'Long Reach',
+        land_national_units_measure4: '14 x 2.5 x 2.7 m',
+        land_national_units_capacity4: '22-24 Tons',
+        land_national_units_pallets4: '26 units',
+
+        land_national_units_title5: '3.5 Pickup Truck',
+        land_national_units_desc5: 'Special Load',
+        land_national_units_measure5: '4 x 2.5 m',
+        land_national_units_capacity5: '3-4 Tons',
+
+        land_national_units_title6: 'Torton',
+        land_national_units_desc6: 'Bulk Load',
+        land_national_units_measure6: '6-7 x 2.5 m',
+        land_national_units_capacity6: '9-16 Tons',
+
+        land_national_units_title7: 'Trailer',
+        land_national_units_desc7: 'Heavy Machinery',
+        land_national_units_measure7: '12 x 2.5 m',
+        land_national_units_capacity7: '25-35 Tons',
 
         // Services We Offer
         land_national_modalities_title: 'Services We Offer',
