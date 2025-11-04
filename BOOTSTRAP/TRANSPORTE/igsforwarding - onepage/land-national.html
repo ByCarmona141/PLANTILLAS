@@ -126,10 +126,19 @@
             });
             
             // Mostrar la grid seleccionada
-            document.getElementById(category).classList.add('active');
+            const selectedGrid = document.getElementById(category);
+            if (selectedGrid) {
+                selectedGrid.classList.add('active');
+            }
             
-            // Activar el tab clickeado
-            event.target.classList.add('active');
+            // Encontrar el botón correcto y activarlo
+            // Buscar el botón que tiene el onclick con esta categoría
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                const onclickAttr = tab.getAttribute('onclick');
+                if (onclickAttr && onclickAttr.includes(`'${category}'`)) {
+                    tab.classList.add('active');
+                }
+            });
         }
     </script>
 
