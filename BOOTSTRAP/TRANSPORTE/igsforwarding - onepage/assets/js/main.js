@@ -160,42 +160,6 @@ function initializeApp() {
     // Llamar una vez al cargar para establecer el estado inicial
     updateActiveNav();
     
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            try {
-                // Verificar que currentLanguage existe
-                const currentLang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'es';
-                
-                const message = currentLang === 'es' 
-                    ? '¡Gracias por contactarnos! Te responderemos a la brevedad.' 
-                    : 'Thank you for contacting us! We will respond shortly.';
-                
-                // Verificar que Swal existe
-                if (typeof Swal !== 'undefined') {
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: currentLang === 'es' ? '¡Mensaje enviado!' : 'Message sent!',
-                        text: message,
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                } else {
-                    alert(message);
-                }
-                
-                // Reset the form after submission
-                this.reset();
-            } catch (error) {
-                console.error('Error en formulario de contacto:', error);
-            }
-        });
-    }
-    
     // Animation on scroll
     const observerOptions = {
         threshold: 0.1,

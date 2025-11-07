@@ -23,21 +23,21 @@
             <div class="col-lg-6">
                 <div class="quote-form">
                     <h3 class="mb-4" data-translate="contact_form_title">Envíanos un Mensaje</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/mqagrjdz" method="POST">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Nombre" data-placeholder="contact_form_name" required>
+                            <input type="text" name="name" class="form-control" placeholder="Nombre" data-placeholder="contact_form_name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" data-placeholder="contact_form_email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Email" data-placeholder="contact_form_email" required>
                         </div>
                         <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Teléfono" data-placeholder="contact_form_phone" required>
+                            <input type="tel" name="phone" class="form-control" placeholder="Teléfono" data-placeholder="contact_form_phone" required>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Asunto" data-placeholder="contact_form_subject" required>
+                            <input type="text" name="subject" class="form-control" placeholder="Asunto" data-placeholder="contact_form_subject" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Mensaje" data-placeholder="contact_form_message" required></textarea>
+                            <textarea name="message" class="form-control" rows="5" placeholder="Mensaje" data-placeholder="contact_form_message" required></textarea>
                         </div>
                         <button type="submit" class="btn custom-btn-tertiary w-100">
                             <i class="fas fa-paper-plane me-2"></i>
