@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ff978056-84ab-41c6-a739-7096c7300cef" name="IGS FORWARDING" url="http://igsforwarding.com.mx">
+        <fileTransfer rootFolder="/public_html" host="igsforwarding.com.mx" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

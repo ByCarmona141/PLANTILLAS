@@ -42,7 +42,7 @@
     color: white;
     position: relative;
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.9), rgba(0, 0, 0, 0.8)), url('../assets/image/maritime/img1.jpg');
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
 }
 
@@ -326,11 +326,12 @@
 }
 
 .advantage-card:hover {
-    background: var(--primary-color);;
+    background: var(--primary-color);
+    ;
     transform: translateY(-10px);
 }
 
-.advantage-card:hover i, 
+.advantage-card:hover i,
 .advantage-card:hover h5 {
     color: var(--bg-tertiary-color);
 }
@@ -369,28 +370,28 @@
     .service-hero {
         padding: 140px 0 80px;
     }
-    
+
     .service-hero-title {
         font-size: 2.2rem;
     }
-    
+
     .service-hero-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .modality-icon-box {
         padding: 60px;
         font-size: 4rem;
     }
-    
+
     .modality-title {
         font-size: 1.8rem;
     }
-    
+
     .coverage-number {
         font-size: 3rem;
     }
-    
+
     .cta-section h2 {
         font-size: 2rem;
     }
