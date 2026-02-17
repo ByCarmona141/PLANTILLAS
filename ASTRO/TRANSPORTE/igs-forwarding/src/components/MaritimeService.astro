@@ -1,0 +1,1105 @@
+---
+
+---
+
+<style>
+    /* Hero Section - INICIO */
+    .hero-section {
+        background: linear-gradient(
+            135deg,
+            var(--secondary-color) 0%,
+            var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -70px;
+        padding-top: 130px;
+    }
+
+    .hero-main-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .full-width-half-height {
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .full-width-half-height .carousel-inner {
+        height: 100%;
+    }
+
+    .full-width-half-height .carousel-item {
+        height: 100%;
+    }
+
+    .full-width-half-height .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            135deg,
+            var(--bg-primary-color-hover),
+            var(--bg-secondary-color-hover)
+        );
+        z-index: 1;
+    }
+
+    .carousel-caption {
+        z-index: 2;
+    }
+
+    .carousel-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .carousel-subtitle {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+        opacity: 0.95;
+        animation: fadeInUp 1s ease;
+    }
+    /* Service Page Styles */
+
+    /* Navbar Active State Override */
+    .navbar .nav-link {
+        color: var(--light-color) !important;
+    }
+
+    .navbar .nav-link:hover {
+        color: var(--tertiary-color) !important;
+    }
+
+    .navbar .nav-link.active {
+        color: var(--primary-color) !important;
+    }
+
+    .navbar .nav-link::after {
+        background: var(--tertiary-color);
+    }
+
+    .bg-dark {
+        background-color: var(--dark-color) !important;
+    }
+
+    /* Hero Section */
+    .service-hero {
+        padding: 180px 0 120px;
+        color: white;
+        position: relative;
+        background: linear-gradient(
+                135deg,
+                rgba(0, 102, 204, 0.9),
+                rgba(0, 0, 0, 0.8)
+            ),
+            url("../assets/image/maritime/img1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .service-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(168, 11, 36, 0.85),
+            rgba(0, 0, 0, 0.85)
+        );
+        z-index: 1;
+    }
+
+    .service-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 12px 24px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        animation: fadeInUp 0.6s ease;
+    }
+
+    .service-hero-badge i {
+        font-size: 1.5rem;
+    }
+
+    .service-hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .service-hero-subtitle {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        opacity: 0.95;
+        animation: fadeInUp 1s ease;
+    }
+
+    /* Service Section */
+    .service-section {
+        padding: 80px 0;
+    }
+
+    /* Port Cards */
+    .port-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .port-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .port-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .port-card h4 {
+        margin-bottom: 10px;
+        color: var(--dark-color);
+    }
+
+    /* Coverage Cards */
+    .coverage-card {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+        padding: 50px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+    }
+
+    .coverage-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .coverage-number {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        opacity: 0.95;
+    }
+
+    .coverage-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .coverage-card p {
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    /* Service Modality */
+    .service-modality {
+        padding: 60px 0;
+    }
+
+    .modality-icon-box {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 30px;
+        padding: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 6rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .modality-badge {
+        display: inline-block;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .modality-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--dark-color);
+    }
+
+    .modality-desc {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .modality-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .modality-features li {
+        padding: 15px 0;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+    }
+
+    .modality-features li:last-child {
+        border-bottom: none;
+    }
+
+    .modality-features i {
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        margin-right: 15px;
+        min-width: 30px;
+    }
+
+    .sub-features {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .sub-features li {
+        padding: 10px 0;
+        color: #666;
+    }
+
+    /* Support Cards */
+    .support-card {
+        border: 2px solid var(--primary-color);
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        height: 100%;
+    }
+
+    .support-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .support-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+
+    .support-card:hover i {
+        color: white;
+    }
+
+    .support-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Customs Clearance Cards */
+    .custom-clearance-card {
+        border: 2px solid var(--primary-color);
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        height: 100%;
+    }
+
+    .custom-clearance-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .custom-clearance-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+
+    .custom-clearance-card:hover i {
+        color: white;
+    }
+
+    .custom-clearance-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Advantage Cards */
+    .advantage-card {
+        background: var(--bg-tertiary-color);
+        backdrop-filter: blur(10px);
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .advantage-card:hover {
+        background: var(--primary-color);
+        transform: translateY(-10px);
+    }
+
+    .advantage-card:hover i,
+    .advantage-card:hover h5 {
+        color: var(--bg-tertiary-color);
+    }
+
+    .advantage-card i {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    .advantage-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 100px 0;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+    }
+
+    .cta-section h2 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .cta-section .lead {
+        font-size: 1.3rem;
+        opacity: 0.95;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .service-hero {
+            padding: 140px 0 80px;
+        }
+
+        .service-hero-title {
+            font-size: 2.2rem;
+        }
+
+        .service-hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .modality-icon-box {
+            padding: 60px;
+            font-size: 4rem;
+        }
+
+        .modality-title {
+            font-size: 1.8rem;
+        }
+
+        .coverage-number {
+            font-size: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<section id="servicios">
+    <div class="container-fluid p-0">
+        <div
+            id="carouselCaptions"
+            class="carousel slide full-width-half-height"
+            data-bs-ride="carousel"
+        >
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/maritime/img2.jpg"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime2"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="maritime_service_title"
+                        >
+                            Servicio Marítimo
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="maritime_service_desc"
+                        >
+                            Proporcionamos transporte marítimo global, con rutas
+                            hacia Asia, Europa y LATAM.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/maritime/img3.jpg"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime3"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="maritime_service_title"
+                        >
+                            Servicio Marítimo
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="maritime_service_desc"
+                        >
+                            Proporcionamos transporte marítimo global, con rutas
+                            hacia Asia, Europa y LATAM.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/maritime/img4.jpg"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime4"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="maritime_service_title"
+                        >
+                            Servicio Marítimo
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="maritime_service_desc"
+                        >
+                            Proporcionamos transporte marítimo global, con rutas
+                            hacia Asia, Europa y LATAM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselCaptions"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselCaptions"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Puertos de Operación -->
+    <section class="service-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-translate="ports_title">
+                    Puertos de Operación en México
+                </h2>
+                <p class="section-subtitle" data-translate="ports_subtitle">
+                    Operamos desde los puertos estratégicos de Veracruz,
+                    Altamira, Manzanillo y Lázaro Cárdenas. Esta cobertura
+                    nacional nos permite optimizar tiempos, rutas y costos,
+                    además de garantizar conexiones fluidas hacia cualquier
+                    destino global.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fas fa-anchor"></i>
+                        </div>
+                        <h4 data-translate="port_veracruz">Veracruz</h4>
+                        <p class="text-muted small">Veracruz</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fas fa-anchor"></i>
+                        </div>
+                        <h4 data-translate="port_altamira">Altamira</h4>
+                        <p class="text-muted small">Tamaulipas</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fas fa-anchor"></i>
+                        </div>
+                        <h4 data-translate="port_manzanillo">Manzanillo</h4>
+                        <p class="text-muted small">Colima</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fas fa-anchor"></i>
+                        </div>
+                        <h4 data-translate="port_lazaro">Lázaro Cárdenas</h4>
+                        <p class="text-muted small">Michoacán</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios que Ofrecemos -->
+    <section class="service-section">
+        <div class="container">
+            <div class="text-center">
+                <h2
+                    class="section-title"
+                    data-translate="maritime_modalities_title"
+                >
+                    Servicios que Ofrecemos
+                </h2>
+            </div>
+
+            <!-- LCL -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div
+                            class="modality-badge"
+                            data-translate="maritime_lcl_badge"
+                        >
+                            Carga Consolidada
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="maritime_lcl_title"
+                        >
+                            LCL – Less than Container Load
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="maritime_lcl_desc"
+                        >
+                            Ideal para envíos que no requieren un contenedor
+                            completo.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_lcl_feat1"
+                                    >Consolidación y desconsolidación en puertos
+                                    clave</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_lcl_feat2"
+                                    >Reducción de costos mediante uso compartido
+                                    del espacio</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_lcl_feat3"
+                                    >Rutas flexibles y tarifas personalizadas</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_lcl_feat4"
+                                    >Tarifas competitivas y transparentes</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FCL -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 order-lg-2 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 order-lg-1">
+                        <div
+                            class="modality-badge"
+                            data-translate="maritime_fcl_badge"
+                        >
+                            Contenedor Completo
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="maritime_fcl_title"
+                        >
+                            FCL – Full Container Load
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="maritime_fcl_desc"
+                        >
+                            Perfecto para cargas exclusivas o de gran volumen.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_fcl_feat1"
+                                    >Contratos globales con navieras líderes y
+                                    condiciones preferenciales</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_fcl_feat2"
+                                    >Menor manipulación y riesgos en tránsito</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_fcl_feat3"
+                                    >Asesoría completa en documentación y
+                                    despacho aduanal</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_fcl_feat4"
+                                    >Cobertura con seguros de mercancía y
+                                    contenedor</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="mt-3">
+                            <p
+                                class="fw-bold mb-2"
+                                data-translate="maritime_fcl_modalities"
+                            >
+                                Modalidades disponibles:
+                            </p>
+                            <ul class="sub-features">
+                                <li>
+                                    <strong data-translate="maritime_fcl_door1"
+                                        >Puerta a Puerta:</strong
+                                    >&nbsp;<span
+                                        data-translate="maritime_fcl_door2"
+                                        >Servicio integral con trazabilidad
+                                        total</span
+                                    >
+                                </li>
+                                <li>
+                                    <strong data-translate="maritime_fcl_cy1"
+                                        >CY-CY:</strong
+                                    >&nbsp;<span
+                                        data-translate="maritime_fcl_cy2"
+                                        >Puerto a Puerto (Container Yard)</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carga Especializada -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div
+                            class="modality-badge"
+                            data-translate="maritime_special_badge"
+                        >
+                            Carga Especializada
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="maritime_special_title"
+                        >
+                            OOG – Out of Gauge
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="maritime_special_desc"
+                        >
+                            Transporte marítimo de maquinaria, estructuras y
+                            piezas que exceden las dimensiones estándar de un
+                            contenedor.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_special_feat1"
+                                    >Manejo de carga sobredimensionada</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_special_feat2"
+                                    >Planificación logística especializada</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="maritime_special_feat3"
+                                    >Equipos y personal certificado</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soporte Logístico -->
+    <section class="service-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2
+                    class="section-title"
+                    data-translate="maritime_support_title"
+                >
+                    Soporte Logístico Integral
+                </h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-satellite-dish"></i>
+                        <h5 data-translate="maritime_support1">
+                            Monitoreo en Tiempo Real
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-warehouse"></i>
+                        <h5 data-translate="maritime_support2">
+                            Almacenaje y Arrastre
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h5 data-translate="maritime_support3">
+                            Personal Especializado
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-file-invoice"></i>
+                        <h5 data-translate="maritime_support4">
+                            Despacho Aduanal
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2
+                    class="section-title"
+                    data-translate="maritime_customs_clearance_title"
+                >
+                    Despacho Aduanal con IGS Forwarding
+                </h2>
+                <p
+                    class="section-subtitle"
+                    data-translate="maritime_customs_clearance_subtitle"
+                >
+                    Ofrecemos un servicio integral de Despacho Aduanal,
+                    asegurando el cumplimiento normativo y una gestión ágil en
+                    cada operación de importación y exportación.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-clearance-card">
+                        <i class="fas fa-cogs"></i>
+                        <h5 data-translate="maritime_customs_clearence_adv1">
+                            Coordinación Integrada
+                        </h5>
+                        <p
+                            data-translate="maritime_customs_clearence_adv1_desc"
+                        >
+                            Departamentos marítimo, aéreo y terrestre
+                            coordinados
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-clearance-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h5 data-translate="maritime_customs_clearence_adv2">
+                            Asesoría Personalizada
+                        </h5>
+                        <p
+                            data-translate="maritime_customs_clearence_adv2_desc"
+                        >
+                            Expertos en cada etapa del proceso aduanal
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-clearance-card">
+                        <i class="fas fa-check-double"></i>
+                        <h5 data-translate="maritime_customs_clearence_adv3">
+                            Cumplimiento Total
+                        </h5>
+                        <p
+                            data-translate="maritime_customs_clearence_adv3_desc"
+                        >
+                            Normas SAT, Secretaría de Economía y autoridades
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-clearance-card">
+                        <i class="fas fa-eye"></i>
+                        <h5 data-translate="maritime_customs_clearence_adv4">
+                            Visibilidad Total
+                        </h5>
+                        <p
+                            data-translate="maritime_customs_clearence_adv4_desc"
+                        >
+                            Trazabilidad con sistemas digitales avanzados
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-clearance-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h5 data-translate="maritime_customs_clearence_adv5">
+                            Transparencia en Costos
+                        </h5>
+                        <p
+                            data-translate="maritime_customs_clearence_adv5_desc"
+                        >
+                            Sin sorpresas ni cargos ocultos
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-clearance-card">
+                        <i class="fas fa-rocket"></i>
+                        <h5 data-translate="maritime_customs_clearence_adv6">
+                            Optimización de Tiempos
+                        </h5>
+                        <p
+                            data-translate="maritime_customs_clearence_adv6_desc"
+                        >
+                            Gestión ágil y liberación oportuna de carga
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas Competitivas -->
+    <section class="service-section bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2
+                    class="section-title text-white"
+                    data-translate="maritime_advantages_title"
+                >
+                    Ventajas Competitivas
+                </h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-award"></i>
+                        <h5 data-translate="maritime_adv1">
+                            +15 Años de Experiencia
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h5 data-translate="maritime_adv2">
+                            Neutralidad Total
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h5 data-translate="maritime_adv3">
+                            Optimización de Costos
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-handshake"></i>
+                        <h5 data-translate="maritime_adv4">
+                            Alianzas Internacionales
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-route"></i>
+                        <h5 data-translate="maritime_adv5">
+                            Soluciones End-to-End
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fa-solid fa-headset"></i>
+                        <h5 data-translate="maritime_adv6">
+                            Soporte Personalizado
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

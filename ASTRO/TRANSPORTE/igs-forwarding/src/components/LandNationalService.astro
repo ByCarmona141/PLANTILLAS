@@ -1,0 +1,1702 @@
+---
+
+---
+
+<style>
+    /* Hero Section - INICIO */
+    .hero-section {
+        background: linear-gradient(
+            135deg,
+            var(--secondary-color) 0%,
+            var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -70px;
+        padding-top: 130px;
+    }
+
+    .hero-main-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .full-width-half-height {
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .full-width-half-height .carousel-inner {
+        height: 100%;
+    }
+
+    .full-width-half-height .carousel-item {
+        height: 100%;
+    }
+
+    .full-width-half-height .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            135deg,
+            var(--bg-primary-color-hover),
+            var(--bg-secondary-color-hover)
+        );
+        z-index: 1;
+    }
+
+    .carousel-caption {
+        z-index: 2;
+    }
+
+    .carousel-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .carousel-subtitle {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+        opacity: 0.95;
+        animation: fadeInUp 1s ease;
+    }
+    /* Service Page Styles */
+
+    /* Navbar Active State Override */
+    .navbar .nav-link {
+        color: var(--light-color) !important;
+    }
+
+    .navbar .nav-link:hover {
+        color: var(--tertiary-color) !important;
+    }
+
+    .navbar .nav-link.active {
+        color: var(--primary-color) !important;
+    }
+
+    .navbar .nav-link::after {
+        background: var(--tertiary-color);
+    }
+
+    .bg-dark {
+        background-color: var(--dark-color) !important;
+    }
+
+    /* Hero Section */
+    .service-hero {
+        padding: 180px 0 120px;
+        color: white;
+        position: relative;
+        background: linear-gradient(
+                135deg,
+                rgba(0, 102, 204, 0.9),
+                rgba(0, 0, 0, 0.8)
+            ),
+            url("../assets/image/maritime/img1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .service-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(168, 11, 36, 0.85),
+            rgba(0, 0, 0, 0.85)
+        );
+        z-index: 1;
+    }
+
+    .service-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 12px 24px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        animation: fadeInUp 0.6s ease;
+    }
+
+    .service-hero-badge i {
+        font-size: 1.5rem;
+    }
+
+    .service-hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .service-hero-subtitle {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        opacity: 0.95;
+        animation: fadeInUp 1s ease;
+    }
+
+    /* Service Section */
+    .service-section {
+        padding: 80px 0;
+    }
+
+    /* Port Cards */
+    .port-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .port-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .port-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .port-card h4 {
+        margin-bottom: 10px;
+        color: var(--dark-color);
+    }
+
+    /* Coverage Cards */
+    .coverage-card {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+        padding: 50px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+    }
+
+    .coverage-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .coverage-number {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        opacity: 0.95;
+    }
+
+    .coverage-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .coverage-card p {
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    /* Service Modality */
+    .service-modality {
+        padding: 60px 0;
+    }
+
+    .modality-icon-box {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 30px;
+        padding: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 6rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .modality-badge {
+        display: inline-block;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .modality-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--dark-color);
+    }
+
+    .modality-desc {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .modality-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .modality-features li {
+        padding: 15px 0;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+    }
+
+    .modality-features li:last-child {
+        border-bottom: none;
+    }
+
+    .modality-features i {
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        margin-right: 15px;
+        min-width: 30px;
+    }
+
+    .sub-features {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .sub-features li {
+        padding: 10px 0;
+        color: #666;
+    }
+
+    /* Support Cards */
+    .support-card {
+        border: 2px solid var(--primary-color);
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        height: 100%;
+    }
+
+    .support-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .support-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+
+    .support-card:hover i {
+        color: white;
+    }
+
+    .support-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Customs Clearance Cards */
+    .custom-clearance-card {
+        border: 2px solid var(--primary-color);
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        height: 100%;
+    }
+
+    .custom-clearance-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .custom-clearance-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+
+    .custom-clearance-card:hover i {
+        color: white;
+    }
+
+    .custom-clearance-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Advantage Cards */
+    .advantage-card {
+        background: var(--bg-tertiary-color);
+        backdrop-filter: blur(10px);
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .advantage-card:hover {
+        background: var(--primary-color);
+        transform: translateY(-10px);
+    }
+
+    .advantage-card:hover i,
+    .advantage-card:hover h5 {
+        color: var(--bg-tertiary-color);
+    }
+
+    .advantage-card i {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    .advantage-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 100px 0;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+    }
+
+    .cta-section h2 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .cta-section .lead {
+        font-size: 1.3rem;
+        opacity: 0.95;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .service-hero {
+            padding: 140px 0 80px;
+        }
+
+        .service-hero-title {
+            font-size: 2.2rem;
+        }
+
+        .service-hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .modality-icon-box {
+            padding: 60px;
+            font-size: 4rem;
+        }
+
+        .modality-title {
+            font-size: 1.8rem;
+        }
+
+        .coverage-number {
+            font-size: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+        }
+    }
+
+    /* Land Service Section */
+    .land-service-section {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 80px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .land-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .land-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .land-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    @media (min-width: 768px) {
+        .land-header h2 {
+            font-size: 3rem;
+        }
+    }
+
+    .land-header p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-top: 25px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .own-fleet-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-top: 20px;
+        box-shadow: 0 5px 20px rgba(168, 11, 36, 0.3);
+        animation: pulse-badge 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-badge {
+        0%,
+        100% {
+            transform: scale(1);
+            box-shadow: 0 5px 20px rgba(168, 11, 36, 0.3);
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(168, 11, 36, 0.5);
+        }
+    }
+
+    .own-fleet-badge i {
+        font-size: 1.3rem;
+    }
+
+    /* Tabs de Categorías */
+    .category-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+
+    .category-tab {
+        padding: 15px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid var(--bg-tertiary-button);
+        color: var(--tertiary-button-text);
+    }
+
+    .category-tab:hover {
+        background-color: var(--bg-tertiary-button-hover);
+        color: var(--tertiary-button-text-hover);
+        transform: translateY(-3px);
+    }
+
+    .category-tab.active {
+        background-color: var(--bg-tertiary-button-hover);
+        color: var(--tertiary-button-text-hover);
+        border-color: var(--primary-color);
+    }
+
+    /* Grid de Unidades */
+    .units-grid {
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .units-grid.active {
+        display: grid;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    .units-grid#plataformas {
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        .units-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .units-grid#plataformas {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .units-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .units-grid#plataformas {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1100px;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Card de Unidad */
+    .unit-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .unit-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(168, 11, 36, 0.2);
+        border-color: var(--primary-color);
+    }
+
+    .unit-content {
+        padding: 25px;
+    }
+
+    .unit-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .unit-title i {
+        color: var(--primary-color);
+    }
+
+    .unit-specs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .unit-specs li {
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: #555;
+    }
+
+    .unit-specs li:last-child {
+        border-bottom: none;
+    }
+
+    .unit-specs li i {
+        color: var(--primary-color);
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+
+    .unit-specs li strong {
+        color: var(--secondary-color);
+        min-width: 80px;
+    }
+
+    .unit-highlight {
+        background: linear-gradient(
+            135deg,
+            rgba(168, 11, 36, 0.1),
+            rgba(0, 0, 0, 0.05)
+        );
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .unit-highlight i {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .unit-highlight strong {
+        display: block;
+        color: var(--secondary-color);
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+        .land-service-section {
+            padding: 60px 15px;
+        }
+
+        .unit-card {
+            margin-bottom: 0;
+        }
+
+        .category-tabs {
+            gap: 10px;
+        }
+
+        .category-tab {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<section id="servicios">
+    <div class="container-fluid p-0">
+        <div
+            id="carouselCaptions"
+            class="carousel slide full-width-half-height"
+            data-bs-ride="carousel"
+        >
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/land/img5.jpg"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime1"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="land_national_carousel_title"
+                        >
+                            Servicio Terrestre Nacional
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="land_national_carousel_subtitle"
+                        >
+                            En IGS Forwarding somos una línea de transporte
+                            nacional FTL (Full Truck Load).
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/land/img6.jpg"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime2"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="land_national_carousel_title"
+                        >
+                            Servicio Terrestre Nacional
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="land_national_carousel_subtitle"
+                        >
+                            En IGS Forwarding somos una línea de transporte
+                            nacional FTL (Full Truck Load).
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/land/img7.jpg"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime3"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="land_national_carousel_title"
+                        >
+                            Servicio Terrestre Nacional
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="land_national_carousel_subtitle"
+                        >
+                            En IGS Forwarding somos una línea de transporte
+                            nacional FTL (Full Truck Load).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselCaptions"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselCaptions"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Rutas de Operación -->
+    <section class="service-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2
+                    class="section-title"
+                    data-translate="land_national_paths_title"
+                >
+                    Rutas de Operación en México
+                </h2>
+                <p
+                    class="section-subtitle"
+                    data-translate="land_national_paths_subtitle"
+                >
+                    Operamos a nivel nacional, conectando los principales
+                    corredores industriales y centros productivos del país.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 data-translate="land_national_path1">Centro</h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_national_path_destinations1"
+                        >
+                            Puebla / Tlaxcala / Ciudad de México / Estado de
+                            México
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 data-translate="land_national_path2">Bajío</h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_national_path_destinations2"
+                        >
+                            Querétaro / Celaya / Silao / Irapuato / San Luis
+                            Potosí / Aguascalientes
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 data-translate="land_national_path3">Occidente</h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_national_path_destinations3"
+                        >
+                            Guadalajara
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 data-translate="land_national_path4">Norte</h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_national_path_destinations4"
+                        >
+                            Saltillo / Ramos Arizpe / Monterrey / Cd Juarez
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 data-translate="land_national_path5">Noroeste</h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_national_path_destinations5"
+                        >
+                            Hermosillo / Tijuana
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h4 data-translate="land_national_path6">
+                            Sur / Sureste
+                        </h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_national_path_destinations6"
+                        >
+                            Mérida / Veracruz / Oaxaca
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unidades -->
+    <section class="land-service-section bg-light" id="terrestre-nacional">
+        <div class="land-container">
+            <!-- Header -->
+            <div class="land-header">
+                <h2 data-translate="land_national_units_title">
+                    Nuestras Unidades
+                </h2>
+                <p data-translate="land_national_units_subtitle">
+                    Transportamos tu carga con nuestras unidades propias,
+                    garantizando puntualidad y seguridad
+                </p>
+                <div class="own-fleet-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-translate="land_national_units_badge"
+                        >Flota Propia</span
+                    >
+                </div>
+            </div>
+
+            <!-- Tabs de Categorías -->
+            <div class="category-tabs">
+                <button
+                    class="category-tab active"
+                    onclick="showCategory('caja-seca')"
+                >
+                    <i class="fas fa-truck"></i>
+                    <span data-translate="land_national_units_box"
+                        >Caja Seca</span
+                    >
+                </button>
+                <button
+                    class="category-tab"
+                    onclick="showCategory('plataformas')"
+                >
+                    <i class="fas fa-pallet"></i>
+                    <span data-translate="land_national_units_platforms"
+                        >Plataformas</span
+                    >
+                </button>
+            </div>
+
+            <!-- Caja Seca -->
+            <div class="units-grid active" id="caja-seca">
+                <!-- Camioneta 3.5 -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-pickup"></i>
+                            <span data-translate="land_national_units_title1"
+                                >Camioneta 3.5</span
+                            >
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong
+                                    data-translate="land_national_units_measure"
+                                    >Medidas:</strong
+                                ><span
+                                    data-translate="land_national_units_measure1"
+                                    >4 x 2.4 x 2.5 m</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong
+                                    data-translate="land_national_units_capacity"
+                                    >Capacidad:</strong
+                                ><span
+                                    data-translate="land_national_units_capacity1"
+                                    >3 Toneladas Max.</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong
+                                    data-translate="land_national_units_pallets"
+                                    >Pallets:</strong
+                                ><span
+                                    data-translate="land_national_units_pallets1"
+                                    >6 unidades</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-shipping-fast"></i>
+                            <strong data-translate="land_national_units_desc1"
+                                >Entregas Locales y Foráneas</strong
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rabón -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck"></i>
+                            <span data-translate="land_national_units_title2"
+                                >Rabón</span
+                            >
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong
+                                    data-translate="land_national_units_measure"
+                                    >Medidas:</strong
+                                ><span
+                                    data-translate="land_national_units_measure2"
+                                    >6-7 x 2.4 x 2.5 m</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong
+                                    data-translate="land_national_units_capacity"
+                                    >Capacidad:</strong
+                                ><span
+                                    data-translate="land_national_units_capacity2"
+                                    >9 Toneladas Max.</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong
+                                    data-translate="land_national_units_pallets"
+                                    >Pallets:</strong
+                                ><span
+                                    data-translate="land_national_units_pallets2"
+                                    >12 unidades</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-city"></i>
+                            <strong data-translate="land_national_units_desc2"
+                                >Entregas Locales y Foráneas</strong
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Torton -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-moving"></i>
+                            <span data-translate="land_national_units_title3"
+                                >Torton</span
+                            >
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong
+                                    data-translate="land_national_units_measure"
+                                    >Medidas:</strong
+                                ><span
+                                    data-translate="land_national_units_measure3"
+                                    >6-7 x 2.5 x 2.5 m</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong
+                                    data-translate="land_national_units_capacity"
+                                    >Capacidad:</strong
+                                ><span
+                                    data-translate="land_national_units_capacity3"
+                                    >14 Toneladas Max.</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong
+                                    data-translate="land_national_units_pallets"
+                                    >Pallets:</strong
+                                ><span
+                                    data-translate="land_national_units_pallets3"
+                                    >14 unidades</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-industry"></i>
+                            <strong data-translate="land_national_units_desc3"
+                                >Entregas Locales y Foráneas</strong
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tráiler -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-trailer"></i>
+                            <span data-translate="land_national_units_title4"
+                                >Tráiler 48-53 ft</span
+                            >
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong
+                                    data-translate="land_national_units_measure"
+                                    >Medidas:</strong
+                                ><span
+                                    data-translate="land_national_units_measure4"
+                                    >14 x 2.5 x 2.7 m</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong
+                                    data-translate="land_national_units_capacity"
+                                    >Capacidad:</strong
+                                ><span
+                                    data-translate="land_national_units_capacity4"
+                                    >22 Toneladas Max.</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-boxes"></i>
+                                <strong
+                                    data-translate="land_national_units_pallets"
+                                    >Pallets:</strong
+                                ><span
+                                    data-translate="land_national_units_pallets4"
+                                    >26 unidades</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-globe-americas"></i>
+                            <strong data-translate="land_national_units_desc4"
+                                >Entregas Locales y Foráneas</strong
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plataformas -->
+            <div class="units-grid" id="plataformas">
+                <!-- Plataforma Camioneta 3.5 -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-pickup"></i>
+                            <span data-translate="land_national_units_title5"
+                                >Camioneta 3.5</span
+                            >
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong
+                                    data-translate="land_national_units_measure"
+                                    >Medidas:</strong
+                                ><span
+                                    data-translate="land_national_units_measure5"
+                                    >4 x 2.5 m</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong
+                                    data-translate="land_national_units_capacity"
+                                    >Capacidad:</strong
+                                ><span
+                                    data-translate="land_national_units_capacity5"
+                                    >4 Toneladas Max.</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-tools"></i>
+                            <strong data-translate="land_national_units_desc5"
+                                >Entregas Locales y Foráneas</strong
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plataforma Torton -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-truck-moving"></i>
+                            <span data-translate="land_national_units_title6"
+                                >Torton</span
+                            >
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong
+                                    data-translate="land_national_units_measure"
+                                    >Medidas:</strong
+                                ><span
+                                    data-translate="land_national_units_measure6"
+                                    >6-7 x 2.5 m</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong
+                                    data-translate="land_national_units_capacity"
+                                    >Capacidad:</strong
+                                ><span
+                                    data-translate="land_national_units_capacity6"
+                                    >14 Toneladas Max.</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-cubes"></i>
+                            <strong data-translate="land_national_units_desc6"
+                                >Entregas Locales y Foráneas</strong
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plataforma Tráiler -->
+                <div class="unit-card">
+                    <div class="unit-content">
+                        <h3 class="unit-title">
+                            <i class="fas fa-trailer"></i>
+                            <span data-translate="land_national_units_title7"
+                                >Tráiler 48-53</span
+                            >
+                        </h3>
+                        <ul class="unit-specs">
+                            <li>
+                                <i class="fas fa-ruler-combined"></i>
+                                <strong
+                                    data-translate="land_national_units_measure"
+                                    >Medidas:</strong
+                                ><span
+                                    data-translate="land_national_units_measure7"
+                                    >12 x 2.5 m</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-weight-hanging"></i>
+                                <strong
+                                    data-translate="land_national_units_capacity"
+                                    >Capacidad:</strong
+                                ><span
+                                    data-translate="land_national_units_capacity7"
+                                    >30 Toneladas Max.</span
+                                >
+                            </li>
+                        </ul>
+                        <div class="unit-highlight">
+                            <i class="fas fa-industry"></i>
+                            <strong data-translate="land_national_units_desc7"
+                                >Entregas Locales y Foráneas</strong
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios que Ofrecemos -->
+    <section class="service-section">
+        <div class="container">
+            <div class="text-center">
+                <h2
+                    class="section-title"
+                    data-translate="land_national_modalities_title"
+                >
+                    Servicios que Ofrecemos
+                </h2>
+            </div>
+
+            <!-- LCL -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_national_ftl_badge"
+                        >
+                            FTL
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_national_ftl_title"
+                        >
+                            FTL - Full Truck Load
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="land_national_ftl_desc"
+                        >
+                            Transporte exclusivo para carga completa, ideal para
+                            volúmenes altos o materiales que requieren control
+                            total del espacio y tiempos.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_ftl_feat1"
+                                    >Rutas optimizadas para reducir costos y
+                                    tiempos de tránsito</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_ftl_feat2"
+                                    >Seguimiento en tiempo real para cada envío</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio Dedicado -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 order-lg-2 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 order-lg-1">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_national_sd_badge"
+                        >
+                            Servicio Dedicado
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_national_sd_title"
+                        >
+                            Servicio Dedicado
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="land_national_sd_desc"
+                        >
+                            Asignación de flota exclusiva para proyectos o rutas
+                            específicas, con disponibilidad permanente y control
+                            operativo centralizado
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_sd_feat1"
+                                    >Atención prioritaria</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_sd_feat2"
+                                    >Personal especializado</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_sd_feat3"
+                                    >Reportes de desempeño específicos para cada
+                                    cliente</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio Spot -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_national_ss_badge"
+                        >
+                            Servicio Spot
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_national_ss_title"
+                        >
+                            Servicio Spot
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="land_national_ss_desc"
+                        >
+                            Transporte por viaje o servicio puntual, diseñado
+                            para cubrir requerimientos eventuales o incrementos
+                            temporales de demanda.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_ss_feat1"
+                                    >Monitoreo en tiempo real</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_ss_feat2"
+                                    >Coordinación inmediata con el cliente para
+                                    garantizar flexibilidad</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_ss_feat3"
+                                    >Control total del envío</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio Express -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 order-lg-2 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 order-lg-1">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_national_se_badge"
+                        >
+                            Servicio Express
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_national_se_title"
+                        >
+                            Servicio Express
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="land_national_se_desc"
+                        >
+                            Solución de entrega urgente en el mismo día,
+                            disponible exclusivamente para clientes con alta
+                            recurrencia o contrato activo con IGS.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_se_feat1"
+                                    >Comunicación constante durante todo el
+                                    trayecto</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_national_se_feat2"
+                                    >Priorización en la asignación de unidades
+                                    para cumplir con tiempos críticos de entrega</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soporte Logístico -->
+    <section class="service-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2
+                    class="section-title"
+                    data-translate="land_national_support_title"
+                >
+                    Soporte Logístico Integral
+                </h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-satellite-dish"></i>
+                        <h5 data-translate="land_national_support1">
+                            Monitoreo en Tiempo Real
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-warehouse"></i>
+                        <h5 data-translate="land_national_support2">
+                            Almacenaje
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h5 data-translate="land_national_support3">
+                            Equipo Operativo Exclusivo
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fa-solid fa-shield"></i>
+                        <h5 data-translate="land_national_support4">
+                            Seguro de Mercancías
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas Competitivas -->
+    <section class="service-section bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2
+                    class="section-title text-white"
+                    data-translate="land_national_advantages_title"
+                >
+                    Ventajas Competitivas
+                </h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-award"></i>
+                        <h5 data-translate="land_national_adv1">
+                            +15 Años de Experiencia
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fa-solid fa-code-compare"></i>
+                        <h5 data-translate="land_national_adv2">
+                            Alta Capacidad de Respuesta y Flexibilidad Operativa
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h5 data-translate="land_national_adv3">
+                            Optimización de Costos
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-handshake"></i>
+                        <h5 data-translate="land_national_adv4">
+                            Red de Aliados
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-route"></i>
+                        <h5 data-translate="land_national_adv5">
+                            Soluciones End-to-End
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fa-solid fa-headset"></i>
+                        <h5 data-translate="land_national_adv6">
+                            Soporte Personalizado
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

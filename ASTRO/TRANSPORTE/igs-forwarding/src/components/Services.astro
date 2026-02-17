@@ -1,0 +1,211 @@
+---
+
+---
+
+<style>
+    /* Services Section - SERVICIOS */
+    .services-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .service-card {
+        border: none;
+        border-radius: 20px;
+        transition: all 0.4s ease;
+        height: 100%;
+        background: white;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .service-icon {
+        font-size: 4rem;
+        margin-bottom: 25px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.1) rotateY(360deg);
+    }
+</style>
+
+<section class="services-section" id="servicios">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title" data-translate="services_title">
+                Nuestros Servicios
+            </h2>
+            <p class="section-subtitle" data-translate="services_subtitle">
+                Soluciones logísticas adaptadas a tus necesidades
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <article class="card service-card">
+                    <div
+                        class="card-body text-center d-flex flex-column justify-content-between p-4"
+                    >
+                        <div>
+                            <div class="service-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3
+                                class="card-title h4 mb-3"
+                                data-translate="service_land_title"
+                            >
+                                Servicio Terrestre
+                            </h3>
+                            <p
+                                class="card-text mb-4"
+                                data-translate="service_land_desc"
+                            >
+                                Proporcionamos transporte terrestre nacional e
+                                internacional, con cobertura en México, Estados
+                                Unidos y Canadá. Contamos con flotilla propia y
+                                tecnología avanzada para garantizar puntualidad
+                                y seguridad en cada envío.
+                            </p>
+                        </div>
+                        <div>
+                            <a
+                                href="land-national.html"
+                                class="btn custom-btn-tertiary mt-3"
+                            >
+                                <i class="fa-solid fa-square-up-right"></i>
+                                <span data-translate="service_national_btn"
+                                    >Nacional</span
+                                >
+                            </a>
+                            <a
+                                href="land-international.html"
+                                class="btn custom-btn-tertiary mt-3"
+                            >
+                                <i class="fa-solid fa-square-up-right"></i>
+                                <span data-translate="service_international_btn"
+                                    >Internacional</span
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <article class="card service-card">
+                    <div
+                        class="card-body text-center d-flex flex-column justify-content-between p-4"
+                    >
+                        <div>
+                            <div class="service-icon">
+                                <i class="fas fa-ship"></i>
+                            </div>
+                            <h3
+                                class="card-title h4 mb-3"
+                                data-translate="service_sea_title"
+                            >
+                                Servicio Marítimo
+                            </h3>
+                            <p
+                                class="card-text mb-4"
+                                data-translate="service_sea_desc"
+                            >
+                                Proporcionamos transporte marítimo global, con
+                                rutas hacia Asia, Europa y LATAM, ofreciendo
+                                soluciones tanto para carga completa como
+                                consolidada, con gestión aduanal y
+                                aseguramiento.
+                            </p>
+                        </div>
+                        <div>
+                            <a
+                                href="maritime.html"
+                                class="btn custom-btn-tertiary mt-3"
+                            >
+                                <i class="fa-solid fa-square-up-right"></i>
+                                <span data-translate="service_sea_btn"
+                                    >Ver más</span
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <article class="card service-card">
+                    <div
+                        class="card-body text-center d-flex flex-column justify-content-between p-4"
+                    >
+                        <div>
+                            <div class="service-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <h3
+                                class="card-title h4 mb-3"
+                                data-translate="service_air_title"
+                            >
+                                Servicio Aéreo
+                            </h3>
+                            <p
+                                class="card-text mb-4"
+                                data-translate="service_air_desc"
+                            >
+                                Proporcionamos transporte aéreo internacional
+                                con opciones programadas y charter, conectando
+                                los principales destinos en Norteamérica,
+                                Europa, Lejano Oriente y LATAM. Ofrecemos
+                                agilidad, seguridad y control total mediante
+                                tecnología de seguimiento en tiempo real.
+                            </p>
+                        </div>
+                        <div>
+                            <a
+                                href="air.html"
+                                class="btn custom-btn-tertiary mt-3"
+                            >
+                                <i class="fa-solid fa-square-up-right"></i>
+                                <span data-translate="service_air_btn"
+                                    >Ver más</span
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

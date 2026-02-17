@@ -1,0 +1,390 @@
+---
+
+---
+
+<style>
+    /* Navbar */
+    .navbar {
+        background: white !important;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+    }
+
+    .navbar-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .navbar-title {
+        color: var(--text-secondary-color);
+        font-size: 25px;
+    }
+
+    .navbar-dark {
+        background: var(--dark-color) !important;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--primary-color) !important;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        color: var(--light-color) !important;
+        margin: 0 10px;
+        transition: color 0.3s;
+        position: relative;
+    }
+
+    .nav-link:hover {
+        color: var(--bg-tertiary-color) !important;
+    }
+
+    .nav-link.active {
+        color: var(--bg-primary-color) !important;
+    }
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--tertiary-color);
+        transition: all 0.3s;
+        transform: translateX(-50%);
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 80%;
+    }
+    .nav-logo-certification-ctpat {
+        width: 150px;
+        height: 100%;
+    }
+    .nav-logo-certification-iso {
+        width: 150px;
+        height: 60px;
+    }
+    .nav-dropdown:hover {
+        background-color: var(--bg-primary-color);
+    }
+    .nav-dropdown:hover i,
+    .nav-dropdown:hover span {
+        color: var(--bg-tertiary-color);
+    }
+
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    /* Escritorio - submenú a la derecha */
+    @media (min-width: 992px) {
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            display: none !important;
+        }
+
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block !important;
+        }
+
+        .dropdown-submenu > a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: currentColor;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        /* Quitar el ::after del terrestre-toggle en escritorio */
+        .terrestre-toggle::after {
+            display: none !important;
+        }
+    }
+
+    /* Móvil - submenú debajo */
+    @media (max-width: 991.98px) {
+        .dropdown-submenu .dropdown-menu {
+            top: auto;
+            left: 0;
+            margin-top: 0;
+            margin-left: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            display: none;
+            padding: 0.5rem 0;
+        }
+
+        .dropdown-submenu .dropdown-menu.show {
+            display: block;
+        }
+
+        .dropdown-submenu > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .terrestre-toggle::after {
+            content: "";
+            display: inline-block;
+            width: 0.3em;
+            height: 0.3em;
+            border-right: 0.12em solid currentColor;
+            border-bottom: 0.12em solid currentColor;
+            margin-left: auto;
+            margin-right: 0.5em;
+            transform: rotate(-45deg);
+            transition: transform 0.2s;
+        }
+
+        .terrestre-toggle[aria-expanded="true"]::after {
+            transform: rotate(45deg);
+        }
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/#inicio">
+            <img src="favicon.svg" alt="Logo" class="navbar-logo" />
+            <span class="navbar-title">IGS Forwarding</span>
+        </a>
+        <img src="ctpat.svg" alt="CTPAT" class="nav-logo-certification-ctpat" />
+        <img src="iso.svg" alt="ISO" class="nav-logo-certification-iso" />
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a
+                        class="nav-link active"
+                        href="/#inicio"
+                        data-translate="nav_inicio">Inicio</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link text-nowrap"
+                        href="/#nosotros"
+                        data-translate="nav_nosotros">Nosotros</a
+                    >
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="/"
+                        id="servicesDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <span data-translate="nav_servicios">Servicios</span>
+                    </a>
+                    <ul
+                        class="dropdown-menu"
+                        aria-labelledby="servicesDropdown"
+                    >
+                        <li class="dropdown-submenu">
+                            <a
+                                class="dropdown-item dropdown-toggle terrestre-toggle"
+                                href="/"
+                                id="terrestreDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="fas fa-truck me-2"></i>
+                                <span data-translate="nav_land">Terrestre</span>
+                            </a>
+                            <ul
+                                class="dropdown-menu terrestre-submenu"
+                                aria-labelledby="terrestreDropdown"
+                            >
+                                <li>
+                                    <a
+                                        class="dropdown-item nav-dropdown"
+                                        href="/land-national"
+                                    >
+                                        <span data-translate="nav_land_nat"
+                                            >Nacional</span
+                                        >
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item nav-dropdown"
+                                        href="/land-international"
+                                    >
+                                        <span data-translate="nav_land_int"
+                                            >Internacional</span
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a
+                                class="dropdown-item nav-dropdown"
+                                href="/maritime"
+                            >
+                                <i class="fas fa-ship me-2"></i>
+                                <span data-translate="nav_maritime_int"
+                                    >Marítimo</span
+                                >
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item nav-dropdown" href="/air">
+                                <i class="fas fa-plane me-2"></i>
+                                <span data-translate="nav_air_int">Aéreo</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="/#cotizaciones"
+                        data-translate="nav_cotizaciones">Cotizaciones</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="/#contacto"
+                        data-translate="nav_contacto">Contacto</a
+                    >
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="/"
+                        id="languageDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <i class="fas fa-globe me-1"></i>
+                        <span id="currentLang">ES</span>
+                    </a>
+                    <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="languageDropdown"
+                    >
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="/"
+                                onclick="changeLanguage('es'); return false;"
+                            >
+                                <img
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/mx.svg"
+                                    alt="Español"
+                                    style="width: 20px; margin-right: 8px;"
+                                />
+                                Español
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="/"
+                                onclick="changeLanguage('en'); return false;"
+                            >
+                                <img
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg"
+                                    alt="English"
+                                    style="width: 20px; margin-right: 8px;"
+                                />
+                                English
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Navbar scroll effect and active section
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (navbar) {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)";
+            } else {
+                navbar.style.boxShadow = "0 2px 15px rgba(0,0,0,0.1)";
+            }
+        }
+
+        updateActiveNav();
+    });
+
+    // Function to update active nav link
+    function updateActiveNav() {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        let current = "";
+        const scrollPosition =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+        // Recorrer todas las secciones del documento
+        sections.forEach((section) => {
+            // Obtener la posición de la sección desde el inicio de la página y su altura
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            // Si estamos en la sección (considerando el navbar de 100px)
+            // La condición se cumple cuando la posición de la ventana está entre la posición de la sección
+            // menos 100px y la posición de la sección más su altura menos 100px
+            if (
+                scrollPosition >= sectionTop - 100 &&
+                scrollPosition < sectionTop + sectionHeight - 100
+            ) {
+                // Almacenar el ID de la sección actual
+                current = section.getAttribute("id");
+            }
+        });
+
+        // Si estamos al inicio de la página, marcar "inicio" como activo
+        if (scrollPosition < 100) {
+            current = "inicio";
+        }
+
+        // Actualizar clases active
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            const href = link.getAttribute("href");
+
+            // Remover el /# si existe y comparar solo con el id
+            const linkId = href.replace("/#", "").replace("#", "");
+
+            if (linkId === current) {
+                link.classList.add("active");
+            }
+        });
+    }
+</script>

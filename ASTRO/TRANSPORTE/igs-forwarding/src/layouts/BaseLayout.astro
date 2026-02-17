@@ -1,0 +1,292 @@
+---
+import WhatsappButton from "../components/WhatsappButton.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    keywords: string;
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<style is:global>
+    :root {
+        --primary-color: #a80b24;
+        --secondary-color: #000000;
+        --tertiary-color: #ffffff;
+
+        --text-primary-color: #000000;
+        --text-secondary-color: #ffffff;
+        --text-tertiary-color: #a80b24;
+
+        --bg-primary-color: #a80b24;
+        --bg-secondary-color: #000000;
+        --bg-tertiary-color: #ffffff;
+
+        --bg-primary-color-hover: #a80b2583;
+        --bg-secondary-color-hover: #00000062;
+        --bg-tertiary-color-hover: #ffffff40;
+
+        --bg-primary-button: #000000;
+        --bg-secondary-button: #ffffff;
+        --bg-tertiary-button: #a80b24;
+
+        --bg-primary-button-hover: #ffffff;
+        --bg-secondary-button-hover: #000000;
+        --bg-tertiary-button-hover: #a80b24;
+
+        --primary-button-text: #ffffff;
+        --secondary-button-text: #ffffff;
+        --tertiary-button-text: #a80b24;
+
+        --primary-button-text-hover: #000000;
+        --secondary-button-text-hover: #ffffff;
+        --tertiary-button-text-hover: #ffffff;
+
+        --dark-color: #000000;
+        --light-color: #f8f9fa;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+        padding-top: 70px;
+    }
+
+    /* Buttons */
+    .custom-btn-primary {
+        background: var(--bg-primary-button);
+        color: var(--primary-button-text);
+        border: none;
+        padding: 15px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .custom-btn-primary:hover {
+        background: var(--bg-primary-button-hover);
+        color: var(--primary-button-text-hover);
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px var(--bg-primary-color-hover);
+    }
+
+    .custom-btn-secondary {
+        padding: 15px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid var(--bg-secondary-button);
+        color: var(--secondary-button-text);
+    }
+
+    .custom-btn-secondary:hover {
+        background-color: var(--bg-secondary-button-hover);
+        color: var(--secondary-button-text-hover);
+    }
+
+    .custom-btn-tertiary {
+        padding: 15px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid var(--bg-tertiary-button);
+        color: var(--tertiary-button-text);
+    }
+
+    .custom-btn-tertiary:hover {
+        background-color: var(--bg-tertiary-button-hover);
+        color: var(--tertiary-button-text-hover);
+    }
+
+    .btn-outline-primary {
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 15px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+    }
+
+    .btn-outline-primary:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: scale(1.05);
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 50px;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    .link:hover {
+        color: var(--primary-color) !important;
+    }
+
+    /* Estilo del texto dentro del botón */
+    .fab-text {
+        margin-left: 10px;
+        /* Separación entre el icono y el texto */
+        white-space: nowrap;
+        /* Evita que el texto se rompa en varias líneas */
+    }
+
+    /* Estilo del botón principal */
+    .main-fab {
+        background-color: #25d366;
+        /* Verde WhatsApp */
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Estado inicial de los botones de servicio (ocultos) */
+    .sub-fab {
+        position: absolute;
+        background-color: #128c7e;
+        /* Verde más oscuro para sub-botones */
+
+        /* Propiedades para ocultarlos y acercarlos al botón principal */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        /* No interactuable cuando está oculto */
+        right: 0;
+        bottom: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 767px) {
+        body {
+            padding-top: 150px;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .quote-form,
+        .quote-info {
+            padding: 30px;
+        }
+    }
+
+    @media (max-width: 379px) {
+        body {
+            padding-top: 190px;
+        }
+    }
+</style>
+
+<html lang="es-MX">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Icono -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- SEO Meta Tags -->
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content="IGS Forwarding" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://igsforwarding.com/" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://igsforwarding.com/" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta
+            property="og:image"
+            content="https://igsforwarding.com/assets/image/favicon.svg"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://igsforwarding.com/" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+
+        <!-- Bootstrap CSS -->
+        <link href="/assets/lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <slot />
+
+        <!-- Bootstrap JS -->
+        <script is:inline src="/assets/lib/bootstrap/bootstrap.bundle.min.js"
+        ></script>
+    </body>
+</html>
+
+<script>
+    // Animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, observerOptions);
+
+    // Animacion de Cards que se muestran al hacer scroll
+    document
+        .querySelectorAll(".service-card, .contact-info-card, .about-stats")
+        .forEach((el) => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.6s ease";
+            observer.observe(el);
+        });
+</script>

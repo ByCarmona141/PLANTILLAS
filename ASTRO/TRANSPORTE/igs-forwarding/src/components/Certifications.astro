@@ -1,0 +1,419 @@
+---
+
+---
+
+<style>
+    .certifications-section {
+        background: white;
+        padding: 80px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .certifications-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .certifications-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: 768px) {
+        .certifications-header h2 {
+            font-size: 3rem;
+        }
+    }
+
+    .certifications-header p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-top: 25px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .certifications-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    @media (min-width: 992px) {
+        .certifications-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+
+    .cert-card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 3px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cert-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+    }
+
+    .cert-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary-color);
+    }
+
+    .cert-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 50%;
+    }
+
+    .cert-icon img {
+        width: 70%;
+        height: 70%;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+    }
+
+    .cert-content {
+        text-align: center;
+    }
+
+    .cert-content h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+    }
+
+    .cert-content .cert-standard {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .cert-info {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 25px 0;
+        text-align: left;
+    }
+
+    .cert-info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+    }
+
+    .cert-info-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .cert-info-item i {
+        color: var(--primary-color);
+        margin-right: 10px;
+        margin-top: 3px;
+        min-width: 20px;
+    }
+
+    .cert-info-item strong {
+        color: var(--secondary-color);
+        margin-right: 5px;
+    }
+
+    .cert-id {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        display: inline-block;
+        margin: 20px 0;
+        box-shadow: 0 5px 20px rgba(168, 11, 36, 0.3);
+    }
+
+    .cert-actions {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    .cert-btn {
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .cert-btn-primary {
+        background: var(--primary-color);
+        color: white;
+        border: 2px solid var(--primary-color);
+    }
+
+    .cert-btn-primary:hover {
+        background: transparent;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(168, 11, 36, 0.3);
+    }
+
+    .cert-btn-secondary {
+        background: transparent;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+    }
+
+    .cert-btn-secondary:hover {
+        background: var(--secondary-color);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animaciones */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .cert-card.animate {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    .cert-card:nth-child(1).animate {
+        animation-delay: 0.1s;
+    }
+
+    .cert-card:nth-child(2).animate {
+        animation-delay: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+        .certifications-section {
+            padding: 60px 15px;
+        }
+
+        .cert-card {
+            padding: 30px 20px;
+        }
+
+        .cert-content h3 {
+            font-size: 1.5rem;
+        }
+
+        .cert-id {
+            font-size: 1.1rem;
+            padding: 12px 20px;
+        }
+    }
+</style>
+
+<section class="certifications-section" id="certificaciones">
+    <div class="certifications-container">
+        <!-- Header -->
+        <div class="certifications-header">
+            <h2 class="section-title" data-translate="cert_title">
+                Nuestras Certificaciones
+            </h2>
+            <p class="section-subtitle" data-translate="cert_description">
+                Comprometidos con la excelencia y la calidad. Nuestras
+                certificaciones internacionales respaldan nuestro compromiso con
+                los más altos estándares de servicio y seguridad.
+            </p>
+        </div>
+
+        <!-- Grid de Certificaciones -->
+        <div class="certifications-grid">
+            <!-- Certificación ISO 9001:2015 -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="/iso.svg" alt="ISO 9001" />
+                </div>
+                <div class="cert-content">
+                    <h3>ISO 9001:2015</h3>
+                    <p class="cert-standard" data-translate="cert_iso_title">
+                        Sistema de Gestión de Calidad
+                    </p>
+
+                    <div class="cert-info">
+                        <div class="cert-info-item">
+                            <i class="fas fa-certificate"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_iso_cert"
+                                    >Certificado:</strong
+                                >
+                                BCI/GIG190207K5A/120624
+                            </p>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_iso_emission"
+                                    >Emisión:</strong
+                                >
+                                12 de Junio de 2024
+                            </p>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_iso_validity"
+                                    >Vigencia:</strong
+                                >
+                                11 de Junio de 2028
+                            </p>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-building"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_iso_awarded_by"
+                                    >Otorgado por:</strong
+                                >
+                                Buró de Certificaciones Internacionales y Sistemas
+                                Integrados
+                            </p>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-truck"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_iso_scope"
+                                    >Alcance:</strong
+                                >
+                                Servicios de transporte de carga terrestre en modalidades
+                                de unidad tipo caja seca y plataformas
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cert-actions">
+                        <a
+                            href="/assets/pdf/Certificado-ISO.pdf"
+                            target="_blank"
+                            class="cert-btn cert-btn-primary"
+                        >
+                            <i class="fas fa-file-pdf"></i>
+                            <span data-translate="cert_iso_view"
+                                >Ver Certificado</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificación C-TPAT -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="/ctpat.svg" alt="C-TPAT" />
+                </div>
+                <div class="cert-content">
+                    <h3>C-TPAT</h3>
+                    <p class="cert-standard">
+                        Customs-Trade Partnership Against Terrorism
+                    </p>
+
+                    <div class="cert-info">
+                        <div class="cert-info-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_ctpat_program"
+                                    >Programa:</strong
+                                >
+                                <span data-translate="cert_ctpat_program_name"
+                                    >Alianza Aduanera contra el Terrorismo</span
+                                >
+                            </p>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-globe-americas"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_ctpat_issued_by"
+                                    >Otorgado por:</strong
+                                >
+                                <span data-translate="cert_ctpat_issued_by_name"
+                                    >U.S. Customs and Border Protection (CBP)</span
+                                >
+                            </p>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-lock"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_ctpat_benefit"
+                                    >Beneficio:</strong
+                                >
+                                <span data-translate="cert_ctpat_benefit_name"
+                                    >Procesamiento acelerado en aduanas
+                                    estadounidenses</span
+                                >
+                            </p>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p class="m-0">
+                                <strong data-translate="cert_ctpat_validation"
+                                    >Validación:</strong
+                                >
+                                <span
+                                    data-translate="cert_ctpat_validation_name"
+                                    >Cumplimiento de estándares internacionales
+                                    de seguridad en la cadena de suministro</span
+                                >
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cert-id">ID: 22796434</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

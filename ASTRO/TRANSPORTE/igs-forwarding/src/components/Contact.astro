@@ -1,0 +1,220 @@
+---
+
+---
+
+<style>
+    /* Contact Section - CONTACTO */
+    .contact-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .contact-info-card {
+        background: var(--light-color);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+        border: 2px solid transparent;
+    }
+
+    .contact-info-card:hover {
+        border-color: var(--primary-color);
+        background: white;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-10px);
+    }
+
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        background: white;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control,
+    .form-select {
+        padding: 15px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        transition: all 0.3s;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+    }
+
+    .map-container {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        height: 400px;
+        background: #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+    }
+
+    /* Section Titles */
+    .section-title-map {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+        .section-title-map {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<section class="contact-section" id="contacto">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title" data-translate="contact_title">
+                Contáctanos
+            </h2>
+            <p class="section-subtitle" data-translate="contact_subtitle">
+                Estamos aquí para ayudarte
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="text-center">
+                    <h3
+                        class="section-title-map"
+                        data-translate="contact_title_map1"
+                    >
+                        Nuestras Oficinas
+                    </h3>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        class="w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7545.2170449703935!2d-98.27825!3d18.9928889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb90047a73789%3A0xed9700775e229d7b!2sIGS%20Forwarding%20Oficinas%20Administrativas!5e0!3m2!1ses-419!2smx!4v1759793656928!5m2!1ses-419!2smx"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="text-center">
+                    <h3
+                        class="section-title-map mt-3"
+                        data-translate="contact_title_map2"
+                    >
+                        Nuestro Patio
+                    </h3>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        class="w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.437838544945!2d-98.2384513!3d19.132302499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0f282044825%3A0x72bfbbba24a126c!2sIGS%20Forwarding!5e0!3m2!1ses-419!2smx!4v1761670371024!5m2!1ses-419!2smx"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <h3 class="mb-4" data-translate="contact_form_title">
+                        Envíanos un Mensaje
+                    </h3>
+                    <form
+                        id="contactForm"
+                        action="https://formspree.io/f/mqagrjdz"
+                        method="POST"
+                    >
+                        <div class="mb-3">
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                placeholder="Nombre"
+                                data-placeholder="contact_form_name"
+                                required
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Email"
+                                data-placeholder="contact_form_email"
+                                required
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <input
+                                type="tel"
+                                name="phone"
+                                class="form-control"
+                                placeholder="Teléfono"
+                                data-placeholder="contact_form_phone"
+                                required
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <input
+                                type="text"
+                                name="subject"
+                                class="form-control"
+                                placeholder="Asunto"
+                                data-placeholder="contact_form_subject"
+                                required
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <textarea
+                                name="message"
+                                class="form-control"
+                                rows="5"
+                                placeholder="Mensaje"
+                                data-placeholder="contact_form_message"
+                                required></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn custom-btn-tertiary w-100"
+                        >
+                            <i class="fas fa-paper-plane me-2"></i>
+                            <span data-translate="contact_form_btn"
+                                >Enviar Mensaje</span
+                            >
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
