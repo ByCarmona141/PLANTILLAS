@@ -193,14 +193,23 @@ footer a:hover {
     /* Asegura que esté sobre otros elementos */
 }
 
-/* Estilo base para todos los botones */
+/* Estilo base para todos los botones (MODIFICADO para incluir texto) */
 .whatsapp-fab {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Alinea los elementos a la izquierda (icono y texto) */
     align-items: center;
-    width: 60px;
+
+    /* Propiedades de tamaño y forma */
+    width: auto;
+    /* Ancho automático para ajustarse al texto */
+    padding: 0 15px;
+    /* Añadir padding horizontal */
     height: 60px;
-    border-radius: 50%;
+    border-radius: 30px;
+    /* Borde más redondeado para el botón alargado */
+
+    /* Estilos generales */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     color: white;
     text-decoration: none;
@@ -208,14 +217,31 @@ footer a:hover {
     transition: all 0.3s ease;
     /* Transiciones suaves */
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 16px;
+    /* Tamaño de fuente para el texto */
+    border: none;
+    /* Asegurar que el botón principal no tenga borde */
 }
+
+/* Estilo del icono dentro del botón */
+.whatsapp-fab i {
+    font-size: 24px;
+    /* Mantiene el icono grande */
+}
+
+/* Estilo del texto dentro del botón */
+.fab-text {
+    margin-left: 10px;
+    /* Separación entre el icono y el texto */
+    white-space: nowrap;
+    /* Evita que el texto se rompa en varias líneas */
+}
+
 
 /* Estilo del botón principal */
 .main-fab {
     background-color: #25d366;
     /* Verde WhatsApp */
-    border: none;
     position: relative;
     z-index: 10;
 }
@@ -246,7 +272,7 @@ footer a:hover {
 }
 
 /* Posicionamiento y animación de los sub-botones (apilados verticalmente) */
-/* (70px es la altura del botón (60px) más el margen (10px)) */
+/* La separación es de 70px (60px del botón + 10px de margen) */
 .whatsapp-fab-container.active .aereo {
     transform: translateY(-70px);
 }
@@ -263,17 +289,18 @@ footer a:hover {
     transform: translateY(-280px);
 }
 
-/* Rotación y cambio de color del botón principal al activarse */
+/* Cambios en el botón principal al activarse */
 .whatsapp-fab-container.active .main-fab {
-    /* Gira el icono de WhatsApp para simular una 'X' */
     background-color: #d32525;
     /* Cambia a color rojo para indicar "cerrar" */
 }
 
+
 /* Efecto hover */
 .whatsapp-fab:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-    transform: scale(1.05);
+    transform: scale(1.03);
+    /* Ligeramente más pequeño para el efecto visual */
 }
 
 /* Responsive */

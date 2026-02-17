@@ -10,7 +10,7 @@
     transition: all 0.4s ease;
     height: 100%;
     background: white;
-    box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     position: relative;
 }
@@ -29,7 +29,7 @@
 
 .service-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .service-card:hover::before {
