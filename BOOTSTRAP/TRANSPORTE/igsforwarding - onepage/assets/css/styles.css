@@ -6,11 +6,11 @@
     --text-primary-color: #000000;
     --text-secondary-color: #ffffff;
     --text-tertiary-color: #A80B24;
-
+    
     --bg-primary-color: #A80B24;
     --bg-secondary-color: #000000;
     --bg-tertiary-color: #ffffff;
-
+    
     --bg-primary-color-hover: #a80b2583;
     --bg-secondary-color-hover: #00000062;
     --bg-tertiary-color-hover: #ffffff40;
@@ -18,15 +18,15 @@
     --bg-primary-button: #000000;
     --bg-secondary-button: #ffffff;
     --bg-tertiary-button: #A80B24;
-
+    
     --bg-primary-button-hover: #ffffff;
     --bg-secondary-button-hover: #000000;
     --bg-tertiary-button-hover: #A80B24;
-
+    
     --primary-button-text: #ffffff;
     --secondary-button-text: #ffffff;
     --tertiary-button-text: #A80B24;
-
+    
     --primary-button-text-hover: #000000;
     --secondary-button-text-hover: #ffffff;
     --tertiary-button-text-hover: #ffffff;
@@ -118,7 +118,7 @@ footer a:hover {
     border: 2px solid var(--bg-secondary-button);
     color: var(--secondary-button-text);
 }
-
+  
 .custom-btn-secondary:hover {
     background-color: var(--bg-secondary-button-hover);
     color: var(--secondary-button-text-hover);
@@ -134,7 +134,7 @@ footer a:hover {
     border: 2px solid var(--bg-tertiary-button);
     color: var(--tertiary-button-text);
 }
-
+  
 .custom-btn-tertiary:hover {
     background-color: var(--bg-tertiary-button-hover);
     color: var(--tertiary-button-text-hover);
@@ -182,147 +182,21 @@ footer a:hover {
     color: var(--primary-color) !important;
 }
 
-/* Contenedor para posicionar los botones */
-.whatsapp-fab-container {
-    position: fixed;
-    bottom: 20px;
-    /* Distancia desde el borde inferior */
-    right: 20px;
-    /* Distancia desde el borde derecho */
-    z-index: 1000;
-    /* Asegura que esté sobre otros elementos */
-}
-
-/* Estilo base para todos los botones (MODIFICADO para incluir texto) */
-.whatsapp-fab {
-    display: flex;
-    justify-content: flex-start;
-    /* Alinea los elementos a la izquierda (icono y texto) */
-    align-items: center;
-
-    /* Propiedades de tamaño y forma */
-    width: auto;
-    /* Ancho automático para ajustarse al texto */
-    padding: 0 15px;
-    /* Añadir padding horizontal */
-    height: 60px;
-    border-radius: 30px;
-    /* Borde más redondeado para el botón alargado */
-
-    /* Estilos generales */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    /* Transiciones suaves */
-    margin-top: 10px;
-    font-size: 16px;
-    /* Tamaño de fuente para el texto */
-    border: none;
-    /* Asegurar que el botón principal no tenga borde */
-}
-
-/* Estilo del icono dentro del botón */
-.whatsapp-fab i {
-    font-size: 24px;
-    /* Mantiene el icono grande */
-}
-
-/* Estilo del texto dentro del botón */
-.fab-text {
-    margin-left: 10px;
-    /* Separación entre el icono y el texto */
-    white-space: nowrap;
-    /* Evita que el texto se rompa en varias líneas */
-}
-
-
-/* Estilo del botón principal */
-.main-fab {
-    background-color: #25d366;
-    /* Verde WhatsApp */
-    position: relative;
-    z-index: 10;
-}
-
-/* Estado inicial de los botones de servicio (ocultos) */
-.sub-fab {
-    position: absolute;
-    background-color: #128c7e;
-    /* Verde más oscuro para sub-botones */
-
-    /* Propiedades para ocultarlos y acercarlos al botón principal */
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    /* No interactuable cuando está oculto */
-    right: 0;
-    bottom: 0;
-}
-
-/* ESTADO ACTIVO: Cuando el botón principal es clickeado */
-
-/* Mostrar y habilitar sub-botones */
-.whatsapp-fab-container.active .sub-fab {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    /* Habilitar interacción */
-}
-
-/* Posicionamiento y animación de los sub-botones (apilados verticalmente) */
-/* La separación es de 70px (60px del botón + 10px de margen) */
-.whatsapp-fab-container.active .aereo {
-    transform: translateY(-70px);
-}
-
-.whatsapp-fab-container.active .maritimo {
-    transform: translateY(-140px);
-}
-
-.whatsapp-fab-container.active .terrestre-nacional {
-    transform: translateY(-210px);
-}
-
-.whatsapp-fab-container.active .terrestre-internacional {
-    transform: translateY(-280px);
-}
-
-/* Cambios en el botón principal al activarse */
-.whatsapp-fab-container.active .main-fab {
-    background-color: #d32525;
-    /* Cambia a color rojo para indicar "cerrar" */
-}
-
-
-/* Efecto hover */
-.whatsapp-fab:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-    transform: scale(1.03);
-    /* Ligeramente más pequeño para el efecto visual */
-}
-
 /* Responsive */
 @media (max-width: 767px) {
     body {
         padding-top: 150px;
     }
-
     .hero-title {
         font-size: 2.2rem;
     }
-
     .hero-subtitle {
         font-size: 1.1rem;
     }
-
     .section-title {
         font-size: 2rem;
     }
-
-    .quote-form,
-    .quote-info {
+    .quote-form, .quote-info {
         padding: 30px;
     }
 }
@@ -331,4 +205,13 @@ footer a:hover {
     body {
         padding-top: 190px;
     }
+}
+
+#whFab {
+    position: fixed !important;
+    z-index: 999999 !important; /* SUPERIOR A CUALQUIER BOOTSTRAP */
+}
+.wh-fab-btn,
+.wh-fab-label {
+    z-index: 999999 !important;
 }

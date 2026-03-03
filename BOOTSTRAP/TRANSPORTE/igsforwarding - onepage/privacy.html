@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,33 +9,31 @@
 
     <!-- SEO Meta Tags -->
     <title>Servicio Terrestre Internacional | IGS Forwarding</title>
-    <meta name="description"
-        content="Transporte terrestre internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
-    <meta name="keywords"
-        content="envío terrestre, FCL, LCL, transporte terrestre, carga consolidada, contenedor completo">
+    <meta name="description" content="Transporte terrestre internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
+    <meta name="keywords" content="envío terrestre, FCL, LCL, transporte terrestre, carga consolidada, contenedor completo">
     <meta name="author" content="IGS Forwarding">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://igsforwarding.com/land-international.html">
-
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://igsforwarding.com/land-international.html">
     <meta property="og:title" content="Servicio de Envío Terrestre | IGS Forwarding">
     <meta property="og:description" content="Transporte terrestre internacional con cobertura global. FCL y LCL.">
     <meta property="og:image" content="https://igsforwarding.com/assets/image/land-international/img1.jpg">
-
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://igsforwarding.com/land-international.html">
     <meta property="twitter:title" content="Servicio de Envío Terrestre | IGS Forwarding">
     <meta property="twitter:description" content="Transporte terrestre internacional con cobertura global.">
-
+    
     <!-- Bootstrap CSS -->
     <link href="assets/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
@@ -45,7 +42,6 @@
     <!-- SweetAlert2 -->
     <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
 </head>
-
 <body>
     <!-- Navigation -->
     <div id="navbar-container"></div>
@@ -53,41 +49,12 @@
     <!-- Land International Content -->
     <div id="privacy-container"></div>
 
-    <div class="whatsapp-fab-container">
-        <a href="https://wa.me/2212704639?text=Estoy interesado en un *servicio de carga aérea*" target="_blank"
-            class="whatsapp-fab sub-fab aereo" title="WhatsApp Aéreo">
-            <i class="fas fa-plane"></i>
-            <span class="fab-text">Aéreo</span>
-        </a>
-        <a href="https://wa.me/2227185252?text=Estoy interesado en un *servicio de carga marítima*" target="_blank"
-            class="whatsapp-fab sub-fab maritimo" title="WhatsApp Marítimo">
-            <i class="fas fa-ship"></i>
-            <span class="fab-text">Marítimo</span>
-        </a>
-        <a href="https://wa.me/2223716661?text=Estoy interesado en un *servicio de carga terrestre nacional*"
-            target="_blank" class="whatsapp-fab sub-fab terrestre-nacional" title="WhatsApp Terrestre Nacional">
-            <i class="fas fa-truck"></i>
-            <span class="fab-text">Terrestre Nacional</span>
-        </a>
-        <a href="https://wa.me/2212704639?text=Estoy interesado en un *servicio de carga terrestre internacional*"
-            target="_blank" class="whatsapp-fab sub-fab terrestre-internacional"
-            title="WhatsApp Terrestre Internacional">
-            <i class="fas fa-globe-americas"></i>
-            <span class="fab-text">Terrestre Internacional</span>
-        </a>
-
-        <button id="main-whatsapp-fab" class="whatsapp-fab main-fab" title="Contactar por WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span class="fab-text">WhatsApp</span>
-        </button>
-    </div>
-
     <!-- Footer -->
     <div id="footer-container"></div>
 
     <!-- Bootstrap JS -->
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
-
+    
     <!-- Translations - IMPORTANTE: Cargar ANTES de translations.js -->
     <script src="assets/js/translations/navbar-translations.js"></script>
     <script src="assets/js/translations/home-translations.js"></script>
@@ -104,13 +71,13 @@
     <script src="assets/js/translations/land-international-translations.js"></script>
     <script src="assets/js/translations/maritime-translations.js"></script>
     <script src="assets/js/translations/privacy-translations.js"></script>
-
+    
     <!-- Translations Main - DEBE ir después de los archivos individuales -->
     <script src="assets/js/translations.js"></script>
-
+    
     <!-- Main JS - DEBE ir después de translations.js -->
     <script src="assets/js/main-services.js"></script>
-
+    
     <!-- Load Components -->
     <script>
         // Function to load HTML components
@@ -125,12 +92,12 @@
         }
 
         // Load all components
-        document.addEventListener('DOMContentLoaded', async function () {
+        document.addEventListener('DOMContentLoaded', async function() {
             // Cargar todos los componentes
             await loadComponent('navbar-container', 'components/navbar.html');
             await loadComponent('privacy-container', 'components/privacy.html');
             await loadComponent('footer-container', 'components/footer.html');
-
+            
             // IMPORTANTE: Esperar un momento para que el DOM se actualice
             setTimeout(() => {
                 // Initialize main functionality after all components are loaded
@@ -140,32 +107,5 @@
             }, 100);
         });
     </script>
-
-    <!-- WhatsApp Floating Button -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mainFab = document.getElementById('main-whatsapp-fab');
-            const container = document.querySelector('.whatsapp-fab-container');
-
-            mainFab.addEventListener('click', () => {
-                // 1. Alterna la clase 'active' en el contenedor para activar los estilos CSS
-                container.classList.toggle('active');
-
-                // 2. Lógica para cambiar el icono (WhatsApp <-> Cerrar)
-                const mainIcon = mainFab.querySelector('i');
-
-                if (container.classList.contains('active')) {
-                    // Si está activo, cambia el icono a un símbolo de cerrar
-                    mainIcon.classList.remove('fa-brands', 'fa-whatsapp');
-                    mainIcon.classList.add('fa-solid', 'fa-x'); // Icono de 'X'
-                } else {
-                    // Si no está activo, vuelve al icono de WhatsApp
-                    mainIcon.classList.remove('fa-solid', 'fa-x');
-                    mainIcon.classList.add('fa-brands', 'fa-whatsapp');
-                }
-            });
-        });
-    </script>
 </body>
-
 </html>

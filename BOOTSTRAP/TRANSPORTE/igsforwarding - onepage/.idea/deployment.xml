@@ -5,7 +5,7 @@
       <paths name="IGS FORWARDING">
         <serverdata>
           <mappings>
-            <mapping deploy="/website_f7293fc8" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

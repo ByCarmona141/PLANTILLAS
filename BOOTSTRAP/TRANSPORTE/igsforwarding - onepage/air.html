@@ -1,41 +1,313 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-
 <head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Crear el contenedor del Web Component
+    class WhatsAppFloating extends HTMLElement {
+        constructor() {
+            super();
+
+            // Shadow DOM cerrado = NO accesible desde consola ni CSS externos
+            const shadow = this.attachShadow({ mode: "closed" });
+
+            // Estilos internos 100% aislados
+            const style = document.createElement("style");
+            style.textContent = `
+                #wa-btn {
+                    position: fixed;
+                    bottom: 25px;
+                    right: 25px;
+                    width: 60px;
+                    height: 60px;
+                    background: #25D366;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                    z-index: 999999;
+                }
+
+                #wa-panel {
+                    position: fixed;
+                    bottom: 95px;
+                    right: 25px;
+                    background: white;
+                    width: 260px;
+                    border-radius: 12px;
+                    padding: 15px;
+                    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+                    display: none;
+                    flex-direction: column;
+                    gap: 10px;
+                    z-index: 999999;
+                }
+
+                .wa-line {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    background: #f5f5f5;
+                }
+
+                .wa-line:hover {
+                    background: #e8e8e8;
+                }
+            `;
+
+            // HTML interno encapsulado
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = `
+                <div id="wa-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35">
+                </div>
+
+                <div id="wa-panel">
+                    <div class="wa-line" data-phone="5211111111111">Línea 1</div>
+                    <div class="wa-line" data-phone="5212222222222">Línea 2</div>
+                    <div class="wa-line" data-phone="5213333333333">Línea 3</div>
+                    <div class="wa-line" data-phone="5214444444444">Línea 4</div>
+                </div>
+            `;
+
+            shadow.appendChild(style);
+            shadow.appendChild(wrapper);
+
+            // Eventos internos aislados
+            const btn = shadow.querySelector("#wa-btn");
+            const panel = shadow.querySelector("#wa-panel");
+
+            btn.addEventListener("click", () => {
+                panel.style.display = panel.style.display === "flex" ? "none" : "flex";
+            });
+
+            shadow.querySelectorAll(".wa-line").forEach(line => {
+                line.addEventListener("click", () => {
+                    const phone = line.getAttribute("data-phone");
+                    window.open(`https://wa.me/${phone}`, "_blank");
+                });
+            });
+        }
+    }
+
+    // Registrar el Web Component
+    customElements.define("whatsapp-floating", WhatsAppFloating);
+
+    // Insertarlo en el body
+    document.body.appendChild(document.createElement("whatsapp-floating"));
+});
+</script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WZJJ6C5');</script>
+    <!-- End Google Tag Manager -->
+
+     <style>
+
+:root{
+  --wh-bg: #25D366;      
+  --wh-accent: #128C7E; 
+  --btn-size: 60px;
+  --gap: 12px;
+  --z: 9999;
+}
+
+
+.wh-fab-wrap {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: var(--z);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: calc(var(--gap));
+  pointer-events: none; 
+}
+
+
+.wh-fab-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform-origin: 100% 50%;
+  transition: transform .22s cubic-bezier(.2,.9,.3,1), opacity .18s;
+  opacity: 0;
+  transform: translateY(8px) scale(.95);
+  pointer-events: none;
+
+}
+
+
+.wh-fab-wrap.open .wh-fab-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+
+.wh-fab-label {
+  background: #fff;
+  color: #222;
+  padding: 10px 14px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  font-size: 14px;
+  white-space: nowrap;
+  border: 1px solid rgba(0,0,0,0.03);
+  
+}
+
+.wh-fab-btn {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  min-width: var(--btn-size);
+  min-height: var(--btn-size);
+  border-radius: 50%;
+  background: var(--wh-bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  box-shadow: 0 10px 22px rgba(37,211,102,.18);
+  cursor: pointer;
+  transition: transform .12s, box-shadow .12s, background .12s;
+  pointer-events: auto;
+
+}
+
+#whFab {
+    position: fixed !important;
+    z-index: 999999 !important; /* SUPERIOR A CUALQUIER BOOTSTRAP */
+}
+.wh-fab-btn,
+.wh-fab-label {
+    z-index: 999999 !important;
+}
+
+.wh-fab-btn.small {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  min-height: 46px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+
+.wh-fab-btn:active { transform: translateY(1px) scale(.99); }
+.wh-fab-btn:hover { box-shadow: 0 12px 26px rgba(0,0,0,.18); }
+
+
+.wh-fab-toggle.open { transform: rotate(45deg); }
+
+.wh-fab-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.wh-fab-label .muted {
+  display:inline-block;
+  opacity:.6;
+  font-size:13px;
+  margin-left:6px;
+}
+
+
+@media (max-width:420px){
+  .wh-fab-wrap { right:12px; bottom:12px; }
+  .wh-fab-label { font-size:13px; padding:8px 12px; }
+}
+
+#whFab {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 9999999 !important;
+  pointer-events: auto !important;
+}
+.wh-fab-btn, .wh-fab-label {
+  z-index: 9999999 !important;
+}
+
+#navbar-container, 
+#home-container,
+#about-container,
+#services-container,
+#certifications-container,
+#clients-container,
+#quotes-container,
+#contact-container,
+#fraud-container,
+#footer-container {
+    position: static !important;
+    overflow: visible !important;
+    z-index: auto !important;
+}
+
+/* Garantiza que el botón quede siempre arriba */
+#whFab {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 999999999 !important;
+    pointer-events: auto !important;
+}
+
+#whFab {
+    position: fixed !important;
+    bottom: 22px !important;
+    right: 22px !important;
+    z-index: 999999999 !important; /* Superior a TODO */
+    pointer-events: auto !important;
+}
+
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Icono -->
     <link rel="icon" href="assets/image/logo.png" type="image/x-icon" />
-
+    
     <!-- SEO Meta Tags -->
     <title>Servicio Aéreo | IGS Forwarding</title>
-    <meta name="description"
-        content="Transporte aéreo internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
+    <meta name="description" content="Transporte aéreo internacional FCL y LCL. Rutas globales hacia Asia, Europa y LATAM con certificación CTPAT e ISO 9001:2015.">
     <meta name="keywords" content="envío aéreo, FCL, LCL, transporte aéreo, carga consolidada, avión completo">
     <meta name="author" content="IGS Forwarding">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://igsforwarding.com/air.html">
-
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://igsforwarding.com/air.html">
     <meta property="og:title" content="Servicio de Envío Aéreo | IGS Forwarding">
     <meta property="og:description" content="Transporte aéreo internacional con cobertura global. FCL y LCL.">
     <meta property="og:image" content="https://igsforwarding.com/assets/image/air/img1.jpg">
-
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://igsforwarding.com/air.html">
     <meta property="twitter:title" content="Servicio de Envío Aéreo | IGS Forwarding">
     <meta property="twitter:description" content="Transporte aéreo internacional con cobertura global.">
-
+    
     <!-- Bootstrap CSS -->
     <link href="assets/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
@@ -47,8 +319,11 @@
     <!-- SweetAlert2 -->
     <script src="assets/lib/sweetalert/sweetalert2.all.min.js"></script>
 </head>
-
 <body>
+     <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJJ6C5"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
     <div id="navbar-container"></div>
 
@@ -58,41 +333,12 @@
     <!-- Quote Section - COTIZACIONES -->
     <div id="quotes-container"></div>
 
-    <div class="whatsapp-fab-container">
-        <a href="https://wa.me/2212704639?text=Estoy interesado en un *servicio de carga aérea*" target="_blank"
-            class="whatsapp-fab sub-fab aereo" title="WhatsApp Aéreo">
-            <i class="fas fa-plane"></i>
-            <span class="fab-text">Aéreo</span>
-        </a>
-        <a href="https://wa.me/2227185252?text=Estoy interesado en un *servicio de carga marítima*" target="_blank"
-            class="whatsapp-fab sub-fab maritimo" title="WhatsApp Marítimo">
-            <i class="fas fa-ship"></i>
-            <span class="fab-text">Marítimo</span>
-        </a>
-        <a href="https://wa.me/2223716661?text=Estoy interesado en un *servicio de carga terrestre nacional*"
-            target="_blank" class="whatsapp-fab sub-fab terrestre-nacional" title="WhatsApp Terrestre Nacional">
-            <i class="fas fa-truck"></i>
-            <span class="fab-text">Terrestre Nacional</span>
-        </a>
-        <a href="https://wa.me/2212704639?text=Estoy interesado en un *servicio de carga terrestre internacional*"
-            target="_blank" class="whatsapp-fab sub-fab terrestre-internacional"
-            title="WhatsApp Terrestre Internacional">
-            <i class="fas fa-globe-americas"></i>
-            <span class="fab-text">Terrestre Internacional</span>
-        </a>
-
-        <button id="main-whatsapp-fab" class="whatsapp-fab main-fab" title="Contactar por WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span class="fab-text">WhatsApp</span>
-        </button>
-    </div>
-
     <!-- Footer -->
     <div id="footer-container"></div>
 
     <!-- Bootstrap JS -->
     <script src="assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
-
+    
     <!-- Translations - IMPORTANTE: Cargar ANTES de translations.js -->
     <script src="assets/js/translations/navbar-services-translations.js"></script>
     <script src="assets/js/translations/home-translations.js"></script>
@@ -109,13 +355,13 @@
     <script src="assets/js/translations/land-international-translations.js"></script>
     <script src="assets/js/translations/maritime-translations.js"></script>
     <script src="assets/js/translations/privacy-translations.js"></script>
-
+    
     <!-- Translations Main - DEBE ir después de los archivos individuales -->
     <script src="assets/js/translations.js"></script>
-
+    
     <!-- Main JS - DEBE ir después de translations.js -->
     <script src="assets/js/main-services.js"></script>
-
+    
     <!-- Load Components -->
     <script>
         // Function to load HTML components
@@ -130,13 +376,13 @@
         }
 
         // Load all components
-        document.addEventListener('DOMContentLoaded', async function () {
+        document.addEventListener('DOMContentLoaded', async function() {
             // Cargar todos los componentes
             await loadComponent('navbar-container', 'components/navbar-services.html');
             await loadComponent('air-container', 'components/services/air/air-page.html');
             await loadComponent('quotes-container', 'components/services/air/quotes.html');
             await loadComponent('footer-container', 'components/footer.html');
-
+            
             // IMPORTANTE: Esperar un momento para que el DOM se actualice
             setTimeout(() => {
                 // Initialize main functionality after all components are loaded
@@ -147,75 +393,204 @@
         });
     </script>
 
-    <!-- WhatsApp Floating Button -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mainFab = document.getElementById('main-whatsapp-fab');
-            const container = document.querySelector('.whatsapp-fab-container');
+    var form = document.getElementById("quoteForm");
+    
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var data = new FormData(event.target);
 
-            mainFab.addEventListener('click', () => {
-                // 1. Alterna la clase 'active' en el contenedor para activar los estilos CSS
-                container.classList.toggle('active');
-
-                // 2. Lógica para cambiar el icono (WhatsApp <-> Cerrar)
-                const mainIcon = mainFab.querySelector('i');
-
-                if (container.classList.contains('active')) {
-                    // Si está activo, cambia el icono a un símbolo de cerrar
-                    mainIcon.classList.remove('fa-brands', 'fa-whatsapp');
-                    mainIcon.classList.add('fa-solid', 'fa-x'); // Icono de 'X'
-                } else {
-                    // Si no está activo, vuelve al icono de WhatsApp
-                    mainIcon.classList.remove('fa-solid', 'fa-x');
-                    mainIcon.classList.add('fa-brands', 'fa-whatsapp');
-                }
-            });
-        });
-    </script>
-
-    <script>
-        var form = document.getElementById("quoteForm");
-
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var data = new FormData(event.target);
-
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: currentLanguage === 'es' ? '¡Solicitud enviada!' : 'Request sent!',
-                        text: "¡Gracias! Tu solicitud de cotización ha sido enviada. Te contactaremos pronto.",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    form.reset()
-                } else {
-                    Swal.fire({
-                        icon: "error",
-                        title: currentLanguage === 'es' ? '¡Ocurrio un error!' : 'An error occurred!',
-                        text: currentLanguage === 'es' ? '¡Contacta el servicio por WhatsApp!' : "Contact the service by WhatsApp!",
-                        footer: '<a href="https://wa.me/2227185252?text=Gracias por ponerse en contacto con *IGS FORWARDING*!%0A%0ASomos una empresa especializada en servicios marítimos internacionales, ofreciendo las siguientes soluciones:%0A%0A*• Carga Consolidada (LCL):* Ideal para envíos pequeños o medianos, con rutas directas y tiempos de tránsito reducidos.%0A*• Contenedor Completo (FCL):* Flexibilidad en rutas, tarifas competitivas y opciones de servicio puerta a puerta.%0A%0A*Contamos con soporte en los principales puertos de México:* Veracruz, Altamira, Manzanillo y Lázaro Cárdenas.%0A%0APara proporcionarle una cotización detallada, por favor indíquenos:%0A%0A*Puerto de origen:*%0A*Puerto de destino:*%0A*Tipo de carga:*%0A*Dimensiones y peso aproximado:*%0A%0ANuestro horario de atención es de lunes a viernes de 9:00 a 18:00 horas.%0A%0AUno de nuestros ejecutivos se pondrá en contacto con usted a la brevedad.%0A%0AAgradecemos su preferencia y quedamos a su disposición para cualquier consulta adicional.%0A%0AAtentamente,%0A*IGS FORWARDING*" target="_blank" class="btn custom-btn-tertiary mt-3"><i class="fa-brands fa-whatsapp"></i><span data-translate="service_btn">Cotizar Servicio</span></a>'
-                    });
-                }
-            }).catch(error => {
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: currentLanguage === 'es' ? '¡Solicitud enviada!' : 'Request sent!',
+                    text: "¡Gracias! Tu solicitud de cotización ha sido enviada. Te contactaremos pronto.",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                form.reset()
+            } else {
                 Swal.fire({
                     icon: "error",
                     title: currentLanguage === 'es' ? '¡Ocurrio un error!' : 'An error occurred!',
                     text: currentLanguage === 'es' ? '¡Contacta el servicio por WhatsApp!' : "Contact the service by WhatsApp!",
                     footer: '<a href="https://wa.me/2227185252?text=Gracias por ponerse en contacto con *IGS FORWARDING*!%0A%0ASomos una empresa especializada en servicios marítimos internacionales, ofreciendo las siguientes soluciones:%0A%0A*• Carga Consolidada (LCL):* Ideal para envíos pequeños o medianos, con rutas directas y tiempos de tránsito reducidos.%0A*• Contenedor Completo (FCL):* Flexibilidad en rutas, tarifas competitivas y opciones de servicio puerta a puerta.%0A%0A*Contamos con soporte en los principales puertos de México:* Veracruz, Altamira, Manzanillo y Lázaro Cárdenas.%0A%0APara proporcionarle una cotización detallada, por favor indíquenos:%0A%0A*Puerto de origen:*%0A*Puerto de destino:*%0A*Tipo de carga:*%0A*Dimensiones y peso aproximado:*%0A%0ANuestro horario de atención es de lunes a viernes de 9:00 a 18:00 horas.%0A%0AUno de nuestros ejecutivos se pondrá en contacto con usted a la brevedad.%0A%0AAgradecemos su preferencia y quedamos a su disposición para cualquier consulta adicional.%0A%0AAtentamente,%0A*IGS FORWARDING*" target="_blank" class="btn custom-btn-tertiary mt-3"><i class="fa-brands fa-whatsapp"></i><span data-translate="service_btn">Cotizar Servicio</span></a>'
                 });
+            }
+        }).catch(error => {
+            Swal.fire({
+                icon: "error",
+                title: currentLanguage === 'es' ? '¡Ocurrio un error!' : 'An error occurred!',
+                text: currentLanguage === 'es' ? '¡Contacta el servicio por WhatsApp!' : "Contact the service by WhatsApp!",
+                footer: '<a href="https://wa.me/2227185252?text=Gracias por ponerse en contacto con *IGS FORWARDING*!%0A%0ASomos una empresa especializada en servicios marítimos internacionales, ofreciendo las siguientes soluciones:%0A%0A*• Carga Consolidada (LCL):* Ideal para envíos pequeños o medianos, con rutas directas y tiempos de tránsito reducidos.%0A*• Contenedor Completo (FCL):* Flexibilidad en rutas, tarifas competitivas y opciones de servicio puerta a puerta.%0A%0A*Contamos con soporte en los principales puertos de México:* Veracruz, Altamira, Manzanillo y Lázaro Cárdenas.%0A%0APara proporcionarle una cotización detallada, por favor indíquenos:%0A%0A*Puerto de origen:*%0A*Puerto de destino:*%0A*Tipo de carga:*%0A*Dimensiones y peso aproximado:*%0A%0ANuestro horario de atención es de lunes a viernes de 9:00 a 18:00 horas.%0A%0AUno de nuestros ejecutivos se pondrá en contacto con usted a la brevedad.%0A%0AAgradecemos su preferencia y quedamos a su disposición para cualquier consulta adicional.%0A%0AAtentamente,%0A*IGS FORWARDING*" target="_blank" class="btn custom-btn-tertiary mt-3"><i class="fa-brands fa-whatsapp"></i><span data-translate="service_btn">Cotizar Servicio</span></a>'
             });
-        }
-        form.addEventListener("submit", handleSubmit)
+        });
+    }
+    form.addEventListener("submit", handleSubmit)
     </script>
-</body>
 
+    <!-- BEGIN: Floating multi-WhatsApp button -->
+
+
+<div class="wh-fab-wrap" id="whFab">
+  <!-- Contact 4 (will appear at top) -->
+  <div class="wh-fab-item" data-order="4">
+    <div class="wh-fab-row">
+      <a class="wh-fab-label" id="label4" href="https://api.whatsapp.com/send/?phone=2212704639&text=Estoy+interesado+en+un+%2Aservicio+de+carga+a%C3%A9rea%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+        Servicio Aéreo <span class="muted"></span>
+      </a>
+      <a class="wh-fab-btn small" id="btn4" href="https://api.whatsapp.com/send/?phone=2212704639&text=Estoy+interesado+en+un+%2Aservicio+de+carga+a%C3%A9rea%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Línea Tienda">
+        <!-- WhatsApp SVG -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.52 3.48A11.79 11.79 0 0 0 12 .5C6.2.5 1.5 4.9.63 10.34c-.6 3.47.46 6.8 2.98 9.09L2 23l3.74-1.01a11.73 11.73 0 0 0 5.99 1.54h.01c5.8 0 10.5-4.4 11.37-9.84.88-5.44-2.69-10.06-7.9-10.19z" fill="#fff"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact 3 -->
+  <div class="wh-fab-item" data-order="3">
+    <div class="wh-fab-row">
+      <a class="wh-fab-label" id="label3" href="https://api.whatsapp.com/send/?phone=2227185252&text=Estoy+interesado+en+un+%2Aservicio+de+carga+mar%C3%ADtima%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+        Servicio Marítimo <span class="muted"></span>
+      </a>
+      <a class="wh-fab-btn small" id="btn3" href="https://api.whatsapp.com/send/?phone=2227185252&text=Estoy+interesado+en+un+%2Aservicio+de+carga+mar%C3%ADtima%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Soporte Técnico">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.52 3.48A11.79 11.79 0 0 0 12 .5C6.2.5 1.5 4.9.63 10.34c-.6 3.47.46 6.8 2.98 9.09L2 23l3.74-1.01a11.73 11.73 0 0 0 5.99 1.54h.01c5.8 0 10.5-4.4 11.37-9.84.88-5.44-2.69-10.06-7.9-10.19z" fill="#fff"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact 2 -->
+  <div class="wh-fab-item" data-order="2">
+    <div class="wh-fab-row">
+      <a class="wh-fab-label" id="label2" href="https://api.whatsapp.com/send/?phone=2212704639&text=Estoy+interesado+en+un+%2Aservicio+de+carga+terrestre+internacional%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+        Servicio Terrestre Internacional<span class="muted"></span>
+      </a>
+      <a class="wh-fab-btn small" id="btn2" href="https://api.whatsapp.com/send/?phone=2212704639&text=Estoy+interesado+en+un+%2Aservicio+de+carga+terrestre+internacional%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Ventas">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.52 3.48A11.79 11.79 0 0 0 12 .5C6.2.5 1.5 4.9.63 10.34c-.6 3.47.46 6.8 2.98 9.09L2 23l3.74-1.01a11.73 11.73 0 0 0 5.99 1.54h.01c5.8 0 10.5-4.4 11.37-9.84.88-5.44-2.69-10.06-7.9-10.19z" fill="#fff"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact 1 -->
+  <div class="wh-fab-item" data-order="1">
+    <div class="wh-fab-row">
+      <a class="wh-fab-label" id="label1" href="https://api.whatsapp.com/send/?phone=2223716661&text=Estoy+interesado+en+un+%2Aservicio+de+carga+terrestre+nacional%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+        Servicio Terrestre Nacional <span class="muted"></span>
+      </a>
+      <a class="wh-fab-btn small" id="btn1" href="hhttps://api.whatsapp.com/send/?phone=2223716661&text=Estoy+interesado+en+un+%2Aservicio+de+carga+terrestre+nacional%2A&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Agenda">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.52 3.48A11.79 11.79 0 0 0 12 .5C6.2.5 1.5 4.9.63 10.34c-.6 3.47.46 6.8 2.98 9.09L2 23l3.74-1.01a11.73 11.73 0 0 0 5.99 1.54h.01c5.8 0 10.5-4.4 11.37-9.84.88-5.44-2.69-10.06-7.9-10.19z" fill="#fff"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main toggle -->
+  <div class="wh-fab-item">
+    <div class="wh-fab-row">
+      <button class="wh-fab-btn wh-fab-toggle" id="whToggle" aria-label="Abrir contactos de WhatsApp" title="Contactar por WhatsApp">
+        <!-- plus icon -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+
+(function(){
+  const wrap = document.getElementById('whFab');
+  const toggle = document.getElementById('whToggle');
+
+ 
+  toggle.addEventListener('click', function(e){
+    e.preventDefault();
+    wrap.classList.toggle('open');
+    toggle.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!wrap.contains(e.target) && wrap.classList.contains('open')) {
+      wrap.classList.remove('open');
+      toggle.classList.remove('open');
+    }
+  });
+
+ 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && wrap.classList.contains('open')) {
+      wrap.classList.remove('open');
+      toggle.classList.remove('open');
+    }
+  });
+
+  
+})();
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+    // ... todas las cargas con loadComponent()
+
+    setTimeout(() => {
+        if (typeof initializeApp === 'function') {
+            initializeApp();
+        }
+
+        // aquí pega esto 👇
+        const whFab = document.getElementById("whFab");
+        if (whFab) {
+            document.body.appendChild(whFab);
+            whFab.style.display = "flex";
+        }
+
+    }, 100);
+});
+
+</script>
+
+<script>
+function ensureWhatsAppFab() {
+    let btn = document.getElementById("whFab");
+
+    // Si el botón no existe, lo recreamos
+    if (!btn) {
+        console.warn("whFab desapareció, reinsertando...");
+
+        const original = window._whFabOriginal;
+        if (original) {
+            document.body.appendChild(original.cloneNode(true));
+        }
+        return;
+    }
+
+    // Si existe pero está dentro de otro contenedor → moverlo
+    if (btn.parentElement !== document.body) {
+        document.body.appendChild(btn);
+    }
+
+    // aseguramos visibilidad
+    btn.style.display = "flex";
+}
+
+// Guardamos una copia original para restaurarlo si se borra
+document.addEventListener("DOMContentLoaded", () => {
+    const original = document.getElementById("whFab");
+    if (original) {
+        window._whFabOriginal = original.cloneNode(true);
+    }
+});
+
+// Ejecutar cada 300 ms
+setInterval(ensureWhatsAppFab, 300);
+</script>
+<!-- END: Floating multi-WhatsApp button -->
+
+</body>
 </html>
