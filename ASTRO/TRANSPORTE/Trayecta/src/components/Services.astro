@@ -1,0 +1,208 @@
+---
+
+---
+
+<style>
+    /* Services Section - SERVICIOS */
+    .services-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .service-card {
+        border: none;
+        border-radius: 20px;
+        transition: all 0.4s ease;
+        height: 100%;
+        background: white;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .service-icon {
+        font-size: 4rem;
+        margin-bottom: 25px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.1) rotateY(360deg);
+    }
+
+    /* ── Lista de características ── */
+    .service-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 28px;
+    }
+
+    .service-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: #3a4a5c;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .service-features li:last-child {
+        border-bottom: none;
+    }
+
+    .service-features li i {
+        color: var(--primary-color);
+        font-size: 0.72rem;
+        flex-shrink: 0;
+    }
+</style>
+
+<section class="services-section" id="servicios">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title" data-translate="services_title">
+                Nuestros Servicios
+            </h2>
+            <p class="section-subtitle" data-translate="services_subtitle">
+                Logística personalizada con eficiencia garantizada
+            </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-5 col-md-6">
+                <article class="card service-card">
+                    <div
+                        class="card-body text-center d-flex flex-column justify-content-between p-4"
+                    >
+                        <div>
+                            <div class="service-icon">
+                                <i class="fa-solid fa-truck-field"></i>
+                            </div>
+                            <h3
+                                class="card-title h4 mb-3"
+                                data-translate="service_sea_title"
+                            >
+                                Servicio Terrestre Nacional
+                            </h3>
+                            <p class="card-text mb-3">
+                                Cobertura en toda la República Mexicana con
+                                flotilla propia y monitoreo GPS en tiempo real.
+                                Garantizamos tiempos de entrega precisos y la
+                                integridad de tu mercancía en cada ruta.
+                            </p>
+                            <ul class="service-features flex-grow-1">
+                                <li>
+                                    <i class="fas fa-check"></i> Cobertura en los
+                                    32 estados
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Rastreo en tiempo
+                                    real
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Carga completa y
+                                    consolidada (FTL / LTL)
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Seguro de carga incluido
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a
+                                href="/land-national"
+                                class="btn custom-btn-tertiary mt-3"
+                            >
+                                <i class="fa-solid fa-square-up-right"></i>
+                                <span>Ver más</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-lg-5 col-md-6">
+                <article class="card service-card">
+                    <div
+                        class="card-body text-center d-flex flex-column justify-content-between p-4"
+                    >
+                        <div>
+                            <div class="service-icon">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">
+                                Servicio Terrestre Internacional
+                            </h3>
+                            <p class="card-text mb-3">
+                                Operaciones transfronterizas hacia Estados
+                                Unidos y Canadá con gestión aduanal integrada.
+                                Red de socios para asegurar cruces ágiles y
+                                documentación en orden.
+                            </p>
+                            <ul class="service-features flex-grow-1">
+                                <li>
+                                    <i class="fas fa-check"></i> Rutas México – EE.UU.
+                                    – Canadá
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Gestión aduanal y
+                                    documentación
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Cumplimiento C-TPAT
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i> Soporte 24/7 en frontera
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a
+                                href="/land-international"
+                                class="btn custom-btn-tertiary mt-3"
+                            >
+                                <i class="fa-solid fa-square-up-right"></i>
+                                <span data-translate="service_air_btn"
+                                    >Ver más</span
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

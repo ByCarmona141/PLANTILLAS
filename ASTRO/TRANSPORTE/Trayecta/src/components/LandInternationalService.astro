@@ -1,0 +1,1049 @@
+---
+interface Props {
+    company: string;
+}
+
+const { company } = Astro.props;
+---
+
+<style>
+    /* Hero Section - INICIO */
+    .hero-section {
+        background: linear-gradient(
+            135deg,
+            var(--secondary-color) 0%,
+            var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -70px;
+        padding-top: 130px;
+    }
+
+    .hero-main-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .full-width-half-height {
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .full-width-half-height .carousel-inner {
+        height: 100%;
+    }
+
+    .full-width-half-height .carousel-item {
+        height: 100%;
+    }
+
+    .full-width-half-height .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            135deg,
+            var(--bg-primary-color-hover),
+            var(--bg-secondary-color-hover)
+        );
+        z-index: 1;
+    }
+
+    .carousel-caption {
+        z-index: 2;
+    }
+
+    .carousel-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .carousel-subtitle {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+        opacity: 0.95;
+        animation: fadeInUp 1s ease;
+    }
+    /* Service Page Styles */
+
+    /* Navbar Active State Override */
+    .navbar .nav-link {
+        color: var(--light-color) !important;
+    }
+
+    .navbar .nav-link:hover {
+        color: var(--tertiary-color) !important;
+    }
+
+    .navbar .nav-link.active {
+        color: var(--primary-color) !important;
+    }
+
+    .navbar .nav-link::after {
+        background: var(--tertiary-color);
+    }
+
+    .bg-dark {
+        background-color: var(--dark-color) !important;
+    }
+
+    /* Hero Section */
+    .service-hero {
+        padding: 180px 0 120px;
+        color: white;
+        position: relative;
+        background:
+            linear-gradient(135deg, rgba(0, 102, 204, 0.9), rgba(0, 0, 0, 0.8)),
+            url("../assets/image/maritime/img1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .service-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(168, 11, 36, 0.85),
+            rgba(0, 0, 0, 0.85)
+        );
+        z-index: 1;
+    }
+
+    .service-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 12px 24px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        animation: fadeInUp 0.6s ease;
+    }
+
+    .service-hero-badge i {
+        font-size: 1.5rem;
+    }
+
+    .service-hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        animation: fadeInUp 0.8s ease;
+    }
+
+    .service-hero-subtitle {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        opacity: 0.95;
+        animation: fadeInUp 1s ease;
+    }
+
+    /* Service Section */
+    .service-section {
+        padding: 80px 0;
+    }
+
+    /* Port Cards */
+    .port-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .port-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .port-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .port-card h4 {
+        margin-bottom: 10px;
+        color: var(--dark-color);
+    }
+
+    /* Coverage Cards */
+    .coverage-card {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+        padding: 50px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+    }
+
+    .coverage-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .coverage-number {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        opacity: 0.95;
+    }
+
+    .coverage-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .coverage-card p {
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    /* Service Modality */
+    .service-modality {
+        padding: 60px 0;
+    }
+
+    .modality-icon-box {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 30px;
+        padding: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 6rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .modality-badge {
+        display: inline-block;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .modality-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--dark-color);
+    }
+
+    .modality-desc {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .modality-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .modality-features li {
+        padding: 15px 0;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        font-size: 1.05rem;
+    }
+
+    .modality-features li:last-child {
+        border-bottom: none;
+    }
+
+    .modality-features i {
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        margin-right: 15px;
+        min-width: 30px;
+    }
+
+    .sub-features {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .sub-features li {
+        padding: 10px 0;
+        color: #666;
+    }
+
+    /* Support Cards */
+    .support-card {
+        border: 2px solid var(--primary-color);
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        height: 100%;
+    }
+
+    .support-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .support-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+
+    .support-card:hover i {
+        color: white;
+    }
+
+    .support-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Customs Clearance Cards */
+    .custom-clearance-card {
+        border: 2px solid var(--primary-color);
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        height: 100%;
+    }
+
+    .custom-clearance-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .custom-clearance-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        transition: all 0.3s;
+    }
+
+    .custom-clearance-card:hover i {
+        color: white;
+    }
+
+    .custom-clearance-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* Advantage Cards */
+    .advantage-card {
+        background: var(--bg-tertiary-color);
+        backdrop-filter: blur(10px);
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .advantage-card:hover {
+        background: var(--primary-color);
+        transform: translateY(-10px);
+    }
+
+    .advantage-card:hover i,
+    .advantage-card:hover h5 {
+        color: var(--bg-tertiary-color);
+    }
+
+    .advantage-card i {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    .advantage-card h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 100px 0;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        color: white;
+    }
+
+    .cta-section h2 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .cta-section .lead {
+        font-size: 1.3rem;
+        opacity: 0.95;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .service-hero {
+            padding: 140px 0 80px;
+        }
+
+        .service-hero-title {
+            font-size: 2.2rem;
+        }
+
+        .service-hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .modality-icon-box {
+            padding: 60px;
+            font-size: 4rem;
+        }
+
+        .modality-title {
+            font-size: 1.8rem;
+        }
+
+        .coverage-number {
+            font-size: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<section id="servicios">
+    <div class="container-fluid p-0">
+        <div
+            id="carouselCaptions"
+            class="carousel slide full-width-half-height"
+            data-bs-ride="carousel"
+        >
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/land/img2.webp"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime1"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="land_carousel_title"
+                        >
+                            Servicio Terrestre Internacional
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="land_carousel_subtitle"
+                        >
+                            Ofrecemos servicio terrestre en todo Norteamérica,
+                            realizando importaciones o exportaciones entre
+                            Canadá, Estados Unidos y México.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/land/img3.webp"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime2"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="land_carousel_title"
+                        >
+                            Servicio Terrestre Internacional
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="land_carousel_subtitle"
+                        >
+                            Ofrecemos servicio terrestre en todo Norteamérica,
+                            realizando importaciones o exportaciones entre
+                            Canadá, Estados Unidos y México.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img
+                        src="../assets/image/land/img4.webp"
+                        class="d-block w-100 carousel-img"
+                        alt="maritime3"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5
+                            class="carousel-title"
+                            data-translate="land_carousel_title"
+                        >
+                            Servicio Terrestre Internacional
+                        </h5>
+                        <p
+                            class="carousel-subtitle"
+                            data-translate="land_carousel_subtitle"
+                        >
+                            Ofrecemos servicio terrestre en todo Norteamérica,
+                            realizando importaciones o exportaciones entre
+                            Canadá, Estados Unidos y México.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselCaptions"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselCaptions"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Puertos de Operación -->
+    <section class="service-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-translate="land_locations_title">
+                    Lugares de Operación en Norteamérica
+                </h2>
+                <p
+                    class="section-subtitle"
+                    data-translate="land_locations_subtitle"
+                >
+                    Nuestro compromiso es ofrecer un servicio seguro, puntual y
+                    transparente, respaldado por alianzas internacionales.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-map"></i>
+                        </div>
+                        <h4 data-translate="land_locations_canada">Canadá</h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_locations_canada_desc"
+                        >
+                            Asociación de carriers autorizados (bonded carriers)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-map"></i>
+                        </div>
+                        <h4 data-translate="land_locations_usa">
+                            Estados Unidos
+                        </h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_locations_usa_desc"
+                        >
+                            Cobertura en toda la unión americana
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="port-card">
+                        <div class="port-icon">
+                            <i class="fa-solid fa-map"></i>
+                        </div>
+                        <h4 data-translate="land_locations_mexico">México</h4>
+                        <p
+                            class="text-muted small"
+                            data-translate="land_locations_mexico_desc"
+                        >
+                            Punto de cruce en Laredo TX
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios que Ofrecemos -->
+    <section class="service-section">
+        <div class="container">
+            <div class="text-center">
+                <h2
+                    class="section-title"
+                    data-translate="land_modalities_title"
+                >
+                    Servicios que Ofrecemos
+                </h2>
+            </div>
+
+            <!-- Bodega Americana y Cruce Fronterizo -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_store_badge"
+                        >
+                            Bodega Americana y Cruce Fronterizo
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_store_title"
+                        >
+                            Bodega Americana y Cruce Fronterizo
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="land_store_desc"
+                        >
+                            Nuestro punto de cruce es Laredo Texas, y ofrecemos
+                            servicio de bodega en Laredo Texas. Lo que nos
+                            permite ofrecerle:
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_store_feat1"
+                                    >Anticipar, consolidar o desaduanar carga
+                                    antes del cruce</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_store_feat2"
+                                    >Consolidación y desconsolidación eficiente</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_store_feat3"
+                                    >Mayor control operativo y seguridad</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LTL -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 order-lg-2 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 order-lg-1">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_ltl_badge"
+                        >
+                            Carga Consolidada
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_ltl_title"
+                        >
+                            LTL – Less than Truck Load
+                        </h3>
+                        <p class="modality-desc" data-translate="land_ltl_desc">
+                            Ideal para cargas entarimadas que no llenan el
+                            tractor y que no tienen un carácter urgente.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_ltl_feat1"
+                                    >Servicio de carga consolidada puerta a
+                                    puerta, desde o hacia México a cualquier
+                                    ciudad de la Unión Americana o Canadá</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_ltl_feat2"
+                                    >Servicio de carga consolidado intra USA, o
+                                    Intra México, ideal para servicios
+                                    consolidados que llegan a frontera
+                                    solamente, o entre ciudades de la unión
+                                    americana, o entre ciudades de México</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_ltl_feat3"
+                                    >Reducción de costos mediante el uso
+                                    compartido del espacio del contenedor</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_ltl_feat4"
+                                    >Tarifas competitivas y transparentes</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FTL -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_ftl_badge"
+                        >
+                            Contenedor Completo
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_ftl_title"
+                        >
+                            FTL – Full Truck load
+                        </h3>
+                        <p class="modality-desc" data-translate="land_ftl_desc">
+                            Perfecto para cargas exclusivas o de gran volumen.
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <p>
+                                    <span
+                                        class="fw-bold"
+                                        data-translate="land_ftl_feat1"
+                                        >Servicio de flete de caja directa
+                                        puerta a puerta para importación o
+                                        exportación:</span
+                                    >
+                                    <span data-translate="land_ftl_feat2"
+                                        >Se usa la misma caja desde origen hasta
+                                        destino, lo que permite que no haya
+                                        manipulación de la carga, ideal para
+                                        materiales muy sensibles que pueden
+                                        tener daños</span
+                                    >
+                                </p>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <p>
+                                    <span
+                                        class="fw-bold"
+                                        data-translate="land_ftl_feat3"
+                                        >Servicio de flete de caja a transbordo
+                                        en frontera para exportación:</span
+                                    >
+                                    <span data-translate="land_ftl_feat4"
+                                        >Se ofrece el cambio de caja en bodegas
+                                        de Laredo Texas usa la misma caja desde
+                                        origen hasta destino, lo que permite un
+                                        mejor costo y menor tiempo de espera
+                                        para cargar el material</span
+                                    >
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carga Especializada -->
+            <div class="service-modality pb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 order-lg-2 mb-4 mb-lg-0">
+                        <div class="modality-icon-box">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 order-lg-1">
+                        <div
+                            class="modality-badge"
+                            data-translate="land_special_badge"
+                        >
+                            Carga Especializada
+                        </div>
+                        <h3
+                            class="modality-title"
+                            data-translate="land_special_title"
+                        >
+                            Flatbed, Stepdeck, double drop
+                        </h3>
+                        <p
+                            class="modality-desc"
+                            data-translate="land_special_desc"
+                        >
+                            Movemos mercancías con requerimientos específicos
+                            que por sus características no puedan usar caja seca
+                            de 53 pies
+                        </p>
+                        <ul class="modality-features">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <p>
+                                    <span
+                                        class="fw-bold"
+                                        data-translate="land_special_feat1"
+                                        >Sobredimensionada:</span
+                                    >
+                                    <span data-translate="land_special_feat2"
+                                        >Se ofrece el cambio de caja en bodegas
+                                        de Laredo Texas usa la misma caja desde
+                                        origen hasta destino, lo que permite un
+                                        mejor costo y menor tiempo de espera
+                                        para cargar el material</span
+                                    >
+                                </p>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span data-translate="land_special_feat3"
+                                    >Cargas Hazmat en consolidado y unidades
+                                    directas</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soporte Logístico -->
+    <section class="service-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-translate="land_support_title">
+                    Soporte Logístico Integral
+                </h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-satellite-dish"></i>
+                        <h5 data-translate="land_support1">
+                            Monitoreo en Tiempo Real
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-route"></i>
+                        <h5 data-translate="land_support2">
+                            Trazabilidad Completa
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h5 data-translate="land_support3">
+                            Personal Especializado
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="support-card">
+                        <i class="fas fa-file-invoice"></i>
+                        <h5 data-translate="land_support4">Despacho Aduanal</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas Competitivas -->
+    <section class="service-section bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2
+                    class="section-title text-white"
+                    data-translate="land_advantages_title"
+                >
+                    Ventajas Competitivas
+                </h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-award"></i>
+                        <h5 data-translate="land_adv1">
+                            +15 Años de Experiencia
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h5 data-translate="land_adv2">Neutralidad Total</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h5 data-translate="land_adv3">
+                            Optimización de Tiempos y Costos
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-handshake"></i>
+                        <h5 data-translate="land_adv4">
+                            Alianzas Internacionales
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fas fa-route"></i>
+                        <h5 data-translate="land_adv5">
+                            Soluciones End-to-End
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="advantage-card">
+                        <i class="fa-solid fa-headset"></i>
+                        <h5 data-translate="land_adv6">
+                            Soporte Personalizado
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,20 @@
+---
+import Footer from "@/components/Footer.astro";
+import LandNationalService from "@/components/LandNationalService.astro";
+import NavBarServices from "@/components/NavBarServices.astro";
+import QuotesService from "@/components/QuotesService.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const company = "Trayecta";
+---
+
+<BaseLayout
+    title="Servicio Terrestre Nacional"
+    description="Servicio Terrestre Nacional"
+    keywords="Servicio Terrestre Nacional"
+>
+    <NavBarServices company={company} />
+    <LandNationalService company={company} />
+    <QuotesService />
+    <Footer />
+</BaseLayout>

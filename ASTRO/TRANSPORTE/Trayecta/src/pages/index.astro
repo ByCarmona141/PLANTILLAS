@@ -1,0 +1,43 @@
+---
+import About from "@/components/About.astro";
+import Footer from "@/components/Footer.astro";
+import NavBar from "@/components/NavBar.astro";
+import Services from "@/components/Services.astro";
+import Certifications from "@/components/Certifications.astro";
+import Clients from "@/components/Clients.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Home from "@/components/Home.astro";
+import Quotes from "@/components/Quotes.astro";
+import Contact from "@/components/Contact.astro";
+import Fraud from "@/components/Fraud.astro";
+
+const company = "Trayecta";
+---
+
+<BaseLayout
+	title="Trayecta"
+	description="Trayecta"
+	keywords="Trayecta, Transporte Terrestre"
+>
+	<NavBar company={company} />
+	<Home company={company} />
+	<About company={company} />
+	<Services />
+	<Clients />
+	<Quotes />
+	<Contact />
+	<Footer />
+</BaseLayout>
+
+<script>
+	// Funcionalidad del Acordeón de Fraudes
+	const fraudHeader = document.getElementById("fraudAccordionHeader");
+	const fraudContent = document.getElementById("fraudAccordionContent");
+
+	if (fraudHeader && fraudContent) {
+		fraudHeader.addEventListener("click", function () {
+			this.classList.toggle("active");
+			fraudContent.classList.toggle("active");
+		});
+	}
+</script>
