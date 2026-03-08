@@ -30,29 +30,29 @@
     .clients-header {
         text-align: center;
         margin-bottom: 60px;
-    }
 
-    .clients-header h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--secondary-color);
-        margin-bottom: 15px;
-        position: relative;
-        display: inline-block;
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     @media (min-width: 768px) {
         .clients-header h2 {
             font-size: 3rem;
         }
-    }
-
-    .clients-header p {
-        font-size: 1.1rem;
-        color: #666;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     /* ===================================
@@ -72,6 +72,11 @@
         margin-bottom: 30px;
         position: relative;
         width: fit-content;
+
+        /* Pausa al hacer hover */
+        &:hover .carousel-track {
+            animation-play-state: paused;
+        }
     }
 
     .carousel-track {
@@ -99,11 +104,6 @@
         animation-duration: 35s;
         /* alternate-reverse: empieza desde el final, opuesta a la fila 1 */
         animation-direction: alternate-reverse;
-    }
-
-    /* Pausa al hacer hover */
-    .carousel-row:hover .carousel-track {
-        animation-play-state: paused;
     }
 
     /* Un solo keyframe para ambas filas */
@@ -196,39 +196,39 @@
         border-radius: 20px;
         color: white;
         box-shadow: 0 10px 30px var(--shadow-color);
-    }
 
-    .clients-footer h3 {
-        font-size: 1.8rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-    }
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
 
-    .clients-footer p {
-        font-size: 1.1rem;
-        margin-bottom: 25px;
-        opacity: 0.95;
-    }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
 
-    .clients-footer .btn {
-        padding: 15px 40px;
-        font-weight: 600;
-        border-radius: 50px;
-        transition: all 0.3s;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        background: white;
-        color: var(--primary-color);
-        border: 2px solid white;
-        text-decoration: none;
-        display: inline-block;
-    }
+        .btn {
+            padding: 15px 40px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+            text-decoration: none;
+            display: inline-block;
+        }
 
-    .clients-footer .btn:hover {
-        background: transparent;
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        .btn:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
     }
 
     /* ===================================
@@ -319,170 +319,128 @@
                 <div class="carousel-track">
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/antolin.png"
+                            src="../assets/image/clients/amg.webp"
+                            alt="AMG"
+                            class="client-logo"
+                        />
+                    </div>
+                    <div class="client-card">
+                        <img
+                            src="../assets/image/clients/antolin.webp"
                             alt="Antolin"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/benteler.png"
+                            src="../assets/image/clients/benteler.webp"
                             alt="Benteler"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/box-mark.png"
-                            alt="Box Mark"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/ch-robinson.png"
-                            alt="Ch Robinson"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/cie-automotive.png"
+                            src="../assets/image/clients/cie-automotive.webp"
                             alt="CIE Automotive"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/clariant.png"
-                            alt="Clariant"
+                            src="../assets/image/clients/electro-abastos.webp"
+                            alt="Electro Abastos"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/coindu.png"
-                            alt="Coindu"
+                            src="../assets/image/clients/globaltranz.webp"
+                            alt="GlobalTranz"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/ergosolar.png"
-                            alt="Ergosolar"
+                            src="../assets/image/clients/hellmann.webp"
+                            alt="Hellmann"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/fag.png"
-                            alt="Fag"
+                            src="../assets/image/clients/jk-logistic.webp"
+                            alt="JKLogistic"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/fischer-tubtech.png"
-                            alt="Fischer Tubtech"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/fte.png"
-                            alt="FTE"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/glm.png"
-                            alt="GLM"
+                            src="../assets/image/clients/valeo.webp"
+                            alt="Valeo"
                             class="client-logo"
                         />
                     </div>
                     <!-- Duplicado para que el track sea suficientemente ancho y el -50% funcione -->
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/antolin.png"
+                            src="../assets/image/clients/amg.webp"
+                            alt="AMG"
+                            class="client-logo"
+                        />
+                    </div>
+                    <div class="client-card">
+                        <img
+                            src="../assets/image/clients/antolin.webp"
                             alt="Antolin"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/benteler.png"
+                            src="../assets/image/clients/benteler.webp"
                             alt="Benteler"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/box-mark.png"
-                            alt="Box Mark"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/ch-robinson.png"
-                            alt="Ch Robinson"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/cie-automotive.png"
+                            src="../assets/image/clients/cie-automotive.webp"
                             alt="CIE Automotive"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/clariant.png"
-                            alt="Clariant"
+                            src="../assets/image/clients/electro-abastos.webp"
+                            alt="Electro Abastos"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/coindu.png"
-                            alt="Coindu"
+                            src="../assets/image/clients/globaltranz.webp"
+                            alt="GlobalTranz"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/ergosolar.png"
-                            alt="Ergosolar"
+                            src="../assets/image/clients/hellmann.webp"
+                            alt="Hellmann"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/fag.png"
-                            alt="Fag"
+                            src="../assets/image/clients/jk-logistic.webp"
+                            alt="JKLogistic"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/fischer-tubtech.png"
-                            alt="Fischer Tubtech"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/fte.png"
-                            alt="FTE"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/glm.png"
-                            alt="GLM"
+                            src="../assets/image/clients/valeo.webp"
+                            alt="Valeo"
                             class="client-logo"
                         />
                     </div>
@@ -494,156 +452,128 @@
                 <div class="carousel-track">
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/hellmann.png"
+                            src="../assets/image/clients/valeo.webp"
+                            alt="Valeo"
+                            class="client-logo"
+                        />
+                    </div>
+                    <div class="client-card">
+                        <img
+                            src="../assets/image/clients/jk-logistic.webp"
+                            alt="JK Logistic"
+                            class="client-logo"
+                        />
+                    </div>
+                    <div class="client-card">
+                        <img
+                            src="../assets/image/clients/hellmann.webp"
                             alt="Hellmann"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/ina.png"
-                            alt="INA"
+                            src="../assets/image/clients/globaltranz.webp"
+                            alt="GloablTranz"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/pelzer.jpg"
-                            alt="Pelzer"
+                            src="../assets/image/clients/electro-abastos.webp"
+                            alt="Electro Abastos"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/possehl-electronics.jpg"
-                            alt="Possehl Electronics"
+                            src="../assets/image/clients/cie-automotive.webp"
+                            alt="CIE Automotive"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/protrans.png"
-                            alt="Protrans"
+                            src="../assets/image/clients/benteler.webp"
+                            alt="Benteler"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/rassini.png"
-                            alt="Rassini"
+                            src="../assets/image/clients/antolin.webp"
+                            alt="Antolin"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/saint-gobain.png"
-                            alt="Saint Gobain"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/sybrigde.png"
-                            alt="Sybrigde"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/tavex.png"
-                            alt="Tavex"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/unicar-plastics.png"
-                            alt="Unicar Plastics"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/valeo.png"
-                            alt="Valeo"
+                            src="../assets/image/clients/amg.webp"
+                            alt="AMG"
                             class="client-logo"
                         />
                     </div>
                     <!-- Duplicado -->
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/hellmann.png"
+                            src="../assets/image/clients/valeo.webp"
+                            alt="Valeo"
+                            class="client-logo"
+                        />
+                    </div>
+                    <div class="client-card">
+                        <img
+                            src="../assets/image/clients/jk-logistic.webp"
+                            alt="JK Logistic"
+                            class="client-logo"
+                        />
+                    </div>
+                    <div class="client-card">
+                        <img
+                            src="../assets/image/clients/hellmann.webp"
                             alt="Hellmann"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/ina.png"
-                            alt="INA"
+                            src="../assets/image/clients/globaltranz.webp"
+                            alt="GloablTranz"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/pelzer.jpg"
-                            alt="Pelzer"
+                            src="../assets/image/clients/electro-abastos.webp"
+                            alt="Electro Abastos"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/possehl-electronics.jpg"
-                            alt="Possehl Electronics"
+                            src="../assets/image/clients/cie-automotive.webp"
+                            alt="CIE Automotive"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/protrans.png"
-                            alt="Protrans"
+                            src="../assets/image/clients/benteler.webp"
+                            alt="Benteler"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/rassini.png"
-                            alt="Rassini"
+                            src="../assets/image/clients/antolin.webp"
+                            alt="Antolin"
                             class="client-logo"
                         />
                     </div>
                     <div class="client-card">
                         <img
-                            src="../assets/image/clients/saint-gobain.png"
-                            alt="Saint Gobain"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/sybrigde.png"
-                            alt="Sybrigde"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/tavex.png"
-                            alt="Tavex"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/unicar-plastics.png"
-                            alt="Unicar Plastics"
-                            class="client-logo"
-                        />
-                    </div>
-                    <div class="client-card">
-                        <img
-                            src="../assets/image/clients/valeo.png"
-                            alt="Valeo"
+                            src="../assets/image/clients/amg.webp"
+                            alt="AMG"
                             class="client-logo"
                         />
                     </div>

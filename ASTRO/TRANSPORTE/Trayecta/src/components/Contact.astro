@@ -149,95 +149,6 @@
         margin: 0;
     }
 
-    /* Info bottom row */
-    .info-card {
-        background: #f8f9fa;
-        border-radius: 18px;
-        padding: 35px 30px;
-        height: 100%;
-        transition: all 0.3s;
-        border: 2px solid transparent;
-    }
-
-    .info-card:hover {
-        border-color: var(--primary-color);
-        background: white;
-        box-shadow: 0 10px 35px rgba(10, 62, 142, 0.1);
-    }
-
-    .info-card-icon {
-        width: 52px;
-        height: 52px;
-        background: linear-gradient(
-            135deg,
-            var(--primary-color),
-            var(--secondary-color)
-        );
-        border-radius: 13px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.3rem;
-        margin-bottom: 18px;
-    }
-
-    .info-card h5 {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--secondary-color);
-        margin-bottom: 10px;
-    }
-
-    .info-card p,
-    .info-card address {
-        font-size: 0.9rem;
-        color: #666;
-        line-height: 1.8;
-        margin: 0;
-        font-style: normal;
-    }
-
-    .schedule-row {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.88rem;
-        padding: 6px 0;
-        border-bottom: 1px solid #f0f0f0;
-        color: #555;
-    }
-
-    .schedule-row:last-child {
-        border-bottom: none;
-    }
-
-    .schedule-row .day {
-        font-weight: 600;
-        color: var(--secondary-color);
-    }
-
-    .schedule-open {
-        background: #ecfdf5;
-        color: #16a34a;
-        font-size: 0.7rem;
-        font-weight: 700;
-        padding: 2px 8px;
-        border-radius: 20px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .schedule-close {
-        background: #fdecec;
-        color: #a00b0b;
-        font-size: 0.7rem;
-        font-weight: 700;
-        padding: 2px 8px;
-        border-radius: 20px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
     .channel-card-lg {
         padding: 45px 35px;
         gap: 14px;
@@ -371,7 +282,7 @@
             <!-- WhatsApp -->
             <div class="col-lg-5 col-md-6 animate-in">
                 <a
-                    href="https://wa.me/2223716661?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+                    href="https://wa.me/2225548104?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
                     target="_blank"
                     class="channel-card channel-card-lg"
                 >
@@ -384,7 +295,7 @@
                         >Respuesta inmediata</span
                     >
                     <p class="channel-title channel-title-lg">WhatsApp</p>
-                    <p class="channel-detail">+52 222 371 6661</p>
+                    <p class="channel-detail">+52 222 554 8104</p>
                     <span
                         class="channel-cta"
                         data-translate="contact_whatsapp_cta"
@@ -393,102 +304,8 @@
                 </a>
             </div>
 
-            <!-- Email -->
-            <div class="col-lg-5 col-md-6 animate-in">
-                <a
-                    href="mailto:ventas1@igsforwarding.com.mx?subject=Solicitud%20de%20informaci%C3%B3n"
-                    class="channel-card channel-card-lg"
-                >
-                    <div class="channel-icon icon-email channel-icon-lg">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <span
-                        class="channel-label"
-                        data-translate="contact_email_label"
-                        >Cotización detallada</span
-                    >
-                    <p class="channel-title channel-title-lg">
-                        Correo Electrónico
-                    </p>
-                    <p class="channel-detail">ventas1@igsforwarding.com.mx</p>
-                    <span class="channel-cta" data-translate="contact_email_cta"
-                        >Enviar correo →</span
-                    >
-                </a>
-            </div>
-        </div>
-
-        <!-- Bottom Row: Address + Schedule + Map -->
-        <div class="row g-4">
-            <!-- Dirección -->
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card h-100">
-                    <div class="info-card-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h5 data-translate="contact_address_title">Dirección</h5>
-                    <address>
-                        Cda. Popocatépetl No. 6<br />
-                        Entre Citlali y Tlaloc<br />
-                        Col. Heritage I Conjunto Habitacional<br />
-                        C.P. 72575<br />
-                        Puebla, Puebla, México
-                    </address>
-                </div>
-            </div>
-
-            <!-- Horarios -->
-            <div class="col-lg-3 col-md-6">
-                <div class="info-card h-100">
-                    <div class="info-card-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h5 data-translate="contact_schedule_title">
-                        Horario de atención
-                    </h5>
-                    <div class="schedule-row">
-                        <span class="day" data-translate="contact_weekdays"
-                            >Lun – Vie</span
-                        >
-                        <span
-                            >9:00 – 18:00 <span
-                                class="schedule-open"
-                                data-translate="contact_open">Abierto</span
-                            ></span
-                        >
-                    </div>
-                    <div class="schedule-row">
-                        <span class="day" data-translate="contact_saturday"
-                            >Sábado</span
-                        >
-                        <span
-                            >9:00 – 14:00 <span
-                                class="schedule-open"
-                                data-translate="contact_open">Abierto</span
-                            ></span
-                        >
-                    </div>
-                    <div class="schedule-row">
-                        <span class="day" data-translate="contact_sunday"
-                            >Domingo</span
-                        >
-                        <span
-                            class="schedule-close"
-                            data-translate="contact_closed">Cerrado</span
-                        >
-                    </div>
-                    <p
-                        class="mt-3"
-                        style="font-size:0.82rem; color:#999;"
-                        data-translate="contact_schedule_note"
-                    >
-                        * WhatsApp disponible fuera de horario
-                    </p>
-                </div>
-            </div>
-
             <!-- Mapa -->
-            <div class="col-lg-6">
+            <div class="col-lg-5 col-md-6 animate-in">
                 <div class="map-wrapper">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.123!2d-98.2430!3d19.0413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAyJzI4LjciTiA5OMKwMTQnMzQuOCJX!5e0!3m2!1ses!2smx!4v1700000000000"

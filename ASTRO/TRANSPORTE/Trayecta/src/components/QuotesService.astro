@@ -49,50 +49,106 @@
         border-radius: 15px;
         margin-bottom: 20px;
         transition: all 0.3s;
+
+        &:hover {
+            background: var(--bg-tertiary-color-hover);
+            transform: translateX(10px);
+        }
+
+        i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
     }
 
-    .quote-info-item:hover {
-        background: var(--bg-tertiary-color-hover);
-        transform: translateX(10px);
-    }
-
-    .quote-info-item i {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-    }
-
-    .contact-info-card {
-        background: var(--light-color);
-        padding: 40px;
-        border-radius: 20px;
-        text-align: center;
-        transition: all 0.3s;
+    /* Info bottom row */
+    .info-card {
+        background: #f8f9fa;
+        border-radius: 18px;
+        padding: 35px 30px;
         height: 100%;
+        transition: all 0.3s;
         border: 2px solid transparent;
+
+        &:hover {
+            border-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 10px 35px rgba(10, 62, 142, 0.1);
+        }
     }
 
-    .contact-info-card:hover {
-        border-color: var(--primary-color);
-        background: white;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        transform: translateY(-10px);
-    }
-
-    .contact-icon {
-        width: 80px;
-        height: 80px;
+    .info-card-icon {
+        width: 52px;
+        height: 52px;
         background: linear-gradient(
             135deg,
             var(--primary-color),
             var(--secondary-color)
         );
-        border-radius: 50%;
+        border-radius: 13px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 20px;
-        color: white;
-        font-size: 2rem;
+        color: var(--light-color);
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+
+    .info-card h5 {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+    }
+
+    .info-card p,
+    .info-card address {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.8;
+        margin: 0;
+        font-style: normal;
+    }
+
+    .schedule-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.88rem;
+        padding: 6px 0;
+        border-bottom: 1px solid #f0f0f0;
+        color: #555;
+    }
+
+    .schedule-row:last-child {
+        border-bottom: none;
+    }
+
+    .schedule-row .day {
+        font-weight: 600;
+        color: var(--secondary-color);
+    }
+
+    .schedule-open {
+        background: #ecfdf5;
+        color: #16a34a;
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .schedule-close {
+        background: #fdecec;
+        color: #a00b0b;
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     /* Quote Selection Buttons */
@@ -110,21 +166,21 @@
         border-radius: 50px;
         transition: all 0.3s;
         cursor: pointer;
-    }
 
-    .btn-selection:hover {
-        background: var(--primary-color);
-        border: 2px solid var(--primary-color);
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(168, 11, 36, 0.3);
-    }
+        &:hover {
+            background: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px var(--bg-primary-color-hover);
+        }
 
-    .btn-selection.active {
-        background: var(--primary-color);
-        border: 2px solid var(--primary-color);
-        color: white;
-        box-shadow: 0 10px 25px rgba(168, 11, 36, 0.3);
+        &.active {
+            background: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            color: white;
+            box-shadow: 0 10px 25px var(--bg-primary-color-hover);
+        }
     }
 
     .btn-form {
@@ -171,6 +227,255 @@
             transform: translateY(0);
         }
     }
+
+    /* WhatsApp Button Cards */
+    .whatsapp-btn {
+        padding: 15px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid var(--bg-tertiary-button);
+        color: var(--tertiary-button-text);
+    }
+
+    .whatsapp-btn:hover {
+        background-color: var(--bg-tertiary-button-hover);
+        color: var(--tertiary-button-text-hover);
+    }
+
+    .whatsapp-card {
+        background: var(--light-color);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        height: 100%;
+        border: 2px solid transparent;
+    }
+
+    .whatsapp-card:hover {
+        border-color: var(--primary-color);
+        background: var(--light-color);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-10px);
+    }
+
+    .whatsapp-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .whatsapp-button-card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        border: 2px solid transparent;
+        transition: all 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .whatsapp-button-card:hover {
+        border-color: #25d366;
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
+        transform: translateY(-5px);
+    }
+
+    .whatsapp-button-card i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+
+    .whatsapp-button-card h6 {
+        font-weight: 700;
+        color: var(--dark-color);
+        margin-bottom: 15px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp-button-card .btn {
+        padding: 15px 40px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid var(--bg-tertiary-button);
+        color: var(--tertiary-button-text);
+    }
+
+    .whatsapp-button-card .btn:hover {
+        background-color: var(--bg-tertiary-button-hover);
+        color: var(--tertiary-button-text-hover);
+    }
+
+    .whatsapp-button-card .btn i {
+        font-size: 1rem;
+    }
+
+    /* Contact channel cards */
+    .channel-card {
+        background: #f8f9fa;
+        border: 2px solid transparent;
+        border-radius: 18px;
+        padding: 30px 25px;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        height: 100%;
+    }
+
+    .channel-card:hover {
+        background: white;
+        border-color: var(--primary-color);
+        box-shadow: 0 12px 40px rgba(10, 62, 142, 0.15);
+        transform: translateY(-8px);
+        color: inherit;
+    }
+
+    .channel-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        color: white;
+        transition: all 0.3s;
+    }
+
+    .channel-card:hover .channel-icon {
+        transform: scale(1.1);
+    }
+
+    .icon-whatsapp {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+    }
+    .icon-email {
+        background: linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+    }
+
+    .channel-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #999;
+    }
+
+    .channel-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin: 0;
+    }
+
+    .channel-detail {
+        font-size: 0.85rem;
+        color: #777;
+        margin: 0;
+    }
+
+    .channel-card-lg {
+        padding: 45px 35px;
+        gap: 14px;
+    }
+
+    .channel-icon-lg {
+        width: 90px;
+        height: 90px;
+        border-radius: 22px;
+        font-size: 2.4rem;
+    }
+
+    .channel-title-lg {
+        font-size: 1.4rem !important;
+    }
+
+    .channel-cta {
+        margin-top: 8px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        letter-spacing: 0.3px;
+        opacity: 0;
+        transform: translateY(6px);
+        transition: all 0.3s ease;
+    }
+
+    .channel-card:hover .channel-cta {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .btn-whatsapp-cta .channel-cta {
+        color: #128c7e;
+    }
+
+    /* Alert Info */
+    .alert-info {
+        background: #e7f3ff;
+        border: 2px solid #25d366;
+        border-radius: 10px;
+        color: #0066cc;
+
+        i {
+            color: #25d366;
+        }
+    }
+
+    /* Transiciones suaves */
+    #form-view,
+    #whatsapp-view {
+        transition: all 0.4s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .btn-selection {
+            padding: 12px 25px;
+            font-size: 0.95rem;
+        }
+
+        .whatsapp-button-card {
+            padding: 20px;
+        }
+
+        .whatsapp-button-card i {
+            font-size: 2rem;
+        }
+    }
 </style>
 
 <section class="quote-section" id="cotizaciones">
@@ -182,175 +487,100 @@
             <p class="section-subtitle" data-translate="quote_subtitle">
                 Obtén una cotización personalizada en minutos
             </p>
-            <div class="d-flex justify-content-center">
-                <a
-                    href="https://wa.me/2223716661?text=Estoy interesado en un *servicio de carga terrestre nacional*"
-                    target="_blank"
-                    class="btn custom-btn-tertiary mt-3"
-                >
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span data-translate="land_national_service_btn"
-                        >Cotizar Servicio</span
-                    >
-                </a>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-lg-7 mb-4 mb-lg-0">
-                <div class="quote-form">
-                    <form
-                        id="quoteForm"
-                        action="https://formspree.io/f/xwpwgawo"
-                        method="POST"
-                    >
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label
-                                    class="form-label fw-bold"
-                                    data-translate="quote_name"
-                                    >Nombre Completo</label
-                                >
-                                <input
-                                    type="text"
-                                    name="name"
-                                    class="form-control"
-                                    required
-                                />
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label
-                                    class="form-label fw-bold"
-                                    data-translate="quote_email"
-                                    >Correo Electrónico</label
-                                >
-                                <input
-                                    type="email"
-                                    name="email"
-                                    class="form-control"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label
-                                    class="form-label fw-bold"
-                                    data-translate="quote_phone">Teléfono</label
-                                >
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    class="form-control"
-                                    required
-                                />
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label
-                                    class="form-label fw-bold"
-                                    data-translate="quote_weight"
-                                    >Peso Aproximado (kg)</label
-                                >
-                                <input
-                                    type="number"
-                                    name="weight"
-                                    class="form-control"
-                                    min="0"
-                                    step="0.1"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label
-                                    class="form-label fw-bold"
-                                    data-translate="quote_origin"
-                                    >Ciudad de Origen</label
-                                >
-                                <input
-                                    type="text"
-                                    name="origin"
-                                    class="form-control"
-                                    required
-                                />
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label
-                                    class="form-label fw-bold"
-                                    data-translate="quote_destination"
-                                    >Ciudad de Destino</label
-                                >
-                                <input
-                                    type="text"
-                                    name="destination"
-                                    class="form-control"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <label
-                                class="form-label fw-bold"
-                                data-translate="quote_message"
-                                >Mensaje Adicional</label
-                            >
-                            <textarea
-                                class="form-control"
-                                name="message"
-                                rows="4"></textarea>
-                        </div>
-                        <button
-                            type="submit"
-                            class="btn custom-btn-tertiary btn-lg w-100"
-                        >
-                            <i class="fas fa-paper-plane me-2"></i>
-                            <span data-translate="quote_btn"
-                                >Solicitar Cotización Gratis</span
-                            >
-                        </button>
-                    </form>
-                </div>
 
-                <div class="row g-4 mt-2">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="contact-info-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <h4 data-translate="land_national_contact_address">
-                                Dirección
-                            </h4>
-                            <address
-                                class="not-italic leading-relaxed text-muted"
+        <div class="row">
+            <!-- VISTA WHATSAPP -->
+            <div id="whatsapp-view" class="col-lg-7 mb-4 mb-lg-0">
+                <div class="whatsapp-contact-container">
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-12">
+                            <a
+                                href="https://wa.me/2225548104?text=Estoy interesado en un *servicio de carga*"
+                                target="_blank"
+                                class="channel-card channel-card-lg"
                             >
-                                Cda. Popocatépetl No. 6<br />
-                                Entre Citlali y Tlaloc<br />
-                                Col. Heritage I Conjunto Habitacional<br />
-                                C.P. 72575<br />
-                                Puebla, Puebla, México
-                            </address>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="contact-info-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <h4
-                                data-translate="land_national_contact_schedule_title"
-                            >
-                                Horario de atención
-                            </h4>
-                            <p class="text-muted">
-                                <span
-                                    data-translate="land_national_contact_schedule_week"
-                                    >Lun - Vie: 9:00 AM - 6:00 PM</span
+                                <div
+                                    class="channel-icon icon-whatsapp channel-icon-lg"
                                 >
-                            </p>
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <span
+                                    class="channel-label"
+                                    data-translate="contact_whatsapp_label"
+                                    >Respuesta inmediata</span
+                                >
+                                <p class="channel-title channel-title-lg">
+                                    WhatsApp
+                                </p>
+                                <p class="channel-detail">+52 222 554 8104</p>
+                                <span class="channel-cta">Enviar mensaje →</span
+                                >
+                            </a>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="info-card h-100">
+                                <div class="d-flex justify-content-center">
+                                    <div class="info-card-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                                <h5>Dirección</h5>
+                                <address>
+                                    Cda. Popocatépetl No. 6<br />
+                                    Entre Citlali y Tlaloc<br />
+                                    Col. Heritage I Conjunto Habitacional<br />
+                                    C.P. 72575<br />
+                                    Puebla, Puebla, México
+                                </address>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="info-card h-100">
+                                <div class="d-flex justify-content-center">
+                                    <div class="info-card-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                </div>
+                                <h5>Horario de atención</h5>
+                                <div class="schedule-row">
+                                    <span class="day">Lun – Vie</span>
+                                    <span
+                                        >9:00 – 18:00 <span
+                                            class="schedule-open">Abierto</span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="schedule-row">
+                                    <span
+                                        class="day"
+                                        data-translate="contact_sunday"
+                                        >Sab - Dom</span
+                                    >
+                                    <span
+                                        class="schedule-close"
+                                        data-translate="contact_closed"
+                                        >Cerrado</span
+                                    >
+                                </div>
+                                <p
+                                    class="mt-3"
+                                    style="font-size:0.82rem; color:#999;"
+                                    data-translate="contact_schedule_note"
+                                >
+                                    * WhatsApp disponible fuera de horario
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- SIDEBAR -->
             <div class="col-lg-5">
                 <div class="quote-info">
                     <h3 class="mb-4" data-translate="quote_info_title">
@@ -395,11 +625,7 @@
                     <div class="mt-4 pt-4 border-top border-light">
                         <p class="mb-2">
                             <i class="fas fa-phone me-2"></i>
-                            +52 222 371 6661
-                        </p>
-                        <p class="mb-2">
-                            <i class="fas fa-envelope me-2"></i>
-                            ventas1@igsforwarding.com.mx
+                            +52 222 554 8104
                         </p>
                     </div>
                 </div>
