@@ -1,0 +1,911 @@
+---
+
+---
+
+<style is:inline>
+    /* ── SERVICIOS ── */
+    #servicios {
+        padding: 7rem 3rem;
+        background: var(--black-soft);
+    }
+    .servicios-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 5rem;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    .servicios-title-block {
+        flex: 0 0 auto;
+    }
+    .big-label {
+        font-family: var(--display);
+        font-size: clamp(3.5rem, 7vw, 6rem);
+        letter-spacing: 0.03em;
+        color: var(--white);
+        line-height: 0.95;
+    }
+    .big-label .red-stroke {
+        -webkit-text-stroke: 1px var(--red);
+        color: transparent;
+    }
+    .servicios-side {
+        max-width: 380px;
+    }
+    .side-tag {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+    }
+    .side-tag::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 1px;
+        background: var(--red);
+    }
+    .side-tag span {
+        font-size: 0.62rem;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.4);
+    }
+    .side-desc {
+        font-size: 0.88rem;
+        font-weight: 300;
+        line-height: 1.9;
+        color: var(--white-dim);
+    }
+    /* ── SERVICE CARDS ── */
+    .svc-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: rgba(245, 242, 238, 0.07);
+        border: 1px solid rgba(245, 242, 238, 0.07);
+    }
+    .svc-card {
+        background: var(--black-soft);
+        padding: 2.25rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+        overflow: hidden;
+        transition: background 0.35s;
+        cursor: default;
+    }
+    .svc-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--red);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .svc-card:hover {
+        background: #161616;
+    }
+    .svc-card:hover::after {
+        transform: scaleX(1);
+    }
+    .svc-card:hover .svc-icon {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+    .svc-card:hover .svc-num {
+        color: var(--red-bright);
+    }
+    .svc-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 1.5rem;
+        opacity: 0.45;
+        transition:
+            opacity 0.35s,
+            transform 0.35s;
+    }
+    .svc-icon svg {
+        width: 44px;
+        height: 44px;
+        display: block;
+    }
+    .svc-num {
+        font-family: var(--display);
+        font-size: 0.75rem;
+        color: rgba(245, 242, 238, 0.2);
+        letter-spacing: 0.18em;
+        margin-bottom: 0.65rem;
+        transition: color 0.3s;
+    }
+    .svc-name {
+        font-size: 0.92rem;
+        font-weight: 300;
+        color: var(--white);
+        letter-spacing: 0.04em;
+        line-height: 1.35;
+        margin-bottom: 0.9rem;
+    }
+    .svc-desc {
+        font-size: 0.75rem;
+        font-weight: 200;
+        line-height: 1.85;
+        color: var(--white-dim);
+        margin-top: auto;
+    }
+    @media (max-width: 1100px) {
+        .svc-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (max-width: 760px) {
+        .svc-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 480px) {
+        .svc-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+    <div class="servicios-top">
+        <div class="servicios-title-block fade-up">
+            <div class="big-label">
+                NUESTROS<br /><span class="red-stroke">SERVICIOS</span>
+            </div>
+        </div>
+        <div class="servicios-side fade-up d2">
+            <div class="side-tag"><span>Oferta integral</span></div>
+            <p class="side-desc">
+                Atendemos cada fase del proceso constructivo: desde el boceto
+                inicial hasta la supervisión final.
+            </p>
+        </div>
+    </div>
+
+    <div class="svc-grid fade-up d1">
+        <!-- 01 Diseño Arquitectónico -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="4"
+                        y="18"
+                        width="36"
+                        height="22"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <polyline
+                        points="4,18 22,6 40,18"
+                        stroke="#C01010"
+                        stroke-width="1.4"
+                        fill="none"
+                        stroke-linejoin="round"></polyline>
+                    <rect
+                        x="17"
+                        y="28"
+                        width="10"
+                        height="12"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"></rect>
+                    <line
+                        x1="22"
+                        y1="28"
+                        x2="22"
+                        y2="40"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.4"></line>
+                </svg>
+            </div>
+            <p class="svc-num">01</p>
+            <h3 class="svc-name">Diseño Arquitectónico</h3>
+            <p class="svc-desc">
+                Proyectos habitacionales, comerciales e institucionales con
+                identidad propia y funcionalidad comprobada.
+            </p>
+        </div>
+
+        <!-- 02 Anteproyecto y Visualización -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="4"
+                        y="6"
+                        width="30"
+                        height="24"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <line
+                        x1="4"
+                        y1="36"
+                        x2="40"
+                        y2="36"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.5"></line>
+                    <polygon
+                        points="34,6 40,6 40,30 34,30"
+                        fill="rgba(140,10,10,0.35)"
+                        stroke="#C01010"
+                        stroke-width="1"></polygon>
+                    <line
+                        x1="10"
+                        y1="13"
+                        x2="24"
+                        y2="13"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.45"></line>
+                    <line
+                        x1="10"
+                        y1="18"
+                        x2="20"
+                        y2="18"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.45"></line>
+                    <circle
+                        cx="10"
+                        cy="24"
+                        r="2.5"
+                        stroke="#C01010"
+                        stroke-width="1"></circle>
+                </svg>
+            </div>
+            <p class="svc-num">02</p>
+            <h3 class="svc-name">Anteproyecto y Visualización</h3>
+            <p class="svc-desc">
+                Renders fotorrealistas, planos conceptuales y maquetas 3D para
+                visualizar el proyecto antes de construir.
+            </p>
+        </div>
+
+        <!-- 03 Proyecto Ejecutivo -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="8"
+                        y="4"
+                        width="28"
+                        height="36"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <line
+                        x1="14"
+                        y1="13"
+                        x2="30"
+                        y2="13"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.55"></line>
+                    <line
+                        x1="14"
+                        y1="19"
+                        x2="30"
+                        y2="19"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.55"></line>
+                    <line
+                        x1="14"
+                        y1="25"
+                        x2="24"
+                        y2="25"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.55"></line>
+                    <line
+                        x1="14"
+                        y1="31"
+                        x2="22"
+                        y2="31"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.35"></line>
+                    <polyline
+                        points="26,28 29,32 34,25"
+                        stroke="#C01010"
+                        stroke-width="1.4"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></polyline>
+                </svg>
+            </div>
+            <p class="svc-num">03</p>
+            <h3 class="svc-name">Proyecto Ejecutivo</h3>
+            <p class="svc-desc">
+                Documentación técnica completa: planos, memorias de cálculo,
+                especificaciones y detalles constructivos.
+            </p>
+        </div>
+
+        <!-- 04 Gestión de Permisos -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="10"
+                        y="8"
+                        width="24"
+                        height="30"
+                        rx="1"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <line
+                        x1="10"
+                        y1="16"
+                        x2="34"
+                        y2="16"
+                        stroke="#C01010"
+                        stroke-width="1"
+                        opacity="0.5"></line>
+                    <circle
+                        cx="22"
+                        cy="26"
+                        r="5"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.5"></circle>
+                    <polyline
+                        points="19,26 21,28 26,23"
+                        stroke="#C01010"
+                        stroke-width="1.4"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></polyline>
+                    <rect
+                        x="15"
+                        y="4"
+                        width="14"
+                        height="6"
+                        rx="1"
+                        fill="var(--off-black)"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.45"></rect>
+                </svg>
+            </div>
+            <p class="svc-num">04</p>
+            <h3 class="svc-name">Gestión de Permisos</h3>
+            <p class="svc-desc">
+                Tramitación de licencias de construcción y permisos ante
+                autoridades municipales y estatales.
+            </p>
+        </div>
+
+        <!-- 05 Dirección y Supervisión -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <line
+                        x1="6"
+                        y1="38"
+                        x2="38"
+                        y2="38"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.4"></line>
+                    <rect
+                        x="6"
+                        y="22"
+                        width="8"
+                        height="16"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.5"></rect>
+                    <rect
+                        x="18"
+                        y="16"
+                        width="8"
+                        height="22"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.5"></rect>
+                    <rect
+                        x="30"
+                        y="10"
+                        width="8"
+                        height="28"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <polyline
+                        points="8,28 16,20 26,24 38,12"
+                        stroke="#C01010"
+                        stroke-width="1.4"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></polyline>
+                    <circle cx="38" cy="12" r="2.5" fill="#C01010"></circle>
+                </svg>
+            </div>
+            <p class="svc-num">05</p>
+            <h3 class="svc-name">Dirección y Supervisión</h3>
+            <p class="svc-desc">
+                Control técnico y administrativo durante la ejecución,
+                garantizando calidad y apego al proyecto.
+            </p>
+        </div>
+
+        <!-- 06 Presupuestos -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="5"
+                        y="10"
+                        width="34"
+                        height="24"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <line
+                        x1="5"
+                        y1="18"
+                        x2="39"
+                        y2="18"
+                        stroke="#C01010"
+                        stroke-width="1"
+                        opacity="0.5"></line>
+                    <line
+                        x1="18"
+                        y1="10"
+                        x2="18"
+                        y2="34"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.35"></line>
+                    <line
+                        x1="29"
+                        y1="10"
+                        x2="29"
+                        y2="34"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.35"></line>
+                    <line
+                        x1="5"
+                        y1="26"
+                        x2="39"
+                        y2="26"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.2"></line>
+                    <circle
+                        cx="34"
+                        cy="7"
+                        r="5"
+                        fill="var(--red)"
+                        opacity="0.85"></circle>
+                    <line
+                        x1="32"
+                        y1="7"
+                        x2="36"
+                        y2="7"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"></line>
+                    <line
+                        x1="34"
+                        y1="5"
+                        x2="34"
+                        y2="9"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"></line>
+                </svg>
+            </div>
+            <p class="svc-num">06</p>
+            <h3 class="svc-name">Presupuestos y Costos</h3>
+            <p class="svc-desc">
+                Análisis de precios unitarios, catálogos de conceptos y
+                seguimiento presupuestal durante la obra.
+            </p>
+        </div>
+
+        <!-- 07 Remodelación -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="4"
+                        y="20"
+                        width="16"
+                        height="20"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.45"></rect>
+                    <rect
+                        x="20"
+                        y="12"
+                        width="20"
+                        height="28"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <line
+                        x1="4"
+                        y1="40"
+                        x2="40"
+                        y2="40"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.4"></line>
+                    <line
+                        x1="20"
+                        y1="20"
+                        x2="40"
+                        y2="20"
+                        stroke="#C01010"
+                        stroke-width="1"
+                        opacity="0.5"></line>
+                    <polyline
+                        points="12,12 12,6 18,6"
+                        stroke="#C01010"
+                        stroke-width="1.4"
+                        fill="none"
+                        stroke-linecap="round"></polyline>
+                    <line
+                        x1="8"
+                        y1="16"
+                        x2="16"
+                        y2="8"
+                        stroke="#C01010"
+                        stroke-width="1.4"
+                        stroke-linecap="round"></line>
+                </svg>
+            </div>
+            <p class="svc-num">07</p>
+            <h3 class="svc-name">Remodelación y Ampliación</h3>
+            <p class="svc-desc">
+                Renovación de espacios existentes sin sacrificar funcionalidad
+                ni la identidad del inmueble.
+            </p>
+        </div>
+
+        <!-- 08 Interiorismo -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="4"
+                        y="4"
+                        width="36"
+                        height="36"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <line
+                        x1="4"
+                        y1="28"
+                        x2="40"
+                        y2="28"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.4"></line>
+                    <rect
+                        x="10"
+                        y="28"
+                        width="24"
+                        height="12"
+                        fill="rgba(140,10,10,0.2)"
+                        stroke="none"></rect>
+                    <line
+                        x1="22"
+                        y1="4"
+                        x2="22"
+                        y2="28"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.3"></line>
+                    <circle
+                        cx="14"
+                        cy="16"
+                        r="4"
+                        stroke="#C01010"
+                        stroke-width="1.2"></circle>
+                    <path
+                        d="M28 10 Q34 16 28 22"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        fill="none"
+                        opacity="0.5"></path>
+                    <path
+                        d="M32 12 Q36 16 32 20"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        fill="none"
+                        opacity="0.3"></path>
+                </svg>
+            </div>
+            <p class="svc-num">08</p>
+            <h3 class="svc-name">Interiorismo</h3>
+            <p class="svc-desc">
+                Diseño de interiores enfocado en confort, iluminación y armonía
+                entre todos los elementos del espacio.
+            </p>
+        </div>
+
+        <!-- 09 Urbanismo -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <line
+                        x1="4"
+                        y1="38"
+                        x2="40"
+                        y2="38"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.4"></line>
+                    <rect
+                        x="4"
+                        y="26"
+                        width="10"
+                        height="12"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.4"></rect>
+                    <rect
+                        x="17"
+                        y="20"
+                        width="10"
+                        height="18"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.5"></rect>
+                    <rect
+                        x="30"
+                        y="12"
+                        width="10"
+                        height="26"
+                        stroke="#C01010"
+                        stroke-width="1.4"></rect>
+                    <line
+                        x1="4"
+                        y1="20"
+                        x2="40"
+                        y2="20"
+                        stroke="#C01010"
+                        stroke-width="1"
+                        opacity="0.3"
+                        stroke-dasharray="3 2"></line>
+                    <circle cx="9" cy="17" r="2" fill="#C01010" opacity="0.7"
+                    ></circle>
+                    <circle cx="22" cy="17" r="2" fill="#C01010" opacity="0.7"
+                    ></circle>
+                    <circle cx="35" cy="9" r="2" fill="#C01010"></circle>
+                </svg>
+            </div>
+            <p class="svc-num">09</p>
+            <h3 class="svc-name">Urbanismo</h3>
+            <p class="svc-desc">
+                Planificación de conjuntos habitacionales, parques industriales
+                y desarrollos de uso mixto.
+            </p>
+        </div>
+
+        <!-- 10 Diseño Sostenible -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle
+                        cx="22"
+                        cy="20"
+                        r="13"
+                        stroke="#C01010"
+                        stroke-width="1.4"></circle>
+                    <path
+                        d="M22 7 C22 7 14 13 14 20 C14 27 22 33 22 33 C22 33 30 27 30 20 C30 13 22 7 22 7Z"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        fill="none"
+                        opacity="0.4"></path>
+                    <line
+                        x1="9"
+                        y1="20"
+                        x2="35"
+                        y2="20"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.4"></line>
+                    <line
+                        x1="22"
+                        y1="33"
+                        x2="22"
+                        y2="40"
+                        stroke="#C01010"
+                        stroke-width="1.4"></line>
+                    <line
+                        x1="16"
+                        y1="40"
+                        x2="28"
+                        y2="40"
+                        stroke="#C01010"
+                        stroke-width="1.4"></line>
+                    <path
+                        d="M22 13 L24 17 L28 17 L25 20 L26 24 L22 21 L18 24 L19 20 L16 17 L20 17Z"
+                        fill="rgba(140,10,10,0.5)"
+                        stroke="#C01010"
+                        stroke-width="0.8"></path>
+                </svg>
+            </div>
+            <p class="svc-num">10</p>
+            <h3 class="svc-name">Diseño Sostenible</h3>
+            <p class="svc-desc">
+                Arquitectura bioclimática y sustentable con eficiencia
+                energética y materiales responsables.
+            </p>
+        </div>
+
+        <!-- 11 Restauración -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect
+                        x="6"
+                        y="12"
+                        width="32"
+                        height="26"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.45"></rect>
+                    <polyline
+                        points="6,12 22,4 38,12"
+                        stroke="#C01010"
+                        stroke-width="1.4"
+                        fill="none"
+                        stroke-linejoin="round"></polyline>
+                    <line
+                        x1="6"
+                        y1="6"
+                        x2="6"
+                        y2="4"
+                        stroke="#C01010"
+                        stroke-width="1.4"></line>
+                    <line
+                        x1="38"
+                        y1="6"
+                        x2="38"
+                        y2="4"
+                        stroke="#C01010"
+                        stroke-width="1.4"></line>
+                    <rect
+                        x="13"
+                        y="24"
+                        width="8"
+                        height="14"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.4"></rect>
+                    <rect
+                        x="25"
+                        y="18"
+                        width="8"
+                        height="20"
+                        stroke="#C01010"
+                        stroke-width="1.3"></rect>
+                    <path
+                        d="M8 12 Q22 8 36 12"
+                        stroke="#C01010"
+                        stroke-width="1"
+                        fill="none"
+                        opacity="0.5"></path>
+                </svg>
+            </div>
+            <p class="svc-num">11</p>
+            <h3 class="svc-name">Restauración y Conservación</h3>
+            <p class="svc-desc">
+                Rehabilitación de inmuebles históricos con técnicas
+                especializadas de conservación patrimonial.
+            </p>
+        </div>
+
+        <!-- 12 Peritajes -->
+        <div class="svc-card">
+            <div class="svc-icon">
+                <svg
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle
+                        cx="19"
+                        cy="19"
+                        r="12"
+                        stroke="#C01010"
+                        stroke-width="1.4"></circle>
+                    <line
+                        x1="28"
+                        y1="28"
+                        x2="40"
+                        y2="40"
+                        stroke="#C01010"
+                        stroke-width="1.8"
+                        stroke-linecap="round"></line>
+                    <line
+                        x1="14"
+                        y1="19"
+                        x2="24"
+                        y2="19"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.6"></line>
+                    <line
+                        x1="19"
+                        y1="14"
+                        x2="19"
+                        y2="24"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.6"></line>
+                    <circle
+                        cx="19"
+                        cy="19"
+                        r="4"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.3"></circle>
+                </svg>
+            </div>
+            <p class="svc-num">12</p>
+            <h3 class="svc-name">Peritajes y Avalúos</h3>
+            <p class="svc-desc">
+                Valuación de inmuebles, dictámenes técnicos y peritajes
+                estructurales con respaldo profesional.
+            </p>
+        </div>
+    </div>
+</section>

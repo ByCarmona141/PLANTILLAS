@@ -1,0 +1,234 @@
+---
+
+---
+
+<style is:inline>
+    /* ── NOSOTROS ── */
+    #nosotros {
+        background: var(--black);
+        overflow: hidden;
+    }
+    .nosotros-intro {
+        padding: 7rem 3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: end;
+    }
+    .nosotros-bignum {
+        font-family: var(--display);
+        font-size: clamp(6rem, 14vw, 13rem);
+        color: rgba(140, 10, 10, 0.15);
+        line-height: 1;
+    }
+    .nosotros-intro-right {
+        padding-bottom: 1rem;
+    }
+    .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .eyebrow::before {
+        content: "";
+        width: 16px;
+        height: 1px;
+        background: var(--red);
+    }
+    .eyebrow span {
+        font-size: 0.62rem;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.35);
+    }
+    .nosotros-heading {
+        font-family: var(--display);
+        font-size: clamp(2.2rem, 4.5vw, 4rem);
+        letter-spacing: 0.04em;
+        line-height: 1;
+        color: var(--white);
+        margin-bottom: 1.5rem;
+    }
+    .nosotros-subtext {
+        font-size: 0.88rem;
+        font-weight: 200;
+        line-height: 2;
+        color: var(--white-dim);
+    }
+    .mv-panels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 4rem;
+    }
+    .mv-panel {
+        padding: 4rem 3rem;
+        position: relative;
+    }
+    .mv-panel:first-child {
+        background: var(--off-black);
+        border-right: 1px solid var(--white-ghost);
+    }
+    .mv-panel:last-child {
+        background: var(--panel);
+    }
+    .mv-panel-icon {
+        font-family: var(--display);
+        font-size: 5rem;
+        color: rgba(140, 10, 10, 0.3);
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+    .mv-panel-label {
+        font-size: 0.58rem;
+        font-weight: 300;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--red-bright);
+        margin-bottom: 1.25rem;
+    }
+    .mv-panel-title {
+        font-family: var(--italic);
+        font-size: 1.6rem;
+        font-style: italic;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 1.25rem;
+        line-height: 1.4;
+    }
+    .mv-panel-text {
+        font-size: 0.84rem;
+        font-weight: 200;
+        line-height: 2;
+        color: var(--white-dim);
+    }
+    .mv-panel-list {
+        list-style: none;
+        margin-top: 2rem;
+    }
+    .mv-panel-list li {
+        font-size: 0.76rem;
+        font-weight: 300;
+        color: rgba(245, 242, 238, 0.35);
+        padding: 0.65rem 0;
+        border-bottom: 1px solid var(--white-ghost);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .mv-panel-list li::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: var(--red);
+        flex-shrink: 0;
+    }
+    .stats-band {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: var(--red);
+    }
+    .stat-cell {
+        padding: 3rem 2rem;
+        text-align: center;
+        border-right: 1px solid rgba(245, 242, 238, 0.1);
+    }
+    .stat-cell:last-child {
+        border-right: none;
+    }
+    .stat-big {
+        font-family: var(--display);
+        font-size: 3.5rem;
+        color: var(--white);
+        letter-spacing: 0.04em;
+    }
+    .stat-sub {
+        font-size: 0.62rem;
+        font-weight: 300;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.55);
+        margin-top: 0.35rem;
+    }
+</style>
+
+<!-- NOSOTROS -->
+<section id="nosotros" style="padding:0">
+    <div class="nosotros-intro fade-up">
+        <div class="nosotros-bignum">23</div>
+        <div class="nosotros-intro-right">
+            <div class="eyebrow"><span>Quiénes somos</span></div>
+            <h2 class="nosotros-heading">
+                ARQUITECTURA<br />CON PROPÓSITO
+            </h2>
+            <p class="nosotros-subtext">
+                MONDRIAL nació en 2001 con una convicción clara: el espacio
+                construido tiene el poder de cambiar vidas. Durante más de dos
+                décadas hemos transformado esa convicción en proyectos que
+                perduran.
+            </p>
+        </div>
+    </div>
+    <div class="mv-panels">
+        <div class="mv-panel fade-up d1">
+            <div class="mv-panel-icon">M</div>
+            <p class="mv-panel-label">Misión</p>
+            <h3 class="mv-panel-title">
+                Crear espacios que transformen la experiencia humana
+            </h3>
+            <p class="mv-panel-text">
+                Somos un despacho de arquitectura comprometido con diseñar y
+                construir espacios funcionales, estéticos y sustentables que
+                eleven la calidad de vida. Trabajamos con rigor técnico,
+                creatividad genuina y respeto profundo por el cliente y su
+                entorno.
+            </p>
+            <ul class="mv-panel-list">
+                <li>Excelencia técnica y creativa en cada proyecto</li>
+                <li>Compromiso total con plazos y presupuestos</li>
+                <li>Transparencia y comunicación permanente</li>
+                <li>Respeto por el entorno natural y urbano</li>
+            </ul>
+        </div>
+        <div class="mv-panel fade-up d2">
+            <div class="mv-panel-icon">V</div>
+            <p class="mv-panel-label">Visión</p>
+            <h3 class="mv-panel-title">
+                Ser el despacho referente en arquitectura integral de México
+            </h3>
+            <p class="mv-panel-text">
+                Aspiramos a consolidarnos como la firma de arquitectura más
+                reconocida del sureste mexicano, exportando talento y proyectos
+                al resto del país. Apostamos por la innovación constante, la
+                sustentabilidad y el impacto positivo en la comunidad.
+            </p>
+            <ul class="mv-panel-list">
+                <li>Liderazgo regional y expansión nacional</li>
+                <li>Referencia en arquitectura sostenible</li>
+                <li>Formación continua del equipo profesional</li>
+                <li>Huella positiva en cada comunidad</li>
+            </ul>
+        </div>
+    </div>
+    <div class="stats-band fade-up">
+        <div class="stat-cell">
+            <p class="stat-big">+23</p><p class="stat-sub">
+                Años de trayectoria
+            </p>
+        </div>
+        <div class="stat-cell">
+            <p class="stat-big">200+</p><p class="stat-sub">
+                Proyectos concluidos
+            </p>
+        </div>
+        <div class="stat-cell">
+            <p class="stat-big">80+</p><p class="stat-sub">
+                Clientes satisfechos
+            </p>
+        </div>
+        <div class="stat-cell">
+            <p class="stat-big">12</p><p class="stat-sub">Líneas de servicio</p>
+        </div>
+    </div>
+</section>

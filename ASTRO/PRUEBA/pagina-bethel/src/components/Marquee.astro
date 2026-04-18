@@ -1,0 +1,56 @@
+---
+
+---
+
+<style is:inline>
+    /* ── MARQUEE STRIP ── */
+    .marquee-strip {
+        background: var(--red);
+        padding: 0.9rem 0;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .marquee-inner {
+        display: inline-block;
+        animation: marquee 22s linear infinite;
+    }
+    .marquee-inner span {
+        font-family: var(--display);
+        font-size: 0.85rem;
+        letter-spacing: 0.3em;
+        color: rgba(245, 242, 238, 0.9);
+        padding: 0 2.5rem;
+    }
+    .marquee-inner .dot {
+        color: rgba(245, 242, 238, 0.4);
+    }
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+    <div class="marquee-inner">
+        <span>Arquitectura · Diseño · Construcción</span>
+        <span class="dot">•</span>
+        <span>Chilpancingo · Guerrero</span>
+        <span class="dot">•</span>
+        <span>2001 · Presente</span>
+        <span class="dot">•</span>
+        <span>Calidad · Precisión · Estilo</span>
+        <span class="dot">•</span>
+        <span>Arquitectura · Diseño · Construcción</span>
+        <span class="dot">•</span>
+        <span>Chilpancingo · Guerrero</span>
+        <span class="dot">•</span>
+        <span>2001 · Presente</span>
+        <span class="dot">•</span>
+        <span>Calidad · Precisión · Estilo</span>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Cursor from "../components/Cursor.astro";
+import Loader from "../components/Loader.astro";
+import Hero from "../components/Hero.astro";
+import Marquee from "../components/Marquee.astro";
+import Services from "../components/Services.astro";
+import About from "../components/About.astro";
+import Certifications from "../components/Certifications.astro";
+import Pritzker from "../components/Pritzker.astro";
+import Clients from "../components/Clients.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout>
+	<style>
+		/* ── REVEAL ── */
+		.fade-up {
+			opacity: 0;
+			transform: translateY(40px);
+			transition:
+				opacity 0.9s ease,
+				transform 0.9s ease;
+		}
+		.fade-up.in {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		.fade-up.d1 {
+			transition-delay: 0.1s;
+		}
+		.fade-up.d2 {
+			transition-delay: 0.2s;
+		}
+		.fade-up.d3 {
+			transition-delay: 0.3s;
+		}
+		.fade-up.d4 {
+			transition-delay: 0.4s;
+		}
+
+		/* ── RESPONSIVE ── */
+		@media (max-width: 900px) {
+			nav {
+				padding: 1rem 1.5rem;
+			}
+			nav.solid {
+				padding: 0.75rem 1.5rem;
+			}
+			.nav-menu {
+				display: none;
+			}
+			section,
+			#servicios,
+			#clientes,
+			#nosotros .nosotros-intro {
+				padding: 4rem 1.5rem;
+			}
+			.nosotros-intro {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+				padding: 4rem 1.5rem 0;
+			}
+			.mv-panels {
+				grid-template-columns: 1fr;
+			}
+			.mv-panel:first-child {
+				border-right: none;
+				border-bottom: 1px solid var(--white-ghost);
+			}
+			.stats-band {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			.contacto-body {
+				grid-template-columns: 1fr;
+			}
+			.contacto-info-side {
+				border-left: none;
+				border-top: 1px solid var(--white-ghost);
+			}
+			.testi-block {
+				grid-template-columns: 1fr;
+			}
+			.testi-left {
+				border-right: none;
+				border-bottom: 1px solid rgba(140, 10, 10, 0.3);
+			}
+			#hero {
+				padding: 0 1.5rem 4rem;
+			}
+			.hero-red-block {
+				width: 25%;
+			}
+			.hero-year-tag {
+				display: none;
+			}
+			.service-row {
+				grid-template-columns: 50px 1fr;
+			}
+			.srow-tag {
+				display: none;
+			}
+			footer {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+	</style>
+
+	<Cursor />
+	<Loader />
+	<NavBar />
+	<Hero />
+	<Marquee />
+	<Services />
+	<About />
+	<Certifications />
+	<Pritzker />
+	<Clients />
+	<Contact />
+	<Footer />
+
+	<script>
+		// Accordion
+		function toggleRow(row) {
+			const wasOpen = row.classList.contains("open");
+			document
+				.querySelectorAll(".service-row.open")
+				.forEach((r) => r.classList.remove("open"));
+			if (!wasOpen) row.classList.add("open");
+		}
+
+		// Scroll reveal
+		const fadels = document.querySelectorAll(".fade-up");
+		const obs = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((e) => {
+					if (e.isIntersecting) {
+						e.target.classList.add("in");
+						obs.unobserve(e.target);
+					}
+				});
+			},
+			{ threshold: 0.1 },
+		);
+		fadels.forEach((el) => obs.observe(el));
+	</script>
+</BaseLayout>

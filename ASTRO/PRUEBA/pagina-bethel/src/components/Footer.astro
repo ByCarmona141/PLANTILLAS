@@ -1,0 +1,58 @@
+---
+
+---
+
+<style is:inline>
+    /* ── FOOTER ── */
+    footer {
+        background: var(--black);
+        border-top: 1px solid var(--white-ghost);
+        padding: 2rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .footer-brand {
+        font-family: var(--display);
+        font-size: 1.4rem;
+        letter-spacing: 0.2em;
+        color: var(--white);
+    }
+    .footer-copy {
+        font-size: 0.65rem;
+        font-weight: 200;
+        color: rgba(245, 242, 238, 0.2);
+        letter-spacing: 0.1em;
+    }
+    .footer-nav {
+        display: flex;
+        gap: 1.75rem;
+    }
+    .footer-nav a {
+        font-size: 0.62rem;
+        font-weight: 300;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.25);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .footer-nav a:hover {
+        color: var(--red-bright);
+    }
+</style>
+
+<footer>
+    <span class="footer-brand">MONDRIAL · 2001</span>
+    <span class="footer-copy"
+        >© 2026 MONDRIAL Arquitectura & Diseño · Todos los derechos reservados</span
+    >
+    <nav class="footer-nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</footer>

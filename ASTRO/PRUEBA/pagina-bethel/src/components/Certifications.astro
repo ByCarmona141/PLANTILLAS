@@ -1,0 +1,520 @@
+---
+
+---
+
+<style is:inline>
+    /* ── CERTIFICACIONES ── */
+    #certificaciones {
+        background: var(--black);
+        padding: 0;
+        border-top: 1px solid var(--white-ghost);
+    }
+    .cert-header {
+        padding: 5rem 3rem 4rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    .cert-heading {
+        font-family: var(--display);
+        font-size: clamp(2.2rem, 4.5vw, 4rem);
+        letter-spacing: 0.04em;
+        color: var(--white);
+        line-height: 0.95;
+    }
+    .cert-heading em {
+        font-family: var(--italic);
+        font-style: italic;
+        font-size: 0.85em;
+        color: rgba(245, 242, 238, 0.4);
+        font-weight: 400;
+    }
+    .cert-sub {
+        font-size: 0.83rem;
+        font-weight: 200;
+        color: var(--white-dim);
+        max-width: 360px;
+        line-height: 1.85;
+    }
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cert-card {
+        padding: 3.5rem 3rem 3rem;
+        border-top: 1px solid var(--white-ghost);
+        border-right: 1px solid var(--white-ghost);
+        position: relative;
+        overflow: hidden;
+        transition: background 0.4s;
+    }
+    .cert-card:last-child {
+        border-right: none;
+    }
+    .cert-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: var(--red);
+        transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cert-card:hover {
+        background: rgba(140, 10, 10, 0.05);
+    }
+    .cert-card:hover::before {
+        width: 100%;
+    }
+    .cert-card:hover .cert-icon-wrap {
+        transform: translateY(-4px);
+    }
+    .cert-icon-wrap {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 2rem;
+        transition: transform 0.4s ease;
+    }
+    .cert-icon-wrap svg {
+        width: 64px;
+        height: 64px;
+        display: block;
+    }
+    .cert-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.55rem;
+        font-weight: 400;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--red-bright);
+        border: 1px solid rgba(140, 10, 10, 0.4);
+        padding: 0.3rem 0.8rem;
+        margin-bottom: 1.25rem;
+    }
+    .cert-badge::before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: var(--red-bright);
+        border-radius: 50%;
+    }
+    .cert-name {
+        font-family: var(--display);
+        font-size: 1.5rem;
+        letter-spacing: 0.06em;
+        color: var(--white);
+        margin-bottom: 0.4rem;
+        line-height: 1.1;
+    }
+    .cert-full {
+        font-size: 0.7rem;
+        font-weight: 200;
+        letter-spacing: 0.1em;
+        color: rgba(245, 242, 238, 0.35);
+        margin-bottom: 1.5rem;
+    }
+    .cert-desc {
+        font-size: 0.8rem;
+        font-weight: 200;
+        line-height: 1.9;
+        color: var(--white-dim);
+        margin-bottom: 2rem;
+    }
+    .cert-features {
+        list-style: none;
+    }
+    .cert-features li {
+        font-size: 0.72rem;
+        font-weight: 300;
+        color: rgba(245, 242, 238, 0.38);
+        padding: 0.55rem 0;
+        border-bottom: 1px solid var(--white-ghost);
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+    }
+    .cert-features li:last-child {
+        border-bottom: none;
+    }
+    .cert-features li::before {
+        content: "";
+        flex-shrink: 0;
+        width: 14px;
+        height: 1px;
+        background: var(--red);
+    }
+    .cert-divider {
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            var(--red),
+            rgba(140, 10, 10, 0.15),
+            transparent
+        );
+        margin: 0 3rem;
+    }
+    .cert-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--white-ghost);
+    }
+    .cert-strip-item {
+        padding: 2rem 3rem;
+        border-right: 1px solid var(--white-ghost);
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .cert-strip-item:last-child {
+        border-right: none;
+    }
+    .cert-strip-num {
+        font-family: var(--display);
+        font-size: 2rem;
+        color: var(--red);
+        letter-spacing: 0.05em;
+    }
+    .cert-strip-text {
+        font-size: 0.7rem;
+        font-weight: 200;
+        color: var(--white-dim);
+        line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+        .cert-grid {
+            grid-template-columns: 1fr;
+        }
+        .cert-card {
+            border-right: none;
+            border-bottom: 1px solid var(--white-ghost);
+        }
+        .cert-card:last-child {
+            border-bottom: none;
+        }
+        .cert-strip {
+            grid-template-columns: 1fr;
+        }
+        .cert-strip-item {
+            border-right: none;
+            border-bottom: 1px solid var(--white-ghost);
+        }
+        .cert-header {
+            padding: 4rem 1.5rem 3rem;
+        }
+        .cert-card {
+            padding: 2.5rem 1.5rem;
+        }
+        .cert-strip-item {
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+<!-- CERTIFICACIONES -->
+<section id="certificaciones">
+    <div class="cert-header">
+        <div class="fade-up">
+            <div class="eyebrow"><span>Certificaciones</span></div>
+            <h2 class="cert-heading">
+                ESTÁNDARES<br /><em>internacionales</em>
+            </h2>
+        </div>
+        <p class="cert-sub fade-up d2">
+            Nuestro equipo está certificado bajo los más rigurosos estándares
+            globales de la industria, garantizando calidad, eficiencia y
+            metodología en cada proyecto.
+        </p>
+    </div>
+
+    <div class="cert-grid">
+        <!-- LEED -->
+        <div class="cert-card fade-up">
+            <div class="cert-icon-wrap">
+                <svg
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <!-- Hoja / edificio sostenible -->
+                    <circle
+                        cx="32"
+                        cy="32"
+                        r="28"
+                        stroke="rgba(140,10,10,0.3)"
+                        stroke-width="1"></circle>
+                    <path
+                        d="M32 52 C32 52 14 40 14 26 C14 17 22 10 32 10 C42 10 50 17 50 26 C50 40 32 52 32 52Z"
+                        stroke="#C01010"
+                        stroke-width="1.5"
+                        fill="rgba(140,10,10,0.12)"></path>
+                    <path
+                        d="M32 52 C32 52 32 34 32 26"
+                        stroke="#f5f2ee"
+                        stroke-width="1.2"
+                        opacity="0.4"
+                        stroke-linecap="round"></path>
+                    <path
+                        d="M22 30 C24 28 28 27 32 28"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.4"
+                        stroke-linecap="round"></path>
+                    <path
+                        d="M42 22 C40 24 36 25 32 24"
+                        stroke="#f5f2ee"
+                        stroke-width="1.1"
+                        opacity="0.35"
+                        stroke-linecap="round"></path>
+                    <circle cx="32" cy="26" r="3" fill="#C01010" opacity="0.8"
+                    ></circle>
+                    <!-- Sol rayos -->
+                    <line
+                        x1="32"
+                        y1="4"
+                        x2="32"
+                        y2="8"
+                        stroke="#C01010"
+                        stroke-width="1.2"
+                        opacity="0.5"
+                        stroke-linecap="round"></line>
+                    <line
+                        x1="50"
+                        y1="10"
+                        x2="47"
+                        y2="13"
+                        stroke="#C01010"
+                        stroke-width="1.2"
+                        opacity="0.4"
+                        stroke-linecap="round"></line>
+                    <line
+                        x1="14"
+                        y1="10"
+                        x2="17"
+                        y2="13"
+                        stroke="#C01010"
+                        stroke-width="1.2"
+                        opacity="0.4"
+                        stroke-linecap="round"></line>
+                </svg>
+            </div>
+            <span class="cert-badge">Sostenibilidad</span>
+            <h3 class="cert-name">LEED</h3>
+            <p class="cert-full">
+                Leadership in Energy and Environmental Design
+            </p>
+            <p class="cert-desc">
+                Certificación internacional que avala el diseño, construcción y
+                operación de edificios con altos estándares de eficiencia
+                energética, uso responsable del agua y reducción de huella de
+                carbono.
+            </p>
+            <ul class="cert-features">
+                <li>Eficiencia energética y bioclimática</li>
+                <li>Gestión responsable del agua</li>
+                <li>Materiales sustentables y locales</li>
+                <li>Calidad ambiental interior</li>
+            </ul>
+        </div>
+
+        <!-- BIM -->
+        <div class="cert-card fade-up d1">
+            <div class="cert-icon-wrap">
+                <svg
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <!-- Cubo 3D / modelo digital -->
+                    <polygon
+                        points="32,8 54,20 54,44 32,56 10,44 10,20"
+                        stroke="#C01010"
+                        stroke-width="1.5"
+                        fill="rgba(140,10,10,0.08)"></polygon>
+                    <line
+                        x1="32"
+                        y1="8"
+                        x2="32"
+                        y2="32"
+                        stroke="#C01010"
+                        stroke-width="1.2"
+                        opacity="0.7"></line>
+                    <line
+                        x1="54"
+                        y1="20"
+                        x2="32"
+                        y2="32"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.35"></line>
+                    <line
+                        x1="10"
+                        y1="20"
+                        x2="32"
+                        y2="32"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.35"></line>
+                    <line
+                        x1="32"
+                        y1="32"
+                        x2="32"
+                        y2="56"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.3"></line>
+                    <line
+                        x1="32"
+                        y1="32"
+                        x2="54"
+                        y2="44"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.25"></line>
+                    <line
+                        x1="32"
+                        y1="32"
+                        x2="10"
+                        y2="44"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.25"></line>
+                    <circle cx="32" cy="32" r="3.5" fill="#C01010"></circle>
+                    <circle cx="32" cy="8" r="2" fill="#C01010" opacity="0.6"
+                    ></circle>
+                    <circle cx="54" cy="20" r="2" fill="rgba(245,242,238,0.4)"
+                    ></circle>
+                    <circle cx="10" cy="20" r="2" fill="rgba(245,242,238,0.4)"
+                    ></circle>
+                    <circle cx="54" cy="44" r="2" fill="rgba(245,242,238,0.3)"
+                    ></circle>
+                    <circle cx="10" cy="44" r="2" fill="rgba(245,242,238,0.3)"
+                    ></circle>
+                    <circle cx="32" cy="56" r="2" fill="rgba(245,242,238,0.25)"
+                    ></circle>
+                </svg>
+            </div>
+            <span class="cert-badge">Tecnología</span>
+            <h3 class="cert-name">BIM</h3>
+            <p class="cert-full">Building Information Modeling</p>
+            <p class="cert-desc">
+                Metodología de trabajo que integra el modelado digital
+                tridimensional con toda la información del proyecto
+                —estructural, instalaciones, costos y tiempos— en un único
+                entorno colaborativo y coordinado.
+            </p>
+            <ul class="cert-features">
+                <li>Modelado 3D inteligente y paramétrico</li>
+                <li>Coordinación multidisciplinar en tiempo real</li>
+                <li>Detección temprana de interferencias</li>
+                <li>Gestión del ciclo de vida del edificio</li>
+            </ul>
+        </div>
+
+        <!-- PMP -->
+        <div class="cert-card fade-up d2">
+            <div class="cert-icon-wrap">
+                <svg
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <!-- Escudo / certificado con check -->
+                    <path
+                        d="M32 6 L52 14 L52 34 C52 45 42 54 32 58 C22 54 12 45 12 34 L12 14 Z"
+                        stroke="#C01010"
+                        stroke-width="1.5"
+                        fill="rgba(140,10,10,0.1)"></path>
+                    <path
+                        d="M32 6 L52 14 L52 34 C52 45 42 54 32 58"
+                        stroke="rgba(140,10,10,0.25)"
+                        stroke-width="8"
+                        fill="none"></path>
+                    <!-- Gantt / barras de proyecto -->
+                    <line
+                        x1="22"
+                        y1="26"
+                        x2="42"
+                        y2="26"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.25"></line>
+                    <line
+                        x1="22"
+                        y1="32"
+                        x2="42"
+                        y2="32"
+                        stroke="#f5f2ee"
+                        stroke-width="1"
+                        opacity="0.25"></line>
+                    <rect
+                        x="22"
+                        y="23"
+                        width="10"
+                        height="5"
+                        rx="1"
+                        fill="#C01010"
+                        opacity="0.6"></rect>
+                    <rect
+                        x="32"
+                        y="29"
+                        width="10"
+                        height="5"
+                        rx="1"
+                        fill="#C01010"
+                        opacity="0.4"></rect>
+                    <!-- Check grande -->
+                    <polyline
+                        points="24,38 30,44 42,30"
+                        stroke="#C01010"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></polyline>
+                </svg>
+            </div>
+            <span class="cert-badge">Gestión</span>
+            <h3 class="cert-name">PMP</h3>
+            <p class="cert-full">Project Management Professional</p>
+            <p class="cert-desc">
+                Certificación del Project Management Institute que acredita
+                competencias avanzadas en la gestión de proyectos complejos:
+                planificación, control de riesgos, presupuesto y liderazgo de
+                equipos multidisciplinarios.
+            </p>
+            <ul class="cert-features">
+                <li>Planificación y control de cronogramas</li>
+                <li>Gestión de riesgos y cambios</li>
+                <li>Control presupuestal avanzado</li>
+                <li>Liderazgo de equipos de obra</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Strip de datos -->
+    <div class="cert-strip fade-up">
+        <div class="cert-strip-item">
+            <span class="cert-strip-num">3</span>
+            <span class="cert-strip-text"
+                >Certificaciones<br />internacionales activas</span
+            >
+        </div>
+        <div class="cert-strip-item">
+            <span class="cert-strip-num">100%</span>
+            <span class="cert-strip-text"
+                >Proyectos con metodología<br />BIM desde 2018</span
+            >
+        </div>
+        <div class="cert-strip-item">
+            <span class="cert-strip-num">+15</span>
+            <span class="cert-strip-text"
+                >Profesionistas certificados<br />en nuestro equipo</span
+            >
+        </div>
+    </div>
+</section>

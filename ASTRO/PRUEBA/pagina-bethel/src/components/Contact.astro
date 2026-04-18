@@ -1,0 +1,254 @@
+---
+
+---
+
+<style is:inline>
+    /* ── CONTACTO ── */
+    #contacto {
+        background: var(--black);
+    }
+    .contacto-top {
+        background: var(--red);
+        padding: 5rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .contacto-big {
+        font-family: var(--display);
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+        letter-spacing: 0.04em;
+        color: var(--white);
+        line-height: 0.95;
+    }
+    .contacto-big em {
+        font-family: var(--italic);
+        font-style: italic;
+        color: rgba(245, 242, 238, 0.6);
+        font-weight: 400;
+    }
+    .contacto-tagline {
+        font-size: 0.85rem;
+        font-weight: 200;
+        color: rgba(245, 242, 238, 0.6);
+        max-width: 300px;
+        line-height: 1.8;
+    }
+    .contacto-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contacto-form-side {
+        padding: 5rem 3rem;
+        background: var(--off-black);
+    }
+    .contacto-info-side {
+        padding: 5rem 3rem;
+        background: var(--panel);
+        border-left: 1px solid var(--white-ghost);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .form-row {
+        margin-bottom: 2rem;
+    }
+    .form-label {
+        display: block;
+        font-size: 0.6rem;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.3);
+        margin-bottom: 0.75rem;
+    }
+    .form-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(245, 242, 238, 0.12);
+        padding: 0.75rem 0;
+        font-family: var(--body);
+        font-size: 0.9rem;
+        font-weight: 200;
+        color: var(--white);
+        outline: none;
+        transition: border-color 0.3s;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    .form-input::placeholder {
+        color: rgba(245, 242, 238, 0.15);
+    }
+    .form-input:focus {
+        border-bottom-color: var(--red-bright);
+    }
+    .form-input option {
+        background: var(--off-black);
+    }
+    .form-textarea {
+        resize: none;
+        height: 90px;
+    }
+    .form-submit {
+        margin-top: 1rem;
+        width: 100%;
+        background: var(--red);
+        border: none;
+        color: var(--white);
+        font-family: var(--body);
+        font-size: 0.7rem;
+        font-weight: 400;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        padding: 1.1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .form-submit:hover {
+        background: var(--red-bright);
+    }
+    .info-item {
+        margin-bottom: 3rem;
+    }
+    .info-label {
+        font-size: 0.58rem;
+        font-weight: 300;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--red-bright);
+        margin-bottom: 0.6rem;
+    }
+    .info-value {
+        font-family: var(--display);
+        font-size: 1.2rem;
+        letter-spacing: 0.06em;
+        color: var(--white);
+    }
+    .info-value a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .info-value a:hover {
+        color: var(--red-bright);
+    }
+    .social-row {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: auto;
+    }
+    .social-row a {
+        font-size: 0.62rem;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.3);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .social-row a:hover {
+        color: var(--red-bright);
+    }
+</style>
+
+<!-- CONTACTO -->
+<section id="contacto" style="padding:0">
+    <div class="contacto-top">
+        <h2 class="contacto-big fade-up">
+            HABLEMOS<br /><em>de tu proyecto</em>
+        </h2>
+        <p class="contacto-tagline fade-up d2">
+            Cuéntanos tu idea. Nuestro equipo te contactará para una consulta
+            inicial sin costo ni compromiso.
+        </p>
+    </div>
+    <div class="contacto-body">
+        <div class="contacto-form-side">
+            <form onsubmit="return false;">
+                <div class="form-row fade-up">
+                    <label class="form-label">Nombre completo</label><input
+                        type="text"
+                        class="form-input"
+                        placeholder="Tu nombre completo"
+                    />
+                </div>
+                <div class="form-row fade-up d1">
+                    <label class="form-label">Correo electrónico</label><input
+                        type="email"
+                        class="form-input"
+                        placeholder="correo@ejemplo.com"
+                    />
+                </div>
+                <div class="form-row fade-up d2">
+                    <label class="form-label">Teléfono</label><input
+                        type="tel"
+                        class="form-input"
+                        placeholder="+52 (000) 000 0000"
+                    />
+                </div>
+                <div class="form-row fade-up d3">
+                    <label class="form-label">Tipo de proyecto</label>
+                    <select class="form-input">
+                        <option value="">Selecciona un servicio</option>
+                        <option>Diseño Arquitectónico</option>
+                        <option>Anteproyecto y Visualización</option>
+                        <option>Proyecto Ejecutivo</option>
+                        <option>Remodelación y Ampliación</option>
+                        <option>Interiorismo</option>
+                        <option>Dirección de Obra</option>
+                        <option>Diseño Sostenible</option>
+                        <option>Urbanismo</option>
+                        <option>Peritajes y Avalúos</option>
+                    </select>
+                </div>
+                <div class="form-row fade-up d4">
+                    <label class="form-label">Descripción del proyecto</label
+                    ><textarea
+                        class="form-input form-textarea"
+                        placeholder="Cuéntanos brevemente tu proyecto o necesidad…"
+                    ></textarea>
+                </div>
+                <button
+                    class="form-submit fade-up"
+                    onclick="alert('¡Gracias por contactarnos! Te responderemos en breve.')"
+                    >Enviar mensaje →</button
+                >
+            </form>
+        </div>
+        <div class="contacto-info-side fade-up">
+            <div>
+                <div class="info-item">
+                    <p class="info-label">Ubicación</p><p class="info-value">
+                        Chilpancingo, Guerrero<br />México
+                    </p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Teléfono</p><p class="info-value">
+                        <a href="tel:+527472238257">+52 (747) 223 8257</a>
+                    </p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Correo</p><p class="info-value">
+                        <a href="mailto:arqmondrial@gmail.com" target="_blank"
+                            >arqmondrial@gmail.com</a
+                        >
+                    </p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Horario</p><p class="info-value">
+                        Lun – Vie · 9:00 – 18:00
+                    </p>
+                </div>
+            </div>
+            <div class="social-row">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Houzz</a>
+            </div>
+        </div>
+    </div>
+</section>

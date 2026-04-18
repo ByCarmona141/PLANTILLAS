@@ -1,0 +1,91 @@
+---
+
+---
+
+<style is:inline>
+    /* ── LOADER ── */
+    #loader {
+        position: fixed;
+        inset: 0;
+        background: var(--black);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.6s ease;
+    }
+    .loader-inner {
+        text-align: center;
+    }
+    .loader-word {
+        font-family: var(--display);
+        font-size: 5rem;
+        letter-spacing: 0.15em;
+        color: var(--white);
+        overflow: hidden;
+    }
+    .loader-word span {
+        display: inline-block;
+        transform: translateY(100%);
+        animation: loaderUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .loader-word span:nth-child(2) {
+        animation-delay: 0.07s;
+    }
+    .loader-word span:nth-child(3) {
+        animation-delay: 0.14s;
+    }
+    .loader-word span:nth-child(4) {
+        animation-delay: 0.21s;
+    }
+    .loader-word span:nth-child(5) {
+        animation-delay: 0.28s;
+    }
+    .loader-word span:nth-child(6) {
+        animation-delay: 0.35s;
+    }
+    .loader-word span:nth-child(7) {
+        animation-delay: 0.42s;
+    }
+    .loader-line {
+        width: 0;
+        height: 2px;
+        background: var(--red);
+        margin: 1.5rem auto 0;
+        animation: loaderLine 0.8s 0.6s ease forwards;
+    }
+    @keyframes loaderUp {
+        to {
+            transform: translateY(0);
+        }
+    }
+    @keyframes loaderLine {
+        to {
+            width: 120px;
+        }
+    }
+</style>
+
+<div id="loader">
+    <div class="loader-inner">
+        <div class="loader-word">
+            <span>M</span><span>O</span><span>N</span><span>D</span><span
+                >R</span
+            ><span>I</span><span>A</span><span style="animation-delay:0.49s"
+                >L</span
+            >
+        </div>
+        <div class="loader-line"></div>
+    </div>
+</div>
+
+<script>
+    // Loader
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            const l = document.getElementById("loader");
+            l.style.opacity = "0";
+            setTimeout(() => (l.style.display = "none"), 600);
+        }, 1200);
+    });
+</script>

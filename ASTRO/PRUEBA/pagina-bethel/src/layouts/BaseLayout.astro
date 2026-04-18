@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MONDRIAL — Arquitectura & Diseño</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,200&family=Playfair+Display:ital@1&display=swap"
+            rel="stylesheet"
+        />
+        <style is:global>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --red: #8c0a0a;
+                --red-bright: #c01010;
+                --red-pale: #3a0505;
+                --black: #080808;
+                --black-soft: #111111;
+                --off-black: #181818;
+                --panel: #0f0f0f;
+                --white: #f5f2ee;
+                --white-dim: rgba(245, 242, 238, 0.55);
+                --white-ghost: rgba(245, 242, 238, 0.12);
+                --display: "Bebas Neue", sans-serif;
+                --italic: "Playfair Display", Georgia, serif;
+                --body: "DM Sans", sans-serif;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: var(--body);
+                background: var(--black);
+                color: var(--white);
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>

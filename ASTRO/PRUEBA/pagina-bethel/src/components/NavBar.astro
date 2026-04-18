@@ -1,0 +1,116 @@
+---
+import logo from "../assets/logo.svg";
+---
+
+<style is:inline>
+    /* ── NAV ── */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 500;
+        padding: 1.5rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        mix-blend-mode: normal;
+        transition:
+            background 0.4s,
+            padding 0.4s;
+    }
+    nav.solid {
+        background: rgba(8, 8, 8, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 3rem;
+        border-bottom: 1px solid rgba(140, 10, 10, 0.25);
+    }
+    .nav-logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+    }
+    .nav-logo-img {
+        height: 34px;
+    }
+    .nav-brand {
+        font-family: var(--display);
+        font-size: 1.5rem;
+        letter-spacing: 0.2em;
+        color: var(--white);
+    }
+    .nav-brand sub {
+        font-family: var(--body);
+        font-size: 0.55rem;
+        font-weight: 200;
+        letter-spacing: 0.3em;
+        vertical-align: middle;
+        color: rgba(245, 242, 238, 0.4);
+        margin-left: 0.25rem;
+    }
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    .nav-menu a {
+        font-size: 0.7rem;
+        font-weight: 300;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--white-dim);
+        text-decoration: none;
+        padding: 0.4rem 0.9rem;
+        transition: color 0.3s;
+        border: 1px solid transparent;
+    }
+    .nav-menu a:hover {
+        color: var(--white);
+        border-color: var(--white-ghost);
+    }
+    .nav-cta-btn {
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--white);
+        background: var(--red);
+        border: none;
+        padding: 0.65rem 1.4rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+    .nav-cta-btn:hover {
+        background: var(--red-bright);
+    }
+</style>
+
+<!-- NAV -->
+<nav id="nav">
+    <a href="#" class="nav-logo-wrap">
+        <img
+            src={logo.src}
+            alt="MONDRIAL"
+            class="nav-logo-img"
+            onerror="this.style.display='none'"
+        />
+        <span class="nav-brand">MONDRIAL <sub>ARQ</sub></span>
+    </a>
+    <div class="nav-menu">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+    <a href="#contacto" class="nav-cta-btn">Iniciar proyecto</a>
+</nav>
+
+<script>
+    // Nav
+    const nav = document.getElementById("nav");
+    window.addEventListener("scroll", () =>
+        nav.classList.toggle("solid", window.scrollY > 60),
+    );
+</script>

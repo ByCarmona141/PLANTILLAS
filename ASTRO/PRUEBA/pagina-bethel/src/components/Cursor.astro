@@ -1,0 +1,64 @@
+---
+
+---
+
+<style is:inline>
+    /* ── CURSOR ── */
+    .cursor {
+        width: 8px;
+        height: 8px;
+        background: var(--red-bright);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s;
+        mix-blend-mode: normal;
+    }
+    .cursor-ring {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(200, 20, 20, 0.5);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9998;
+        transform: translate(-50%, -50%);
+        transition:
+            transform 0.18s ease,
+            width 0.3s,
+            height 0.3s;
+    }
+</style>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<script>
+    // Custom cursor
+    const cur = document.getElementById("cursor");
+    const ring = document.getElementById("cursorRing");
+    document.addEventListener("mousemove", (e) => {
+        cur.style.left = e.clientX + "px";
+        cur.style.top = e.clientY + "px";
+        setTimeout(() => {
+            ring.style.left = e.clientX + "px";
+            ring.style.top = e.clientY + "px";
+        }, 60);
+    });
+    document
+        .querySelectorAll("a,button,.service-row,.client-row")
+        .forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+                ring.style.width = "56px";
+                ring.style.height = "56px";
+                ring.style.borderColor = "rgba(200,20,20,0.8)";
+            });
+            el.addEventListener("mouseleave", () => {
+                ring.style.width = "36px";
+                ring.style.height = "36px";
+                ring.style.borderColor = "rgba(200,20,20,0.5)";
+            });
+        });
+</script>

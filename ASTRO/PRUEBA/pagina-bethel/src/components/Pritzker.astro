@@ -1,0 +1,533 @@
+---
+
+---
+
+<style is:inline>
+    /* ── PRITZKER ── */
+    #pritzker {
+        background: var(--black-soft);
+        border-top: 1px solid var(--white-ghost);
+        position: relative;
+        overflow: hidden;
+    }
+    .pritzker-bg-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--display);
+        font-size: clamp(6rem, 18vw, 16rem);
+        letter-spacing: 0.04em;
+        color: rgba(245, 242, 238, 0.025);
+        white-space: nowrap;
+        pointer-events: none;
+        user-select: none;
+        line-height: 1;
+    }
+    .pritzker-top {
+        padding: 5rem 3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: end;
+        position: relative;
+        z-index: 1;
+    }
+    .pritzker-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .pritzker-eyebrow::before {
+        content: "";
+        width: 16px;
+        height: 1px;
+        background: var(--red);
+    }
+    .pritzker-eyebrow span {
+        font-size: 0.62rem;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.35);
+    }
+    .pritzker-heading {
+        font-family: var(--display);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        letter-spacing: 0.04em;
+        color: var(--white);
+        line-height: 0.95;
+    }
+    .pritzker-heading em {
+        font-family: var(--italic);
+        font-style: italic;
+        font-size: 0.85em;
+        color: rgba(245, 242, 238, 0.4);
+        font-weight: 400;
+        display: block;
+        margin-top: 0.2rem;
+    }
+    .pritzker-intro {
+        font-size: 0.84rem;
+        font-weight: 200;
+        line-height: 2;
+        color: var(--white-dim);
+        padding-bottom: 0.5rem;
+    }
+    .pritzker-intro strong {
+        color: rgba(245, 242, 238, 0.75);
+        font-weight: 300;
+    }
+    /* Medallón central */
+    .pritzker-medal-row {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 3rem 3rem;
+        gap: 0;
+    }
+    .pritzker-medal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .medal-svg-wrap {
+        position: relative;
+    }
+    .medal-ring {
+        animation: medalSpin 18s linear infinite;
+        transform-origin: center;
+    }
+    @keyframes medalSpin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    /* Premio cards */
+    .pritzker-list {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--white-ghost);
+    }
+    .pritzker-item {
+        display: grid;
+        grid-template-columns: 80px 90px 1fr auto;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2rem 3rem;
+        border-bottom: 1px solid var(--white-ghost);
+        transition: background 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+    .pritzker-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 0;
+        background: var(--red);
+        transition: height 0.4s ease;
+    }
+    .pritzker-item:hover {
+        background: rgba(140, 10, 10, 0.05);
+    }
+    .pritzker-item:hover::before {
+        height: 100%;
+    }
+    .pritzker-item:last-child {
+        border-bottom: none;
+    }
+    .p-year {
+        font-family: var(--display);
+        font-size: 1.6rem;
+        letter-spacing: 0.06em;
+        color: var(--red);
+        line-height: 1;
+    }
+    .p-award-icon {
+        display: flex;
+        justify-content: center;
+    }
+    .p-award-icon svg {
+        width: 38px;
+        height: 38px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+    .pritzker-item:hover .p-award-icon svg {
+        opacity: 1;
+    }
+    .p-body {
+    }
+    .p-title {
+        font-family: var(--display);
+        font-size: 1.1rem;
+        letter-spacing: 0.06em;
+        color: var(--white);
+        margin-bottom: 0.3rem;
+    }
+    .p-project {
+        font-size: 0.75rem;
+        font-weight: 200;
+        color: var(--white-dim);
+        letter-spacing: 0.06em;
+    }
+    .p-category {
+        font-size: 0.55rem;
+        font-weight: 300;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.3);
+        border: 1px solid var(--white-ghost);
+        padding: 0.3rem 0.8rem;
+        white-space: nowrap;
+        text-align: center;
+        transition:
+            border-color 0.3s,
+            color 0.3s;
+    }
+    .pritzker-item:hover .p-category {
+        border-color: rgba(140, 10, 10, 0.5);
+        color: rgba(192, 16, 16, 0.8);
+    }
+    /* Banner inferior */
+    .pritzker-banner {
+        position: relative;
+        z-index: 1;
+        background: var(--red);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .pritzker-banner-text {
+        font-family: var(--display);
+        font-size: clamp(1rem, 2.5vw, 1.6rem);
+        letter-spacing: 0.08em;
+        color: var(--white);
+    }
+    .pritzker-banner-sub {
+        font-size: 0.72rem;
+        font-weight: 200;
+        color: rgba(245, 242, 238, 0.6);
+        margin-top: 0.2rem;
+        letter-spacing: 0.1em;
+    }
+    .pritzker-banner-count {
+        text-align: right;
+    }
+    .pritzker-banner-num {
+        font-family: var(--display);
+        font-size: 3.5rem;
+        color: var(--white);
+        line-height: 1;
+    }
+    .pritzker-banner-label {
+        font-size: 0.6rem;
+        font-weight: 200;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.5);
+    }
+    @media (max-width: 900px) {
+        .pritzker-top {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 4rem 1.5rem 0;
+        }
+        .pritzker-item {
+            grid-template-columns: 60px 1fr;
+            gap: 1.25rem;
+            padding: 1.5rem;
+        }
+        .p-award-icon,
+        .p-category {
+            display: none;
+        }
+        .pritzker-banner {
+            padding: 1.5rem;
+        }
+        .pritzker-medal-row {
+            padding: 3rem 1.5rem 2rem;
+        }
+    }
+</style>
+
+<!-- PREMIOS PRITZKER -->
+<section id="pritzker">
+    <div class="pritzker-bg-text">PRITZKER</div>
+
+    <div class="pritzker-top">
+        <div class="fade-up">
+            <div class="pritzker-eyebrow"><span>Reconocimientos</span></div>
+            <h2 class="pritzker-heading">PREMIO<br /><em>Pritzker</em></h2>
+        </div>
+        <p class="pritzker-intro fade-up d2">
+            El <strong>Premio Pritzker</strong> es el galardón más prestigioso de
+            la arquitectura mundial — el equivalente al Nobel de nuestra disciplina.
+            Es otorgado anualmente por la Fundación Hyatt a arquitectos cuya obra
+            ha producido contribuciones significativas a la humanidad y al entorno
+            construido.<br /><br />
+            MONDRIAL ha sido reconocido en múltiples ocasiones por proyectos que han
+            transformado el paisaje urbano y la calidad de vida de sus comunidades.
+        </p>
+    </div>
+
+    <!-- Medallón decorativo -->
+    <div class="pritzker-medal-row fade-up">
+        <div class="pritzker-medal">
+            <svg
+                width="180"
+                height="180"
+                viewBox="0 0 180 180"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <!-- Anillo exterior giratorio -->
+                <g class="medal-ring">
+                    <circle
+                        cx="90"
+                        cy="90"
+                        r="82"
+                        stroke="rgba(140,10,10,0.3)"
+                        stroke-width="1"
+                        stroke-dasharray="4 6"></circle>
+                </g>
+                <!-- Anillo medio -->
+                <circle
+                    cx="90"
+                    cy="90"
+                    r="70"
+                    stroke="rgba(140,10,10,0.18)"
+                    stroke-width="1"></circle>
+                <!-- Círculo principal -->
+                <circle
+                    cx="90"
+                    cy="90"
+                    r="58"
+                    fill="rgba(140,10,10,0.12)"
+                    stroke="#C01010"
+                    stroke-width="1.5"></circle>
+                <!-- Corona de laurel izquierda -->
+                <path
+                    d="M42 90 C38 80 40 70 46 66 C44 76 46 84 50 88 C46 84 44 90 46 96 C40 92 38 82 42 90Z"
+                    fill="rgba(140,10,10,0.4)"
+                    stroke="#C01010"
+                    stroke-width="0.8"></path>
+                <path
+                    d="M48 78 C45 70 48 62 54 60 C51 68 52 76 56 80Z"
+                    fill="rgba(140,10,10,0.3)"
+                    stroke="#C01010"
+                    stroke-width="0.7"></path>
+                <path
+                    d="M48 102 C44 96 46 86 52 84 C50 92 52 100 56 104Z"
+                    fill="rgba(140,10,10,0.3)"
+                    stroke="#C01010"
+                    stroke-width="0.7"></path>
+                <!-- Corona de laurel derecha -->
+                <path
+                    d="M138 90 C142 80 140 70 134 66 C136 76 134 84 130 88 C134 84 136 90 134 96 C140 92 142 82 138 90Z"
+                    fill="rgba(140,10,10,0.4)"
+                    stroke="#C01010"
+                    stroke-width="0.8"></path>
+                <path
+                    d="M132 78 C135 70 132 62 126 60 C129 68 128 76 124 80Z"
+                    fill="rgba(140,10,10,0.3)"
+                    stroke="#C01010"
+                    stroke-width="0.7"></path>
+                <path
+                    d="M132 102 C136 96 134 86 128 84 C130 92 128 100 124 104Z"
+                    fill="rgba(140,10,10,0.3)"
+                    stroke="#C01010"
+                    stroke-width="0.7"></path>
+                <!-- Texto circular -->
+                <path id="topArc" d="M 30 90 A 60 60 0 0 1 150 90" fill="none"
+                ></path>
+                <text
+                    font-family="'Bebas Neue', sans-serif"
+                    font-size="11"
+                    letter-spacing="4"
+                    fill="rgba(245,242,238,0.35)"
+                >
+                    <textPath href="#topArc" startOffset="8%"
+                        >PREMIO · PRITZKER · ARCHITECTURE ·</textPath
+                    >
+                </text>
+                <path id="botArc" d="M 30 90 A 60 60 0 0 0 150 90" fill="none"
+                ></path>
+                <text
+                    font-family="'Bebas Neue', sans-serif"
+                    font-size="11"
+                    letter-spacing="4"
+                    fill="rgba(245,242,238,0.25)"
+                >
+                    <textPath href="#botArc" startOffset="8%"
+                        >MUNDIAL · MONDRIAL · 2001 · ARQ ·</textPath
+                    >
+                </text>
+                <!-- P central -->
+                <text
+                    x="90"
+                    y="80"
+                    text-anchor="middle"
+                    font-family="'Bebas Neue', sans-serif"
+                    font-size="38"
+                    letter-spacing="2"
+                    fill="#C01010"
+                    opacity="0.9">P</text
+                >
+                <line
+                    x1="68"
+                    y1="88"
+                    x2="112"
+                    y2="88"
+                    stroke="rgba(192,16,16,0.4)"
+                    stroke-width="1"></line>
+                <text
+                    x="90"
+                    y="104"
+                    text-anchor="middle"
+                    font-family="'DM Sans', sans-serif"
+                    font-size="7.5"
+                    letter-spacing="3"
+                    fill="rgba(245,242,238,0.4)">PRITZKER</text
+                >
+            </svg>
+        </div>
+    </div>
+
+    <!-- Lista de premios -->
+    <div class="pritzker-list">
+        <div class="pritzker-item fade-up">
+            <span class="p-year">2008</span>
+            <div class="p-award-icon">
+                <svg
+                    viewBox="0 0 38 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <polygon
+                        points="19,3 23,14 35,14 26,21 29,33 19,26 9,33 12,21 3,14 15,14"
+                        stroke="#C01010"
+                        stroke-width="1.3"
+                        fill="rgba(140,10,10,0.2)"></polygon>
+                </svg>
+            </div>
+            <div class="p-body">
+                <p class="p-title">PREMIO PRITZKER DE ARQUITECTURA</p>
+                <p class="p-project">
+                    Conjunto Cultural Río Balsas · Chilpancingo, Guerrero ·
+                    Diseño bioclimático de uso mixto con integración del paisaje
+                    natural
+                </p>
+            </div>
+            <span class="p-category">Diseño Cultural</span>
+        </div>
+
+        <div class="pritzker-item fade-up d1">
+            <span class="p-year">2013</span>
+            <div class="p-award-icon">
+                <svg
+                    viewBox="0 0 38 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <polygon
+                        points="19,3 23,14 35,14 26,21 29,33 19,26 9,33 12,21 3,14 15,14"
+                        stroke="#C01010"
+                        stroke-width="1.3"
+                        fill="rgba(140,10,10,0.2)"></polygon>
+                </svg>
+            </div>
+            <div class="p-body">
+                <p class="p-title">MENCIÓN ESPECIAL PRITZKER</p>
+                <p class="p-project">
+                    Vivienda Social Sustentable Infonavit · Región Montaña,
+                    Guerrero · Modelo replicable de hábitat digno con materiales
+                    locales
+                </p>
+            </div>
+            <span class="p-category">Vivienda Social</span>
+        </div>
+
+        <div class="pritzker-item fade-up d2">
+            <span class="p-year">2018</span>
+            <div class="p-award-icon">
+                <svg
+                    viewBox="0 0 38 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <polygon
+                        points="19,3 23,14 35,14 26,21 29,33 19,26 9,33 12,21 3,14 15,14"
+                        stroke="#C01010"
+                        stroke-width="1.3"
+                        fill="rgba(140,10,10,0.2)"></polygon>
+                </svg>
+            </div>
+            <div class="p-body">
+                <p class="p-title">PREMIO PRITZKER DE ARQUITECTURA</p>
+                <p class="p-project">
+                    Torre Meridiano · Ciudad de México · Rascacielos de uso
+                    mixto con certificación LEED Platinum y fachada fotovoltaica
+                </p>
+            </div>
+            <span class="p-category">Edificio en Altura</span>
+        </div>
+
+        <div class="pritzker-item fade-up d3">
+            <span class="p-year">2022</span>
+            <div class="p-award-icon">
+                <svg
+                    viewBox="0 0 38 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <polygon
+                        points="19,3 23,14 35,14 26,21 29,33 19,26 9,33 12,21 3,14 15,14"
+                        stroke="#C01010"
+                        stroke-width="1.3"
+                        fill="rgba(140,10,10,0.2)"></polygon>
+                </svg>
+            </div>
+            <div class="p-body">
+                <p class="p-title">RECONOCIMIENTO ESPECIAL PRITZKER</p>
+                <p class="p-project">
+                    Plan Maestro Urbano Iguala Sostenible · Guerrero ·
+                    Regeneración urbana de 48 ha con movilidad activa y espacios
+                    públicos
+                </p>
+            </div>
+            <span class="p-category">Urbanismo</span>
+        </div>
+    </div>
+
+    <!-- Banner inferior -->
+    <div class="pritzker-banner fade-up">
+        <div>
+            <p class="pritzker-banner-text">
+                EL RECONOCIMIENTO MÁS ALTO DE LA ARQUITECTURA MUNDIAL
+            </p>
+            <p class="pritzker-banner-sub">
+                Hyatt Foundation · Chicago, Illinois · Desde 1979
+            </p>
+        </div>
+        <div class="pritzker-banner-count">
+            <p class="pritzker-banner-num">4</p>
+            <p class="pritzker-banner-label">Premios y menciones</p>
+        </div>
+    </div>
+</section>

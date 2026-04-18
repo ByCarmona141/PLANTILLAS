@@ -1,0 +1,647 @@
+---
+
+---
+
+<style is:inline>
+    /* ── CLIENTES ── */
+    #clientes {
+        padding: 7rem 3rem;
+        background: var(--black-soft);
+    }
+    .clientes-top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 4.5rem;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .clientes-heading {
+        font-family: var(--display);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        letter-spacing: 0.04em;
+        color: var(--white);
+        line-height: 0.95;
+    }
+    .clientes-heading em {
+        font-family: var(--italic);
+        font-style: italic;
+        font-size: 0.85em;
+        color: rgba(245, 242, 238, 0.45);
+        font-weight: 400;
+    }
+    .clientes-count {
+        font-size: 0.72rem;
+        font-weight: 300;
+        letter-spacing: 0.15em;
+        color: var(--white-dim);
+        border-top: 1px solid var(--white-ghost);
+        padding-top: 1rem;
+    }
+    .clients-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .client-row {
+        display: grid;
+        grid-template-columns: 48px 1fr auto;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--white-ghost);
+        transition: background 0.3s;
+        cursor: default;
+    }
+    .client-row:hover {
+        background: rgba(140, 10, 10, 0.06);
+    }
+    .client-index {
+        font-family: var(--display);
+        font-size: 0.85rem;
+        color: rgba(245, 242, 238, 0.18);
+        letter-spacing: 0.1em;
+    }
+    .client-info {
+    }
+    .client-n {
+        font-size: 0.95rem;
+        font-weight: 300;
+        color: var(--white);
+        letter-spacing: 0.04em;
+    }
+    .client-s {
+        font-size: 0.7rem;
+        font-weight: 200;
+        color: var(--white-dim);
+        margin-top: 0.15rem;
+    }
+    .client-pill {
+        font-size: 0.58rem;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.3);
+        border: 1px solid var(--white-ghost);
+        padding: 0.3rem 0.9rem;
+    }
+    /* ── TESTIMONIAL CAROUSEL ── */
+    .testi-carousel {
+        margin-top: 5rem;
+        border: 1px solid var(--white-ghost);
+        position: relative;
+        overflow: hidden;
+    }
+    .testi-track {
+        display: flex;
+        transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform;
+    }
+    .testi-slide {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .testi-left {
+        padding: 4rem;
+        background: var(--red-pale);
+        border-right: 1px solid rgba(140, 10, 10, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .testi-q {
+        font-family: var(--display);
+        font-size: 7rem;
+        color: rgba(192, 16, 16, 0.28);
+        line-height: 0.65;
+        margin-bottom: 1.75rem;
+    }
+    .testi-text {
+        font-family: var(--italic);
+        font-size: 1.1rem;
+        font-style: italic;
+        font-weight: 400;
+        color: rgba(245, 242, 238, 0.78);
+        line-height: 1.9;
+        flex: 1;
+    }
+    .testi-stars {
+        display: flex;
+        gap: 4px;
+        margin-top: 1.75rem;
+    }
+    .testi-stars span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: var(--red);
+        clip-path: polygon(
+            50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%
+        );
+    }
+    .testi-right {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: var(--off-black);
+    }
+    .testi-author-init {
+        width: 52px;
+        height: 52px;
+        background: rgba(140, 10, 10, 0.25);
+        border: 1px solid rgba(140, 10, 10, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--display);
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+        color: var(--red-bright);
+        margin-bottom: 1.5rem;
+    }
+    .testi-author-name {
+        font-family: var(--display);
+        font-size: 1.45rem;
+        letter-spacing: 0.1em;
+        color: var(--white);
+    }
+    .testi-author-role {
+        font-size: 0.68rem;
+        font-weight: 200;
+        letter-spacing: 0.15em;
+        color: var(--white-dim);
+        margin-top: 0.35rem;
+    }
+    .testi-project-label {
+        font-size: 0.58rem;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--red-bright);
+        margin-bottom: 0.4rem;
+    }
+    .testi-project {
+        font-size: 0.82rem;
+        font-weight: 200;
+        color: var(--white-dim);
+        line-height: 1.6;
+    }
+    /* Controls */
+    .testi-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 4rem;
+        border-top: 1px solid var(--white-ghost);
+        background: var(--panel);
+    }
+    .testi-dots {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    .testi-dot {
+        width: 20px;
+        height: 2px;
+        background: var(--white-ghost);
+        cursor: pointer;
+        transition:
+            width 0.3s,
+            background 0.3s;
+        border: none;
+        padding: 0;
+    }
+    .testi-dot.active {
+        width: 40px;
+        background: var(--red);
+    }
+    .testi-arrows {
+        display: flex;
+        gap: 0.5rem;
+    }
+    .testi-arrow {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--white-ghost);
+        background: transparent;
+        color: var(--white-dim);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+            border-color 0.3s,
+            color 0.3s,
+            background 0.3s;
+        font-size: 0.9rem;
+    }
+    .testi-arrow:hover {
+        border-color: var(--red);
+        color: var(--white);
+        background: rgba(140, 10, 10, 0.15);
+    }
+    .testi-progress {
+        font-family: var(--display);
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+        color: rgba(245, 242, 238, 0.25);
+    }
+    .testi-progress strong {
+        color: var(--white);
+    }
+    @media (max-width: 760px) {
+        .testi-slide {
+            grid-template-columns: 1fr;
+        }
+        .testi-right {
+            border-top: 1px solid rgba(140, 10, 10, 0.3);
+        }
+        .testi-controls {
+            padding: 1rem 1.5rem;
+        }
+        .testi-left,
+        .testi-right {
+            padding: 2.5rem 1.5rem;
+        }
+    }
+</style>
+
+<!-- CLIENTES -->
+<section id="clientes">
+    <div class="clientes-top">
+        <div class="fade-up">
+            <div class="eyebrow"><span>Nuestros clientes</span></div>
+            <h2 class="clientes-heading">CONFIANZA<br /><em>construida</em></h2>
+        </div>
+        <div class="clientes-count fade-up d2">
+            Más de 80 clientes<br />han confiado en MONDRIAL
+        </div>
+    </div>
+    <div class="clients-list fade-up">
+        <div class="client-row">
+            <span class="client-index">01</span><div class="client-info">
+                <p class="client-n">Grupo Copachisa</p><p class="client-s">
+                    Desarrollo Inmobiliario
+                </p>
+            </div><span class="client-pill">Inmobiliaria</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">02</span><div class="client-info">
+                <p class="client-n">Arco Iris</p><p class="client-s">
+                    Conjuntos Habitacionales
+                </p>
+            </div><span class="client-pill">Vivienda</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">03</span><div class="client-info">
+                <p class="client-n">Desarrollos Urbanos del Sur</p><p
+                    class="client-s"
+                >
+                    Planeación Urbana
+                </p>
+            </div><span class="client-pill">Urbanismo</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">04</span><div class="client-info">
+                <p class="client-n">Hotel Gran Plaza</p><p class="client-s">
+                    Hospitality & Turismo
+                </p>
+            </div><span class="client-pill">Hotelería</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">05</span><div class="client-info">
+                <p class="client-n">Servicios Constructivos Guerrero</p><p
+                    class="client-s"
+                >
+                    Construcción e Infraestructura
+                </p>
+            </div><span class="client-pill">Construcción</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">06</span><div class="client-info">
+                <p class="client-n">Inmuebles del Estado</p><p class="client-s">
+                    Patrimonio Gubernamental
+                </p>
+            </div><span class="client-pill">Gobierno</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">07</span><div class="client-info">
+                <p class="client-n">Centro Médico Integral</p><p
+                    class="client-s"
+                >
+                    Infraestructura de Salud
+                </p>
+            </div><span class="client-pill">Salud</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">08</span><div class="client-info">
+                <p class="client-n">Plaza Lagos Comercial</p><p
+                    class="client-s"
+                >
+                    Centros Comerciales
+                </p>
+            </div><span class="client-pill">Comercial</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">09</span><div class="client-info">
+                <p class="client-n">Residencial Itzel</p><p class="client-s">
+                    Vivienda Premium & Residencial
+                </p>
+            </div><span class="client-pill">Residencial</span>
+        </div>
+        <div class="client-row">
+            <span class="client-index">10</span><div class="client-info">
+                <p class="client-n">Fondo Patrimonial Guerrero</p><p
+                    class="client-s"
+                >
+                    Patrimonio Histórico
+                </p>
+            </div><span class="client-pill">Patrimonio</span>
+        </div>
+    </div>
+    <div class="testi-carousel fade-up" id="testiCarousel">
+        <div class="testi-track" id="testiTrack">
+            <!-- Testimonio 1 -->
+            <div class="testi-slide">
+                <div class="testi-left">
+                    <div>
+                        <div class="testi-q">"</div>
+                        <p class="testi-text">
+                            MONDRIAL no solo diseñó nuestro edificio, redefinió
+                            por completo la experiencia de nuestros huéspedes.
+                            Su capacidad para entender nuestra identidad y
+                            traducirla en un espacio físico es sencillamente
+                            extraordinaria.
+                        </p>
+                    </div>
+                    <div class="testi-stars">
+                        <span></span><span></span><span></span><span
+                        ></span><span></span>
+                    </div>
+                </div>
+                <div class="testi-right">
+                    <div class="testi-author-init">CM</div>
+                    <div>
+                        <p class="testi-author-name">CARLOS MENDOZA</p>
+                        <p class="testi-author-role">
+                            Director General · Hotel Gran Plaza
+                        </p>
+                    </div>
+                    <div>
+                        <p class="testi-project-label">Proyecto</p>
+                        <p class="testi-project">
+                            Hotel Gran Plaza<br />Chilpancingo, Guerrero · 2022
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="testi-slide">
+                <div class="testi-left">
+                    <div>
+                        <div class="testi-q">"</div>
+                        <p class="testi-text">
+                            Desde el primer boceto hasta la entrega final, el
+                            equipo de MONDRIAL demostró un nivel de compromiso y
+                            profesionalismo que no habíamos encontrado en ningún
+                            otro despacho. El resultado superó todas nuestras
+                            expectativas.
+                        </p>
+                    </div>
+                    <div class="testi-stars">
+                        <span></span><span></span><span></span><span
+                        ></span><span></span>
+                    </div>
+                </div>
+                <div class="testi-right">
+                    <div class="testi-author-init">LR</div>
+                    <div>
+                        <p class="testi-author-name">LAURA REYES</p>
+                        <p class="testi-author-role">
+                            Directora de Operaciones · Residencial Itzel
+                        </p>
+                    </div>
+                    <div>
+                        <p class="testi-project-label">Proyecto</p>
+                        <p class="testi-project">
+                            Conjunto Residencial Itzel<br />Chilpancingo,
+                            Guerrero · 2021
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testi-slide">
+                <div class="testi-left">
+                    <div>
+                        <div class="testi-q">"</div>
+                        <p class="testi-text">
+                            Trabajar con MONDRIAL fue una experiencia
+                            excepcional. Su conocimiento del entorno local,
+                            combinado con su visión contemporánea, nos permitió
+                            crear un espacio comercial que atrae y retiene a
+                            nuestros clientes de una manera que nunca
+                            imaginamos.
+                        </p>
+                    </div>
+                    <div class="testi-stars">
+                        <span></span><span></span><span></span><span
+                        ></span><span></span>
+                    </div>
+                </div>
+                <div class="testi-right">
+                    <div class="testi-author-init">JV</div>
+                    <div>
+                        <p class="testi-author-name">JORGE VARGAS</p>
+                        <p class="testi-author-role">
+                            Gerente General · Plaza Lagos Comercial
+                        </p>
+                    </div>
+                    <div>
+                        <p class="testi-project-label">Proyecto</p>
+                        <p class="testi-project">
+                            Plaza Lagos Comercial<br />Chilpancingo, Guerrero ·
+                            2020
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 4 -->
+            <div class="testi-slide">
+                <div class="testi-left">
+                    <div>
+                        <div class="testi-q">"</div>
+                        <p class="testi-text">
+                            La supervisión de obra por parte de MONDRIAL fue
+                            impecable. Cada detalle fue atendido con rigor
+                            técnico y puntualidad. Terminamos el proyecto en
+                            tiempo y dentro del presupuesto acordado, algo que
+                            en esta industria no siempre ocurre.
+                        </p>
+                    </div>
+                    <div class="testi-stars">
+                        <span></span><span></span><span></span><span
+                        ></span><span></span>
+                    </div>
+                </div>
+                <div class="testi-right">
+                    <div class="testi-author-init">AM</div>
+                    <div>
+                        <p class="testi-author-name">ANA MORALES</p>
+                        <p class="testi-author-role">
+                            Directora · Centro Médico Integral
+                        </p>
+                    </div>
+                    <div>
+                        <p class="testi-project-label">Proyecto</p>
+                        <p class="testi-project">
+                            Centro Médico Integral<br />Chilpancingo, Guerrero ·
+                            2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 5 -->
+            <div class="testi-slide">
+                <div class="testi-left">
+                    <div>
+                        <div class="testi-q">"</div>
+                        <p class="testi-text">
+                            MONDRIAL entendió perfectamente que nuestro proyecto
+                            de vivienda debía ser sustentable y accesible sin
+                            sacrificar calidad estética. Lograron ese equilibrio
+                            de forma magistral, y hoy nuestros residentes viven
+                            en espacios que los enorgullecen.
+                        </p>
+                    </div>
+                    <div class="testi-stars">
+                        <span></span><span></span><span></span><span
+                        ></span><span></span>
+                    </div>
+                </div>
+                <div class="testi-right">
+                    <div class="testi-author-init">RP</div>
+                    <div>
+                        <p class="testi-author-name">ROBERTO PEÑA</p>
+                        <p class="testi-author-role">
+                            Director · Desarrollos Urbanos del Sur
+                        </p>
+                    </div>
+                    <div>
+                        <p class="testi-project-label">Proyecto</p>
+                        <p class="testi-project">
+                            Conjunto Urbano Arco Iris<br />Chilpancingo,
+                            Guerrero · 2019
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="testi-controls">
+            <div class="testi-dots" id="testiDots"></div>
+            <span class="testi-progress"
+                ><strong id="testiCurrent">1</strong> / <span id="testiTotal"
+                    >5</span
+                ></span
+            >
+            <div class="testi-arrows">
+                <button class="testi-arrow" id="testiPrev" aria-label="Anterior"
+                    >&#8592;</button
+                >
+                <button
+                    class="testi-arrow"
+                    id="testiNext"
+                    aria-label="Siguiente">&#8594;</button
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Testimonial Carousel
+    (function () {
+        const track = document.getElementById("testiTrack");
+        const slides = track ? track.querySelectorAll(".testi-slide") : [];
+        const dotsEl = document.getElementById("testiDots");
+        const curEl = document.getElementById("testiCurrent");
+        const totalEl = document.getElementById("testiTotal");
+        const prevBtn = document.getElementById("testiPrev");
+        const nextBtn = document.getElementById("testiNext");
+        if (!track || !slides.length) return;
+
+        let current = 0;
+        let autoTimer = null;
+        const total = slides.length;
+        if (totalEl) totalEl.textContent = total;
+
+        // Build dots
+        slides.forEach((_, i) => {
+            const d = document.createElement("button");
+            d.className = "testi-dot" + (i === 0 ? " active" : "");
+            d.setAttribute("aria-label", "Testimonio " + (i + 1));
+            d.addEventListener("click", () => goTo(i));
+            dotsEl.appendChild(d);
+        });
+
+        function goTo(idx) {
+            current = (idx + total) % total;
+            track.style.transform = "translateX(-" + current * 100 + "%)";
+            document
+                .querySelectorAll(".testi-dot")
+                .forEach((d, i) => d.classList.toggle("active", i === current));
+            if (curEl) curEl.textContent = current + 1;
+            resetAuto();
+        }
+
+        function resetAuto() {
+            clearInterval(autoTimer);
+            autoTimer = setInterval(() => goTo(current + 1), 5500);
+        }
+
+        if (prevBtn) prevBtn.addEventListener("click", () => goTo(current - 1));
+        if (nextBtn) nextBtn.addEventListener("click", () => goTo(current + 1));
+
+        // Swipe support
+        let touchX = 0;
+        track.addEventListener(
+            "touchstart",
+            (e) => {
+                touchX = e.touches[0].clientX;
+            },
+            { passive: true },
+        );
+        track.addEventListener("touchend", (e) => {
+            const diff = touchX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+        });
+
+        // Pause on hover
+        const carousel = document.getElementById("testiCarousel");
+        if (carousel) {
+            carousel.addEventListener("mouseenter", () =>
+                clearInterval(autoTimer),
+            );
+            carousel.addEventListener("mouseleave", resetAuto);
+        }
+
+        resetAuto();
+    })();
+</script>
