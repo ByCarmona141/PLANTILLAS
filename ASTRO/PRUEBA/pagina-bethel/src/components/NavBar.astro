@@ -602,7 +602,7 @@ import logo from "../assets/logo.svg";
     </div>
 </nav>
 
-<script>
+<script is:inline>
     // Nav scroll + progress bar
     const nav = document.getElementById("nav");
     const progress = document.getElementById("navProgress");
@@ -703,6 +703,7 @@ import logo from "../assets/logo.svg";
         const hero = document.getElementById("hero");
         if (hero) heroObs.observe(hero);
     })();
+    const fadels = document.querySelectorAll(".fade-up");
     const obs = new IntersectionObserver(
         (entries) => {
             entries.forEach((e) => {

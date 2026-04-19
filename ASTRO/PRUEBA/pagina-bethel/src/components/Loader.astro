@@ -12,70 +12,130 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: opacity 0.6s ease;
+        opacity: 1;
+        transition: opacity 0.7s ease;
     }
     .loader-inner {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
     }
-    .loader-word {
-        font-family: var(--display);
-        font-size: 5rem;
-        letter-spacing: 0.15em;
-        color: var(--white);
-        overflow: hidden;
+    /* Logo SVG — entra con fade+scale */
+    .loader-logo {
+        opacity: 0;
+        transform: scale(0.8);
+        animation: loaderLogoIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        width: clamp(80px, 20vw, 140px);
+        height: auto;
     }
-    .loader-word span {
-        display: inline-block;
-        transform: translateY(100%);
-        animation: loaderUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    .loader-logo path {
+        fill: #f5f2ee;
     }
-    .loader-word span:nth-child(2) {
-        animation-delay: 0.07s;
-    }
-    .loader-word span:nth-child(3) {
-        animation-delay: 0.14s;
-    }
-    .loader-word span:nth-child(4) {
-        animation-delay: 0.21s;
-    }
-    .loader-word span:nth-child(5) {
-        animation-delay: 0.28s;
-    }
-    .loader-word span:nth-child(6) {
-        animation-delay: 0.35s;
-    }
-    .loader-word span:nth-child(7) {
-        animation-delay: 0.42s;
-    }
-    .loader-line {
-        width: 0;
-        height: 2px;
-        background: var(--red);
-        margin: 1.5rem auto 0;
-        animation: loaderLine 0.8s 0.6s ease forwards;
-    }
-    @keyframes loaderUp {
+    @keyframes loaderLogoIn {
         to {
-            transform: translateY(0);
+            opacity: 1;
+            transform: scale(1);
         }
     }
-    @keyframes loaderLine {
+    /* Línea roja que aparece debajo del logo antes de las letras */
+    .loader-divider {
+        width: 0;
+        height: 1px;
+        background: var(--red);
+        margin: clamp(1rem, 3vw, 1.75rem) 0 0;
+        animation: loaderDivIn 0.5s ease 2s forwards;
+    }
+    @keyframes loaderDivIn {
         to {
-            width: 120px;
+            width: clamp(60px, 15vw, 100px);
+        }
+    }
+    /* Letras: aparecen letra a letra desde abajo, 2s de delay */
+    .loader-word {
+        overflow: hidden;
+        height: 0;
+        animation: loaderWordShow 0s 2.1s forwards;
+        margin-top: clamp(0.75rem, 2vw, 1.25rem);
+    }
+    @keyframes loaderWordShow {
+        to {
+            height: auto;
+        }
+    }
+    .loader-word span {
+        font-family: var(--display);
+        font-size: clamp(1.8rem, 7vw, 4rem);
+        letter-spacing: clamp(0.25em, 1vw, 0.45em);
+        color: var(--white);
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(100%);
+        animation: loaderLetterUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .loader-word span:nth-child(1) {
+        animation-delay: 2.15s;
+    }
+    .loader-word span:nth-child(2) {
+        animation-delay: 2.22s;
+    }
+    .loader-word span:nth-child(3) {
+        animation-delay: 2.29s;
+    }
+    .loader-word span:nth-child(4) {
+        animation-delay: 2.36s;
+    }
+    .loader-word span:nth-child(5) {
+        animation-delay: 2.43s;
+    }
+    .loader-word span:nth-child(6) {
+        animation-delay: 2.5s;
+    }
+    .loader-word span:nth-child(7) {
+        animation-delay: 2.57s;
+    }
+    @keyframes loaderLetterUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 </style>
 
 <div id="loader">
     <div class="loader-inner">
+        <!-- Logo SVG inline -->
+        <svg
+            class="loader-logo"
+            viewBox="0 0 1716 1699"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="MONDIAL"
+        >
+            <g transform="translate(0,1699) scale(0.1,-0.1)">
+                <path
+                    d="M252 16687 c-136 -138 -136 -136 -2 -271 54 -56 417 -418 806 -806 388 -388 735 -738 770 -779 l64 -74 0 -7221 c0 -6855 1 -7223 18 -7256 9 -19 29 -41 43 -47 33 -16 259 -19 288 -4 11 6 25 28 31 49 7 25 10 2215 10 7033 0 3848 2 7004 6 7012 3 9 11 18 18 20 15 6 -141 161 1846 -1830 921 -923 1702 -1700 1735 -1726 33 -27 384 -373 780 -769 396 -396 734 -729 750 -739 17 -11 38 -19 49 -19 32 0 230 217 224 247 -4 16 -4461 4476 -4568 4571 -41 36 -670 660 -1397 1387 -879 877 -1330 1321 -1345 1323 -18 2 -46 -21 -126 -101z"
+                ></path>
+                <path
+                    d="M16897 15231 c-49 -32 -714 -693 -4255 -4226 -1879 -1875 -3425 -3425 -3435 -3442 -18 -32 -18 -34 0 -68 10 -20 131 -150 268 -289 477 -485 748 -766 766 -793 9 -16 110 -122 224 -238 114 -115 228 -234 254 -264 25 -30 139 -149 253 -265 113 -116 216 -224 229 -241 12 -16 132 -140 266 -275 133 -135 243 -250 243 -256 0 -5 102 -111 226 -234 124 -124 243 -247 264 -275 21 -27 142 -156 269 -284 127 -129 231 -239 231 -243 0 -5 99 -108 219 -229 121 -120 237 -241 257 -267 21 -26 137 -149 258 -274 122 -125 331 -342 466 -483 480 -501 814 -835 835 -835 24 0 235 209 234 231 -1 32 -24 58 -246 284 -128 129 -256 263 -284 298 -29 34 -145 157 -260 272 -114 116 -225 233 -247 260 -22 28 -117 127 -212 220 -95 94 -190 193 -212 220 -22 28 -135 147 -252 265 -117 118 -225 233 -242 255 -16 22 -136 148 -266 280 -130 132 -247 254 -259 270 -12 17 -117 128 -233 247 -116 120 -319 330 -451 468 -132 138 -342 355 -466 483 -124 128 -241 252 -261 277 -19 25 -110 119 -202 210 -92 91 -195 199 -230 240 -35 42 -152 166 -261 275 -108 110 -224 231 -256 268 -33 37 -138 146 -234 242 -156 155 -175 178 -175 207 0 31 159 193 2188 2220 1203 1203 2210 2204 2237 2226 28 22 574 564 1214 1206 640 641 1170 1166 1177 1166 7 0 16 -6 21 -12 4 -7 10 -3177 13 -7045 4 -5546 8 -7035 17 -7044 19 -19 86 -25 211 -18 87 5 118 10 130 23 16 16 17 534 20 7479 1 4104 0 7477 -3 7495 -7 37 -10 38 -48 13z"
+                ></path>
+                <path
+                    d="M13870 8576 c-492 -492 -910 -907 -929 -922 -51 -43 -90 -101 -83 -126 7 -27 1878 -1907 1911 -1919 40 -16 101 23 191 120 46 52 80 97 80 110 0 13 -46 67 -124 148 -165 170 -499 499 -561 554 -74 64 -329 315 -671 661 -253 255 -304 312 -304 335 0 24 62 89 393 417 215 213 396 391 400 395 4 3 94 94 200 201 106 108 233 232 282 276 50 44 137 129 195 188 58 60 126 129 153 154 26 25 47 52 47 59 0 19 -132 164 -189 209 -24 18 -56 34 -70 34 -20 0 -202 -176 -921 -894z"
+                ></path>
+                <path
+                    d="M5735 7448 c-10 -44 0 -7087 10 -7097 12 -11 7130 -18 7158 -6 19 8 21 23 8 58 -12 32 -1786 1809 -1866 1870 -33 25 -987 973 -2120 2108 -1133 1134 -2073 2070 -2089 2080 -16 10 -248 236 -515 503 -267 266 -499 489 -514 495 -44 17 -66 13 -72 -11z"
+                ></path>
+            </g>
+        </svg>
+
+        <!-- Línea roja -->
+        <div class="loader-divider"></div>
+
+        <!-- Letras con delay de 2s -->
         <div class="loader-word">
             <span>M</span><span>O</span><span>N</span><span>D</span><span
                 >R</span
-            ><span>I</span><span>A</span><span style="animation-delay:0.49s"
-                >L</span
-            >
+            ><span>I</span><span>A</span><span>L</span>
         </div>
-        <div class="loader-line"></div>
     </div>
 </div>
 
@@ -85,7 +145,7 @@
         setTimeout(() => {
             const l = document.getElementById("loader");
             l.style.opacity = "0";
-            setTimeout(() => (l.style.display = "none"), 600);
-        }, 1200);
+            setTimeout(() => (l.style.display = "none"), 700);
+        }, 3400);
     });
 </script>
