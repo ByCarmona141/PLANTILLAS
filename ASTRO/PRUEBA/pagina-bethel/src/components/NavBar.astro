@@ -4,113 +4,715 @@ import logo from "../assets/logo.svg";
 
 <style is:inline>
     /* ── NAV ── */
-    nav {
+    #nav {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 500;
-        padding: 1.5rem 3rem;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.4s ease;
+    }
+
+    /* Top strip */
+    .nav-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        mix-blend-mode: normal;
+        padding: 0 3rem;
+        height: 36px;
+        background: var(--red);
         transition:
-            background 0.4s,
-            padding 0.4s;
+            height 0.4s ease,
+            opacity 0.4s ease;
+        overflow: hidden;
     }
-    nav.solid {
-        background: rgba(8, 8, 8, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 1rem 3rem;
-        border-bottom: 1px solid rgba(140, 10, 10, 0.25);
+    #nav.solid .nav-top {
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
     }
-    .nav-logo-wrap {
+    .nav-top-left {
         display: flex;
         align-items: center;
-        gap: 0.75rem;
-        text-decoration: none;
+        gap: 2rem;
     }
-    .nav-logo-img {
-        height: 34px;
-    }
-    .nav-brand {
-        font-family: var(--display);
-        font-size: 1.5rem;
+    .nav-top-item {
+        font-size: 0.58rem;
+        font-weight: 300;
         letter-spacing: 0.2em;
-        color: var(--white);
+        color: rgba(245, 242, 238, 0.75);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
-    .nav-brand sub {
-        font-family: var(--body);
-        font-size: 0.55rem;
+    .nav-top-item svg {
+        width: 10px;
+        height: 10px;
+        opacity: 0.7;
+    }
+    .nav-top-right {
+        font-size: 0.58rem;
+        font-weight: 300;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.6);
+    }
+
+    /* Main bar */
+    .nav-main {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        height: 60px;
+        background: rgba(8, 8, 8, 0.96);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(245, 242, 238, 0.07);
+        transition: border-color 0.4s;
+        position: relative;
+    }
+    #nav.solid .nav-main {
+        border-color: rgba(140, 10, 10, 0.25);
+    }
+
+    /* Logo block */
+    .nav-logo-block {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 2.5rem 0 3rem;
+        text-decoration: none;
+        border-right: 1px solid rgba(245, 242, 238, 0.07);
+        transition: border-color 0.4s;
+    }
+    #nav.solid .nav-logo-block {
+        border-color: rgba(140, 10, 10, 0.2);
+    }
+    .nav-logo-block svg {
+        height: 32px;
+        width: auto;
+        flex-shrink: 0;
+    }
+    .nav-logo-block svg path {
+        fill: #f5f2ee;
+    }
+    .nav-logo-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .nav-logo-name {
+        font-family: var(--display);
+        font-size: 1.2rem;
+        letter-spacing: 0.28em;
+        color: var(--white);
+        line-height: 1;
+    }
+    .nav-logo-tagline {
+        font-size: 0.48rem;
         font-weight: 200;
         letter-spacing: 0.3em;
-        vertical-align: middle;
-        color: rgba(245, 242, 238, 0.4);
-        margin-left: 0.25rem;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.3);
     }
-    .nav-menu {
+
+    /* Links center */
+    .nav-links-center {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .nav-links-center a {
         display: flex;
         align-items: center;
-        gap: 0.25rem;
-    }
-    .nav-menu a {
-        font-size: 0.7rem;
+        font-size: 0.62rem;
         font-weight: 300;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--white-dim);
+        color: rgba(245, 242, 238, 0.45);
         text-decoration: none;
-        padding: 0.4rem 0.9rem;
+        padding: 0 1.4rem;
+        position: relative;
         transition: color 0.3s;
-        border: 1px solid transparent;
+        border-right: 1px solid rgba(245, 242, 238, 0.05);
     }
-    .nav-menu a:hover {
+    .nav-links-center a:first-child {
+        border-left: 1px solid rgba(245, 242, 238, 0.05);
+    }
+    .nav-links-center a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: var(--red);
+        transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-links-center a:hover {
         color: var(--white);
-        border-color: var(--white-ghost);
+    }
+    .nav-links-center a:hover::after {
+        width: 100%;
+    }
+    .nav-links-center a.active {
+        color: var(--white);
+    }
+    .nav-links-center a.active::after {
+        width: 100%;
+        background: var(--red);
+    }
+
+    /* Drawer active */
+    .drawer-links a.active {
+        color: var(--white);
+        padding-left: 2rem;
+        background: rgba(140, 10, 10, 0.1);
+    }
+    .drawer-links a.active::after {
+        opacity: 1;
+        color: var(--red);
+    }
+
+    /* Right block */
+    .nav-right-block {
+        display: flex;
+        align-items: stretch;
+        flex-shrink: 0;
+        border-left: 1px solid rgba(245, 242, 238, 0.07);
+        transition: border-color 0.4s;
+        margin-left: auto;
+    }
+    #nav.solid .nav-right-block {
+        border-color: rgba(140, 10, 10, 0.2);
     }
     .nav-cta-btn {
-        font-size: 0.68rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.62rem;
         font-weight: 400;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: var(--white);
-        background: var(--red);
-        border: none;
-        padding: 0.65rem 1.4rem;
-        cursor: pointer;
         text-decoration: none;
+        padding: 0 2rem;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s;
+    }
+    .nav-cta-btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--red);
+        transform: translateX(-101%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-cta-btn:hover::before {
+        transform: translateX(0);
+    }
+    .nav-cta-btn span,
+    .nav-cta-btn svg {
+        position: relative;
+        z-index: 1;
+    }
+    .nav-cta-btn svg {
+        width: 12px;
+        height: 12px;
+        opacity: 0.6;
+        transition:
+            transform 0.3s,
+            opacity 0.3s;
+    }
+    .nav-cta-btn:hover svg {
+        transform: translateX(3px);
+        opacity: 1;
+    }
+
+    /* Hamburger */
+    .nav-burger {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 58px;
+        background: none;
+        border: none;
+        border-left: 1px solid rgba(245, 242, 238, 0.07);
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
         transition: background 0.3s;
     }
-    .nav-cta-btn:hover {
+    .nav-burger:hover {
+        background: rgba(140, 10, 10, 0.15);
+    }
+    .nav-burger span {
+        display: block;
+        width: 20px;
+        height: 1.5px;
+        background: var(--white);
+        transition:
+            transform 0.35s ease,
+            opacity 0.35s ease,
+            width 0.35s ease;
+    }
+    .nav-burger span:nth-child(2) {
+        width: 14px;
+    }
+    .nav-burger.open span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+        width: 20px;
+    }
+    .nav-burger.open span:nth-child(2) {
+        opacity: 0;
+        width: 0;
+    }
+    .nav-burger.open span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+        width: 20px;
+    }
+
+    /* Progress bar */
+    .nav-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        background: var(--red);
+        width: 0;
+        transition: width 0.1s linear;
+        pointer-events: none;
+    }
+
+    /* Side drawer (mobile) */
+    .nav-drawer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(320px, 85vw);
+        z-index: 490;
+        background: var(--off-black);
+        border-left: 1px solid rgba(140, 10, 10, 0.3);
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+    }
+    .nav-drawer.open {
+        transform: translateX(0);
+        pointer-events: all;
+    }
+    .drawer-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 480;
+        background: rgba(8, 8, 8, 0.7);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+    }
+    .drawer-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .drawer-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid rgba(245, 242, 238, 0.07);
+    }
+    .drawer-logo {
+        font-family: var(--display);
+        font-size: 1.1rem;
+        letter-spacing: 0.25em;
+        color: var(--white);
+    }
+    .drawer-close {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: 1px solid rgba(245, 242, 238, 0.12);
+        cursor: pointer;
+        color: rgba(245, 242, 238, 0.6);
+        font-size: 1.1rem;
+        transition:
+            border-color 0.3s,
+            color 0.3s;
+    }
+    .drawer-close:hover {
+        border-color: var(--red);
+        color: var(--white);
+    }
+    .drawer-links {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+    .drawer-links a {
+        font-size: 0.78rem;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(245, 242, 238, 0.45);
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(245, 242, 238, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition:
+            color 0.25s,
+            padding-left 0.25s,
+            background 0.25s;
+    }
+    .drawer-links a::after {
+        content: "→";
+        opacity: 0;
+        transition: opacity 0.25s;
+        font-size: 0.7rem;
+    }
+    .drawer-links a:hover {
+        color: var(--white);
+        padding-left: 2rem;
+        background: rgba(140, 10, 10, 0.08);
+    }
+    .drawer-links a:hover::after {
+        opacity: 1;
+    }
+    .drawer-foot {
+        padding: 1.5rem;
+        border-top: 1px solid rgba(245, 242, 238, 0.07);
+    }
+    .drawer-cta {
+        display: block;
+        text-align: center;
+        font-size: 0.65rem;
+        font-weight: 400;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--white);
+        background: var(--red);
+        text-decoration: none;
+        padding: 1rem;
+        transition: background 0.3s;
+    }
+    .drawer-cta:hover {
         background: var(--red-bright);
+    }
+    .drawer-info {
+        margin-top: 1.25rem;
+    }
+    .drawer-info p {
+        font-size: 0.6rem;
+        font-weight: 200;
+        letter-spacing: 0.1em;
+        color: rgba(245, 242, 238, 0.25);
+        margin-bottom: 0.35rem;
+    }
+
+    @media (max-width: 1060px) {
+        .nav-links-center {
+            display: none;
+        }
+        .nav-cta-btn {
+            display: none;
+        }
+        .nav-burger {
+            display: flex;
+        }
+        .nav-top {
+            padding: 0 1.5rem;
+        }
+        .nav-logo-block {
+            padding: 0 1.5rem;
+        }
+    }
+    @media (max-width: 480px) {
+        .nav-top-left span:last-child {
+            display: none;
+        }
     }
 </style>
 
+<!-- OVERLAY (mobile) -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+<!-- SIDE DRAWER (mobile) -->
+<div class="nav-drawer" id="drawer">
+    <div class="drawer-head">
+        <span class="drawer-logo">MONDIAL</span>
+        <button class="drawer-close" onclick="closeDrawer()" aria-label="Cerrar"
+            >✕</button
+        >
+    </div>
+    <div class="drawer-links">
+        <a href="#servicios" onclick="closeDrawer()">Servicios</a>
+        <a href="#nosotros" onclick="closeDrawer()">Nosotros</a>
+        <a href="#certificaciones" onclick="closeDrawer()">Certificaciones</a>
+        <a href="#pritzker" onclick="closeDrawer()">Premios</a>
+        <a href="#clientes" onclick="closeDrawer()">Clientes</a>
+        <a href="#contacto" onclick="closeDrawer()">Contacto</a>
+    </div>
+    <div class="drawer-foot">
+        <a href="#contacto" class="drawer-cta" onclick="closeDrawer()"
+            >Iniciar proyecto →</a
+        >
+        <div class="drawer-info">
+            <p>Chilpancingo, Guerrero, México</p>
+            <p>contacto@mondial2001.mx</p>
+            <p>+52 (747) 000 0000</p>
+        </div>
+    </div>
+</div>
+
 <!-- NAV -->
 <nav id="nav">
-    <a href="#" class="nav-logo-wrap">
-        <img
-            src={logo.src}
-            alt="MONDRIAL"
-            class="nav-logo-img"
-            onerror="this.style.display='none'"
-        />
-        <span class="nav-brand">MONDRIAL <sub>ARQ</sub></span>
-    </a>
-    <div class="nav-menu">
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#contacto">Contacto</a>
+    <div class="nav-top">
+        <div class="nav-top-left">
+            <span class="nav-top-item">
+                <svg viewBox="0 0 10 10" fill="none"
+                    ><circle
+                        cx="5"
+                        cy="5"
+                        r="4"
+                        stroke="currentColor"
+                        stroke-width="1"></circle><line
+                        x1="5"
+                        y1="2"
+                        x2="5"
+                        y2="5"
+                        stroke="currentColor"
+                        stroke-width="1"></line><line
+                        x1="5"
+                        y1="5"
+                        x2="7"
+                        y2="6.5"
+                        stroke="currentColor"
+                        stroke-width="1"></line></svg
+                >
+                Lun – Vie · 9:00 – 18:00
+            </span>
+            <span class="nav-top-item">
+                <svg viewBox="0 0 10 10" fill="none"
+                    ><circle
+                        cx="5"
+                        cy="4"
+                        r="2.5"
+                        stroke="currentColor"
+                        stroke-width="1"></circle><path
+                        d="M1 9 C1 7 2.5 6 5 6 C7.5 6 9 7 9 9"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        fill="none"></path></svg
+                >
+                Chilpancingo, Guerrero
+            </span>
+        </div>
+        <span class="nav-top-right">Est. 2001 · Despacho de Arquitectura</span>
     </div>
-    <a href="#contacto" class="nav-cta-btn">Iniciar proyecto</a>
+
+    <div class="nav-main">
+        <a href="#" class="nav-logo-block">
+            <svg
+                viewBox="0 0 1716 1699"
+                xmlns="http://www.w3.org/2000/svg"
+                style="height:30px;width:auto"
+            >
+                <g transform="translate(0,1699) scale(0.1,-0.1)">
+                    <path
+                        d="M252 16687 c-136 -138 -136 -136 -2 -271 54 -56 417 -418 806 -806 388 -388 735 -738 770 -779 l64 -74 0 -7221 c0 -6855 1 -7223 18 -7256 9 -19 29 -41 43 -47 33 -16 259 -19 288 -4 11 6 25 28 31 49 7 25 10 2215 10 7033 0 3848 2 7004 6 7012 3 9 11 18 18 20 15 6 -141 161 1846 -1830 921 -923 1702 -1700 1735 -1726 33 -27 384 -373 780 -769 396 -396 734 -729 750 -739 17 -11 38 -19 49 -19 32 0 230 217 224 247 -4 16 -4461 4476 -4568 4571 -41 36 -670 660 -1397 1387 -879 877 -1330 1321 -1345 1323 -18 2 -46 -21 -126 -101z"
+                    ></path>
+                    <path
+                        d="M16897 15231 c-49 -32 -714 -693 -4255 -4226 -1879 -1875 -3425 -3425 -3435 -3442 -18 -32 -18 -34 0 -68 10 -20 131 -150 268 -289 477 -485 748 -766 766 -793 9 -16 110 -122 224 -238 114 -115 228 -234 254 -264 25 -30 139 -149 253 -265 113 -116 216 -224 229 -241 12 -16 132 -140 266 -275 133 -135 243 -250 243 -256 0 -5 102 -111 226 -234 124 -124 243 -247 264 -275 21 -27 142 -156 269 -284 127 -129 231 -239 231 -243 0 -5 99 -108 219 -229 121 -120 237 -241 257 -267 21 -26 137 -149 258 -274 122 -125 331 -342 466 -483 480 -501 814 -835 835 -835 24 0 235 209 234 231 -1 32 -24 58 -246 284 -128 129 -256 263 -284 298 -29 34 -145 157 -260 272 -114 116 -225 233 -247 260 -22 28 -117 127 -212 220 -95 94 -190 193 -212 220 -22 28 -135 147 -252 265 -117 118 -225 233 -242 255 -16 22 -136 148 -266 280 -130 132 -247 254 -259 270 -12 17 -117 128 -233 247 -116 120 -319 330 -451 468 -132 138 -342 355 -466 483 -124 128 -241 252 -261 277 -19 25 -110 119 -202 210 -92 91 -195 199 -230 240 -35 42 -152 166 -261 275 -108 110 -224 231 -256 268 -33 37 -138 146 -234 242 -156 155 -175 178 -175 207 0 31 159 193 2188 2220 1203 1203 2210 2204 2237 2226 28 22 574 564 1214 1206 640 641 1170 1166 1177 1166 7 0 16 -6 21 -12 4 -7 10 -3177 13 -7045 4 -5546 8 -7035 17 -7044 19 -19 86 -25 211 -18 87 5 118 10 130 23 16 16 17 534 20 7479 1 4104 0 7477 -3 7495 -7 37 -10 38 -48 13z"
+                    ></path>
+                    <path
+                        d="M13870 8576 c-492 -492 -910 -907 -929 -922 -51 -43 -90 -101 -83 -126 7 -27 1878 -1907 1911 -1919 40 -16 101 23 191 120 46 52 80 97 80 110 0 13 -46 67 -124 148 -165 170 -499 499 -561 554 -74 64 -329 315 -671 661 -253 255 -304 312 -304 335 0 24 62 89 393 417 215 213 396 391 400 395 4 3 94 94 200 201 106 108 233 232 282 276 50 44 137 129 195 188 58 60 126 129 153 154 26 25 47 52 47 59 0 19 -132 164 -189 209 -24 18 -56 34 -70 34 -20 0 -202 -176 -921 -894z"
+                    ></path>
+                    <path
+                        d="M5735 7448 c-10 -44 0 -7087 10 -7097 12 -11 7130 -18 7158 -6 19 8 21 23 8 58 -12 32 -1786 1809 -1866 1870 -33 25 -987 973 -2120 2108 -1133 1134 -2073 2070 -2089 2080 -16 10 -248 236 -515 503 -267 266 -499 489 -514 495 -44 17 -66 13 -72 -11z"
+                    ></path>
+                </g>
+            </svg>
+            <div class="nav-logo-text">
+                <span class="nav-logo-name">MONDIAL</span>
+                <span class="nav-logo-tagline">Arquitectura &amp; Diseño</span>
+            </div>
+        </a>
+
+        <div class="nav-links-center">
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#certificaciones">Certificaciones</a>
+            <a href="#pritzker">Premios</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+
+        <div class="nav-right-block">
+            <a href="#contacto" class="nav-cta-btn">
+                <span>Iniciar proyecto</span>
+                <svg
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <line
+                        x1="1"
+                        y1="6"
+                        x2="11"
+                        y2="6"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"></line>
+                    <polyline
+                        points="7,2 11,6 7,10"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"></polyline>
+                </svg>
+            </a>
+            <button
+                class="nav-burger"
+                id="burger"
+                onclick="toggleDrawer()"
+                aria-label="Menú"
+            >
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav-progress" id="navProgress"></div>
+    </div>
 </nav>
 
 <script>
-    // Nav
+    // Nav scroll + progress bar
     const nav = document.getElementById("nav");
-    window.addEventListener("scroll", () =>
-        nav.classList.toggle("solid", window.scrollY > 60),
+    const progress = document.getElementById("navProgress");
+    function onScroll() {
+        nav.classList.toggle("solid", window.scrollY > 60);
+        if (progress) {
+            const max = document.body.scrollHeight - window.innerHeight;
+            progress.style.width = (window.scrollY / max) * 100 + "%";
+        }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Smooth scroll with nav offset
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (e) => {
+            const target = document.querySelector(link.getAttribute("href"));
+            if (!target) return;
+            e.preventDefault();
+            const offset = nav.offsetHeight + 8;
+            window.scrollTo({
+                top:
+                    target.getBoundingClientRect().top +
+                    window.scrollY -
+                    offset,
+                behavior: "smooth",
+            });
+        });
+    });
+
+    // Mobile drawer
+    function toggleDrawer() {
+        const drawer = document.getElementById("drawer");
+        const overlay = document.getElementById("drawerOverlay");
+        const burger = document.getElementById("burger");
+        const open = drawer.classList.toggle("open");
+        overlay.classList.toggle("open", open);
+        burger.classList.toggle("open", open);
+        document.body.style.overflow = open ? "hidden" : "";
+    }
+    function closeDrawer() {
+        const drawer = document.getElementById("drawer");
+        const overlay = document.getElementById("drawerOverlay");
+        const burger = document.getElementById("burger");
+        drawer.classList.remove("open");
+        overlay.classList.remove("open");
+        burger.classList.remove("open");
+        document.body.style.overflow = "";
+    }
+
+    // Active nav link tracking
+    (function () {
+        const sections = [
+            "servicios",
+            "nosotros",
+            "certificaciones",
+            "pritzker",
+            "clientes",
+            "contacto",
+        ];
+        const navLinks = document.querySelectorAll(
+            ".nav-links-center a, .drawer-links a",
+        );
+
+        function setActive(id) {
+            navLinks.forEach((a) => {
+                const href = a.getAttribute("href");
+                a.classList.toggle("active", href === "#" + id);
+            });
+        }
+
+        // Use IntersectionObserver — fire when section is ≥20% visible
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) setActive(entry.target.id);
+                });
+            },
+            {
+                rootMargin: "-10% 0px -70% 0px", // triggers when section crosses upper 30% of viewport
+                threshold: 0,
+            },
+        );
+
+        sections.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) sectionObserver.observe(el);
+        });
+
+        // Clear active when back at very top (hero)
+        const heroObs = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    navLinks.forEach((a) => a.classList.remove("active"));
+                }
+            },
+            { threshold: 0.3 },
+        );
+        const hero = document.getElementById("hero");
+        if (hero) heroObs.observe(hero);
+    })();
+    const obs = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    e.target.classList.add("in");
+                    obs.unobserve(e.target);
+                }
+            });
+        },
+        { threshold: 0.1 },
     );
+    fadels.forEach((el) => obs.observe(el));
 </script>
